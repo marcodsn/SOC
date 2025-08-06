@@ -310,7 +310,7 @@ def main(
     target_languages: List[str] = None,
     temperature: float = 0.3,
     top_p: float = 0.95,
-    max_new_tokens: int = 4096,
+    max_new_tokens: int = 8192,
     device: str = "auto",
     torch_dtype: str = "auto",
     hf_token: Optional[str] = None,
@@ -421,7 +421,7 @@ def main(
                 batch_prompts,
                 return_tensors="pt",
                 padding=True,
-                truncation=True,
+                truncation=False,
                 max_length=model.config.max_position_embeddings or 8192,
             ).to(model.device)
 
@@ -520,8 +520,8 @@ if __name__ == "__main__":
     parser.add_argument(
         "--max-new-tokens",
         type=int,
-        default=4096,
-        help="Maximum new tokens to generate (default: 4096)",
+        default=8192,
+        help="Maximum new tokens to generate (default: 8192)",
     )
     parser.add_argument(
         "--device",
