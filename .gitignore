@@ -1,0 +1,15 @@
+__pycache__/
+
+data/chats
+data/experiences
+data/personas
+data/personasPool
+data/seedData
+data/*.json*
+
+scripts/*.py*
+scripts/processing/add_experience_ids.py
+
+logs/
+
+supportDatasets

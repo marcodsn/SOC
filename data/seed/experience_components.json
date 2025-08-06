@@ -1,0 +1,224 @@
+{
+  "online_platforms": [
+    { "value": "Discord server", "weight": 20 },
+    { "value": "Reddit community", "weight": 15 },
+    { "value": "Instagram", "weight": 25 },
+    { "value": "TikTok", "weight": 23 },
+    { "value": "Twitter/X", "weight": 15 },
+    { "value": "Facebook group", "weight": 10 },
+    { "value": "Twitch chat", "weight": 8 },
+    { "value": "YouTube comments", "weight": 7 },
+    { "value": "LinkedIn", "weight": 6 },
+    { "value": "dating app", "weight": 12 },
+    { "value": "gaming platform (Steam/Xbox/PS/...)", "weight": 9 },
+    { "value": "Slack workspace", "weight": 5 },
+    { "value": "WhatsApp group", "weight": 8 },
+    { "value": "Telegram channel", "weight": 4 },
+    { "value": "Snapchat", "weight": 6 },
+    { "value": "BeReal", "weight": 3 },
+    { "value": "Clubhouse room", "weight": 2 },
+    { "value": "online forum", "weight": 4 },
+    { "value": "Stack Overflow", "weight": 3 },
+    { "value": "GitHub", "weight": 2 },
+    { "value": "Patreon community", "weight": 2 },
+    { "value": "Mastodon", "weight": 1 }
+  ],
+  "online_communities": [
+    { "value": "gaming community", "weight": 20 },
+    { "value": "book club", "weight": 12 },
+    { "value": "movie/TV discussion group", "weight": 15 },
+    { "value": "recipe sharing group", "weight": 8 },
+    { "value": "fitness/workout community", "weight": 10 },
+    { "value": "mental health support group", "weight": 6 },
+    { "value": "language exchange group", "weight": 7 },
+    { "value": "coding/tech community", "weight": 9 },
+    { "value": "pet owners group", "weight": 8 },
+    { "value": "music production community", "weight": 6 },
+    { "value": "art sharing group", "weight": 7 },
+    { "value": "photography community", "weight": 5 },
+    { "value": "crypto/NFT community", "weight": 4 },
+    { "value": "investing/finance group", "weight": 6 },
+    { "value": "parenting support group", "weight": 7 },
+    { "value": "local city/neighborhood group", "weight": 9 },
+    { "value": "college/university group", "weight": 8 },
+    { "value": "hobby crafting community", "weight": 5 },
+    { "value": "travel planning group", "weight": 6 },
+    { "value": "food enthusiasts group", "weight": 7 },
+    { "value": "meme sharing community", "weight": 8 },
+    { "value": "political discussion group", "weight": 4 },
+    { "value": "spiritual/religious community", "weight": 3 },
+    { "value": "true crime discussion group", "weight": 5 },
+    { "value": "podcast fan community", "weight": 6 },
+    { "value": "streaming viewers community", "weight": 7 },
+    { "value": "online course study group", "weight": 4 },
+    { "value": "freelancer/gig worker group", "weight": 4 },
+    { "value": "relationship advice community", "weight": 5 },
+    { "value": "career/job search group", "weight": 5 }
+  ],
+  "fandoms": [
+    { "value": "Marvel/DC comics", "weight": 12 },
+    { "value": "anime/manga", "weight": 15 },
+    { "value": "K-pop", "weight": 10 },
+    { "value": "sci-fi (Star Wars/Trek)", "weight": 8 },
+    { "value": "fantasy (LOTR/GoT)", "weight": 7 },
+    { "value": "horror movies", "weight": 5 },
+    { "value": "reality TV shows", "weight": 8 },
+    { "value": "video game franchise", "weight": 12 },
+    { "value": "YouTuber/content creator", "weight": 9 },
+    { "value": "TikTok creator", "weight": 7 },
+    { "value": "Twitch streamer", "weight": 6 },
+    { "value": "podcast", "weight": 5 },
+    { "value": "music artist/band", "weight": 10 },
+    { "value": "sports team", "weight": 9 },
+    { "value": "Netflix series", "weight": 8 },
+    { "value": "Disney franchise", "weight": 6 },
+    { "value": "celebrity couple", "weight": 4 },
+    { "value": "book series", "weight": 5 },
+    { "value": "board game", "weight": 3 },
+    { "value": "car/motorcycle brand", "weight": 3 },
+    { "value": "fashion brand", "weight": 4 },
+    { "value": "tech company/product", "weight": 4 },
+    { "value": "meme culture", "weight": 6 }
+  ],
+  "gaming_contexts": [
+    { "value": "co-op campaign partners", "weight": 6 },
+    { "value": "trading card game community", "weight": 3 },
+    { "value": "Minecraft builders/server", "weight": 5 },
+    { "value": "rhythm game community", "weight": 2 },
+    { "value": "competitive esports team", "weight": 8 },
+    { "value": "MMO guild/clan", "weight": 10 },
+    { "value": "casual mobile gaming group", "weight": 12 },
+    { "value": "battle royale squad", "weight": 9 },
+    { "value": "streaming viewers who play together", "weight": 6 },
+    { "value": "retro gaming enthusiasts", "weight": 4 },
+    { "value": "indie game developers", "weight": 3 },
+    { "value": "fighting game community", "weight": 4 },
+    { "value": "puzzle/strategy game club", "weight": 5 },
+    { "value": "VR gaming group", "weight": 3 },
+    { "value": "speedrunning community", "weight": 2 },
+    { "value": "game modding community", "weight": 2 }
+  ],
+  "online_relationship_types": [
+    { "value": "just matched on a dating app", "weight": 15 },
+    { "value": "met in a {community} online community", "weight": 12 },
+    { "value": "connected on {platform}", "weight": 18 },
+    { "value": "mutuals on social media who started DMing", "weight": 10 },
+    { "value": "met through a mutual friend's online post", "weight": 8 },
+    { "value": "fellow {fandom} fans who discovered each other", "weight": 9 },
+    { "value": "teammates in a {gaming} group", "weight": 7 },
+    { "value": "classmates in an online course", "weight": 6 },
+    { "value": "coworkers who only interact through Slack/Teams", "weight": 5 },
+    { "value": "neighbors who connected on a local app/group", "weight": 4 },
+    { "value": "old friends who recently reconnected online", "weight": 8 },
+    {
+      "value": "high school friends who follow each other but rarely talk",
+      "weight": 6
+    },
+    {
+      "value": "college acquaintances who stayed connected on social media",
+      "weight": 6
+    },
+    {
+      "value": "distant cousins who only interact through family group chats",
+      "weight": 3
+    },
+    {
+      "value": "former colleagues who stayed connected on LinkedIn",
+      "weight": 4
+    },
+    {
+      "value": "childhood friends who moved apart but stayed in touch online",
+      "weight": 5
+    },
+    {
+      "value": "best friends who mainly communicate through memes and reactions",
+      "weight": 7
+    },
+    {
+      "value": "roommates who text more than they talk in person",
+      "weight": 4
+    },
+    { "value": "online pen pals who have never met IRL", "weight": 3 },
+    {
+      "value": "long-distance relationship maintained through apps",
+      "weight": 4
+    },
+    {
+      "value": "exes who stayed friends and occasionally check in",
+      "weight": 3
+    },
+    { "value": "online business partners/collaborators", "weight": 3 },
+    {
+      "value": "content creator and a longtime follower/supporter",
+      "weight": 2
+    },
+    {
+      "value": "regular customer and online store owner who became friendly",
+      "weight": 2
+    },
+    { "value": "study buddies who met in an academic Discord", "weight": 4 },
+    {
+      "value": "workout accountability partners from a fitness app",
+      "weight": 3
+    },
+    {
+      "value": "people who bonded over a shared traumatic online experience",
+      "weight": 2
+    },
+    {
+      "value": "competitors in an online tournament who became friends",
+      "weight": 2
+    },
+    {
+      "value": "beta testers for the same app/game who connected",
+      "weight": 1
+    },
+    { "value": "people who met in a virtual event/conference", "weight": 2 },
+    { "value": "online therapy/support group members", "weight": 2 }
+  ],
+  "conversation_triggers": [
+    { "value": "responding to someone's Instagram/TikTok story", "weight": 9 },
+    { "value": "sharing screenshots of funny conversations", "weight": 6 },
+    { "value": "discussing app updates or website changes", "weight": 4 },
+    { "value": "coordinating online shopping or group buys", "weight": 3 },
+    { "value": "sharing streaming recommendations", "weight": 7 },
+    { "value": "reacting to someone's social media drama", "weight": 5 },
+    { "value": "sharing a viral meme or TikTok", "weight": 15 },
+    { "value": "reacting to breaking news or trending topic", "weight": 12 },
+    {
+      "value": "celebrating someone's online milestone/achievement",
+      "weight": 10
+    },
+    { "value": "discussing a recently released movie/show/game", "weight": 14 },
+    { "value": "sharing a personal life update with photo", "weight": 13 },
+    { "value": "asking for advice about a specific problem", "weight": 11 },
+    { "value": "planning an online hangout or event", "weight": 8 },
+    { "value": "sharing content from their interests/hobbies", "weight": 10 },
+    { "value": "commenting on each other's social media posts", "weight": 9 },
+    { "value": "discussing a controversial opinion or debate", "weight": 7 },
+    { "value": "sharing a funny or embarrassing story", "weight": 8 },
+    {
+      "value": "asking about someone's expertise/recommendations",
+      "weight": 9
+    },
+    { "value": "catching up after a long period of not talking", "weight": 6 },
+    { "value": "coordinating online gaming or streaming session", "weight": 7 },
+    { "value": "sharing travel photos or experiences", "weight": 6 },
+    { "value": "discussing work/career changes", "weight": 7 },
+    {
+      "value": "complaining about technical problems or app updates",
+      "weight": 5
+    },
+    { "value": "sharing food photos or recipes", "weight": 6 },
+    {
+      "value": "discussing relationship drama or dating experiences",
+      "weight": 6
+    },
+    { "value": "sharing pet photos or stories", "weight": 8 },
+    { "value": "discussing mental health or self-care", "weight": 5 },
+    { "value": "planning purchases or comparing products online", "weight": 5 },
+    { "value": "sharing workout progress or health goals", "weight": 4 },
+    { "value": "discussing online drama or influencer tea", "weight": 4 },
+    { "value": "sharing nostalgic content or memories", "weight": 4 }
+  ]
+}
