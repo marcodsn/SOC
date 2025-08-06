@@ -360,7 +360,7 @@ def main(
         trust_remote_code=True,
     )
 
-    tokenizer = AutoTokenizer.from_pretrained(model_id, trust_remote_code=True)
+    tokenizer = AutoTokenizer.from_pretrained(model_id, trust_remote_code=True, padding_side='left')
 
     # Add pad token if not present
     if tokenizer.pad_token is None:
