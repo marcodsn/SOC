@@ -2,11 +2,10 @@
 # requires-python = ">=3.10"
 # dependencies = [
 #     "datasets",
-#     "flashinfer-python",
 #     "huggingface-hub[hf_transfer]",
 #     "torch",
 #     "transformers>=4.53.0",
-#     "vllm>=0.8.5",
+#     "accelerate",
 # ]
 # ///
 
@@ -18,14 +17,12 @@ import json
 import re
 from datetime import datetime
 from typing import Optional, Dict, List, Any
-from pydantic import BaseModel
 
-from torch import cuda
+import torch
 from datasets import load_dataset, Dataset
 from huggingface_hub import DatasetCard, get_token, login
 from tqdm.auto import tqdm
-from transformers import AutoTokenizer
-from vllm import LLM, SamplingParams
+from transformers import AutoTokenizer, AutoModelForCausalLM, GenerationConfig
 
 # Enable HF Transfer for faster downloads
 os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "1"
@@ -63,23 +60,23 @@ class Config:
     """All script settings grouped in a single class."""
     SOURCE_DATASET = "marcodsn/SOC-2508"
     OUTPUT_DATASET = "marcodsn/SOC-2508-MULTI"
-    MODEL_NAME = "google/gemma-3-4b-it"  # "HuggingFaceTB/SmolLM3-3B"
+    MODEL_NAME = "HuggingFaceTB/SmolLM3-3B"
     TARGET_LANGUAGES = ["fr", "es", "de", "it", "pt"]  # Default languages to translate to
 
 
 def check_gpu_availability() -> int:
     """Check if CUDA is available and return the number of GPUs."""
-    if not cuda.is_available():
+    if not torch.cuda.is_available():
         logger.error("CUDA is not available. This script requires a GPU.")
         logger.error(
             "Please run on a machine with NVIDIA GPU or use HF Jobs with GPU flavor."
         )
         sys.exit(1)
 
-    num_gpus = cuda.device_count()
+    num_gpus = torch.cuda.device_count()
     for i in range(num_gpus):
-        gpu_name = cuda.get_device_name(i)
-        gpu_memory = cuda.get_device_properties(i).total_memory / 1024**3
+        gpu_name = torch.cuda.get_device_name(i)
+        gpu_memory = torch.cuda.get_device_properties(i).total_memory / 1024**3
         logger.info(f"GPU {i}: {gpu_name} with {gpu_memory:.1f} GB memory")
 
     return num_gpus
@@ -105,6 +102,7 @@ IMPORTANT RULES:
 5. Respond ONLY with a valid JSON object in the exact format shown
 
 Input data to translate:
+
 ```
 {json.dumps(data, indent=2, ensure_ascii=False)}
 ```
@@ -234,8 +232,7 @@ def create_dataset_card(
     source_dataset: str,
     model_id: str,
     target_languages: List[str],
-    sampling_params: SamplingParams,
-    tensor_parallel_size: int,
+    generation_config: GenerationConfig,
     num_examples: int,
     generation_time: str,
 ) -> str:
@@ -258,10 +255,9 @@ This dataset contains multilingual translations of conversational data, translat
 
 ## Translation Parameters
 
-- **Temperature**: {sampling_params.temperature}
-- **Top-p**: {sampling_params.top_p}
-- **Max Tokens**: {sampling_params.max_tokens}
-- **Tensor Parallel Size**: {tensor_parallel_size}
+- **Temperature**: {generation_config.temperature}
+- **Top-p**: {generation_config.top_p}
+- **Max Tokens**: {generation_config.max_new_tokens}
 
 ## Dataset Structure
 
@@ -310,16 +306,15 @@ If you use this dataset, please cite the original source dataset and mention the
 def main(
     src_dataset_hub_id: str = "marcodsn/SOC-2508",
     output_dataset_hub_id: str = "marcodsn/SOC-2508-MULTI",
-    model_id: str = "google/gemma-3-4b-it",
+    model_id: str = "HuggingFaceTB/SmolLM3-3B",
     target_languages: List[str] = None,
     temperature: float = 0.3,
     top_p: float = 0.95,
-    max_tokens: int = 32768,
-    gpu_memory_utilization: float = 0.90,
-    max_model_len: Optional[int] = None,
-    tensor_parallel_size: Optional[int] = None,
+    max_new_tokens: int = 4096,
+    device: str = "auto",
+    torch_dtype: str = "auto",
     hf_token: Optional[str] = None,
-    batch_size: int = 10,
+    batch_size: int = 4,
 ):
     """
     Main translation pipeline.
@@ -338,9 +333,14 @@ def main(
 
     # GPU check and configuration
     num_gpus = check_gpu_availability()
-    if tensor_parallel_size is None:
-        tensor_parallel_size = num_gpus
-        logger.info(f"Auto-detected {num_gpus} GPU(s), using tensor_parallel_size={tensor_parallel_size}")
+
+    # Set device
+    if device == "auto":
+        device = "cuda" if torch.cuda.is_available() else "cpu"
+
+    # Set torch dtype
+    if torch_dtype == "auto":
+        torch_dtype = torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16
 
     # Authentication
     HF_TOKEN = hf_token or os.environ.get("HF_TOKEN") or get_token()
@@ -351,27 +351,29 @@ def main(
     logger.info("HuggingFace token found, authenticating...")
     login(token=HF_TOKEN)
 
-    # Initialize vLLM
+    # Initialize model and tokenizer
     logger.info(f"Loading model: {model_id}")
-    vllm_kwargs = {
-        "model": model_id,
-        "tensor_parallel_size": tensor_parallel_size,
-        "gpu_memory_utilization": gpu_memory_utilization,
-    }
-    if max_model_len is not None:
-        vllm_kwargs["max_model_len"] = max_model_len
+    model = AutoModelForCausalLM.from_pretrained(
+        model_id,
+        torch_dtype=torch_dtype,
+        device_map="auto" if num_gpus > 1 else device,
+        trust_remote_code=True,
+    )
 
-    llm = LLM(**vllm_kwargs)
+    tokenizer = AutoTokenizer.from_pretrained(model_id, trust_remote_code=True)
 
-    # Load tokenizer for chat template
-    logger.info("Loading tokenizer...")
-    tokenizer = AutoTokenizer.from_pretrained(model_id)
+    # Add pad token if not present
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
 
-    # Create sampling parameters
-    sampling_params = SamplingParams(
+    # Create generation configuration
+    generation_config = GenerationConfig(
         temperature=temperature,
         top_p=top_p,
-        max_tokens=max_tokens,
+        max_new_tokens=max_new_tokens,
+        do_sample=True,
+        pad_token_id=tokenizer.pad_token_id,
+        eos_token_id=tokenizer.eos_token_id,
     )
 
     # Load dataset
@@ -396,7 +398,7 @@ def main(
 
             # Apply chat template
             messages = [
-                # {"role": "system", "content": "/no_think"},  # Disable thinking for SmolLM3
+                {"role": "system", "content": "/no_think"},  # Disable thinking for SmolLM3
                 {"role": "user", "content": prompt}
             ]
             formatted_prompt = tokenizer.apply_chat_template(
@@ -414,12 +416,34 @@ def main(
 
             logger.info(f"Processing batch {i//batch_size + 1}/{(len(prompts) + batch_size - 1)//batch_size}")
 
-            outputs = llm.generate(batch_prompts, sampling_params)
+            # Tokenize batch
+            inputs = tokenizer(
+                batch_prompts,
+                return_tensors="pt",
+                padding=True,
+                truncation=True,
+                max_length=model.config.max_position_embeddings or 8192,
+            ).to(model.device)
+
+            # Generate responses
+            with torch.no_grad():
+                outputs = model.generate(
+                    **inputs,
+                    generation_config=generation_config,
+                )
+
+            # Decode responses
+            responses = []
+            for j, output in enumerate(outputs):
+                # Remove input tokens from output
+                input_length = inputs.input_ids[j].shape[0]
+                generated_tokens = output[input_length:]
+                response = tokenizer.decode(generated_tokens, skip_special_tokens=True).strip()
+                responses.append(response)
 
             # Parse responses and merge translations
-            for j, output in enumerate(outputs):
+            for j, response in enumerate(responses):
                 example_idx = list(batch_indices)[j]
-                response = output.outputs[0].text.strip()
 
                 translation = parse_translation_response(response, target_lang)
                 multilingual_data[example_idx] = merge_translation(
@@ -436,8 +460,7 @@ def main(
         source_dataset=src_dataset_hub_id,
         model_id=model_id,
         target_languages=target_languages,
-        sampling_params=sampling_params,
-        tensor_parallel_size=tensor_parallel_size,
+        generation_config=generation_config,
         num_examples=total_examples,
         generation_time=generation_start_time,
     )
@@ -457,7 +480,7 @@ def main(
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="Translate chat dataset to multiple languages using vLLM",
+        description="Translate chat dataset to multiple languages using Transformers",
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
 
@@ -472,7 +495,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--model-id",
         type=str,
-        default="google/gemma-3-4b-it",
+        default="HuggingFaceTB/SmolLM3-3B",
         help="Model to use for translation",
     )
     parser.add_argument(
@@ -495,27 +518,28 @@ if __name__ == "__main__":
         help="Top-p sampling parameter (default: 0.95)",
     )
     parser.add_argument(
-        "--max-tokens",
+        "--max-new-tokens",
         type=int,
-        default=32768,
-        help="Maximum tokens to generate (default: 32768)",
+        default=4096,
+        help="Maximum new tokens to generate (default: 4096)",
     )
     parser.add_argument(
-        "--gpu-memory-utilization",
-        type=float,
-        default=0.90,
-        help="GPU memory utilization factor (default: 0.90)",
+        "--device",
+        type=str,
+        default="auto",
+        help="Device to use (cuda/cpu/auto, default: auto)",
     )
     parser.add_argument(
-        "--tensor-parallel-size",
-        type=int,
-        help="Number of GPUs to use (default: auto-detect)",
+        "--torch-dtype",
+        type=str,
+        default="auto",
+        help="Torch dtype (auto/float16/bfloat16/float32, default: auto)",
     )
     parser.add_argument(
         "--batch-size",
         type=int,
-        default=10,
-        help="Batch size for processing (default: 10)",
+        default=4,
+        help="Batch size for processing (default: 4)",
     )
     parser.add_argument(
         "--hf-token",
@@ -536,6 +560,15 @@ if __name__ == "__main__":
             print(f"  {code}: {info['name']} ({info['native_name']})")
         sys.exit(0)
 
+    # Convert torch_dtype string to actual dtype
+    torch_dtype_map = {
+        "auto": "auto",
+        "float16": torch.float16,
+        "bfloat16": torch.bfloat16,
+        "float32": torch.float32,
+    }
+    torch_dtype = torch_dtype_map.get(args.torch_dtype, "auto")
+
     main(
         src_dataset_hub_id=args.src_dataset_hub_id,
         output_dataset_hub_id=args.output_dataset_hub_id,
@@ -543,9 +576,9 @@ if __name__ == "__main__":
         target_languages=args.languages,
         temperature=args.temperature,
         top_p=args.top_p,
-        max_tokens=args.max_tokens,
-        gpu_memory_utilization=args.gpu_memory_utilization,
-        tensor_parallel_size=args.tensor_parallel_size,
+        max_new_tokens=args.max_new_tokens,
+        device=args.device,
+        torch_dtype=torch_dtype,
         batch_size=args.batch_size,
         hf_token=args.hf_token,
     )
