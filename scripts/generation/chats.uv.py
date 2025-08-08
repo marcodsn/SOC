@@ -8,12 +8,6 @@
 # ]
 # ///
 
-### Notes
-# use json, *messages* list so the LLM can generate more than 1 message at a time (as if it wrote 2 consecutive messages)
-# use xml tags, like <audio>...</audio>, <image>...</image>, <gif>...</gif>, etc to simulate multimedia content
-# you should try to keep the conversation going, but if that is not possible in a natural way anymore, write <end/> at the end of a message to indicate the end of the conversation
-# as in natural conversations, it may happen that a person cannot reply immediately. To simulate this, you can add <delay minutes="30" hours="6" days="1"/> at the start of a message, which will indicate that the person took some time to reply
-
 """
 Full, self-contained chat-generation pipeline
 ---------------------------------------------
@@ -63,10 +57,8 @@ logging.basicConfig(
 class Config:
     """All script settings grouped in a single class."""
     EXPERIENCES_FILES = [
-        "data/experiences/experiences_GLM-4.5-Air-FP8_1754332461.jsonl",
-        "data/experiences/experiences_Kimi-K2-Instruct_1754328634.jsonl",
-        "data/experiences/experiences_Kimi-K2-Instruct_1754329354.jsonl",
-        "data/experiences/experiences_Qwen3-235B-A22B-Instruct-2507_1754377597.jsonl"
+        "data/experiences/experiences_Qwen3-235B-A22B-Instruct-2507_1754636647.jsonl",
+        "data/experiences/experiences_Qwen3-235B-A22B-Instruct-2507_1754637814.jsonl",
     ]
     MODEL_NAME       = "Qwen/Qwen3-235B-A22B-Instruct-2507"
     OUTPUT_FILE      = f"data/chats/chats_{MODEL_NAME.split('/')[-1]}_{int(time.time())}.jsonl"
@@ -74,7 +66,7 @@ class Config:
 
     CONCURRENCY      = 10
     CHECKPOINT_EVERY = 1
-    TARGET_CHATS     = 600
+    TARGET_CHATS     = 1200
     GLOBAL_MAX_TOKENS = 32_000
     GLOBAL_MAX_TURNS  = 200
 
@@ -82,7 +74,7 @@ class Config:
 Additional instructions:
 1. You can generate more than one message in a single turn (like in a natural conversation where a person can write 1, 2 or more consecutive messages before getting a reply), but you must output them as a single JSON object with a list of messages, and do not abuse this feature! Aim for 1 to 3 messages.
 2. You can use XML-like tags to simulate multimedia content, such as <audio>audio transcription/description</audio>, <image>image description</image>, <gif>gif description</gif>, etc.
-3. A multimedia tag shall be treated as a single message; you can add a caption after closing the tag for images, gifs and videos, but not for audio. (ok example: ["Hi!", "<image>a cute kitten</image> This is my cat!"])
+3. A message containing a multimedia tag shall not contain any other text; you can add a caption after closing the tag for images, gifs and videos, but not for audio. (ok example: ["Hi!", "<image>a cute kitten</image> This is my cat!"]; not ok example: ["Hi! <image>a cute kitten</image> This is my cat!"])
 4. If the conversation naturally comes to an end (e.g. the topic has been exhausted, and you are not able to continue the conversation with a new topic), you can indicate this by adding <end/> at the end of a message. This will signal the end of the conversations.
 5. As in natural conversations it may happen that a person cannot reply immediately sometimes, you can simulate this by adding a delay like <delay minutes="30" hours="6" days="1"/> at the start of a message, indicating that the person took some time to reply (delay params are additive).
 """

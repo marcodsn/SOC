@@ -4,7 +4,8 @@
 # requires-python = ">=3.12"
 # dependencies = [
 #   "huggingface-hub",
-#   "pydantic"
+#   "pydantic",
+#   "datasets" # Added datasets as an explicit dependency
 # ]
 # ///
 
@@ -14,7 +15,7 @@ import time
 import uuid
 import random
 import asyncio
-from typing import List, Set, Dict, Any
+from typing import List, Set, Dict, Any, Tuple
 from huggingface_hub import AsyncInferenceClient
 from datasets import load_dataset
 from pydantic import BaseModel, Field
@@ -22,14 +23,13 @@ from pydantic import BaseModel, Field
 # --- Configuration ---
 PERSONAS_FILE = ""  # "data/personas/processed_personas_1754226515.jsonl"
 PERSONAS_DATASET = "marcodsn/SPB-2508"
-# SEED_EXPERIENCES_FILE = "data/seed/experiences.jsonl"
-SEED_EXPERIENCES_FILE = "data/experiences/experiences_Kimi-K2-Instruct_1754329354.jsonl"
+SEED_EXPERIENCES_FILE = "data/experiences/experiences_Qwen3-235B-A22B-Instruct-2507_1754377597.jsonl"
 COMPONENTS_FILE = "data/seed/experience_components.json"
-TARGET_N = 600
-MODEL_NAME = "Qwen/Qwen3-235B-A22B-Instruct-2507"  # "zai-org/GLM-4.5-Air-FP8"  # "moonshotai/Kimi-K2-Instruct"
-CONCURRENCY = 10
-CHECKPOINT_EVERY = 30
-RESET_EVERY = 50
+TARGET_N = 950
+MODEL_NAME = "Qwen/Qwen3-235B-A22B-Instruct-2507"
+CONCURRENCY = 20
+CHECKPOINT_EVERY = 50
+RESET_EVERY = 100
 
 # Ensure the Hugging Face token is available
 if "HF_TOKEN" not in os.environ:
@@ -37,7 +37,6 @@ if "HF_TOKEN" not in os.environ:
 
 # Use the Asynchronous client for parallel execution
 client = AsyncInferenceClient(
-    # provider="fireworks-ai",
     provider="together",
     api_key=os.environ.get("HF_TOKEN")
 )
@@ -67,7 +66,6 @@ class ConversationContext(BaseModel):
 
 # --- Component Loading ---
 def load_components(filepath: str) -> Dict[str, Any]:
-    """Load weighted components from JSON file."""
     try:
         with open(filepath, "r", encoding="utf-8") as f:
             return json.load(f)
@@ -76,7 +74,6 @@ def load_components(filepath: str) -> Dict[str, Any]:
         exit(1)
 
 def weighted_choice(items: List[Dict[str, Any]]) -> str:
-    """Select a random item based on weights."""
     values = [item["value"] for item in items]
     weights = [item["weight"] for item in items]
     return random.choices(values, weights=weights, k=1)[0]
@@ -102,23 +99,15 @@ class ComponentManager:
         return weighted_choice(self.components["conversation_triggers"])
 
     def generate_relationship(self) -> str:
-        """Generate a weighted relationship with dynamic substitution."""
-        relationship_template = weighted_choice(self.components["online_relationship_types"])
-
-        # Handle template substitutions
+        relationship_template = weighted_choice(self.components["relationship_types"])
         if "{platform}" in relationship_template:
-            platform = self.get_platform()
-            return relationship_template.format(platform=platform)
+            return relationship_template.format(platform=self.get_platform())
         elif "{community}" in relationship_template:
-            community = self.get_community()
-            return relationship_template.format(community=community)
+            return relationship_template.format(community=self.get_community())
         elif "{fandom}" in relationship_template:
-            fandom = self.get_fandom()
-            return relationship_template.format(fandom=fandom)
+            return relationship_template.format(fandom=self.get_fandom())
         elif "{gaming}" in relationship_template:
-            gaming = self.get_gaming_context()
-            return relationship_template.format(gaming=gaming)
-
+            return relationship_template.format(gaming=self.get_gaming_context())
         return relationship_template
 
 # Define the structured JSON output format
@@ -133,7 +122,6 @@ response_format = {
 
 # --- Helper Functions ---
 def load_personas_from_jsonl(filepath: str) -> list[Persona]:
-    """Loads personas from a .jsonl file."""
     personas = []
     print(f"Loading personas from {filepath}...")
     try:
@@ -152,7 +140,6 @@ def load_personas_from_jsonl(filepath: str) -> list[Persona]:
         exit(1)
 
 def load_seed_experiences(filepath: str) -> list[ConversationContext]:
-    """Loads seed experiences from a .jsonl file."""
     experiences = []
     print(f"Loading seed experiences from {filepath}...")
     try:
@@ -193,10 +180,60 @@ def format_experience_examples(examples: list[ConversationContext]) -> str:
         )
     return formatted_string + "\n---\n"
 
+
+# --- MODIFICATION START: Pre-computation logic ---
+
+def calculate_age_similarity_weight(age1: int, age2: int, similarity_strength: float = 2.0) -> float:
+    """Calculate probability weight based on age similarity."""
+    age_diff = abs(age1 - age2)
+    return (1 / (age_diff + 1)) ** similarity_strength
+
+def precompute_weighted_pairs(
+    persona_pool: list[Persona], similarity_strength: float = 2.0
+) -> Tuple[List[Tuple[Persona, Persona]], List[float]]:
+    """
+    Pre-calculates all persona pairs and their age-similarity weights.
+    This is an O(n^2) operation that should only be run ONCE.
+    """
+    if len(persona_pool) < 2:
+        raise ValueError("Need at least 2 personas to create pairs.")
+
+    print(f"\n⏳ Pre-computing age-weighted pairs for {len(persona_pool)} personas... (This may take a moment)")
+    start_time = time.time()
+
+    pairs = []
+    weights = []
+
+    for i in range(len(persona_pool)):
+        for j in range(i + 1, len(persona_pool)):
+            p1 = persona_pool[i]
+            p2 = persona_pool[j]
+            pairs.append((p1, p2))
+            weight = calculate_age_similarity_weight(p1.age, p2.age, similarity_strength)
+            weights.append(weight)
+
+    end_time = time.time()
+    print(f"✅ Pre-computation complete. Generated {len(pairs)} pairs in {end_time - start_time:.2f} seconds.")
+    return pairs, weights
+
+def select_precomputed_pair(
+    precomputed_pairs: List[Tuple[Persona, Persona]],
+    precomputed_weights: List[float]
+) -> tuple[Persona, Persona]:
+    """Selects a random pair from the pre-computed lists."""
+    return random.choices(precomputed_pairs, weights=precomputed_weights, k=1)[0]
+
+
+# --- MODIFICATION END ---
+
+
 # --- Main Generation Logic ---
 async def generate_one_experience(
     semaphore: asyncio.Semaphore,
-    persona_pool: list[Persona],
+    # --- MODIFICATION: Accept pre-computed lists instead of the whole pool
+    precomputed_pairs: List[Tuple[Persona, Persona]],
+    precomputed_weights: List[float],
+    # ---
     reference_experiences: list[ConversationContext],
     component_manager: ComponentManager
 ) -> ConversationContext | None:
@@ -209,7 +246,10 @@ async def generate_one_experience(
             references = random.sample(reference_experiences, min(len(reference_experiences), 2))
             examples_str = format_experience_examples(references)
 
-            p1_data, p2_data = random.sample(persona_pool, 2)
+            # --- MODIFICATION: Use the fast selection function
+            p1_data, p2_data = select_precomputed_pair(precomputed_pairs, precomputed_weights)
+            # ---
+
             relationship = component_manager.generate_relationship()
             conversation_trigger = component_manager.get_conversation_trigger()
 
@@ -268,18 +308,15 @@ async def main():
     component_manager = ComponentManager(components_data)
 
     if len(PERSONAS_FILE) > 0:
-        # Load personas from the specified JSONL file
         print(f"Loading personas from file: {PERSONAS_FILE}...")
         persona_pool = load_personas_from_jsonl(PERSONAS_FILE)
     else:
-        # Load personas from the Hugging Face dataset if no file is specified
         print(f"Loading personas from dataset: {PERSONAS_DATASET}...")
         dataset = load_dataset(PERSONAS_DATASET, split="train")
         persona_pool = [Persona(**item) for item in dataset]
         print(f"✅ Successfully loaded {len(persona_pool)} personas from dataset.")
     seed_experiences = load_seed_experiences(SEED_EXPERIENCES_FILE)
 
-    # This pool will grow with new generations
     experiences_pool = seed_experiences.copy()
 
     if len(persona_pool) < 2:
@@ -288,6 +325,10 @@ async def main():
     if not seed_experiences:
         print("⚠️ No seed experiences loaded. Cannot proceed with few-shot prompting.")
         return
+
+    # --- MODIFICATION: Pre-compute the pairs and weights here, ONCE.
+    precomputed_pairs, precomputed_weights = precompute_weighted_pairs(persona_pool)
+    # ---
 
     timestamp = int(time.time())
     output_filename = f"data/experiences/experiences_{MODEL_NAME.split('/')[-1]}_{timestamp}.jsonl"
@@ -303,9 +344,7 @@ async def main():
     successful_generations = 0
 
     while successful_generations < TARGET_N:
-        # Launch new tasks if we have capacity and haven't hit the target
         while len(tasks) < CONCURRENCY and successful_generations + len(tasks) < TARGET_N:
-            # Determine which pool of examples to use for this task
             current_iteration = successful_generations + len(tasks)
             if RESET_EVERY > 0 and current_iteration > 0 and current_iteration % RESET_EVERY == 0:
                 reference_pool = seed_experiences
@@ -313,12 +352,19 @@ async def main():
             else:
                 reference_pool = experiences_pool
 
+            # --- MODIFICATION: Pass the pre-computed lists to the task
             task = asyncio.create_task(
-                generate_one_experience(semaphore, persona_pool, reference_pool, component_manager)
+                generate_one_experience(
+                    semaphore,
+                    precomputed_pairs,
+                    precomputed_weights,
+                    reference_pool,
+                    component_manager
+                )
             )
+            # ---
             tasks.add(task)
 
-        # Wait for the next task to complete
         done, pending = await asyncio.wait(tasks, return_when=asyncio.FIRST_COMPLETED)
 
         for future in done:
@@ -327,13 +373,10 @@ async def main():
 
             if result:
                 successful_generations += 1
-                # Add the new experience to the dynamic pool for future generations
                 experiences_pool.append(result)
                 results_buffer.append(result)
-
                 print(f"✅ ({successful_generations}/{TARGET_N}) Generated: {result.persona1.name} & {result.persona2.name} - {result.relationship}")
 
-                # Checkpoint logic
                 if successful_generations % CHECKPOINT_EVERY == 0 and results_buffer:
                     print(f"\n--- CHECKPOINT: Saving {len(results_buffer)} experiences to {output_filename}... ---")
                     for context in results_buffer:
@@ -341,7 +384,6 @@ async def main():
                     results_buffer.clear()
                     print("--- ✅ CHECKPOINT Complete. ---\n")
 
-    # Final save for any remaining items in the buffer
     if results_buffer:
         print(f"\n--- FINAL SAVE: Saving {len(results_buffer)} remaining experiences to file... ---")
         for context in results_buffer:
