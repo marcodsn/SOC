@@ -6,6 +6,7 @@ import time
 import copy
 import logging
 import random
+import re
 from pydantic import BaseModel
 
 class Persona(BaseModel):
@@ -43,6 +44,46 @@ def setup_logging():
     )
     return timestamp
 
+def split_message_by_tags(message: str) -> list[str]:
+    """
+    Splits a single message string based on multimedia tags.
+
+    - For <audio> and <delay>, the tag is isolated into its own message.
+      e.g., "Hi <delay/> wait" -> ["Hi", "<delay/>", "wait"]
+    - For <image>, <gif>, <video>, the tag and any subsequent text are
+      kept together, but split from any preceding text.
+      e.g., "Look! <image>cat</image> my cat" -> ["Look!", "<image>cat</image> my cat"]
+    """
+    # Pattern for tags that require a "hard break" (split before and after)
+    # The parentheses capture the delimiter, so re.split() keeps the tag in the list.
+    hard_break_pattern = re.compile(r'(<audio.*?</audio>|<delay.*?>)')
+
+    # Pattern for tags that require a "soft break" (split only before)
+    # A positive lookahead `(?=...)` splits without consuming the tag.
+    soft_break_pattern = re.compile(r'(?=<image.*?</image>|<gif.*?</gif>|<video.*?</video>)')
+
+    final_messages = []
+
+    # Stage 1: Split by hard-break tags first.
+    # This gives us chunks, some of which are the tags themselves.
+    chunks = hard_break_pattern.split(message)
+
+    # Stage 2: Process each chunk for soft-break tags.
+    for chunk in chunks:
+        if not chunk:
+            continue
+
+        # If the chunk is a hard-break tag itself, just add it.
+        if hard_break_pattern.fullmatch(chunk):
+            final_messages.append(chunk.strip())
+        else:
+            # Otherwise, split this chunk by the soft-break tags.
+            sub_chunks = soft_break_pattern.split(chunk)
+            # Add the resulting non-empty, stripped sub-chunks to the final list.
+            final_messages.extend([sub.strip() for sub in sub_chunks if sub and sub.strip()])
+
+    return final_messages
+
 def clean(data):
     """
     Cleaning logic.
@@ -79,7 +120,7 @@ def clean(data):
     # Skip processing if no persona names to remove
     if not persona1_name and not persona2_name:
         logging.warning(f"No persona names found to clean in chat {chat_id}")
-        return data
+        # We might still need to split tags, so we don't return here.
 
     # Process chat parts
     chat_parts = data.get("chat_parts", [])
@@ -93,76 +134,52 @@ def clean(data):
             logging.warning(f"No messages found in part {part_idx} of chat {chat_id}")
             continue
 
+        # --- Rebuild the messages list to handle splitting ---
+        new_messages = []
         for i, message in enumerate(messages):
             if not isinstance(message, str):
                 logging.warning(f"Non-string message found in part {part_idx}, message {i} of chat {chat_id}")
+                new_messages.append(message) # Keep non-string data as-is
                 continue
 
-            # Remove persona names from messages
+            # 1. First, clean the persona names from the message
             cleaned_message = message
             original_message = message  # Save original for logging
 
             # Define possible name patterns to remove
             name_patterns = []
             if persona1_name:
-                name_patterns.extend([
-                    f"{persona1_name}:",
-                    f"{persona1_name.lower()}:",
-                    f"{persona1_name.upper()}:"
-                ])
-                # Also handle possible spacing issues
-                name_patterns.extend([
-                    f"{persona1_name} :",
-                    f" {persona1_name}:"
-                ])
-
+                name_patterns.extend([f"{persona1_name}:", f"{persona1_name.lower()}:", f"{persona1_name.upper()}:", f"{persona1_name} :", f" {persona1_name}:"])
             if persona2_name:
-                name_patterns.extend([
-                    f"{persona2_name}:",
-                    f"{persona2_name.lower()}:",
-                    f"{persona2_name.upper()}:"
-                ])
-                # Also handle possible spacing issues
-                name_patterns.extend([
-                    f"{persona2_name} :",
-                    f" {persona2_name}:"
-                ])
-
-            # Also try removing usernames if available
+                name_patterns.extend([f"{persona2_name}:", f"{persona2_name.lower()}:", f"{persona2_name.upper()}:", f"{persona2_name} :", f" {persona2_name}:"])
             if persona1_username:
-                name_patterns.extend([
-                    f"{persona1_username}:",
-                    f"@{persona1_username}:"
-                ])
-
+                name_patterns.extend([f"{persona1_username}:", f"@{persona1_username}:"])
             if persona2_username:
-                name_patterns.extend([
-                    f"{persona2_username}:",
-                    f"@{persona2_username}:"
-                ])
+                name_patterns.extend([f"{persona2_username}:", f"@{persona2_username}:"])
 
-            # Apply all replacements
             for pattern in name_patterns:
                 if pattern in cleaned_message:
-                    logging.debug(f"Removing pattern '{pattern}' from message in chat {chat_id}")
                     cleaned_message = cleaned_message.replace(pattern, "")
 
-            # Also handle names that might appear at the start without a colon
-            # (common in conversation data)
             if persona1_name and cleaned_message.strip().startswith(persona1_name):
                 cleaned_message = cleaned_message.replace(persona1_name, "", 1).strip()
-
             if persona2_name and cleaned_message.strip().startswith(persona2_name):
                 cleaned_message = cleaned_message.replace(persona2_name, "", 1).strip()
 
             cleaned_message = cleaned_message.strip()
-            part["messages"][i] = cleaned_message
 
-            # Log changes if something was actually changed
-            if original_message != cleaned_message:
-                logging.debug(f"Chat {chat_id}, part {part_idx}, message {i} cleaned:")
-                logging.debug(f"  Before: {original_message}")
-                logging.debug(f"  After:  {cleaned_message}")
+            # 2. Now, split the cleaned message by tags
+            split_messages = split_message_by_tags(cleaned_message)
+
+            # Log if a split occurred
+            if len(split_messages) > 1:
+                logging.info(f"Chat {chat_id}, message split from: '{original_message}' -> {split_messages}")
+
+            # Add the resulting messages (which could be one or more) to our new list
+            new_messages.extend(split_messages)
+
+        # Replace the old messages list with the new, processed one
+        part["messages"] = new_messages
 
     return data
 
@@ -180,7 +197,7 @@ def main():
     )
 
     parser.add_argument(
-        "--input_pattern",
+        "--input-pattern",
         default="data/chats/chats_*.jsonl",
         help="Glob pattern for input JSONL files (e.g., 'data/chats_*.jsonl').\n"
              "Be sure to wrap in quotes if your shell expands it automatically."

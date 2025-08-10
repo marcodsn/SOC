@@ -181,8 +181,6 @@ def format_experience_examples(examples: list[ConversationContext]) -> str:
     return formatted_string + "\n---\n"
 
 
-# --- MODIFICATION START: Pre-computation logic ---
-
 def calculate_age_similarity_weight(age1: int, age2: int, similarity_strength: float = 2.0) -> float:
     """Calculate probability weight based on age similarity."""
     age_diff = abs(age1 - age2)
@@ -223,17 +221,11 @@ def select_precomputed_pair(
     """Selects a random pair from the pre-computed lists."""
     return random.choices(precomputed_pairs, weights=precomputed_weights, k=1)[0]
 
-
-# --- MODIFICATION END ---
-
-
 # --- Main Generation Logic ---
 async def generate_one_experience(
     semaphore: asyncio.Semaphore,
-    # --- MODIFICATION: Accept pre-computed lists instead of the whole pool
     precomputed_pairs: List[Tuple[Persona, Persona]],
     precomputed_weights: List[float],
-    # ---
     reference_experiences: list[ConversationContext],
     component_manager: ComponentManager
 ) -> ConversationContext | None:
@@ -246,9 +238,7 @@ async def generate_one_experience(
             references = random.sample(reference_experiences, min(len(reference_experiences), 2))
             examples_str = format_experience_examples(references)
 
-            # --- MODIFICATION: Use the fast selection function
             p1_data, p2_data = select_precomputed_pair(precomputed_pairs, precomputed_weights)
-            # ---
 
             relationship = component_manager.generate_relationship()
             conversation_trigger = component_manager.get_conversation_trigger()
@@ -326,9 +316,7 @@ async def main():
         print("⚠️ No seed experiences loaded. Cannot proceed with few-shot prompting.")
         return
 
-    # --- MODIFICATION: Pre-compute the pairs and weights here, ONCE.
     precomputed_pairs, precomputed_weights = precompute_weighted_pairs(persona_pool)
-    # ---
 
     timestamp = int(time.time())
     output_filename = f"data/experiences/experiences_{MODEL_NAME.split('/')[-1]}_{timestamp}.jsonl"
@@ -352,7 +340,6 @@ async def main():
             else:
                 reference_pool = experiences_pool
 
-            # --- MODIFICATION: Pass the pre-computed lists to the task
             task = asyncio.create_task(
                 generate_one_experience(
                     semaphore,
@@ -362,7 +349,6 @@ async def main():
                     component_manager
                 )
             )
-            # ---
             tasks.add(task)
 
         done, pending = await asyncio.wait(tasks, return_when=asyncio.FIRST_COMPLETED)

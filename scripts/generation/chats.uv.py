@@ -41,19 +41,12 @@ from typing import List
 from huggingface_hub import AsyncInferenceClient
 from pydantic import BaseModel, Field
 
-# ───────────────────────────────────────────────────────────────────
-# Logging Setup
-# ───────────────────────────────────────────────────────────────────
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
     stream=sys.stdout,
 )
 
-
-# ───────────────────────────────────────────────────────────────────
-# Configuration
-# ───────────────────────────────────────────────────────────────────
 class Config:
     """All script settings grouped in a single class."""
     EXPERIENCES_FILES = [
@@ -96,9 +89,7 @@ When the situation involves a disagreement or fight, let the argument breathe an
 """
 
 
-# ───────────────────────────────────────────────────────────────────
-# Model / schema definitions (Pydantic)
-# ───────────────────────────────────────────────────────────────────
+# Schema definitions (Pydantic)
 class Persona(BaseModel):
     name: str
     username: str | None = None
@@ -134,9 +125,7 @@ class Chat(BaseModel):
     model: str
 
 
-# ───────────────────────────────────────────────────────────────────
 # Chat Generation Pipeline
-# ───────────────────────────────────────────────────────────────────
 class ChatGenerator:
     """Orchestrates the entire chat generation process."""
 
@@ -366,9 +355,6 @@ class ChatGenerator:
                 logging.error(f"A chat generation task failed unexpectedly: {e}", exc_info=True)
 
 
-# ───────────────────────────────────────────────────────────────────
-# main()
-# ───────────────────────────────────────────────────────────────────
 async def main() -> None:
     """Initializes and runs the chat generation pipeline."""
     config = Config()
