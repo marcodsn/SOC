@@ -1,0 +1,469 @@
+# Weights are proportional to each country's share of the 2024 world population (Top 42 countries).
+# Values are fractions (e.g. 0.1776 == 17.76% of world population).
+
+regions:
+  # Asia (South / East / SE)
+  in_IN: 0.1776 # India
+  zh_CN: 0.1772 # China
+  id_ID: 0.0345 # Indonesia
+  pk_PK: 0.0299 # Pakistan
+  bd_BD: 0.0215 # Bangladesh
+  jp_JP: 0.0153 # Japan
+  ph_PH: 0.0146 # Philippines
+  vn_VN: 0.0123 # Vietnam
+  ir_IR: 0.0111 # Iran
+  tr_TR: 0.0107 # Turkey
+  th_TH: 0.0089 # Thailand
+  mm_MM: 0.0068 # Myanmar
+  kr_KR: 0.0064 # South Korea
+  af_AF: 0.0053 # Afghanistan
+  iq_IQ: 0.0057 # Iraq
+  sa_SA: 0.0046 # Saudi Arabia
+
+  # Americas
+  en_US: 0.0423 # United States
+  es_MX: 0.0160 # Mexico
+  pt_BR: 0.0269 # Brazil
+  es_CO: 0.0065 # Colombia
+  es_AR: 0.0057 # Argentina
+  en_CA: 0.0048 # Canada
+
+  # Europe
+  ru_RU: 0.0180 # Russia
+  de_DE: 0.0104 # Germany
+  en_GB: 0.0084 # United Kingdom
+  fr_FR: 0.0080 # France
+  it_IT: 0.0073 # Italy
+  es_ES: 0.0059 # Spain
+  pl_PL: 0.0051 # Poland
+  uk_UA: 0.0046 # Ukraine
+
+  # Africa
+  ng_NG: 0.0278 # Nigeria
+  et_ET: 0.0157 # Ethiopia
+  eg_EG: 0.0140 # Egypt
+  cd_CD: 0.0127 # DR Congo
+  tz_TZ: 0.0084 # Tanzania
+  za_ZA: 0.0075 # South Africa
+  ke_KE: 0.0068 # Kenya
+  ug_UG: 0.0060 # Uganda
+  sd_SD: 0.0060 # Sudan
+  dz_DZ: 0.0057 # Algeria
+  ma_MA: 0.0047 # Morocco
+  ao_AO: 0.0046 # Angola
+
+# Relative population distribution across subregions (e.g. states, provinces) within each country.
+subregions:
+  en_US:
+    "California": 0.12
+    "Texas": 0.09
+    "Florida": 0.07
+    "New York": 0.06
+    "Pennsylvania": 0.04
+    "Illinois": 0.04
+    "Ohio": 0.03
+    "Georgia": 0.03
+    "North Carolina": 0.03
+    "Michigan": 0.03
+
+  in_IN:
+    "Uttar Pradesh": 0.16
+    "Maharashtra": 0.10
+    "Bihar": 0.09
+    "West Bengal": 0.08
+    "Madhya Pradesh": 0.06
+    "Tamil Nadu": 0.06
+    "Rajasthan": 0.06
+    "Karnataka": 0.05
+    "Gujarat": 0.05
+    "Andhra Pradesh": 0.04
+
+  zh_CN:
+    "Guangdong": 0.09
+    "Shandong": 0.08
+    "Henan": 0.07
+    "Jiangsu": 0.06
+    "Sichuan": 0.06
+    "Hebei": 0.06
+    "Hunan": 0.05
+    "Anhui": 0.05
+    "Hubei": 0.04
+    "Zhejiang": 0.05
+
+  id_ID:
+    "West Java": 0.19
+    "East Java": 0.16
+    "Central Java": 0.15
+    "North Sumatra": 0.06
+    "Banten": 0.05
+    "South Sulawesi": 0.04
+    "Lampung": 0.03
+    "West Sumatra": 0.02
+
+  pk_PK:
+    "Punjab": 0.53
+    "Sindh": 0.23
+    "Khyber Pakhtunkhwa": 0.15
+    "Balochistan": 0.06
+    "Islamabad Capital": 0.01
+    "Gilgit-Baltistan": 0.01
+    "Azad Kashmir": 0.02
+
+  bd_BD:
+    "Dhaka Division": 0.36
+    "Chattogram Division": 0.22
+    "Rajshahi Division": 0.13
+    "Khulna Division": 0.12
+    "Rangpur Division": 0.12
+    "Sylhet Division": 0.03
+    "Barisal Division": 0.05
+    "Mymensingh Division": 0.08
+
+  jp_JP:
+    "Tokyo": 0.11
+    "Kanagawa": 0.07
+    "Osaka": 0.07
+    "Aichi": 0.06
+    "Saitama": 0.06
+    "Chiba": 0.05
+    "Hyogo": 0.04
+    "Hokkaido": 0.04
+    "Fukuoka": 0.04
+    "Shizuoka": 0.03
+
+  ph_PH:
+    "Metro Manila": 0.12
+    "Cebu": 0.05
+    "Cavite": 0.04
+    "Bulacan": 0.03
+    "Laguna": 0.03
+    "Rizal": 0.03
+    "Negros Occidental": 0.03
+    "Pangasinan": 0.03
+    "Batangas": 0.03
+    "Pampanga": 0.03
+
+  vn_VN:
+    "Ho Chi Minh City": 0.14
+    "Hanoi": 0.09
+    "Thanh Hoa": 0.04
+    "Nghe An": 0.04
+    "Dong Nai": 0.04
+    "Hai Phong": 0.05
+    "Can Tho": 0.04
+    "Da Nang": 0.03
+    "An Giang": 0.05
+    "Binh Duong": 0.03
+
+  ir_IR:
+    "Tehran": 0.16
+    "Razavi Khorasan": 0.08
+    "Isfahan": 0.07
+    "Fars": 0.06
+    "Khuzestan": 0.06
+    "Mazandaran": 0.04
+    "West Azerbaijan": 0.04
+    "East Azerbaijan": 0.05
+    "Kerman": 0.04
+
+  tr_TR:
+    "Istanbul": 0.18
+    "Ankara": 0.06
+    "Izmir": 0.05
+    "Bursa": 0.04
+    "Antalya": 0.03
+    "Adana": 0.03
+    "Konya": 0.03
+    "Sanliurfa": 0.02
+    "Gaziantep": 0.02
+
+  th_TH:
+    "Bangkok": 0.08
+    "Nakhon Ratchasima": 0.04
+    "Chiang Mai": 0.03
+    "Khon Kaen": 0.03
+    "Ubon Ratchathani": 0.03
+    "Udon Thani": 0.02
+    "Chon Buri": 0.03
+    "Nakhon Si Thammarat": 0.02
+
+  mm_MM:
+    "Yangon": 0.10
+    "Mandalay": 0.09
+    "Ayeyarwady": 0.11
+    "Shan": 0.09
+    "Sagaing": 0.08
+    "Bago": 0.07
+    "Magway": 0.06
+
+  kr_KR:
+    "Seoul": 0.19
+    "Gyeonggi": 0.26
+    "Busan": 0.07
+    "Incheon": 0.06
+    "Daegu": 0.05
+    "Daejeon": 0.03
+    "Gwangju": 0.03
+    "Ulsan": 0.02
+
+  af_AF:
+    "Kabul": 0.20
+    "Herat": 0.10
+    "Nangarhar": 0.08
+    "Kandahar": 0.07
+    "Balkh": 0.07
+    "Helmand": 0.05
+    "Badakhshan": 0.05
+
+  iq_IQ:
+    "Baghdad": 0.18
+    "Basra": 0.07
+    "Nineveh": 0.08
+    "Dhi Qar": 0.05
+    "Diyala": 0.04
+    "Erbil": 0.04
+    "Sulaymaniyah": 0.05
+
+  sa_SA:
+    "Riyadh": 0.24
+    "Makkah": 0.24
+    "Eastern Province": 0.14
+    "Asir": 0.06
+    "Madinah": 0.06
+    "Jazan": 0.04
+    "Qasim": 0.04
+
+  es_MX:
+    "Mexico State": 0.13
+    "Mexico City": 0.07
+    "Jalisco": 0.06
+    "Veracruz": 0.06
+    "Puebla": 0.05
+    "Guanajuato": 0.05
+    "Chiapas": 0.04
+    "Nuevo León": 0.04
+    "Michoacán": 0.04
+    "Oaxaca": 0.03
+
+  pt_BR:
+    "São Paulo": 0.22
+    "Minas Gerais": 0.10
+    "Rio de Janeiro": 0.08
+    "Bahia": 0.07
+    "Paraná": 0.05
+    "Rio Grande do Sul": 0.05
+    "Pernambuco": 0.04
+    "Ceará": 0.04
+    "Pará": 0.04
+    "Maranhão": 0.03
+
+  es_CO:
+    "Bogotá": 0.15
+    "Antioquia": 0.13
+    "Valle del Cauca": 0.09
+    "Atlántico": 0.05
+    "Santander": 0.04
+    "Bolívar": 0.04
+    "Cundinamarca": 0.05
+
+  es_AR:
+    "Buenos Aires Province": 0.38
+    "Buenos Aires City": 0.07
+    "Córdoba": 0.08
+    "Santa Fe": 0.07
+    "Mendoza": 0.04
+    "Tucumán": 0.03
+    "Entre Ríos": 0.03
+
+  en_CA:
+    "Ontario": 0.38
+    "Quebec": 0.23
+    "British Columbia": 0.13
+    "Alberta": 0.11
+    "Manitoba": 0.04
+    "Saskatchewan": 0.03
+    "Nova Scotia": 0.03
+
+  ru_RU:
+    "Moscow": 0.09
+    "Moscow Oblast": 0.05
+    "Saint Petersburg": 0.04
+    "Krasnodar Krai": 0.04
+    "Sverdlovsk Oblast": 0.03
+    "Rostov Oblast": 0.03
+    "Bashkortostan": 0.03
+    "Tatarstan": 0.03
+
+  de_DE:
+    "North Rhine-Westphalia": 0.21
+    "Bavaria": 0.16
+    "Baden-Württemberg": 0.13
+    "Lower Saxony": 0.10
+    "Hesse": 0.07
+    "Saxony": 0.05
+    "Rhineland-Palatinate": 0.05
+    "Berlin": 0.04
+
+  en_GB:
+    "England": 0.84
+    "Scotland": 0.08
+    "Wales": 0.05
+    "Northern Ireland": 0.03
+
+  fr_FR:
+    "Île-de-France": 0.19
+    "Auvergne-Rhône-Alpes": 0.12
+    "Hauts-de-France": 0.09
+    "Nouvelle-Aquitaine": 0.09
+    "Occitanie": 0.09
+    "Grand Est": 0.08
+    "Provence-Alpes-Côte d'Azur": 0.08
+    "Brittany": 0.05
+
+  it_IT:
+    "Lombardy": 0.17
+    "Lazio": 0.10
+    "Campania": 0.10
+    "Sicily": 0.09
+    "Veneto": 0.08
+    "Piedmont": 0.07
+    "Emilia-Romagna": 0.08
+    "Apulia": 0.07
+
+  es_ES:
+    "Andalusia": 0.18
+    "Catalonia": 0.16
+    "Madrid": 0.14
+    "Valencia": 0.11
+    "Galicia": 0.06
+    "Castile and León": 0.05
+    "Basque Country": 0.05
+
+  pl_PL:
+    "Masovian": 0.14
+    "Silesian": 0.12
+    "Greater Poland": 0.09
+    "Lesser Poland": 0.09
+    "Lower Silesian": 0.08
+    "Łódź": 0.07
+    "Pomeranian": 0.06
+
+  uk_UA:
+    "Kyiv City": 0.07
+    "Donetsk": 0.11
+    "Dnipropetrovsk": 0.08
+    "Kharkiv": 0.06
+    "Odesa": 0.06
+    "Lviv": 0.06
+    "Zaporizhzhia": 0.04
+
+  ng_NG:
+    "Lagos": 0.06
+    "Kano": 0.05
+    "Kaduna": 0.04
+    "Oyo": 0.04
+    "Rivers": 0.03
+    "Katsina": 0.04
+    "Ogun": 0.03
+    "Jigawa": 0.03
+    "Anambra": 0.03
+    "Borno": 0.03
+
+  et_ET:
+    "Oromia": 0.36
+    "Amhara": 0.23
+    "Southern Nations": 0.20
+    "Tigray": 0.06
+    "Somali": 0.06
+    "Addis Ababa": 0.04
+    "Afar": 0.02
+
+  eg_EG:
+    "Cairo": 0.10
+    "Giza": 0.09
+    "Sharqia": 0.07
+    "Dakahlia": 0.06
+    "Beheira": 0.06
+    "Minya": 0.05
+    "Qalyubia": 0.05
+    "Sohag": 0.05
+    "Alexandria": 0.05
+
+  cd_CD:
+    "Kinshasa": 0.12
+    "North Kivu": 0.07
+    "Kwilu": 0.06
+    "South Kivu": 0.05
+    "Kasai": 0.05
+    "Haut-Katanga": 0.05
+    "Lualaba": 0.03
+
+  tz_TZ:
+    "Dar es Salaam": 0.06
+    "Mwanza": 0.04
+    "Kagera": 0.03
+    "Shinyanga": 0.03
+    "Tabora": 0.03
+    "Arusha": 0.02
+    "Mbeya": 0.03
+    "Morogoro": 0.03
+
+  za_ZA:
+    "Gauteng": 0.26
+    "KwaZulu-Natal": 0.19
+    "Western Cape": 0.12
+    "Eastern Cape": 0.11
+    "Limpopo": 0.10
+    "Mpumalanga": 0.08
+    "North West": 0.07
+
+  ke_KE:
+    "Nairobi": 0.08
+    "Kiambu": 0.04
+    "Nakuru": 0.04
+    "Kakamega": 0.03
+    "Bungoma": 0.03
+    "Meru": 0.03
+    "Kilifi": 0.03
+    "Machakos": 0.03
+
+  ug_UG:
+    "Central": 0.27
+    "Eastern": 0.21
+    "Western": 0.21
+    "Northern": 0.20
+    "Kampala": 0.03
+
+  sd_SD:
+    "Khartoum": 0.18
+    "West Darfur": 0.08
+    "South Darfur": 0.10
+    "North Darfur": 0.08
+    "Gezira": 0.09
+    "North Kordofan": 0.07
+
+  dz_DZ:
+    "Algiers": 0.08
+    "Oran": 0.04
+    "Sétif": 0.04
+    "Blida": 0.03
+    "Béjaïa": 0.03
+    "Tizi Ouzou": 0.03
+    "Constantine": 0.03
+
+  ma_MA:
+    "Casablanca-Settat": 0.21
+    "Rabat-Salé-Kénitra": 0.13
+    "Marrakesh-Safi": 0.13
+    "Fès-Meknès": 0.12
+    "Tangier-Tétouan-Al Hoceïma": 0.10
+    "Souss-Massa": 0.07
+
+  ao_AO:
+    "Luanda": 0.22
+    "Huíla": 0.07
+    "Benguela": 0.06
+    "Huambo": 0.06
+    "Uíge": 0.05
+    "Bié": 0.04
+    "Cuanza Sul": 0.05
