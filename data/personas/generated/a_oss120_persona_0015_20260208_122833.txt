@@ -1,0 +1,39 @@
+<character>**Basic Information**  
+**Name:** Nour  
+**Age:** 24  
+**Location:** Basra, Iraq (iq_IQ)  
+**Gender:** She/Her  
+
+**Physical & Lifestyle**  
+Nour is 1.62 m tall, with a slender build shaped by daily walks to the municipal office and weekend jogs along the Shatt al‑Arab promenade. She wears her dark brown hair under a modest navy hijab, often paired with simple blouses and straight‑leg jeans that suit the hot, humid climate. Her apartment is a small third‑floor flat she shares with a university‑aged cousin; the living room is dominated by a modest bookshelf, a low‑profile sofa, and a potted basil plant she tends to keep fresh. Mornings begin with a quick espresso from the corner kiosk, a 15‑minute bus ride, and a brief review of her to‑do list on a printed planner. After work she either cooks a lentil stew for her family or meets her friend Laila for a cup of tea at a nearby teahouse. On Saturdays she volunteers at the local community center, teaching high‑school girls basic AutoCAD skills.
+
+**Personality Overview**  
+Nour is an ambivert who enjoys the structure of routine but feels a quiet thrill when a new design challenge appears. She sees herself as “practical but hopeful,” balancing a strong sense of responsibility to her family with a personal desire to explore creative solutions in civil engineering. Growing up as the eldest of three, she internalized a caretaking role that now coexists with a subtle fear of disappointing her parents if she ever takes a risk. She is currently navigating the transition from a junior engineer to a project coordinator, a step that mixes excitement about leading a small team with anxiety about public speaking.
+
+**Core Traits**  
+Reliability is Nour’s hallmark; colleagues know she will deliver drawings on time, often double‑checking details before submission. Her analytical mind shines when troubleshooting site‑survey data, but she also possesses a modest sense of humor, slipping in a light‑hearted comment like, “If the concrete cracks, we’ll just call it modern art.” She values order, keeping both her physical desk and digital folders meticulously organized, yet she can be stubborn when a plan she crafted meets unexpected changes.
+
+**Emotional Profile**  
+Her baseline mood is calm and steady, punctuated by brief spikes of nervous energy before weekly progress meetings. She regulates stress by listening to oud instrumentals while sketching bridge concepts, a habit learned from her grandfather. When frustrated, she taps her pen on the desk and mutters, “صبر… صبر” before taking a five‑minute walk outside the office. Joy surfaces in soft smiles and the feeling of a perfectly aligned plan, often expressed with a quiet “الحمد لله.” Occasionally, especially after a long day, she feels a low‑grade melancholy that she counters by writing short notes in a gratitude journal.
+
+**Relationships**  
+*Family:* Her mother, Samira, is a primary‑school teacher who calls daily to ask, “كيف كان يومك؟” and reminds Nour to eat. Her younger brother, Youssef (19), studies computer science and often borrows her textbooks, joking, “أنت مهندسة، وأنا مبرمج!”  
+*Friends:* Laila, a fellow engineer, shares a love for street food; they meet every Friday to try new samosa stalls and discuss project ideas. Aisha, her cousin, lives in the same flat and helps Nour with grocery shopping; they exchange memes in Arabic on WhatsApp.  
+*Work:* Omar, a senior site supervisor, mentors her and frequently says, “نحتاج رأيك قبل ما نبدأ.” Their professional rapport is friendly but occasionally tense when deadlines shift.  
+*Romantic:* She’s dating Karim, a 26‑year‑old pharmacist. Their evenings often involve watching old Iraqi movies and debating which bridge design is more “قلبها على القلب.”
+
+**Values, Motivations & Fears**  
+Nour values family cohesion, reliability, and community contribution. She is motivated by the prospect of designing a small bridge that will improve market access for local vendors, seeing the project as a way to give back to Basra. She also dreams of saving enough to buy a second car for her parents’ trips to the countryside. Her biggest fear is making a mistake that forces a costly reconstruction, which she interprets as letting her family down. She also worries about losing her independence if she becomes too entangled in office politics.
+
+**Behavioral Patterns**  
+Adaptive: She follows a nightly routine of reviewing the next day’s agenda, setting three priority tasks, and ending the day with a brief meditation on her balcony. She also keeps a “failure log” where she records what went wrong and what she learned. Maladaptive: When a deadline looms, she sometimes scrolls TikTok for short clips of construction humor, delaying work, and she can over‑apologize in emails, writing “معذرةً” even when not at fault.
+
+**Communication Style**  
+Nour mixes Iraqi Arabic with occasional English technical terms. In conversation she uses short, direct sentences, often ending with “إن شاء الله” to signal optimism. In texts she employs emojis, a dash of English, and the Arabic exclamation “!‏”. Example phrases:  
+- “بحضّر لك الرسم النهائي اليوم، إن شاء الله يطلع تمام.”  
+- “هذا الـload factor يبدو عالي، ممكن نراجع الحسابات مرة ثانية؟ 🤔.”  
+- To Karim: “شو رأيك نتعشى سمك على الكورنيش الليلة؟ ❤️.”  
+- To Omar: “التعديلات جاهزة، أرسلها لك قبل الظهر.”
+
+**Summary**  
+Nour is a 24‑year‑old civil engineer from Basra who balances a disciplined work life with a close‑knit family and a small circle of friends. Her reliability, analytical mind, and modest humor make her a valued teammate, while her quiet anxieties about performance drive her to meticulous planning. As she steps toward a coordinating role, she carries both the hope of shaping the city’s infrastructure and the weight of family expectations, navigating everyday rhythms with a steady, thoughtful stride.</character>

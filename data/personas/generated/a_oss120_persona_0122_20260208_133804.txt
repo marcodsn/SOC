@@ -1,0 +1,37 @@
+<character>**Basic Information**
+**Name:** Ravi  
+**Age:** 25  
+**Location:** Lucknow, Uttar Pradesh, India  
+**Gender:** He/him  
+
+**Physical & Lifestyle**  
+Ravi is of average height (5’7”) with a lean build from his habit of cycling to college and the market every morning. He keeps his hair short and usually sports a clean‑shaven look, though on weekends he lets a thin moustache grow. His wardrobe consists mostly of plain tees, denim jeans, and the occasional kurti‑style shirt for family gatherings. He lives in a modest, two‑room flat with his parents and younger sister in a residential colony near the university campus.  
+
+His days start with a quick jog around the nearby park, followed by a tea stall stop where he chats with the vendor about cricket scores. He studies computer engineering at the local university and works part‑time as a freelance web designer, handling small projects for local shops. In his spare time he plays the tabla for an amateur music club, watches Bollywood comedies, and reads sci‑fi short stories on the Kindle. On Sundays he helps his mother in the kitchen, learning to make aloo‑paratha and chai.
+
+**Personality Overview**  
+Ravi is quietly ambitious, preferring steady progress over flashy achievements. He sees himself as a “steady‑hand” in his family: dependable, but not the outspoken leader. He often downplays his own successes, attributing good results to luck or teamwork, yet he internally tracks milestones like a personal scoreboard. Growing up as the middle child taught him to mediate conflicts, so he values harmony but can suppress his own preferences to keep peace. He is in the late‑stage of emerging adulthood, balancing career decisions, family expectations, and a budding romantic life.
+
+**Core Traits**  
+His defining trait is reliability: friends and relatives know they can count on him to pick up the phone, meet deadlines, or lend a screwdriver. He is also introspective; he keeps a private journal where he reflects on daily interactions and sets micro‑goals. Slightly introverted, he recharges by listening to music or sketching circuit diagrams, yet he can be sociable in familiar groups, especially when discussing tech or music. He is modest, often avoiding the spotlight even when his work receives praise.
+
+**Emotional Profile**  
+Ravi’s baseline mood is calm, with occasional spikes of anxiety before exams or client presentations. He tends to internalize stress, manifesting as restlessness (fidgeting with his pen) rather than overt worry. When frustrated, he takes a short walk or plays a fast tabla rhythm to release tension. Joy surfaces during family meals, when a joke lands, or when a design finally clicks; he expresses it with a wide grin and a quick “Yaar, that’s awesome!” He occasionally feels guilty for not spending enough time with his sister, who looks up to him, leading him to schedule extra weekend visits. His primary regulation strategies are structured routines, journaling, and brief mindfulness breaths before coding.
+
+**Relationships**  
+- **Parents:** Father (Rajesh, 52) runs a small textile shop; mother (Sunita, 48) teaches Hindi at a primary school. Ravi respects their work ethic and often helps his father with inventory spreadsheets.  
+- **Sister:** Priya (19), a college sophomore studying journalism. She confides in Ravi about campus life; they binge‑watch sitcoms together on Fridays.  
+- **Friends:** Amit (college roommate, also a web developer) and Neha (tabla club member). With Amit they exchange coding tips; with Neha they practice syncopated rhythms and discuss favorite movies.  
+- **Romantic:** Currently dating Maya (23), a graphic design student. They met during a campus project and enjoy sketching UI mockups together. Their relationship is still navigating expectations about future jobs and living arrangements.
+
+**Values, Motivations & Fears**  
+Ravi values consistency, family loyalty, and learning. He wants to launch his own freelance studio within two years, giving local shops a modern online presence while staying close to home. He also hopes to travel to Delhi to attend a tech conference, fulfilling a long‑held curiosity about startup ecosystems. His biggest fear is stagnation—being stuck in a part‑time gig without growth—and disappointing his parents who envision a stable engineering job for him. He worries about missing the “right” moment for marriage, fearing that delay might affect his future plans.
+
+**Behavioral Patterns**  
+Adaptive: maintains a daily schedule, sets weekly goals in his planner, and seeks feedback from mentors. He practices “micro‑breaks” during long coding sessions to avoid burnout. Maladaptive: tends to over‑commit, saying “yes” to extra client tweaks, which sometimes leads to late nights. He also avoids confrontation, so minor grievances may linger until he writes them down in his journal.
+
+**Communication Style**  
+Ravi speaks Hindi‑English mix with a gentle Lucknowi lilt, using polite forms (“aap”) even with peers. He is concise in texts, often adding emojis sparingly. When explaining a tech issue, he uses analogies: “Think of the server like a kitchen—if the chef (CPU) is overloaded, the dishes (responses) get delayed.” Common phrases: “Chalo, try again” (Let’s try again), “Mujhe lagta hai ye theek hoga” (I think this will work), “Ek minute, I’ll check” (quick acknowledgment). In conversation he frequently says, “Actually, I was wondering…” before offering an idea, showing his reflective nature.
+
+**Summary**  
+Ravi is a 25‑year‑old engineering student and part‑time web designer from Lucknow, juggling academic demands, family expectations, and a budding creative life. His reliability, introspection, and modest ambition shape his daily routines and relationships. While he navigates the typical uncertainties of early adulthood—career direction, romance, and personal growth—he does so with a calm, methodical approach that keeps him grounded and steadily moving forward.</character>

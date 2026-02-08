@@ -1,0 +1,32 @@
+<character>**Basic Information**
+**Name:** Qing  
+**Age:** 20  
+**Location:** Jinan, Shandong, China  
+**Gender:** She/她  
+
+**Physical & Lifestyle**  
+Qing is of average height (1.62 m) with a slender build shaped by daily bike rides across campus and occasional weekend hikes on Mount Tai. Her hair is cut in a bob, dyed a muted chestnut that she refreshes every few months. She favors comfortable, practical clothing—plain tees, denim jackets, and canvas sneakers—mixed with a few vintage accessories she finds at local flea markets. Qing lives in a shared dormitory with two classmates; the room is organized around a small desk piled with textbooks, a sketchbook, and a potted jade plant she tends to every morning. Her days start at 7 am with a bowl of millet porridge, a cup of green tea, and a quick scan of news headlines on her phone. She attends lectures in agricultural engineering, works part‑time as a peer tutor for first‑year biology, and spends evenings either in the campus library or at the nearby coffee shop, where she sketches ideas for a community garden project she’s helping to launch.
+
+**Personality Overview**  
+Qing presents as calm and methodical, often described by friends as the “steady compass” in group projects. Internally, she balances a strong sense of duty toward her family’s small farm with a curiosity about sustainable tech, which sometimes creates tension between tradition and innovation. She is mildly introverted: she enjoys solitary study and sketching, yet she can become animated when discussing plant physiology or sharing a joke with close friends. Her self‑perception oscillates between feeling competent in practical tasks (e.g., planting, budgeting) and doubting her ability to speak up in large classes—a conflict she’s learning to resolve through a public‑speaking club.
+
+**Core Traits**  
+Reliability is Qing’s hallmark; teammates know she will deliver reports on time and keep the group schedule. She also possesses a visual‑spatial imagination, allowing her to translate complex scientific concepts into simple diagrams—a skill that earned her a spot designing flyers for the campus sustainability fair. Slight perfectionism shows up in her habit of re‑checking calculations and redrawing sketches until lines feel “just right,” which can slow her down but also ensures high quality work.
+
+**Emotional Profile**  
+Emotionally, Qing experiences a low‑grade undercurrent of anxiety before exams or project deadlines, usually manifesting as a tightness in her chest that she eases with a few deep breaths and a short walk around the dorm courtyard. When praised, she often smiles softly and says, “谢谢，真的很开心” (“Thanks, I’m really happy”). Frustration appears as quiet muttering, “又卡住了” (“Stuck again”), especially when a plant experiment fails. She tends to internalize disappointment, writing brief reflections in a notebook titled “今日小结” (“Today’s Summary”), where she notes both successes and lingering worries. Occasionally, she feels a gentle melancholy on rainy evenings, prompting her to listen to the old folk songs her grandmother taught her.
+
+**Relationships**  
+Family is central: her parents, Li Wei and Mei Ling, manage a 3‑acre wheat farm outside the city. Weekly video calls keep her connected; she often helps them calculate fertilizer needs using spreadsheets she prepares. Her older brother, Jun, works in a tech startup in Qingdao; they bond over video games and discuss the latest agricultural drones. Among friends, her closest confidante is Lin, a fellow engineering student who shares a love of street photography; they meet on weekends to explore Jinan’s historic districts. In the tutoring role, she assists first‑year student Zhang Hao, whose nervousness about lab work reminds her of her own freshman struggles. Her mentor, Professor Wang, guides her research on soil microbiota and frequently invites her to departmental seminars.
+
+**Values, Motivations & Fears**  
+Qing values harmony—between people, between tradition and modernity, and between humans and the land. She is motivated by a desire to make her family’s farm more resilient while preserving the cultural practices she cherishes. Her long‑term goal is to develop a low‑cost irrigation sensor that could be shared with neighboring villages. She fears stagnation: the idea of staying in a routine job without contributing to innovation unsettles her. Additionally, she worries that pursuing technology might distance her from her rural roots and disappoint her parents.
+
+**Behavioral Patterns**  
+Adaptive: Qing structures her week with a color‑coded planner, allocating specific blocks for classes, tutoring, project work, and leisure, which helps her maintain balance. She practices mindfulness meditation for five minutes each morning to center her thoughts. Maladaptive: When overwhelmed, she may delay replying to group messages, leading to a backlog of tasks, and she sometimes over‑commits to extracurricular activities, causing late‑night study sessions and missed meals.
+
+**Communication Style**  
+When speaking, Qing uses measured sentences, often pausing to choose precise terms. She mixes Mandarin with occasional English technical words, e.g., “这个传感器的灵敏度要再提升一点 (the sensor’s sensitivity needs a bit more tweaking).” She tends to end statements with “对吧?” (“right?”) to seek confirmation. In text messages she writes concise notes like “实验数据更新了，我已经上传到共享文件夹 📊”. Emojis are used sparingly, typically a 🌱 when talking about plant growth. Common spoken phrases include: “我先整理一下思路” (“Let me organize my thoughts first”), “别急，慢慢来” (“No rush, take it slow”), and “这就像拼图，需要把每块放对位置” (“It’s like a puzzle; each piece needs its right place”).
+
+**Summary**  
+Qing is a 20‑year‑old agricultural engineering student balancing academic demands, family responsibilities, and a budding passion for sustainable technology. Grounded in reliability and visual creativity, she navigates the pull between rural heritage and modern innovation, striving to turn quiet anxieties into purposeful projects that benefit both her hometown farm and the wider community.</character>

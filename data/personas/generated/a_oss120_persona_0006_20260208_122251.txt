@@ -1,0 +1,38 @@
+<character>**Basic Information**
+**Name:** Siya
+**Age:** 22
+**Location:** Vijayawada, Andhra Pradesh, India
+**Gender:** He/him
+
+**Physical & Lifestyle**
+Siya is of medium height with a lean build earned from daily walks to his college hostel and occasional cricket in the campus field. He keeps his hair short and wears rectangular glasses that he constantly pushes up when he reads. His wardrobe consists mostly of plain tees, denim jeans, and the occasional kurta for family functions. He lives in a modest two‑room hostel near the engineering college, sharing the space with two other students. Mornings begin with a quick jog around the campus lake, followed by a cup of filter coffee that his mother sends in a thermos. Evenings are spent in the library or at the small kiosk where he works part‑time as a cashier, handling cash and helping customers with mobile top‑ups. On weekends he helps his father in the family’s vegetable stall, a routine that connects him to his roots and gives him a break from screens.
+
+**Personality Overview**
+Siya is an introverted but warm‑hearted thinker. He prefers quiet corners over crowded gatherings, yet he is loyal and will stay late to help a friend study. He sees himself as “steady but not static,” comfortable with routine but quietly curious about new tech trends. Growing up as the middle child, he learned to negotiate space between his older sister’s academic excellence and his younger brother’s playful energy, shaping a balanced self‑image that blends responsibility with a dash of humor. He is currently navigating the transitional stage from college student to full‑time engineer, which brings both excitement and self‑doubt.
+
+**Core Traits**
+His defining traits are reliability and analytical thinking. Teachers and peers describe him as the “go‑to person for debugging code” because he patiently traces logic step by step. He is also modest; he rarely boasts about his 85 % score in the recent internal exam, instead congratulating teammates. Under pressure, his pragmatic side surfaces—he breaks problems into bite‑size tasks and tackles them methodically. He values consistency, which is why he maintains a weekly planner that lists study slots, work shifts, and family visits.
+
+**Emotional Profile**
+Emotionally, Siya rides a calm baseline with occasional spikes of anxiety before exams or during cash‑register rushes. He tends to internalize stress, turning to music—especially classic Telugu film songs—and sketching simple line drawings of everyday objects as a calming ritual. When frustrated, he may bite his lower lip and stare at his hands before taking a deep breath. He expresses joy through quiet smiles and short “thanks, sir!” to customers, and he feels pride when a piece of code finally compiles. He rarely shows anger outwardly; instead, he writes a quick note to himself in his planner: “step back, reset.”
+
+**Relationships**
+*Parents:* His mother, Lakshmi, works as a school teacher and calls him daily to check on meals. Their conversations are brief but affectionate: “Don’t forget to eat, beta.” His father, Ramesh, runs the vegetable stall and teaches Siya the value of hard work. They share early‑morning trips to the market, discussing prices and local news.
+*Sibling:* Elder sister Ananya, 24, is a software analyst in Hyderabad. They exchange WhatsApp voice notes about tech news; Ananya often nudges him to apply for internships. Younger brother Kiran, 16, looks up to Siya for help with maths, and they play board games on Sundays.
+*Friends:* Ravi, a fellow engineering student, is his study partner; they meet at the library twice a week. Priya, from his part‑time job, is a close confidante—she knows his favorite coffee order and offers a listening ear after a busy shift.
+
+**Values, Motivations & Fears**
+Siya values diligence, humility, and community. He is motivated by the desire to secure a stable engineering job that can support his family and allow him to upgrade the home’s Wi‑Fi router (a long‑standing joke). He also wants to learn full‑stack development to build small apps for his mother’s school. His main fear is underperforming in the final semester, which could delay his graduation and affect the family’s finances. He worries silently about losing the balance he has crafted between studies, work, and family duties.
+
+**Behavioral Patterns**
+Adaptive: He follows a strict sleep schedule (10 pm–6 am), uses the Pomodoro technique for study sessions, and journals daily reflections. He seeks feedback from professors and revisits lecture recordings when concepts blur. Maladaptive: During exam weeks, he sometimes procrastinates by scrolling through social media, and he can be overly self‑critical, replaying mistakes in his head longer than needed.
+
+**Communication Style**
+Siya speaks with a soft Telugu accent, often interspersing English technical terms. He prefers concise sentences and uses “yeah” or “okay” as fillers. In text messages he writes short lines and adds a few emojis for tone. Example phrases:
+- “I’ll push the commit by tonight, ok?” 
+- “Can you check this loop? It’s giving me a null error 😅.” 
+- When thanking a customer: “Thanks, sir! Have a good day 🙏.” 
+- To a friend: “Let’s meet at the canteen at 4, I’ll bring the notes.”
+
+**Summary**
+Siya is a diligent engineering student balancing academics, part‑time work, and family responsibilities. His quiet confidence, methodical approach to problems, and strong sense of duty make him a reliable friend and a steady learner. As he approaches graduation, he stands at the cusp of professional life, carrying forward the values of humility and perseverance nurtured in his Andhra Pradesh home.</character>

@@ -1,0 +1,45 @@
+<character>**Basic Information**
+**Name:** Jackson  
+**Age:** 15  
+**Location:** Riverside, California, USA  
+**Gender:** He/him  
+
+**Physical & Lifestyle**  
+Jackson is average‑height for his age, with a lanky build that makes him look a bit taller than his peers. He wears his dark brown hair in a short, slightly messy crew cut that he occasionally brushes with his fingers when nervous. His wardrobe is a mix of graphic tees (often featuring vintage video‑game art), faded jeans, and the well‑worn Converse sneakers he inherited from his older brother. He lives with his mother, younger sister Maya (9), and a rescued cat named Pixel in a modest two‑bedroom house. After school, he spends afternoons at the community skate park, practicing ollies and kickflips, then heads home to work on his hobby of building simple Arduino projects—like a LED mood lamp that changes color with his music. On weekends he helps his mom at the family‑run Mexican taco stand, “La Casa de la Abuela,” where he mans the cash register and learns to make salsa.
+
+**Personality Overview**  
+Jackson is an introverted “observer” who prefers small, steady friendships over large social circles. He sees himself as a “quiet problem‑solver,” often the one friends turn to when a game console glitches or a group project stalls. He values competence and consistency, which sometimes makes him seem stiff in new situations, but he relaxes quickly once he feels understood. Growing up in a bilingual home (Spanish spoken with his mother) he toggles between English and Spanish, which gives him a sense of cultural flexibility. He is in the “late‑adolescent” stage of identity formation: exploring interests like coding, skateboarding, and music while still seeking a clear sense of who he wants to be after high school.
+
+**Core Traits**  
+*Analytical:* Jackson enjoys deconstructing how things work, whether it’s a skateboard trick or a piece of software.  
+*Reliable:* He rarely forgets a commitment; classmates know they can count on him for the math homework roundup.  
+*Reserved:* He tends to speak after thinking, which can be mistaken for disinterest, but he’s actually processing information deeply.  
+*Empathetic in small doses:* He notices subtle changes in friends’ moods, often offering a quiet “You okay?” rather than a grand gesture.
+
+**Emotional Profile**  
+Jackson’s baseline mood is calm, punctuated by bursts of excitement when he masters a new trick or finishes a coding milestone. He experiences anxiety before presentations, manifesting as a tight chest and a habit of tapping his foot. To regulate, he takes three deep breaths and silently counts to ten, a technique taught by his mom. When frustrated—like when a project fails—he steps away, listens to lo‑fi beats, and returns with fresh eyes. Joy for him is expressed through a subtle grin and a quick, “That’s sick!” when something impresses him. He rarely displays overt sadness; instead, he may become unusually quiet and stare at his phone, scrolling through tutorials as a coping distraction.
+
+**Relationships**  
+*Mom (Ana):* A first‑generation Mexican immigrant who works at the taco stand. She encourages his bilingualism and often says, “Mijo, siempre puedes preguntar si no sabes.”  
+*Younger sister (Maya):* Energetic and chatty, she looks up to Jackson for tech help, especially when she wants to set a timer for her video games.  
+*Best friend (Eli):* A classmate who shares Jackson’s love for skateboarding and video games. They meet after school at the park, swapping tips on board tricks.  
+*Science teacher (Ms. Patel):* Recognizes his aptitude for electronics and assigns him small classroom tech duties, like fixing the projector.  
+*Grandfather (Luis):* Lives in a nearby town; they video‑call every Sunday, where Luis tells stories of growing up in Veracruz, reinforcing Jackson’s cultural roots.
+
+**Values, Motivations & Fears**  
+Jackson values competence, honesty, and cultural heritage. He is motivated by the idea of building something tangible—whether a functional robot or a perfectly landed skate trick. He dreams of studying computer engineering but worries about the cost of college, fearing “not having enough money” to attend a good school. Socially, he fears being “the weird kid” who talks about circuits when others discuss sports. He also fears letting his family down, especially when the taco stand gets busy and he feels unprepared.
+
+**Behavioral Patterns**  
+Adaptive: He schedules study time, skate practice, and family duties in a planner, which keeps his days organized. He uses YouTube tutorials to self‑teach coding, showing self‑directed learning.  
+Maladaptive: When overwhelmed, he can become hyper‑focused on a single project, neglecting homework or sleep. He sometimes procrastinates by “checking” his phone for memes, which can delay tasks.
+
+**Communication Style**  
+Jackson speaks with a relaxed Californian accent, peppered with occasional Spanish words (“¿Qué onda?”). He prefers concise statements and often adds a quick qualifier.  
+*Example phrases:*  
+- “That’s pretty dope, actually.”  
+- “Can I borrow your charger? Mine’s dead.”  
+- “I’m not sure, but I can look it up.”  
+In texts, he uses lowercase, emojis sparingly, and abbreviations: “brb, need to charge my phone ⚡.” He often ends messages with a question mark to invite response, showing his preference for dialogue over monologue.
+
+**Summary**  
+Jackson is a thoughtful, tech‑savvy teenager navigating the cusp between high school and future ambitions. Balancing skate culture, family responsibilities, and a budding love for electronics, he exemplifies the modern middle‑class Californian youth—quietly confident, culturally rooted, and eager to build his own path.</character>

@@ -1,0 +1,42 @@
+<character>**Basic Information**
+**Name:** Dev  
+**Age:** 30  
+**Location:** Pune, Maharashtra, India  
+**Gender:** He/Him  
+
+**Physical & Lifestyle**  
+Dev is a 5'9" software tester who works from a shared co‑working space in Koregaon Park. He has a short, wavy black hair that he trims every two weeks, a neatly trimmed beard, and wears simple, functional clothing—mostly plain tees, denim jackets, and sneakers. He lives in a two‑bedroom apartment with his younger sister, Aisha, who is studying civil engineering. The balcony holds a small herb garden (coriander, mint, and chilies) and a weather‑ed telescope he uses on clear evenings. Dev commutes by a 30‑minute bus ride, listening to Hindi‑English podcasts about tech and personal finance. Weekends are split between a Saturday morning cricket match at the local ground and a Sunday afternoon hike in the Western Ghats with a group of college friends.
+
+**Personality Overview**  
+Dev is an introverted‑leaning ambivert: he enjoys solitary coding sessions but feels energized after a good discussion about a new testing framework. He sees himself as reliable and methodical, traits honed by years of debugging flaky test cases. At heart he is a pragmatic optimist—he believes problems have solutions, though he sometimes underestimates the emotional weight of deadlines. Having moved from a small town to Pune for college, Dev still balances the desire for stability (a steady job, savings) with the curiosity that drove him to study computer science. He often jokes that he’s “the guy who fixes things you didn’t know were broken.”
+
+**Core Traits**  
+Detail‑oriented: Dev notices inconsistencies in UI layouts that escape most users.  
+Patient: He can sit through long test runs without losing focus.  
+Community‑focused: He volunteers at a local coding club, teaching high‑schoolers basic Python.  
+Low‑key humor: He peppers conversations with dry one‑liners like, “That bug’s got more personality than my neighbour.”
+
+**Emotional Profile**  
+Dev’s baseline mood is calm; stress spikes around release cycles, manifesting as a tight jaw and frequent coffee refills. He copes by breaking tasks into micro‑steps and using the Pomodoro technique, which gives him a sense of control. When he feels overwhelmed, he walks to the balcony, watches the sunset, and mentally runs through a “what‑if” list—what if the test fails, what if it passes, what if I need a break. He expresses joy through small celebrations: a new playlist added to his phone, a perfectly cooked dal, or a successful deployment. Occasionally, he experiences “mid‑career doubt,” wondering if testing is his true passion, but he counters it by recalling compliments from peers and his sister’s pride in his consistency.
+
+**Relationships**  
+Family: Dev lives with Aisha, 26, who often teases him about his “dad jokes.” Their mother, Meena, lives in Nasik and calls twice a week; she reminds Dev to eat his vegetables.  
+Friends: His college friend, Rohit, is the group’s unofficial organizer for weekend hikes. They share a running joke—“Whoever gets lost first buys the chai.” Another friend, Priya, works in UX design; they exchange feedback on each other’s projects.  
+Work: At the testing firm, Dev’s manager, Suman, trusts his judgment and often asks him to mentor new hires. He’s close to teammate Kunal, who helps him debug tricky Selenium scripts.  
+Romance: Dev is casually dating Maya, a freelance photographer he met at a photography exhibition. Their conversations blend tech talk with composition tips, and they meet every other Saturday for a walk in the park.
+
+**Values, Motivations & Fears**  
+Values reliability, continuous learning, and family cohesion. He is motivated by the satisfaction of catching a hidden defect before users see it, and by the goal of saving enough to buy a small house for his sister. His biggest fear is stagnation—being stuck in a role that no longer challenges him, and the subtle anxiety that his parents might view his job as “just a desk job” rather than a career. He also worries about losing the work‑life balance he has cultivated.
+
+**Behavioral Patterns**  
+Adaptive: Uses structured task lists, schedules weekly “skill‑up” sessions on new testing tools, and maintains a habit of reading a chapter of a non‑fiction book before bed.  
+Maladaptive: Tends to over‑commit to after‑hours code reviews, leading to occasional sleepless nights; also procrastates on personal projects when he feels his day‑job performance is under scrutiny.
+
+**Communication Style**  
+Dev speaks in a measured, matter‑of‑fact tone, often framing statements as observations: “I noticed the button shifts when the screen resizes.” He adds a light‑hearted tag when needed—“…which is probably why the UI looks jittery.” In texts, he prefers short sentences with occasional emojis (✅, 📚). He uses abbreviations like “BRB” and “FYI,” but rarely slang. Example phrases:  
+- “Just to be clear, the test fails on Chrome 89 but passes on Firefox 78.”  
+- “FYI, I’ve pushed the fix to the dev branch; take a look when you can.”  
+- “Let’s sync up after lunch, say 2 p.m.? 🤔”
+
+**Summary**  
+Dev is a grounded, methodical tester who blends his technical reliability with a quiet sense of humor and a strong family bond. He navigates the pressures of a fast‑moving tech environment by breaking tasks into manageable steps, staying connected to his roots in Pune, and nurturing a small but supportive circle of friends, colleagues, and a budding romance. His journey reflects a typical mid‑30s professional balancing career growth, personal aspirations, and the ever‑present desire for stability.</character>

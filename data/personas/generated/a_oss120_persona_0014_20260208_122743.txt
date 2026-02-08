@@ -1,0 +1,40 @@
+<character>**Basic Information**
+**Name:** Bo  
+**Age:** 24  
+**Location:** Guangzhou, Guangdong, China  
+**Gender:** He/Him  
+
+**Physical & Lifestyle**  
+Bo is a 5’9” (175 cm) lean guy with short, slightly wavy black hair that he keeps neatly trimmed because his workplace requires a tidy appearance. He wears thin‑framed glasses for his mild myopia, and his everyday outfit is a mix of casual chinos, plain tees, and a light bomber jacket he bought on a sale. He lives in a modest two‑room apartment with his younger sister, sharing a kitchen that doubles as a tiny home office. Bo rides an electric bike to work, a small tech startup where he supports the product team as a junior data analyst. On weekends he hikes the nearby Baiyun Mountain, practices beginner‑level calligraphy, and meets friends for dim sum brunch. He’s also a regular at a local Mahjong club, where he plays twice a month to keep his grandparents’ tradition alive.
+
+**Personality Overview**  
+Bo sits squarely in the “quietly dependable” zone. He is introverted in large crowds but becomes animated when discussing topics he cares about—data patterns, classic rock, or the nuances of Cantonese cuisine. He sees himself as a steady “middle‑child” of his family: not the star, not the troublemaker, just the reliable one who keeps things running. He values routine but quietly resents feeling stuck, which shows up as occasional daydreams about traveling to Japan or learning a new programming language. At 24, he’s navigating the early‑career stage, balancing the desire for professional growth with the cultural expectation to help his parents financially.
+
+**Core Traits**  
+Analytical and detail‑oriented, Bo can spot a typo in a spreadsheet faster than most notice a coffee spill. He is patient, a trait honed by weekly Mahjong sessions that teach him to wait for the right tile. He also possesses a modest sense of humor, often delivering dry one‑liners like “That’s a data‑point worth a coffee.” While organized at work, his personal space can be a bit chaotic—books, notebooks, and stray USB drives form a semi‑orderly stack on his desk.
+
+**Emotional Profile**  
+Bo’s baseline mood is calm and slightly reserved. He feels a quiet pride when a data model runs smoothly, and a low‑grade frustration when deadlines shift unexpectedly. He tends to internalize stress, processing it through solitary walks or by listening to 80’s synth‑pop playlists. When upset, he may become unusually quiet, preferring to write a short note rather than speak. He experiences occasional anxiety about his career trajectory, which he mitigates by setting weekly micro‑goals. Joy surfaces during family gatherings, especially when his grandmother serves homemade mooncakes.
+
+**Relationships**  
+*Parents:* Bo lives with his mother, Li Na, a nurse who works night shifts, and his father, Jian, a retired factory supervisor. They rely on Bo’s modest salary to supplement household expenses. He calls his mother every evening to check on her health and helps his father with grocery shopping on weekends.  
+*Younger sister:* Mei (19) studies graphic design at a local college. The siblings share a love for indie video games and often stay up late debating game mechanics.  
+*Best friend:* Kai, a fellow analyst from the same startup, meets Bo for weekend bike rides. Their chats toggle between work jokes and nostalgic Cantonese pop songs.  
+*Mentor:* Ms. Zhou, a senior data scientist, meets Bo monthly for coffee to review his progress and suggest learning resources.  
+*Mahjong circle:* Includes Uncle Wei (68), Auntie Lin (63), and two peers, providing Bo with a social anchor beyond the office.
+
+**Values, Motivations & Fears**  
+Bo values reliability, modesty, and collective harmony—principles instilled by his family. He is motivated by the desire to become a senior analyst within three years, which would allow him to support his parents more comfortably and perhaps fund a short trip abroad. He fears stagnation: the thought of staying in the same junior role forever feels like a personal failure. He also worries about disappointing his parents if he ever decides to switch careers to something less “stable,” like UX design.
+
+**Behavioral Patterns**  
+Adaptive: Bo keeps a bullet‑journal where he logs work tasks, personal goals, and reflections, helping him maintain focus. He schedules a “reset” hour every Sunday for meditation and a quick call to his grandparents.  
+Maladaptive: When overwhelmed, he may skip meals or binge‑watch dramas late into the night, which temporarily eases stress but disrupts his sleep schedule. He also sometimes over‑commits to help colleagues, leading to mild burnout.
+
+**Communication Style**  
+Bo speaks with a measured Cantonese‑accented Mandarin, often inserting English tech terms (“API,” “pipeline”). He favors concise sentences: “I’ll have the report ready by Friday.” In text messages, he uses simple emojis (📊, 👍) and rarely employs slang. Example phrases:  
+- “Got it, I’ll dive into the dataset tonight.”  
+- “That’s a solid insight, thanks for sharing.”  
+- When joking with Kai: “If our code crashes, we’ll blame the coffee.”  
+
+**Summary**  
+Bo is a steady, analytically minded young adult balancing family duties, early‑career ambitions, and personal hobbies. His life is a blend of quiet routines and subtle aspirations, making him relatable to many Chinese millennials who seek stability while quietly dreaming of broader horizons.</character>

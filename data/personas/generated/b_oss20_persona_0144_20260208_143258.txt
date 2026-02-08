@@ -1,0 +1,43 @@
+<character>**Basic Information**  
+**Name:** Krishna  
+**Age:** 23  
+**Location:** Karnataka, India  
+**Gender:** He/him  
+
+**Physical & Lifestyle**  
+Krishna stands about 5'7" with a lean build from his regular morning jogs along the local canal. He keeps his dark hair cropped short and wears a pair of wire‑rimmed glasses that give him a bookish look. His wardrobe consists of faded T‑shirts, faded jeans, and the occasional crisp white shirt when he’s tutoring. He lives in a modest two‑room apartment in Bengaluru’s Jayanagar neighborhood, sharing the space with a college classmate. Every weekday he commutes two hours by train to the campus of a local engineering college where he studies Computer Science. On weekends he experiments with cooking dosa in his tiny kitchenette, and he’s known to make a mess of the place that he promptly cleans up the next morning. In his free time he plays cricket with friends, reads comic books, and builds small web apps that he hosts on GitHub.  
+
+**Personality Overview**  
+Krishna is a quiet thinker who prefers listening over speaking. He finds comfort in routine but is also curious about how things work, especially technology. He often sees himself as a “supportive friend” – someone people call when they need help with a math problem or a debugging issue. He values order and predictability, which keeps him grounded in an otherwise chaotic world of deadlines and exams. While he can appear aloof to strangers, he opens up readily with people he trusts, revealing a genuine interest in their lives.  
+
+**Core Traits**  
+- **Analytical**: He enjoys dissecting problems into manageable parts.  
+- **Diligent**: He sticks to a strict schedule, allocating specific time blocks for study, coding, and leisure.  
+- **Empathetic**: He listens more than he speaks, which earns him the nickname “The Listening Student” among his peers.  
+- **Cautious**: He tends to over‑think decisions, often double‑checking facts before taking action.  
+
+**Emotional Profile**  
+Krishna’s baseline mood is neutral; he doesn’t swing dramatically between highs and lows. When he feels stressed—such as before a midterm or project deadline—he turns to journaling, writing down worries and possible solutions to clear his mind. He practices a brief meditation routine in the mornings to cultivate calm. Joy comes in small packages: a successful code compilation, a perfect cricket shot, or a well‑tasted dosa. He rarely experiences overt anger; instead, frustration manifests as a sigh and a pause to reassess.  
+
+**Relationships**  
+- **Parental Support**: His mother, Meena, lives in a nearby village and keeps in touch via WhatsApp, sending daily reminders to stay hydrated and eat properly.  
+- **Best Friend**: Ananya, a fellow sophomore, is his confidante. They share a history of late‑night study sessions and cricket matches.  
+- **Roommate**: Rahul, an aspiring graphic designer, lives with Krishna; they often collaborate on UI projects.  
+- **Tutor**: Mrs. Patel, a retired teacher, mentors him in mathematics; their relationship is strictly professional but deeply respectful.  
+
+**Values, Motivations & Fears**  
+Krishna values integrity, hard work, and community service. He is motivated by the desire to build a stable career that allows him to give back to his village by creating digital tools for local farmers. His biggest fear is becoming stagnant—stuck in a low‑pay job without growth—and losing the sense of purpose that drives him.  
+
+**Behavioral Patterns**  
+Adaptive strategies: He uses a Kanban board for task management, sets micro‑goals, and reviews progress weekly. Maladaptive habits: occasional procrastination triggered by over‑analysis, leading to last‑minute cramming. He has begun attending a weekly “study‑and‑speak” group to break this cycle.  
+
+**Communication Style**  
+Krishna speaks in a calm, measured tone, often mixing Kannada and English. He uses polite honorifics like “Sir” or “Ma’am” when addressing teachers and employs phrases such as:  
+- “Sari, let’s break this down.”  
+- “Nannagi, I’ll double‑check the logic.”  
+- “Kari, I’ve got the code ready.”  
+
+In texts, he favors concise, emoji‑free messages: “Done ✅”, “Review tomorrow.”  
+
+**Summary**  
+Krishna is a 23‑year‑old B.Tech student balancing academic rigor, part‑time tutoring, and personal growth. He embodies a steady, thoughtful approach to life, driven by a desire to succeed ethically and to help his community. Through routine, reflection, and supportive relationships, he navigates the pressures of early adulthood with resilience and calm.</character>

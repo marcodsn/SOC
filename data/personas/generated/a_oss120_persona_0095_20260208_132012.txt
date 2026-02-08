@@ -1,0 +1,42 @@
+<character>**Basic Information**  
+**Name:** Peng  
+**Age:** 21  
+**Location:** Wuhan, Hubei, China  
+**Gender:** He/him  
+
+**Physical & Lifestyle**  
+Peng stands about 175 cm with a lean build shaped by his habit of biking to the university campus each morning. His hair is a short, practical cut that he occasionally dyes dark blue for a “fresh look” before exams. He prefers plain T‑shirts, denim jeans, and a well‑worn canvas backpack that holds his sketchbook, a reusable water bottle, and a set of cheap earbuds. His dorm room is modest: a single bed, a compact desk covered in textbooks, a small bookshelf where he keeps a mix of engineering manuals and graphic novels, and a string of LED lights that give the space a warm amber glow.  
+
+A typical weekday begins at 6:30 am with a quick stretch, a bowl of congee, and a 30‑minute bike ride. Lectures in the School of Mechanical Engineering run from 8 am to 12 pm, after which he heads to the campus library to finish assignments or work on a personal Arduino project. Evenings are his “offline” time: he cooks simple meals (often stir‑fried noodles with vegetables), watches a drama episode, or meets a friend for a game of “Mahjong” at the nearby community center. On weekends he volunteers at a local youth robotics club, helping high‑schoolers build simple line‑following robots, and hikes the surrounding hills when the weather permits.  
+
+**Personality Overview**  
+Peng is an introverted‑leaning thinker who feels most comfortable when his environment is predictable. He values competence and enjoys solving concrete problems, which explains his attraction to engineering. Yet he also harbors a quiet curiosity about visual storytelling; he sketches characters in the margins of his notebooks during lectures. He sees himself as “a steady gear” in his friend group—reliable, not flashy. Developmentally, he is transitioning from the “explorer” phase of university to a more defined “career‑builder” mindset, which creates occasional tension: he wants to explore creative hobbies but also feels pressure to secure a stable internship before graduation.  
+
+**Core Traits**  
+- **Analytical Problem‑Solver:** Peng approaches challenges methodically, breaking them into smaller steps and testing hypotheses, whether it’s debugging code or planning a weekend hike.  
+- **Quiet Dependable:** He rarely initiates social events, but when a friend needs help (e.g., moving furniture or proofreading a report), he shows up without being asked.  
+- **Low‑Key Humor:** His jokes are dry and often involve wordplay; he enjoys puns like “电路里没有‘短路’，只有‘短路’的机会”。  
+
+**Emotional Profile**  
+Emotionally, Peng tends toward a calm baseline, but his affect spikes during deadlines or unexpected setbacks. Before an exam, he may feel a tightness in his chest, which he alleviates by a brief walk and a deep‑breathing exercise he learned from a YouTube tutorial. When a project fails, his first reaction is self‑critique (“哪里出了错？”) followed by a pragmatic plan to retry. He expresses joy subtly—a small grin, a quiet “好啊！” when plans succeed. Stress often manifests as restless tapping of his fingers on the desk or an urge to reorganize his notes. He copes by journaling in a pocket-sized notebook, noting the day’s “three wins” to maintain a positive perspective.  
+
+**Relationships**  
+- **Lin (older sister, 27):** Lives in Xiangyang and works as a nurse. They talk weekly on WeChat; Lin often reminds Peng to eat breakfast and to “别忘了锻炼”。  
+- **Chen (roommate, 20):** A computer‑science major who shares Peng’s love for retro video games. They spend Friday nights playing “Street Fighter” and debating the best game strategies.  
+- **Ms. Wu (professor, 45):** Peng’s mentor in the robotics lab; she encourages his Arduino experiments and occasionally invites him to assist in undergraduate research.  
+- **Yuan (friend from the robotics club, 19):** A high‑school senior who looks up to Peng for his patience in teaching soldering techniques.  
+
+**Values, Motivations & Fears**  
+Peng values reliability, precision, and continuous learning. He is motivated by the desire to design a functional device that could help his hometown’s bike‑share system run more efficiently. He also seeks personal competence—finishing a semester‑long project gives him a sense of achievement. His biggest fear is stagnation: “如果以后只能做重复的工作，那就太无聊了”。 He worries about failing to secure an internship, which he equates with losing a foothold in the job market.  
+
+**Behavioral Patterns**  
+Adaptively, Peng follows a “night‑review” routine: after dinner he spends 30 minutes reviewing lecture slides, then updates his to‑do list for the next day. He also uses the Pomodoro technique to stay focused during study sessions. When overwhelmed, he may fall into “analysis paralysis,” spending excessive time refining a design rather than moving forward. He counters this by setting a timer for each iteration and allowing himself a short break to play a quick game.  
+
+**Communication Style**  
+Peng’s spoken Mandarin is clear and measured; he often inserts “其实” (actually) to preface explanations and uses “嗯” as a thinking filler. He prefers concise messages in digital chats, e.g., “明天实验材料准备好了吗？” He adds a single emoji like “👍” to confirm. When he’s excited, he might say, “太棒了，我们马上动手！” and when he’s confused, “这个步骤我不太明白，你能再说一遍吗？”  
+
+*Texting example:*  
+> “今晚一起复习吗？我准备好笔记了 📚，你要带上实验报告。”  
+
+**Summary**  
+Peng is a steady, analytically minded university student balancing engineering studies with modest creative outlets. His reliable nature and methodical coping strategies help him navigate academic pressure, while his quiet humor and close‑knit relationships keep his life grounded. As graduation nears, he is shaping a path that blends technical skill with a budding interest in practical design for his community.</character>

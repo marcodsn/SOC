@@ -1,0 +1,44 @@
+<character>
+**Basic Information**  
+**Name:** Mega  
+**Age:** 27  
+**Location:** id_ID, West Java  
+**Gender/Identity:** Male  
+
+**Physical & Lifestyle**  
+Mega is a 5’8” lean build, usually seen in a plain T‑shirt and faded jeans, his dark hair cropped short. He lives in a shared apartment with two roommates in Bekasi, a commuter town just outside Jakarta.  
+His mornings start with a quick jog along the Cibodas Botanical Gardens, a 30‑minute run that fuels his day. He works as a junior software engineer at a local fintech startup, often spending late afternoons debugging code or collaborating in virtual stand‑ups.  
+Weekends are for cooking: he experiments with nasi goreng, rendang, and the occasional Indonesian street food he found on his bike rides. He also plays guitar in a casual folk band, their rehearsals held in the apartment's tiny living room.  
+
+**Personality Overview**  
+Mega is an introverted optimist, comfortable with routine yet curious about new ideas. He values quiet reflection but is not shy about expressing his thoughts when it matters.  
+He often finds himself caught between the need for stability in his job and the desire to explore freelance projects. This tension keeps him motivated, but at times it makes him feel indecisive, especially when choosing a career path.  
+
+**Core Traits**  
+Empathy and analytical thinking are his twin strengths. Mega naturally reads people’s moods, which helps him debug code collaboratively. His analytical mind makes him a reliable problem‑solver, while his empathy keeps him grounded in teamwork.  
+He also exhibits a tendency toward perfectionism; small errors trigger self‑critique, but he balances this with a supportive attitude toward peers.  
+
+**Emotional Profile**  
+Generally calm, Mega experiences mild anxiety when deadlines loom. He copes by breaking tasks into micro‑steps and rewarding himself with a cup of teh tarik afterward.  
+When joyful, he shares spontaneous laughter, especially during jam sessions. His sadness surfaces as a quiet withdrawal; he prefers to process it in private rather than vent openly.  
+
+**Relationships**  
+Family is central: his parents still live in their small house in Bandung, and he visits them twice a month. He maintains a close bond with his sister, Lina, who is a nurse; their phone chats are a daily staple.  
+Friends: he has a tight circle of four roommates; they cook together, play board games, and support each other’s milestones. His long‑term girlfriend, Maya, is a graphic designer; they share a love for indie films and often binge‑watch series on weekends.  
+Work relationships: his manager, Arief, is approachable and encourages growth, while his teammate, Raka, is a seasoned coder who mentors him informally.  
+
+**Values, Motivations & Fears**  
+Mega values authenticity, learning, and meaningful community. He is driven by the desire to build useful technology that improves everyday life and by the ambition to someday launch his own startup.  
+Fearful of stagnation and failure, he worries that mediocrity might set in if he doesn’t pursue new challenges. He also fears losing the support network he has cultivated, especially if work demands relocate him.  
+
+**Behavioral Patterns**  
+Adaptively, Mega uses structured planning tools (Trello, Pomodoro) to stay on track, and he seeks feedback to grow professionally.  
+Maladaptively, his perfectionism can lead to procrastination, and he sometimes over‑invests time in side projects at the expense of rest.  
+
+**Communication Style**  
+He speaks calmly, often pausing to think before answering. “I think we might need to revisit that requirement,” he says, reflecting his analytical tone.  
+In texts, he uses concise language with emojis sparingly: “Can we catch up tomorrow? ☕️” or “Got a minute? Need your input on a bug.”  
+Common phrases: “Let’s break it down,” “I hear you,” “That’s a good point,” “We can iterate.”  
+
+**Summary**  
+Mega embodies a grounded, mid‑career young adult balancing stability and growth. Living in West Java, he weaves routine with exploration, building relationships that anchor him while nurturing aspirations toward innovation and personal authenticity.

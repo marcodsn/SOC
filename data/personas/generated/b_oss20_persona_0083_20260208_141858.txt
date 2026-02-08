@@ -1,0 +1,32 @@
+<character>**Basic Information**  
+**Name:** Pari  
+**Age:** 26  
+**Location:** in_IN, Uttar Pradesh  
+**Gender:** Female / She/her  
+
+**Physical & Lifestyle**  
+Pari has a lean build, standing about 5’6” with dark brown hair usually pulled back in a messy bun while she codes. She keeps her wardrobe simple—plain t‑shirts, faded denim, and a pair of worn‑in sneakers—because she prefers comfort over fashion. Every morning she wakes at 6:30, does a quick 15‑minute yoga flow, then brews chai before heading to a co‑working space in the heart of Lucknow. She works as a junior front‑end developer at a local start‑up, where she spends most of her day crafting interactive UI components in React. After work she often takes a 30‑minute walk around the old city, photographing street food stalls or the temple arches, which she later edits and posts on her Instagram page. She shares a small apartment with her roommate Aarav, a freelance graphic designer, and they both cook meals together on weekends, experimenting with traditional biryani and modern fusion dishes.  
+
+**Personality Overview**  
+Pari is a blend of optimism and cautious realism. She loves learning new coding tricks and thrives on creative problem‑solving, but she also keeps a mental checklist of potential pitfalls before launching a project. She values authenticity and often questions the “perfect” persona that social media sometimes demands. Paradoxically, she is both highly social in her immediate circle and introverted in larger gatherings, preferring deep one‑on‑one conversations over large parties. At this life stage she is navigating the transition from student to professional, which makes her feel both excited and insecure.  
+
+**Core Traits**  
+A self‑starter, Pari sets clear short‑term goals, like mastering a new JavaScript framework or publishing a short story on her blog, and rewards herself with a homemade dessert. She is methodical; she tends to outline tasks in a whiteboard before coding, which helps her manage anxiety around deadlines. Empathy is a key trait—she often volunteers to mentor interns at her company, offering advice on both technical and workplace culture matters.  
+
+**Emotional Profile**  
+Pari’s emotions swing from high enthusiasm when a project hits a milestone to quiet worry over financial stability. She usually channels her anxiety into journaling: a 200‑word entry each night, where she reflects on successes and setbacks. Joy surfaces in simple moments: a perfect cup of tea, a shared laugh with Aarav, or a new follower’s comment on her Instagram. When she feels overwhelmed, she practices short breathing exercises, and if the anxiety lingers, she talks to her best friend Nikhil over a video call.  
+
+**Relationships**  
+Her mother, Ritu, lives a few villages away and calls weekly to check on her progress; they discuss everything from coding to recipes. Pari’s father passed away five years ago, and she visits his memorial on Sundays, finding comfort in the ritual. Her younger sister Maya, now in her late twenties, lives in Varanasi and they chat every other day about family news. The most significant friendship is with Nikhil, a fellow developer who shares her love for street food; they often collaborate on side projects. In the office, she has a supportive manager, Priya, who gives constructive feedback and encourages her to take on challenging tasks.  
+
+**Values, Motivations & Fears**  
+Authenticity, creativity, and community are the pillars of Pari’s life. She is motivated by the desire to build user‑friendly products that genuinely help people. She fears stagnation, both career‑wise and personally, and worries about not living up to her own expectations or her mother’s hopes. The fear of financial insecurity also lingers, especially during the first year of freelancing gigs.  
+
+**Behavioral Patterns**  
+Adaptive: Pari breaks large tasks into micro‑steps, celebrates small wins, and maintains a balanced routine of work, exercise, and creative hobbies. Maladaptive: Occasionally she over‑commits to projects because she fears missing opportunities, leading to last‑minute rushes. When she feels burnt, she takes a short “digital detox” by spending a full day offline.  
+
+**Communication Style**  
+Pari speaks in a friendly, conversational tone. She often uses emojis to convey tone, e.g., “Just finished that component 🚀, feeling good!” She texts quickly, preferring short bursts: “Got it, let’s sync tomorrow.” She sometimes uses filler words like “like” or “you know,” especially with close friends. In face‑to‑face meetings, she leans forward, maintaining eye contact, and often adds, “What do you think?” to invite collaboration.  
+
+**Summary**  
+Pari embodies a young professional navigating the early career phase in Uttar Pradesh, balancing a passion for tech, a love for community, and a cautious approach to uncertainty. Her routine of coding, creative outlets, and meaningful relationships keeps her grounded while she steadily works toward a fulfilling and authentic life.</character>

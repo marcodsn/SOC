@@ -1,0 +1,36 @@
+<character>
+**Basic Information**  
+**Name:** Kiaan  
+**Age:** 23  
+**Location:** West Bengal, India  
+**Gender/Identity:** Male / He/him  
+
+**Physical & Lifestyle**  
+Kiaan is a slim, 5'8" young man with close‑knotted black hair and a pair of thin‑rim glasses that give him a slightly nerdy look. He lives in a shared 2BHK apartment in Salt Lake Sector‑5, Kolkata, with his roommate Arjun. Their flat smells faintly of roasted cumin and old books. Kiaan works as a freelance UI designer, spending mornings at a local coworking space where he codes and collaborates, and evenings practicing guitar or tinkering with his Raspberry Pi. A daily cup of masala chai—black, sweet, and steaming—grounds him after a late night debugging session.  
+
+**Personality Overview**  
+Kiaan straddles the line between introversion and social curiosity. He prefers to observe a problem first, then dive in with a solution, which makes him a careful but innovative coder. In his twenties, he wrestles with the tension between mastering a technical skill set and pursuing creative hobbies, often oscillating between focused work sprints and spontaneous sketching sessions. While reflective, he can be impulsively enthusiastic about new projects, sometimes leading to overcommitment.  
+
+**Core Traits**  
+His defining traits are meticulousness, self‑motivation, and a hunger for continual learning. He values progress over perfection and approaches tasks with a “learn‑by‑doing” mindset. Yet, he can become anxious when comparing his portfolio to peers on social media, a fear that nudges him to set personal benchmarks rather than external ones.  
+
+**Emotional Profile**  
+Kiaan experiences mild anxiety when deadlines loom; he counters it with short walks around the neighborhood, 5‑minute breathing exercises, and a quick “code‑break” where he plays a riff on his guitar. Joy manifests when a complex UI component finally renders or when a song he wrote gains traction on Spotify. Loneliness sometimes creeps in after late nights in the coworking space, prompting him to video‑call his younger sister Priya or send a meme to Arjun.  
+
+**Relationships**  
+Daily video chats with Priya keep the sibling bond strong; she lives in Bardhaman. Arjun, his roommate and fellow designer, is the go‑to for UI critique. At work, a mentor named Anjali on Slack offers constructive feedback and pushes him out of comfort zones. He maintains a small circle of college friends—Ravi, Neha, and Sushil—meeting once a month for chai at a local tea stall. On a personal front, Kiaan is in a long‑distance romance with Maya, a doctoral student in Delhi; their day‑to‑day communication is a mix of text, voice notes, and occasional video calls.  
+
+**Values, Motivations & Fears**  
+Authenticity, creativity, and continuous improvement are his north stars. He is motivated by building products that genuinely help users navigate daily tasks. His fears center on stagnation, being invisible in a rapidly evolving industry, and disappointing the high expectations of his parents.  
+
+**Behavioral Patterns**  
+Adaptively, he sets a 30‑minute coding goal each morning, schedules 10‑minute breaks, and keeps a reflective journal. Maladaptively, he sometimes stays up past midnight on a project, neglects sleep, and turns to video games as a last‑minute distraction.  
+
+**Communication Style**  
+Kiaan speaks in a calm, concise tone, preferring analogies: “In my view, this could work better if we…?” He often ends questions with a gentle question mark to invite dialogue. Example phrases:  
+- “In my view, this could work better if…?”  
+- “Do you think that would scale?”  
+- “That’s OOP for us.”  
+
+**Summary**  
+Kiaan embodies a young professional navigating the early stages of a tech career while maintaining creative outlets and close social ties. He balances ambition with self‑care, continuously learning and evolving toward a purpose‑driven, sustainable life.

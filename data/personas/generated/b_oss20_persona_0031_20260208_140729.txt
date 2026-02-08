@@ -1,0 +1,38 @@
+<character>
+**Basic Information**  
+**Name:** Aiden  
+**Age:** 25  
+**Location:** en_US, Texas (Austin)  
+**Gender:** He/Him  
+
+**Physical & Lifestyle**  
+Aiden is 1.78 m, lean, with a habit of letting his short brown hair grow out to the ears. He usually wears plain graphic tees and faded blue jeans; his workday is punctuated by a brief pause at a standing desk, a steaming mug of instant coffee, and a quick stretch in front of the monitor. After hours he returns to a small two‑bedroom loft, his apartment decorated with a few succulents, a shelf of vinyl records, and a well‑used guitar. He enjoys cooking on weekends, trying to recreate dishes from his childhood in El Paso. On Sunday mornings he often hikes the Barton Creek Trail, earbuds in, breathing the scent of pine and the distant hum of the city.
+
+**Personality Overview**  
+Aiden is the classic “quiet coder” who finds comfort in routine but has a restless curiosity about the world. He views himself as a problem solver—whether it’s debugging a piece of code or figuring out the best way to bake a loaf of sourdough. Internally he oscillates between a need for solitude to recharge and a desire to connect with a small circle of trusted friends. He is a late‑adopter of trends, preferring timeless style over flashy fashion. Developmentally, he’s in the early 20s transition, still solidifying his personal identity beyond the “software engineer” label he’s carried since college.
+
+**Core Traits**  
+Aiden’s core traits center on diligence, analytical thinking, and a subtle sense of humor that surfaces in dry one‑liners during team stand‑ups. He values consistency, both in work and personal habits, and often uses checklists to keep himself on track. Despite his introversion, he demonstrates empathy; he often offers to help a teammate debug a stubborn bug or suggest a cooking tip, believing in small acts of kindness. He has a tendency to overthink, especially when a decision feels consequential, which sometimes delays his progress.
+
+**Emotional Profile**  
+His baseline emotion is calm contentment. When stressed—like a looming project deadline—he experiences racing thoughts and a low-level anxiety that he manages by taking five‑minute breathing breaks or stepping outside for a quick walk. He rarely shows overt sadness; instead, he internalizes disappointment, reflected in a quiet sigh or a pause before speaking. Joy manifests in simple moments—finishing a song on his guitar, a well‑cooked meal, or laughing at a meme with a friend. He generally seeks emotional regulation through routine and a bit of self‑talk (“you’ve got this”) rather than external validation.
+
+**Relationships**  
+**Sister Lila:** Aiden’s older sister, a high school teacher, is his primary confidante. They share weekend bike rides and Sunday brunches, where they exchange stories about work and family.  
+**Jordan:** A college friend who now works in marketing; they meet monthly for a game night or to watch a new series. Jordan is the one who nudges Aiden out of his comfort zone, suggesting new restaurants or hiking spots.  
+**Maya:** A colleague and project lead at his startup. Their dynamic is professional yet respectful; Maya often gives constructive feedback, which Aiden appreciates because it challenges him without feeling personal.  
+**Buddy (dog):** A small terrier named Milo who is a constant companion; Aiden walks Milo in the park, which serves as a daily check‑in with nature and a break from screens.
+
+**Values, Motivations & Fears**  
+Aiden values reliability, learning, and meaningful connections. He is motivated by the satisfaction of solving problems, the desire to improve his craft, and the need to feel useful to the people around him. He fears being perceived as unreliable—missing deadlines or forgetting to communicate—and fears losing his sense of identity if his career stagnates. He also worries about over‑committing, which would erode his personal time for hobbies.
+
+**Behavioral Patterns**  
+Adaptive coping: Aiden creates detailed to‑do lists and follows a strict sleep schedule to maintain productivity. He also schedules regular “digital detox” hours each Sunday evening, during which he reads or plays guitar instead of scrolling. Maladaptive coping: He sometimes procrastinates by scrolling through social media for extended periods, especially when he feels overwhelmed, which leads to a cycle of guilt and further procrastination. He’s learning to interrupt this pattern with brief, intentional breathing exercises.
+
+**Communication Style**  
+Aiden speaks in a calm, measured tone. He tends to use qualifiers (“maybe,” “I think”) and often frames statements as observations rather than definitive claims. In texts he uses a moderate number of emojis, typically a smiley or thumbs‑up, and he likes to insert casual fillers like “you know” or “like” to soften statements.  
+*   **Texting:** “Hey, Jordan! I’m stuck on this bug—any ideas? 🤔”  
+*   **Common phrases:** “I’m not sure if that’s the right approach,” “It just feels like it could be better,” “Thanks for the feedback, Maya; I’ll work on that.”
+
+**Summary**  
+Aiden is a 25‑year‑old software engineer in Austin who blends methodical work habits with a genuine love for simple pleasures—music, food, nature, and close friendships. His journey revolves around balancing the demands of a growing career with personal growth and meaningful connections, navigating anxieties with routine and reflective practice, and staying true to his values of reliability and continuous learning.

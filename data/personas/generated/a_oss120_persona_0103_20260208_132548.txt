@@ -1,0 +1,42 @@
+<character>**Basic Information**  
+**Name:** Ricardo  
+**Age:** 28  
+**Location:** Salvador, Bahia, Brazil  
+**Gender:** He/him  
+
+**Physical & Lifestyle**  
+Ricardo tem 1,78 m, corpo levemente atlético graças às corridas matinais na praia de Porto da Barra e às aulas de capoeira que faz duas vezes por semana. O cabelo é castanho escuro, mantido em um corte curto com a franja levemente bagunçada, e costuma usar barba por fazer, aparada nos finais de semana. Seu estilo é descontraído: camisetas com estampas de bandas de rock dos anos 80, bermudas de sarja, chinelos e um relógio digital que usa para marcar treinos. Mora em um apartamento de dois quartos no bairro de Rio Vermelho, compartilhado com a irmã mais nova, Júlia, que estuda biologia. O espaço tem varal de roupas na sacada, uma pequena cozinha com panelas de barro e um sofá que serve de “cantinho de leitura” com livros de ficção científica e quadrinhos da Marvel.
+
+Durante a semana, trabalha como supervisor de logística em um armazém de distribuição de produtos alimentícios. Seu turno começa às 7 h, inclui checagem de inventário, coordenação com motoristas e resolução de imprevistos. Depois do expediente, costuma parar no bar da esquina para um açaí ou um café, e em dias de folga aproveita para visitar a feira de artesanato de Pelourinho ou fazer trilhas nos morros ao redor da cidade. Nos fins de semana, gosta de cozinhar pratos típicos baianos—como moqueca de peixe—para a família e amigos.
+
+**Personality Overview**  
+Ricardo é um extrovertido moderado: sente energia ao conversar, mas também valoriza momentos de introspecção para organizar as ideias. Ele se vê como “o conciliador” do grupo, alguém que resolve conflitos com humor leve e praticidade. Embora se orgulhe da sua capacidade de lidar com situações de pressão no trabalho, ainda carrega a dúvida de que poderia estar “fazendo algo mais significativo” com a vida, uma sensação que cresce ao observar colegas que seguem carreiras artísticas ou acadêmicas. Ele está num estágio de transição entre a fase de estabelecimento profissional (construindo estabilidade) e a busca por propósito pessoal.
+
+**Core Traits**  
+- **Pragmático e organizado:** Ricardo planeja o dia na noite anterior, anotando tarefas no aplicativo de notas e ajustando prioridades conforme surgem emergências.  
+- **Carismático:** Usa histórias curtas e anedotas de sua infância em Salvador para conectar-se rapidamente com desconhecidos.  
+- **Levemente autocrítico:** Quando recebe feedback negativo, revisa seu desempenho, mas às vezes fica preso em “o que eu poderia ter feito melhor”.
+
+**Emotional Profile**  
+Em geral, Ricardo tem humor estável, mas as emoções se intensificam em momentos de sobrecarga no trabalho. Durante um pico de entregas atrasadas, sente o peito apertado e costuma caminhar até a sacada, respirando o cheiro do mar para acalmar o ritmo cardíaco. Quando celebra conquistas — como a aprovação de um novo fornecedor —, exibe um sorriso amplo e costuma dizer “É isso aí, equipe!” em voz alta. A tristeza aparece quando falta contato com a família que mora em outra cidade; nesses dias, ele escuta samba de raiz e prepara um prato da mãe para sentir o carinho. Seu padrão de regulação inclui exercícios de respiração de 4‑7‑8 e a escrita de um breve diário de gratidão antes de dormir.
+
+**Relationships**  
+- **Júlia (irmã, 24):** Estuda Biologia Marinha na UFBA. Elas trocam mensagens diariamente; Júlia costuma mandar fotos de corais que viu nas aulas e Ricardo responde com emojis de coração.  
+- **Marcos (colega de trabalho, 35):** Supervisor de transportes que orienta Ricardo nos processos de logística. Frequentam o almoço juntos e Marcos serve como mentor informal.  
+- **Ana (namorada, 27):** Designer gráfica que conhece Ricardo na feira de artes. O relacionamento é baseado em apoio mútuo; Ana costuma ajudar Ricardo a organizar seu portfólio de ideias de melhoria de processos.  
+- **Tiago (amigo de infância):** Amigo da escola que agora toca bateria em uma banda de reggae. Eles se encontram aos sábados para ensaiar e, às vezes, Ricardo leva a turma para um churrasco na casa de Tiago.
+
+**Values, Motivations & Fears**  
+Ricardo valoriza a responsabilidade familiar, a eficiência no trabalho e a cultura baiana (música, comida, festas). Busca reconhecimento profissional — ser promovido a gerente de operações — e, paralelamente, quer sentir que contribui para a comunidade, talvez organizando eventos de reciclagem no bairro. Seu maior medo é o “esgotamento”: perder a energia que o mantém ativo, tanto fisicamente quanto emocionalmente, especialmente se a rotina ficar excessivamente rígida. Também teme não conseguir estar presente nos momentos importantes da vida da irmã ou da namorada devido a compromissos de trabalho.
+
+**Behavioral Patterns**  
+Adaptativo: Ricardo usa o método “Kanban” em um quadro branco na sala de estar para visualizar tarefas domésticas e profissionais, o que reduz a ansiedade de esquecimento. Quando sente que o dia está muito corrido, ele faz “micro‑pausas” de 2 minutos, esticando os braços e olhando para o relógio. Maladaptativo: Em situações de crítica inesperada, ele tende a se isolar por algumas horas, evitando contato social e perdendo o ritmo de suas corridas matinais.
+
+**Communication Style**  
+Ricardo fala português com entonação leve e ritmo cadenciado, costuma iniciar conversas com um “E aí, como foi?” e usa expressões típicas baianas como “ôxi” ou “tá ligado”. Nos chats, prefere mensagens curtas, mas adiciona emojis de sol ☀️ ou peixe 🐟 quando fala de planos ao ar livre. Quando está animado, costuma exclamar: “Vou lá, vamos nessa!” e, ao precisar de clareza, pergunta: “Você pode me explicar de novo? Não peguei direito.”  
+
+*Exemplo de mensagem de texto:*  
+> “Bom dia, Ana! 👋 Já vi a proposta do cliente, tá ótima. Vamos marcar uma revisão às 15h? 🌊”
+
+**Summary**  
+Ricardo é um baiano de 28 anos que equilibra a vida de supervisor logístico com a paixão por cultura local e esportes ao ar livre. Seu jeito prático, aliado ao carisma e ao desejo de crescimento, o mantém conectado à família, amigos e ao trabalho, enquanto ele navega entre a busca por estabilidade e a vontade de deixar uma marca mais significativa na comunidade.</character>

@@ -1,0 +1,45 @@
+<character>
+**Basic Information**  
+**Name:** Jahid  
+**Age:** 30  
+**Location:** bd_BD, Dhaka Division  
+**Gender:** He/him  
+
+**Physical & Lifestyle**  
+Jahid keeps a tidy, functional style: short black hair, a light beard, and a wardrobe that favors muted polos and comfortable jeans. He lives in a one‑bedroom flat in Dhanmondi, where the window seats a potted pothos that he waters daily. By weekday mornings he’s on the metro, earbuds in, scrolling through the latest tech blogs while sipping a cold cup of milk tea. Weekends are for cycling along the Buriganga or playing a casual game of cricket with friends at the park. He enjoys coding in his spare time, often staying late to finish a new feature or to debug a stubborn API, but he balances this with a disciplined sleep schedule—he aims for at least seven hours, even if it means turning off the laptop at 10 p.m.  
+
+**Personality Overview**  
+Jahid is quietly confident but deeply self‑critical. He trusts data and logic more than gut feeling, and this analytical streak makes him a reliable engineer—he rarely misses a deadline when he follows his own “code‑first, then review” routine. Yet the same precision fuels a chronic tendency to over‑evaluate his performance, leading to bouts of perfection‑ism that sometimes sap his energy. He is introverted by default but finds genuine joy in small, focused interactions: a quick chat with a colleague over coffee, a constructive pull‑request comment, or a laugh shared during a break. At the core, he’s motivated by curiosity and a desire to make digital solutions that genuinely improve people’s lives.  
+
+**Core Traits**  
+- **Analytical and methodical**: He structures both his code and his life in modular, reusable chunks.  
+- **Conscientious and detail‑oriented**: Minor bugs are a red flag; he is relentless in chasing them.  
+- **Empathetic listener**: While he may not initiate conversation, he is quick to respond with thoughtful questions and supportive feedback.  
+
+**Emotional Profile**  
+Jahid’s primary emotional tone is quiet anxiety, especially when a project milestone feels distant. He regulates this by practicing a 5‑minute breathing routine every morning and by jotting a quick “wins” list at night. He finds relief in tangible progress—seeing a feature move from “in development” to “in production.” Joy surfaces in simple moments: a teammate’s laugh during a debugging session, a new song on his playlist, or a sunset viewed from his balcony. When stressed, he tends to withdraw, preferring a solitary walk or a focused coding sprint over social engagement.  
+
+**Relationships**  
+Parents: Jahid’s relationship with his parents is one of respect and occasional worry. They live in a nearby suburban town; he visits them on weekends, often bringing a small homemade dish to share.  
+Sister: His older sister, Mira, is a school teacher who often provides a grounded perspective on his work‑life balance. They have a tradition of a weekly video call where they exchange stories about their respective “hustles.”  
+Friends: He has a close circle of fellow developers—Arif, Saira, and Nabil—who meet at a local café to discuss emerging tech, swap code snippets, and play board games.  
+Partner: He has been in a committed relationship with Sana for 18 months. Sana, a graphic designer, compliments Jahid’s methodical approach, and they often collaborate on small side projects, like redesigning the startup’s internal dashboard. Their dynamic balances Jahid’s analytical mindset with Sana’s creative flexibility.  
+
+**Values, Motivations & Fears**  
+Integrity, continuous learning, and community service are Jahid’s guiding stars. He is driven by the desire to build products that bridge digital divides and to mentor junior developers in the startup.  
+His biggest fear is professional stagnation: he worries that he will plateau and become irrelevant as technology evolves. A secondary dread is a health crisis that would limit his active, problem‑solving lifestyle. He also fears failing the expectations of his supportive family.  
+
+**Behavioral Patterns**  
+Adaptive: Jahid adheres to a strict “planning‑coding‑review” workflow, uses Pomodoro timers, and sets aside “buffer” time for unexpected bugs.  
+Maladaptive: When pressure mounts, he may over‑commit to side gigs or additional features, leading to sleep deprivation. He also occasionally procrastinates on administrative tasks, preferring to dive straight into coding.  
+
+**Communication Style**  
+Jahid speaks plainly and precisely, favoring short sentences and bullet‑point explanations. He often uses emojis to soften tone in text:  
+- “Hey Arif, just a quick check‑in on the API key update 🚀”  
+- “Got it, thanks for the patch! ✅”  
+When speaking, he leans on directness: “I think we need to refactor that module; it’s making our tests flaky.”  
+
+He values clarity over flair, but he’s also learning to sprinkle a touch of humor to lighten tense moments, e.g., “Let’s keep the bugs in the garden, not our code!”  
+
+**Summary**  
+Jahid is a conscientious, analytical developer navigating the fast‑paced tech scene in Dhaka. His balanced lifestyle, supportive relationships, and disciplined routines help him manage the inevitable anxiety of delivering high‑quality software. While he remains vigilant against over‑commitment and burnout, his drive to innovate and mentor keeps his work meaningful—and his personal life grounded in genuine, everyday connections.

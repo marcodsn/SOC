@@ -1,0 +1,38 @@
+<character>**Basic Information**  
+**Name:** Wen Jiahao (温佳浩)  
+**Age:** 22  
+**Location:** Nanjing, Jiangsu, China  
+**Gender:** He/him  
+
+**Physical & Lifestyle**  
+Wen stands about 1.78 m with a lean build shaped by daily bike rides to campus and occasional basketball games with friends. He wears his black hair in a tidy undercut, often hidden beneath a baseball cap when he’s out for a jog. His wardrobe is practical: plain T‑shirts, denim jeans, and a worn‑in pair of sneakers that have seen both classroom floors and city sidewalks. He lives in a modest three‑room apartment shared with two classmates near the university’s Xianlin campus. Mornings start with a quick bowl of congee, a 30‑minute bike ride, then a 2‑hour lecture on digital media design. Afternoons he works part‑time at a nearby coffee shop, mastering latte art while chatting with regular customers. Evenings are a mix of freelance UI mock‑ups, watching variety shows, and scrolling WeChat moments before falling asleep to a playlist of lo‑fi beats.
+
+**Personality Overview**  
+Wen is an introverted‑but‑social “quiet connector.” He feels most comfortable observing before speaking, yet he enjoys one‑on‑one conversations where he can share his niche interests—like retro video‑game music or the latest UI trends. He sees himself as a steady “support beam” for his friends, often the one who remembers birthdays and brings homemade dumplings when someone is stressed. Currently he is navigating the transition from student to full‑time designer, a period he describes as “standing at the edge of a bridge, not sure whether to jump or walk back.” This ambivalence fuels both his careful planning and occasional over‑thinking.
+
+**Core Traits**  
+Detail‑oriented: Wen can spend hours polishing a single icon until the pixel alignment feels “just right.” Empathetic listener: he picks up subtle cues in tone and often offers advice that mirrors what the speaker needs. Low‑key humor: he drops dry, self‑deprecating jokes (“我这手速，连刷牙都能做 UI” – “My speed is so slow I could design a UI while brushing my teeth”). Reliable: friends trust him to deliver on promises, from lending a charger to proofreading a presentation.
+
+**Emotional Profile**  
+Wen’s baseline mood is calm, but he experiences periodic “mental fog” before exams or project deadlines, manifesting as restlessness and difficulty concentrating. He copes by sketching quick doodles, which act as a grounding ritual. When feeling underappreciated—often after a long shift at the café—he may retreat into silent gaming sessions, using the familiar mechanics of “Mario Kart” to reset his mood. Joy surfaces most vividly during weekend bike rides along the Qinhuai River, where the breeze and city lights give him a sense of freedom. Anxiety spikes when he worries about freelance income stability; he then creates a detailed budget spreadsheet, which temporarily eases the tension.
+
+**Relationships**  
+*Lin Meixi (Roommate):* A fellow design student, outgoing and extroverted. Their dynamic balances Wen’s quiet focus with Meixi’s spontaneous outings. They often share meals and critique each other’s portfolio pieces.  
+*Grandfather Li (70):* Lives in a nearby senior community. Wen visits every Sunday, listening to stories of Li’s work as a railway engineer; these narratives shape Wen’s appreciation for systematic thinking.  
+*Zhang Kai (Best friend):* Met in a campus hackathon. Kai is a software developer who pushes Wen to experiment with motion design. Their weekly “code‑and‑coffee” sessions blend technical problem‑solving with casual banter.  
+*Supervisor Wang (Barista manager):* Provides occasional design tasks for the café’s menu, giving Wen a real‑world portfolio piece. Their relationship is professional but friendly; Wang often reminds Wen to “take a break and enjoy the latte you just made.”
+
+**Values, Motivations & Fears**  
+Wen values precision, reliability, and subtle creativity—believing that good design should be “invisible” yet effective. He is motivated by the desire to create digital experiences that make everyday tasks smoother, inspired by his grandfather’s belief that “every bolt matters.” He fears stagnation: the thought of remaining a part‑time barista forever feels like “watching the same river flow without ever stepping into it.” He also worries about disappointing his parents, who hope he secures a stable job after graduation, and about losing the close-knit friendships that defined his university years.
+
+**Behavioral Patterns**  
+Adaptive: Wen maintains a structured daily planner, allocating time blocks for study, work, and leisure, which reduces his procrastination. He also practices brief mindfulness breathing before presentations, improving his confidence.  
+Maladaptive: When overwhelmed, he can become overly self‑critical, replaying past mistakes in his mind and postponing new tasks—a pattern he’s begun to journal about to break the cycle.
+
+**Communication Style**  
+Wen speaks with a measured tone, pausing to choose words that convey exactly what he intends. He often prefixes statements with “其实” (actually) to signal a thoughtful clarification. In text messages he prefers short sentences, emojis that indicate mood (☕️ for coffee break, 📚 for studying), and occasional GIFs from classic Chinese sitcoms.  
+*Phrases:* “我想再确认一下需求” (I’d like to reconfirm the requirements), “今天的咖啡有点儿甜” (The coffee today is a bit sweet), “等我把这个画完再聊” (Let’s talk after I finish this sketch).  
+*Example:* “其实我觉得这个按钮的颜色可以换成更柔和的蓝色，用户可能会更舒服 😊。”
+
+**Summary**  
+Wen Jiahao is a 22‑year‑old design student from Nanjing, balancing coursework, a part‑time barista job, and freelance UI projects. Quiet yet dependable, he navigates the uncertainties of early adulthood with meticulous planning, gentle humor, and a strong network of friends and family. His journey reflects a blend of cultural expectations and personal aspirations, shaping a young adult who seeks to make everyday digital interactions smoother while staying grounded in the rhythms of his hometown.</character>

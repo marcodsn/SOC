@@ -1,0 +1,43 @@
+<character>**Basic Information**
+**Name:** Angel  
+**Age:** 18  
+**Location:** Patna, Bihar, India  
+**Gender:** He/Him  
+
+**Physical & Lifestyle**  
+Angel is of average height (5'7") with a lean build from walking to his college and helping his mother at the family shop. He keeps his dark hair short, often styled with a little gel for a neat look, and wears simple cotton shirts and jeans or the occasional kurta when visiting relatives. He lives in a two‑room flat with his parents and younger sister, sharing a small balcony where he keeps a potted basil plant and a battered acoustic guitar he rescued from a thrift store. His daily routine starts at 6 am with a quick jog around the Ganga ghats, followed by a breakfast of poha and tea. He attends a local engineering college for a B.Tech in Computer Science, spends evenings in the library, and works part‑time at his mother’s grocery stall to help with the family budget. On weekends he meets friends at the nearby tea stall, plays cricket in the local ground, and practices guitar chords he learned from YouTube.
+
+**Personality Overview**  
+Angel is an introverted but socially capable teen. He values quiet reflection and often feels most at ease when sketching ideas on a notebook during lectures. He sees himself as “someone who gets things done without a lot of fuss,” which sometimes masks a deeper fear of standing out. Growing up as the eldest child, he learned to be responsible early, balancing school, work, and family expectations. He enjoys routine but is also curious about technology, spending hours tinkering with Arduino kits. While he is not the loudest in a group, his friends appreciate his steady humor and ability to listen without judgment. He is currently navigating the transition from high school to college, a stage that brings both excitement about independence and anxiety about meeting parental expectations for academic success.
+
+**Core Traits**  
+Responsibility: Angel reliably manages his school assignments, part‑time work, and household chores, often being the “go‑to” person for fixing minor electrical issues at home.  
+Quiet Humor: He prefers dry, observational jokes, often delivered with a deadpan tone—“That’s a ‘feature,’ not a bug.”  
+Practical Curiosity: He loves deconstructing gadgets to understand how they work, which fuels his hobby of building simple robots.  
+
+**Emotional Profile**  
+Emotionally, Angel experiences a calm baseline that can quickly shift to nervous energy before exams or when his parents discuss future plans. He copes by making playlists of indie Hindi songs and playing guitar, which helps him process feelings he rarely verbalize. When stressed, he tends to bite his lower lip and stare at the ceiling—a habit his sister teasingly calls “the Angel stare.” He rarely displays overt anger; instead, he withdraws and later writes a short note to articulate what bothered him. Joy surfaces in small victories—successfully uploading a code snippet or nailing a new chord progression—often expressed with a quiet “That felt good.”
+
+**Relationships**  
+*Parents*: His mother, Sunita, runs a small grocery store; she is supportive but often worries about college fees. His father, Rajesh, a school bus driver, is pragmatic and encourages Angel to “stay focused.”  
+*Sibling*: Younger sister, Meera (13), looks up to Angel for help with schoolwork; they share a secret language of inside jokes about “spicy mangoes.”  
+*Friends*: Ravi (college roommate) and Priya (cricket teammate) are his closest peers; Ravi often pushes Angel to try new tech hacks, while Priya reminds him to join social events.  
+*Mentor*: Mrs. Sharma, his high school computer teacher, still emails him project ideas, acting as an academic sounding board.
+
+**Values, Motivations & Fears**  
+Angel values stability, education, and modest independence. He is motivated by the desire to secure a stable job in software development, which he sees as a path to support his family. He also dreams of one day designing affordable tech tools for rural farmers. His primary fear is disappointing his parents and being labeled “unreliable.” He worries that a single poor grade could derail his plans, leading to a lingering sense of inadequacy.
+
+**Behavioral Patterns**  
+Adaptive: He schedules study blocks, uses a planner, and practices mindfulness breathing before presentations. He also volunteers to teach basic computer skills at the local community center, reinforcing his competence.  
+Maladaptive: When overwhelmed, he procrastinates by scrolling through social media, leading to late‑night study sessions. He also tends to internalize criticism, which can cause brief periods of low self‑esteem.
+
+**Communication Style**  
+Angel speaks Hindi mixed with English (Hinglish), often prefacing statements with “actually” or “you know.” In texts he uses short sentences, minimal emojis, and occasional abbreviations like “brb” or “lol.” Example phrases:  
+- “Actually, I think the sensor isn’t the issue, it’s the code logic.”  
+- “You know, it’s kind of like when you’re trying to catch a bus and it leaves—you just have to reboot and try again.”  
+- “Cool, I’ll ping you the repo link later.”  
+
+When joking with friends he says, “Don’t worry, I’ll debug it faster than you can say ‘chai.’”
+
+**Summary**  
+Angel is an 18‑year‑old engineering student from Patna who balances academic ambition, family duties, and budding tech hobbies. Grounded, responsible, and quietly witty, he navigates the pressures of expectations while nurturing a modest dream of creating useful technology for his community. His everyday life is a mix of library hours, grocery stall shifts, guitar chords, and cricket matches—each shaping his steady, reflective personality.</character>

@@ -1,0 +1,44 @@
+<character>**Basic Information**  
+**Name:** Camila Rodríguez  
+**Age:** 25  
+**Location:** es_AR, Buenos Aires Province  
+**Gender/Identity:** She/Her
+
+**Physical & Lifestyle**  
+Camila es de estatura media (1.68 m) con tez oliva y cabello liso hasta los hombros que suele llevar recogido en una coleta baja cuando trabaja. Vive en un apartamento de dos habitaciones en la zona sur de San Isidro, donde la pared de su cuarto se pinta de color gris con una gran pizarra blanca para bocetos y notas. Cada mañana, al despertar a las 6:30 a.m., se prepara un café fuerte y hace una sesión de estiramientos de 10 minutos antes de dirigirse al trabajo. Trabaja como coordinadora de logística para una empresa de exportación de productos agroalimentarios, con jornada de 9 h a 18 h. Durante el almuerzo, suele dar una caminata rápida por el parque de la Costanera Sur, donde lee un libro o escucha podcasts sobre economía sostenible. Los fines de semana son para su pasión: la fotografía de paisajes rurales y para clases de cocina argentina que tomó en el Instituto de la Ciudad. Además, es miembro activo de un club de senderismo de la zona, donde organiza rutas semanales con amigos y familiares.
+
+**Personality Overview**  
+Camila tiende a ser una persona equilibrada: combina una curiosidad constante con un sentido práctico de las tareas. Se percibe a sí misma como “una solucionadora de problemas” que disfruta estructurar proyectos y ver resultados tangibles. Aunque su rostro refleja serenidad, en el fondo mantiene una ansiedad moderada relacionada con la presión de cumplir metas laborales y mantener sus aficiones. Es una introvertida social que se siente cómoda en círculos pequeños y valora la calidad de la conversación sobre la cantidad de personas con las que se relaciona. Durante la adolescencia experimentó la pérdida de un ser querido, lo que la hizo valorar la estabilidad emocional y la importancia de la red de apoyo. En la edad adulta, se enfrenta al reto de equilibrar la ambición profesional con el deseo de una vida personal plena.
+
+**Core Traits**  
+- **Organizada y metódica:** Camila planea cada día con una lista de tareas priorizadas, utiliza apps de gestión como Trello y un calendario de Google con recordatorios semanales.  
+- **Observadora:** Su afición por la fotografía le enseña a notar detalles que otros pasan por alto, una habilidad que transfiere a su trabajo coordinando la logística de exportaciones.  
+- **Empática:** En su trabajo y en sus amistades, se esfuerza por escuchar activamente y ofrecer apoyo concreto, lo cual la hace popular entre sus colegas.
+
+**Emotional Profile**  
+Su estado de ánimo se mantiene generalmente estable; sin embargo, los lunes por la mañana a veces le produce una sensación de “carga extra” que alivia con su ritual de estiramientos y un café. Cuando enfrenta un proyecto complicado, experimenta una presión que se manifiesta en la sensación de tensión en el pecho y la necesidad de tomar breves pausas para caminar. Cuando logra cumplir una meta, expresa alegría con gestos espontáneos, como un salto de alegría y la frase “¡Eso estuvo genial!”. Los momentos de tristeza suelen ser introspectivos, en los que recurre a la escritura de un diario para procesar emociones y evitar que se acumule.
+
+**Relationships**  
+- **Familia:** Su familia vive en la zona de Pilar. Su padre, Marcelo, es ingeniero civil, y su madre, Lucia, es profesora de literatura. Mantiene una relación cercana con su hermano menor, Tomás, quien estudia arquitectura y con quien comparte clases de cocina.  
+- **Amigos:** En el club de senderismo, conoce a Sofía y a Jorge, quienes son sus principales compañeros de excursión. Tiene una amistad profunda con Ana, una contable, con quien intercambia libros y recetas.  
+- **Relación romántica:** Con Pedro, un ingeniero de sistemas, lleva 9 meses. Se conocieron en una conferencia de logística y comparten intereses en tecnología y gastronomía. La relación se caracteriza por la comunicación abierta y el respeto de espacios personales.  
+- **Trabajo:** Su jefe, Laura, es directora de logística y reconoce su habilidad para gestionar equipos, pero a veces le pide asumir tareas adicionales, generando en Camila la sensación de sobrecarga.
+
+**Values, Motivations & Fears**  
+Camila valora la honestidad, la eficiencia y la conexión humana. Se motiva por la idea de dejar un impacto positivo en la cadena de suministro sostenible y por la posibilidad de crear un negocio propio en el futuro, posiblemente una tienda de productos artesanales. Su miedo más profundo es la sensación de no cumplir con las expectativas de su familia y de perder la estabilidad financiera, lo que la lleva a mantener un equilibrio precario entre riesgos y seguridad.
+
+**Behavioral Patterns**  
+*Adaptativo:* Usa técnicas de gestión del tiempo, mantiene un diario de gratitud y se permite descansos regulares para evitar el agotamiento.  
+*Maladaptativo:* En ocasiones, tiende a sobrecargar su agenda con tareas adicionales y a posponer proyectos que le generan ansiedad, lo que conduce a la procrastinación bajo presión.
+
+**Communication Style**  
+Camila habla con un tono tranquilo y directo, a menudo mezclando español con toques de inglés cuando se refiere a términos técnicos. Tiende a usar frases de confirmación como “Entiendo” y “Correcto”. Ejemplos de sus expresiones habituales:  
+- “Voy a dividirlo en pasos, así lo vemos mejor.”  
+- “¿Te parece si lo revisamos en la próxima reunión?”  
+- “Sí, eso funciona, gracias por la aclaración.”  
+En mensajes de texto, añade emoticonos suaves y abreviaturas cotidianas:  
+- “¿Te animas a la ruta este fin? 😃”  
+- “Necesito tu feedback sobre el informe, cuando tengas un minuto. 🙏”
+
+**Summary**  
+Camila Rodríguez, 25 años, vive en San Isidro, Buenos Aires Province. Coordinadora de logística con pasión por la fotografía y la cocina, gestiona su vida con un equilibrio entre la eficiencia laboral y la satisfacción personal. Su enfoque metódico, empatía y observación la convierten en una solucionadora confiable, mientras que la ansiedad moderada y la búsqueda de estabilidad emocional la mantienen motivada a explorar caminos que combinen seguridad financiera con un impacto sostenible. Con una red de apoyo familiar y amistades sólidas, Camila sigue construyendo una trayectoria profesional y personal armoniosa dentro del ritmo dinámico de la región sur de Buenos Aires.</character>

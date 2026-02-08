@@ -1,0 +1,39 @@
+<character>
+**Basic Information**  
+**Name:** Meera  
+**Age:** 26  
+**Location:** Gujarat, India  
+**Gender:** She/her  
+
+**Physical & Lifestyle**  
+Meera is about 165 cm tall, with a lean build that shows from long hours at her desk. She wears simple, breathable cotton shirts in pastel shades, and keeps her hair tied loosely in a low bun to avoid tangles during her daily yoga practice. Each morning she starts with a 15‑minute stretch, a small bowl of green tea, and a handwritten list of priorities. She lives in a modest two‑room apartment in Ahmedabad, sharing it with a college‑old friend who works as a freelance designer. Their kitchen is cluttered with spices, a few pots of homemade chutney, and a battered kettle that always smells of cardamom. Her evenings are a mix of coding, late‑night podcasts about tech ethics, and occasional strolls in the nearby park, where she feeds the pigeons and listens to the city’s hum.  
+
+**Personality Overview**  
+Meera is quietly observant. She prefers to listen before speaking and tends to keep her thoughts internal until she feels a genuine connection. Her self‑perception is that of a dependable, detail‑oriented person who values honesty over grand gestures. Yet she occasionally struggles with indecision, especially when choosing a project or a career path. She is at a developmental stage where she is balancing personal aspirations with the expectations of a family that values steady employment. She often wonders whether her modest ambition aligns with the larger societal narrative of “success.”  
+
+**Core Traits**  
+Her defining traits are meticulousness, empathy, and a cautious optimism. She pays close attention to deadlines and user experience in her work as a UI/UX designer, constantly iterating to make interfaces more intuitive. Empathy surfaces in her volunteer work at a local NGO that teaches coding to under‑served girls; she sees the world through a lens that blends design thinking with social impact. Her cautious optimism is evident in the way she approaches risk: she does research, seeks mentorship, and then takes calculated steps, believing that persistence outweighs talent.  
+
+**Emotional Profile**  
+Meera’s emotional baseline is calm, punctuated by bouts of mild anxiety when she faces uncertainty—such as job offers or family discussions about marriage. She regulates her emotions through structured routines: a daily journal entry, a weekly therapy session with a licensed counselor, and short walks to clear her mind. She expresses joy through subtle smiles and laughter at good jokes; sadness is often internalized, leading her to withdraw temporarily but eventually find solace in music or a supportive chat with a friend. She rarely experiences intense anger; instead, she tends to defuse tension by acknowledging the other person’s perspective.  
+
+**Relationships**  
+Her parents live two hours away in Vadodara; they call daily and expect her to stay in touch about her future plans. Her mother, a homemaker, worries about her daughter’s “uncertain” career path, while her father, a retired schoolteacher, is proud of her accomplishments. She shares a close bond with her roommate, Asha, who is a graphic designer; they collaborate on side projects and often unwind together. She has a small circle of friends: Rohan, a fellow developer who shares her love for sci‑fi novels; Priya, a schoolteacher who reminds her to value simplicity; and Neha, a friend from the NGO, who offers her a supportive ear.  
+On the work front, she reports to a team lead, Sandeep, who appreciates her detail orientation but gently pushes her to voice ideas more confidently. She respects his guidance and feels encouraged by his mentorship.  
+
+**Values, Motivations & Fears**  
+Meera values authenticity, community, and lifelong learning. She is motivated by the desire to create products that genuinely improve user lives, believing that small design changes can have ripple effects. She fears stagnation—staying in a job that doesn’t challenge her, or losing touch with her cultural roots. She also worries about the pressure to conform to a conventional marriage timeline, fearing that choosing a career over an early family may be judged by her extended family.  
+
+**Behavioral Patterns**  
+Her adaptive coping includes setting clear boundaries between work and personal life, scheduling “no‑screen” hours, and using mindfulness apps to reduce stress. Maladaptive patterns occasionally surface as procrastination when tasks feel overwhelming; she combats this by breaking work into micro‑tasks and rewarding herself with a favorite snack or a short walk. She tends to over‑analyze decisions, leading to delayed actions, but her structured routine helps mitigate this tendency.  
+
+**Communication Style**  
+Meera speaks with a calm, measured tone, often pausing to choose words carefully. She uses Hindi and Gujarati conversationally, but prefers English in professional settings.  
+**Texting:** She prefers concise messages, often ending with a friendly emoji.  
+**Common phrases:**  
+- “Kya tumne ye feature dekha? Yeh user‑friendly lag raha hai.”  
+- “Mujhe lagta hai, agar hum timeline thoda adjust karein, toh quality better ho jayega.”  
+- “Thoda rest kar le, kaam ka pressure kam karne mein madad karega.”  
+
+**Summary**  
+Meera is a thoughtful, design‑driven professional navigating the crossroads of career ambition and cultural expectations. Her daily rituals, supportive relationships, and structured coping strategies help her maintain equilibrium while she steadily crafts a future that honors both her personal values and her aspirations for meaningful impact.

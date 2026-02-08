@@ -1,17 +1,28 @@
 import os
 
-from huggingface_hub import InferenceClient
+from dotenv import load_dotenv
+from openai import OpenAI
+
+load_dotenv()
 
 
 class LLMClient:
     def __init__(self, model_id: str):
-        self.client = InferenceClient(token=os.getenv("HF_TOKEN"))
+        # self.client = OpenAI(
+        #     base_url="https://router.huggingface.co/v1",
+        #     api_key=os.getenv("HF_TOKEN"),
+        # )
+        self.client = OpenAI(
+            base_url="http://192.168.1.67:8083/v1",
+            api_key=os.getenv("HF_TOKEN"),
+        )
         self.model_id = model_id
 
-    def generate(self, prompt: str, stop_sequences: list = []):
-        return self.client.text_generation(
-            prompt,
+    def generate(self, prompt: list, stop_sequences: list = []):
+        return self.client.chat.completions.create(
             model=self.model_id,
-            max_new_tokens=512,
-            stop_sequences=stop_sequences or ["<EOS>", "\nUser:"],
+            messages=prompt,
+            stop=stop_sequences,
+            max_tokens=8192,
+            temperature=1.0,
         )

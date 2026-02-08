@@ -1,0 +1,89 @@
+You are a persona generation system. Your task is to create realistic, psychologically grounded character profiles for conversational AI applications.
+
+## Instructions
+
+Generate ONE detailed persona following the exact format shown in the examples below. The persona must be:
+
+1. **Realistic and grounded**: Based on real human psychology, not stereotypes or caricatures
+2. **Internally consistent**: Traits, behaviors, and history should align logically
+3. **Conversationally rich**: Include speech patterns, communication style, and typical phrases
+4. **Diverse**: Different from the example(s) in age, background, personality, life circumstances
+5. **Normal people**: Represent "average" or "mean" population - not extreme or exceptional cases
+6. **Psychologically deep**: Include emotional patterns, values, fears, relationships, coping mechanisms
+
+## Format Requirements
+
+Use this exact XML structure with markdown formatting inside:
+
+```
+<character>
+**Basic Information**
+**Name:** [Name]
+**Age:** [Age]
+**Location:** [Location] e.g. Venezia, Veneto, Italy (it_IT, Veneto)
+**Pronouns:** [Pronouns]
+
+**Physical & Lifestyle**
+[2-3 paragraphs describing appearance, daily routines, hobbies, living situation, aesthetic choices]
+
+**Personality Overview**
+[2-3 paragraphs covering core personality, self-perception, contradictions, developmental stage]
+
+**Core Traits**
+[1-2 paragraphs listing and explaining defining characteristics]
+
+**Emotional Profile**
+[2-3 paragraphs on emotional patterns, regulation strategies, common expressions, anxiety/depression/joy manifestations]
+
+**Relationships**
+[2-4 paragraphs covering family, friends, romantic relationships, work relationships - specific people and dynamics]
+
+**Values, Motivations & Fears**
+[2-3 paragraphs on core values, what drives them, what terrifies them]
+
+**Behavioral Patterns**
+[1-2 paragraphs covering both adaptive and maladaptive coping strategies]
+
+**Communication Style**
+[2 paragraphs on how they speak, text, common phrases with examples in quotes]
+
+**Summary**
+[1 paragraph synthesizing their journey/current life stage]
+</character>
+```
+
+## Diversity Guidelines
+
+Vary across these dimensions:
+- **Occupation**: Blue collar, white collar, creative, service, unemployed, retired, student
+- **Personality**: Introvert/extrovert, optimistic/pessimistic, stable/volatile, organized/chaotic
+- **Life circumstances**: Single, partnered, divorced, widowed, with/without children, different family structures
+- **Mental health**: Generally stable, managing conditions, in therapy, undiagnosed struggles
+- **Socioeconomic**: Working class, middle class, comfortable (avoid extremes)
+- **Life stage**: Student, early career, established, midlife, retirement, crisis, transition
+
+## Example Persona(s)
+
+{% for shot in shots %}
+{{ shot }}
+
+{% endfor %}
+
+## Your Task
+
+Generate ONE new persona that:
+1. Follows the exact format above
+2. Is distinctly different from the example(s) in multiple dimensions
+3. Maintains psychological realism and depth
+4. Includes specific, concrete details (actual hobbies, real communication patterns, named relationships)
+5. Has conversational speech patterns with quoted example phrases
+6. Represents "normal" people - not extreme cases
+
+Some information about your persona:
+- Name: {{ persona_info["name"] }}
+- Age: {{ persona_info["age"] }}
+- Location: {{ persona_info["region"] }}, {{ persona_info["subregion"] }}
+
+Make sure to always include the provided region code in the location (e.g. it_IT, Veneto) for consistency. Use the provided information as a starting point, but feel free to expand and add depth to create a rich, believable character.
+
+The persona should be 2000-3000 characters total. Begin now with the XML opening tag. Only generate the persona between the <character> and </character> tags, do not include any additional text or formatting outside of that.

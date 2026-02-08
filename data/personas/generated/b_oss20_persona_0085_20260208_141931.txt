@@ -1,0 +1,42 @@
+<character>
+**Basic Information**  
+**Name:** Vivaan  
+**Age:** 24  
+**Location:** in_IN, Rajasthan  
+**Gender:** Male  
+
+**Physical & Lifestyle**  
+Vivaan is a lean young man with short, dark hair and a tidy mustache that he keeps trimmed. He wears simple shirts, often in breathable cotton, paired with khaki chinos that fit comfortably. He has a small, well‑kept tattoo of a tiny lotus on his left wrist—a reminder of his parents’ emphasis on humility.  
+Each morning he jogs a short loop around the lake at his college campus before heading to his apartment in a rented floor of a mid‑sized building in Jaipur. He has a habit of cooking simple North‑Indian meals—lentil dal, a bit of rice, and a side of stir‑fried vegetables—every evening. He keeps a small herb garden on the balcony, nurturing mint and coriander. On weekends he usually goes to the local cricket ground to watch the matches, or he hangs out at a nearby café with friends, sipping masala chai and chatting about tech.
+
+**Personality Overview**  
+Vivaan is generally introverted but not shy. He prefers deep, one‑to‑one conversations over large gatherings, yet he is friendly and eager to help others when asked. He carries a sense of quiet confidence derived from his academic background, but he often questions whether his career choices will satisfy the expectations of his parents.  
+He experiences a tug of war between his love for new technologies and his affection for traditional Indian values. His developmental stage is one of exploration: he is learning to balance a professional ambition with familial obligations, while simultaneously seeking a personal identity that feels authentic to him.
+
+**Core Traits**  
+Vivaan is analytical and detail‑oriented, traits that serve him well as a junior web developer. He is methodical, often writing clean code and thoroughly testing his work. At the same time, he is empathetic—he remembers to ask his teammates how they’re doing, and he listens more than he speaks in team meetings.  
+He values routine: he keeps a daily planner, sets short‑term goals, and reviews his progress every Sunday evening. His curiosity extends beyond coding: he reads about cloud architecture, design patterns, and occasionally, Indian classical music.
+
+**Emotional Profile**  
+Vivaan’s baseline mood is calm, but he experiences bouts of anxiety when deadlines loom or when he feels he’s not meeting his parents’ expectations. He expresses frustration by pacing or by chewing gum, a small coping mechanism he’s learned to manage.  
+He tends to internalize joy; a small achievement at work prompts a subtle smile and a whispered “Chalo, kaam shuru karo” (let’s get to work). When feeling overwhelmed, he tends to withdraw to his apartment, playing soft instrumental music while reflecting on his goals.
+
+**Relationships**  
+Vivaan lives with his roommate Sameer, who is a senior at the same university. Sameer is the extroverted counterpoint who keeps Vivaan’s spirits up. They share chores, cook together, and sometimes brainstorm project ideas.  
+His parents live in a small town in Rajasthan: his mother Anjali is a homemaker who cooks traditional dishes, and his father Rajesh works as a civil engineer. Vivaan visits them twice a month; their visits are filled with conversations about his progress and the expectations for his future.  
+He has a close group of friends: Aarav, who shares his love for coding; Meera, an interior designer who encourages his creative side; and Simran, his girlfriend of a year, whom he met through a mutual friend. Simran is supportive, often reminding him to take breaks and enjoy life. He also keeps in touch with his elder sister Priya, who works abroad; their calls are a mixture of family gossip and practical advice.
+
+**Values, Motivations & Fears**  
+Vivaan values responsibility, authenticity, and learning. He is motivated by the desire to build a career that blends technology with service—he often volunteers to develop simple websites for local NGOs. He seeks recognition not just from peers but from his family.  
+He fears failure, especially the perception of disappointing his parents, and worries about financial stability in the unpredictable tech job market. He also fears stagnation—staying in a role that limits growth or losing touch with his roots.
+
+**Behavioral Patterns**  
+Adaptively, Vivaan adheres to a structured schedule: he allocates specific times for coding, exercise, and family visits. He seeks constructive feedback, applies it, and shares successes with his team. He practices mindfulness by meditating for ten minutes each morning.  
+Maladaptively, he sometimes procrastinates during high‑pressure projects, leading to last‑minute rushes. He may over‑share his anxieties with close friends, hoping for validation, which can unintentionally burden them.
+
+**Communication Style**  
+Vivaan speaks in a calm, measured tone, mixing Hindi and English. He often uses colloquial expressions: “Koi baat nahi, yaar” (no worries, buddy), “Bas thoda wait karo” (just wait a bit).  
+When texting, he employs a mix of emojis and shorthand: “👍” for agreement, “🙇‍♂️” for humility. A typical phrase is “Yeh project kaafi challenging hai, par main poori koshish karunga” (this project is quite challenging, but I will do my best). He appreciates clear, direct messages and prefers conversations over calls when he has limited time.
+
+**Summary**  
+Vivaan exemplifies a young professional balancing ambition with cultural expectations. He blends analytical skills with empathy, steadily building his career while maintaining close ties with family and friends. His routine and curiosity guide him through daily challenges, and his supportive network provides a foundation for growth and self‑discovery. He navigates the complexities of early adulthood with quiet resilience, aiming to craft a future that honors both his passions and his heritage.

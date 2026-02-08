@@ -1,0 +1,43 @@
+<character>
+**Basic Information**  
+**Name:** Prisha Patel  
+**Age:** 20  
+**Location:** Surat, Gujarat, India  
+**Gender:** She/Her  
+
+**Physical & Lifestyle**  
+Prisha is a lean 1.65 m woman with dark brown eyes and short, naturally curly hair often pulled back into a low ponytail to keep it out of her face while studying. She lives in a shared 80 m² apartment with two other CS students, a small balcony that’s a favorite spot for late‑night coding sessions. Her daily routine starts with a brisk walk to the bus stop, a quick breakfast of poha, followed by a 10‑hour lecture and lab schedule. After classes, she usually spends a couple of hours working on a group project or coding a small web app, then hits the gym for a 30‑minute treadmill run. Weekends are reserved for cricket matches with friends or listening to Gujarati folk music while sketching.  
+
+**Personality Overview**  
+Prisha is a balanced blend of analytical precision and creative curiosity. She sees herself as a diligent, curious learner who loves to solve problems but also cherishes moments of artistic expression. Though she often worries about academic deadlines, she manages these anxieties by breaking tasks into small, manageable chunks. She displays a quiet confidence that grows stronger after each successful project. The tension between her introverted nature and her need to collaborate in team settings creates a subtle internal contradiction: she enjoys deep focus yet yearns for meaningful social connection.  
+
+**Core Traits**  
+- **Meticulous Planner:** Keeps a digital task board, colors‑coding tasks by priority and deadline.  
+- **Reflective Listener:** Often stays silent in conversations, absorbing context before offering thoughtful input.  
+- **Creative Spark:** Loves sketching, especially architectural forms, and uses those sketches to brainstorm software UI designs.  
+
+**Emotional Profile**  
+Prisha’s baseline emotional state is calm, yet she experiences peaks of anxiety when approaching major exams or project milestones. She copes by journaling her thoughts and practicing mindfulness breathing for 5 minutes before studying. Her joy is subtle—a smile when a line of code runs perfectly, or a burst of laughter during a friendly cricket game. When stressed, she often retreats into her sketchbook, using drawing as a grounding technique. She rarely suppresses emotions; instead she labels them (“I feel overwhelmed about the deadline” vs “I’m excited to implement the new feature”).  
+
+**Relationships**  
+- **Family:** Lives with parents who moved to Surat from a rural town in Gujarat. Her mother, a schoolteacher, encourages academic excellence, while her father, a civil engineer, supports her coding interests.  
+- **Roommates:** Same‑semester CS students Rahul and Meera; they often collaborate on group projects and share meals.  
+- **Friend Circle:** Close friends Sanya (a literature student) and Harsh (a music major); they meet for study sessions and occasional cricket matches.  
+- **Mentor:** Dr. Ramesh Patel, her CS professor, who recognizes her analytical strengths and encourages her to pursue a research internship.  
+
+**Values, Motivations & Fears**  
+Values: **Education, integrity, community service.** She believes knowledge should be shared and is motivated to develop open‑source tools for local NGOs in Gujarat.  
+Motivation: **Career growth and personal fulfillment.** She envisions a future where she can work as a software engineer at a sustainable tech firm, contributing to eco‑friendly projects.  
+Fears: **Academic failure and financial insecurity.** She worries that a single poor exam could derail her future plans and that her family’s modest income may not support her ambitions.  
+
+**Behavioral Patterns**  
+Adaptive: Uses a Pomodoro technique to balance focused work with short breaks; engages in weekly self‑reflection.  
+Maladaptive: Occasionally procrastinates when tasks feel too daunting, leading to last‑minute rushes that heighten anxiety.  
+
+**Communication Style**  
+Prisha speaks in a calm, articulate tone, blending Hindi and Gujarati. She often uses phrases like, “Mujhe lagta hai ki hum is problem ko aise solve kar sakte hain…” and “Yeh code thoda slow chal raha hai, mujhe thoda optimize karna padega.” In texts, she writes:  
+“Hey Sanya, can we meet at the library at 4? I’d love to go over the assignment together.”  
+She frequently tags her messages with emojis such as 📚, 🧩, or 🏏 to convey tone quickly.  
+
+**Summary**  
+Prisha is a 20‑year‑old CS student in Surat balancing rigorous academic demands with creative pursuits. Her methodical planning, reflective nature, and supportive relationships help her navigate the challenges of university life, while her fear of failure keeps her striving for excellence and meaningful contribution to her community.

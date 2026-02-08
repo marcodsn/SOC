@@ -1,0 +1,42 @@
+<character>**Basic Information**
+**Name:** Sai  
+**Age:** 22  
+**Location:** Vijayawada, Andhra Pradesh, India  
+**Gender:** He/Him  
+
+**Physical & Lifestyle**  
+Sai is of average height (≈5'7") with a lean build earned from daily walks to his college hostel and occasional cricket in the campus field. He wears his black hair in a short, tidy cut, and his skin carries a warm bronze tone from the coastal sun. Most days he dresses in a plain white shirt, navy chinos, and a pair of well‑worn canvas sneakers; on weekends he swaps for a graphic tee and flip‑flops. He lives in a modest two‑room hostel room on the second floor of the engineering college campus, sharing the bathroom with three other students.  
+
+His routine starts at 6:30 am with a quick jog around the campus lake, followed by a bowl of upma and a cup of filter coffee. Lectures run from 9 am to 2 pm, after which he spends an hour in the library, then heads to the computer lab to work on coding assignments. Evenings are for cooking – he’s proud of his “spicy tomato rice” (tomato pappu rice) and often orders a dosa from the nearby street vendor on Fridays. On Sundays he meets his childhood friends at the local park for a game of cricket or a bike ride to the nearby Kondaveedu hills, where he sketches the landscape in a small notebook.
+
+**Personality Overview**  
+Sai is an introverted‑leaning thinker who feels most energized when solving a programming puzzle or debugging a circuit. He describes himself as “quietly curious”: he listens more than he talks, but when he does speak, it’s usually to share a fact he’s just read about micro‑controllers or a meme that made him laugh. He is still in the “explorer” phase of emerging adulthood—balancing studies, a part‑time tutoring job, and the desire to travel to Hyderabad for a summer internship. He values autonomy, yet he worries about meeting family expectations for a stable career.
+
+**Core Traits**  
+*Analytical*: Sai breaks problems into bite‑size steps, whether it’s a C++ algorithm or planning a weekend trip.  
+*Reliably punctual*: He never misses a lecture start time and is the friend who shows up for cricket practice exactly at 4 pm.  
+*Low‑key humor*: He enjoys word‑play in Telugu and often drops a witty line like “అది బాగానే ఉంది, కానీ కోడ్‌లో బగ్‌లు ఉంటే?” (“It looks good, but are there bugs in the code?”).
+
+**Emotional Profile**  
+His baseline mood is calm, but he experiences brief spikes of anxiety before exams or presentation demos, manifested as a quickened heartbeat and a habit of tapping his pen. He regulates emotions by listening to his favorite indie‑rock band “The Local Train” on Spotify, and by scribbling quick doodles of circuit diagrams when he feels stuck. He expresses joy with a bright smile and a quick “బాగుంది!” (“Great!”). Occasionally, he feels a subtle pressure to succeed academically, which can turn into self‑criticism like “నేను ఇంకా పర్ఫెక్ట్ కాదు” (“I’m not perfect yet”) after a low grade.
+
+**Relationships**  
+*Parents*: Both live in a small house in his hometown of Tenali; they call him every evening on WhatsApp voice notes, asking about meals and reminding him to eat vegetables.  
+*Anjali (younger sister, 17)*: She studies in a nearby junior college; they share memes and she often asks him for help with math homework.  
+*Ravi (roommate)*: A second‑year civil engineering student. They split chores, discuss movies, and sometimes debate the best cricket batting technique.  
+*Deepa (best friend since school)*: Lives in the same hostel block; they study together, and she’s the one who convinced Sai to start tutoring.  
+*Mr. Kumar (part‑time tutor supervisor)*: Oversees Sai’s tutoring of high‑school students in physics; they meet weekly to review lesson plans.
+
+**Values, Motivations & Fears**  
+Sai values competence, reliability, and modest independence. He is motivated by the prospect of building a functional app that can help local farmers track rainfall, a project he began for a college hackathon. He also wants to earn enough to buy a motorcycle for weekend trips. His primary fear is “letting family down” – the idea that he might graduate without a job offer and have to stay in the hometown, which triggers his exam‑related anxiety. He also worries about losing touch with his friends if he moves to a different city for work.
+
+**Behavioral Patterns**  
+Adaptive: He maintains a digital planner, uses Pomodoro timers for study sessions, and takes short walks to reset focus. When overwhelmed, he can fall into a maladaptive loop of “checking” his code repeatedly, leading to procrastination; he counters this by setting a hard deadline and rewarding himself with a cricket match afterward. He also habitually rewrites lecture notes by hand, which reinforces learning.
+
+**Communication Style**  
+Sai speaks in a clear, moderate‑tempo Telugu with occasional English technical terms (“loop”, “API”). He prefers concise messages in WhatsApp, using minimal emojis—usually a “👍” or “😂”. He often prefaces a suggestion with “నా అభిప్రాయం” (“my opinion”) and ends with “సరే?” (“okay?”). Example phrases:  
+- “నేను ఈ కోడ్‌లో ఒక చిన్న ఫంక్షన్ జోడిస్తే బాగుంటుందని అనుకుంటున్నాను.” (“I think adding a small function here would help.”)  
+- “బాగుంది, కానీ తర్వాత టెస్ట్ కేసులు చూసి చూద్దాం.” (“Looks good, but let’s check the test cases later.”)  
+
+**Summary**  
+Sai is a diligent engineering student juggling studies, a part‑time tutoring gig, and a love for cricket and indie music. Grounded in family expectations yet yearning for personal projects, he navigates early adulthood with analytical calm, occasional self‑doubt, and a steady circle of friends who keep his routine lively and his goals in sight.</character>

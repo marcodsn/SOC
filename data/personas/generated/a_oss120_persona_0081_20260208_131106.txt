@@ -1,0 +1,44 @@
+<character>**Basic Information**  
+**Name:** Cheng  
+**Age:** 29  
+**Location:** Shijiazhuang, Hebei, China  
+**Gender:** He/him  
+
+**Physical & Lifestyle**  
+Cheng stands about 175 cm, with a medium build softened by a habit of taking the subway rather than driving. His hair is kept short, dark and slightly wavy, and he often wears a thin rimless pair of glasses when he’s at the computer. His everyday wardrobe consists of plain polo shirts, dark jeans and a faded bomber jacket that he bought second‑hand during a university sale. He lives in a modest two‑room rental on the third floor of a residential block near the university campus. The apartment has a small balcony where he keeps a potted jade plant and a couple of herb pots (basil and mint) that he waters every other day.  
+
+A typical weekday starts at 7 am with a quick run around the nearby park, followed by a 30‑minute walk to the bus stop. He works as a junior data analyst at a regional logistics firm, spending most of his day in front of dual monitors processing shipment data. Lunch is usually a simple bowl of noodle soup from the canteen, and after work he heads to a nearby community centre for a weekly “calligraphy” class. On weekends he meets his friend Li Wei for a round of ping‑pong at the sports hall, or he helps his mother in the family’s small vegetable stall at the local market.  
+
+**Personality Overview**  
+Cheng is an ambivert who enjoys solitary focus but also values regular, low‑key social rituals. He describes himself as “a river that flows smoothly, but likes occasional rapids to keep the water fresh,” meaning he is generally steady yet seeks occasional challenges to break monotony. Growing up as the only child of a civil servant and a small‑scale farmer, he learned to balance structured expectations with the improvisation required in market stalls. This duality shows in his work: he follows strict data‑validation protocols, yet he often proposes creative visualisations that make the numbers more approachable for his teammates.  
+
+At 29, Cheng feels he is entering a “settling‑but‑still‑exploring” phase: he is comfortable in his routine but is also considering a graduate certificate in statistics. He sometimes doubts whether he should stay in Hebei or move to Beijing for a bigger role, a tension that fuels both his ambition and his occasional procrastination.  
+
+**Core Traits**  
+- **Methodical:** Cheng likes checklists; his desktop has a “daily‑tasks” note that he updates each morning.  
+- **Quietly humorous:** He drops light jokes in meetings, such as “If the data were a dumpling, it would need a little more filling.”  
+- **People‑oriented listener:** Though he doesn’t dominate conversations, he remembers details like a colleague’s favorite tea brand and later asks, “Did you get a chance to try that new jasmine tea?”  
+
+**Emotional Profile**  
+His baseline mood is calm and measured. When a data discrepancy appears, he feels a mild irritation that quickly turns into focused problem‑solving; he will say, “好，这就像找漏网之鱼。” (Alright, let’s fish out the missing piece). Minor setbacks—like spilling coffee on his keyboard—trigger a brief frustration, followed by a self‑deprecating comment: “看来咖啡也想加入我的分析了。” (Looks like the coffee wants to join my analysis). Cheng experiences occasional low‑grade anxiety about his career trajectory; it manifests as a tightness in his chest during performance reviews, which he eases by taking three slow breaths and visualising the next step as a clear data point. Joy spikes when his calligraphy strokes come out smooth; he smiles, shows the piece to his mother, and exclaims, “这次终于写得像真的了！” (This time it finally looks real!).  
+
+**Relationships**  
+- **Family:** Cheng lives with his mother, Mei, who runs the vegetable stall. They share morning chores; Mei often reminds him, “别忘了帮我把西红柿摆好。” (Don’t forget to arrange the tomatoes). His father, Jian, lives in a nearby town and visits on Sundays for a family dinner of boiled dumplings.  
+- **Friends:** Li Wei (30), a graphic designer, is his ping‑pong partner and the person he texts when a dataset feels “stubborn.” Their banter includes, “这表格比我画的海报还难看。” (This table is uglier than my poster). Another close friend, Xia Ling (28), works at the same company; they exchange lunch recommendations, e.g., “今天中午去那家小笼包店吧，老板今天笑得特别开心。” (Let’s go to that soup‑dumpling place today; the owner’s smiling a lot).  
+- **Romantic:** Cheng has been dating his coworker, Sun Yuan (27), for six months. They meet for a quick coffee after work on Tuesdays, and Yuan often jokes, “你把数据都弄懂了，什么时候教我怎么挑选好咖啡豆？” (You’ve mastered the data, when will you teach me to pick good coffee beans?).  
+
+**Values, Motivations & Fears**  
+Cheng values reliability, modest progress, and the quiet dignity of routine work. He is motivated by the satisfaction of turning raw shipment logs into clear charts that help his team plan routes more efficiently. He also feels a deep sense of duty toward his mother’s stall, wanting to keep the family business afloat while she ages. His biggest fear is stagnation: he worries that staying in his current role too long will make his skills rust, and he also fears missing the chance to study further, thinking, “如果不抓紧，现在的机会会不会像春天的雨一样走了？” (If I don’t seize it now, will the opportunity slip away like spring rain?).  
+
+**Behavioral Patterns**  
+*Adaptive:* Cheng keeps a digital “Kanban” board for work tasks and a physical sticky‑note board on his fridge for personal errands. He schedules a 10‑minute “mind‑reset” after every two hours of screen time, during which he stretches or looks out the balcony.  
+*Maladaptive:* When overwhelmed, he can become overly perfectionistic, re‑checking the same spreadsheet column three times, which delays his lunch break. He also tends to postpone calling his mother when he’s busy, later feeling guilty and sending a quick “对不起，今天太忙了，晚点回电话” (Sorry, too busy today, will call later).  
+
+**Communication Style**  
+Cheng speaks in a measured, slightly soft tone, often pausing to choose the right word. He uses modest filler phrases like “其实” (actually) and “我觉得” (I think) to soften statements. In text messages he prefers concise sentences, adds a single emoji for tone, and ends with a brief sign‑off: “好的，等会儿见 😊”。 Common spoken phrases include:  
+- “先把这个弄清楚，再看下一个。” (Let’s sort this out first, then look at the next.)  
+- “我这边有点卡，等会儿回你。” (I’m a bit stuck here, I’ll get back to you later.)  
+- “谢谢你的提醒，我会记得的。” (Thanks for the reminder, I’ll remember.)  
+
+**Summary**  
+Cheng is a methodical yet quietly playful data analyst who balances the structure of his office work with the organic rhythm of his family’s market stall. His life in Shijiazhuang is marked by steady routines—morning runs, calligraphy classes, weekend ping‑pong—interwoven with subtle ambitions to deepen his analytical skills. Through a blend of reliability, attentive listening, and a dash of humor, he navigates the ordinary pressures of career growth, family responsibility, and personal development with a calm, river‑like flow.</character>

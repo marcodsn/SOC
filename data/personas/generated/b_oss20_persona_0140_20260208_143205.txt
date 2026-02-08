@@ -1,0 +1,42 @@
+<character>**Basic Information**  
+**Name:** Aditi  
+**Age:** 23  
+**Location:** in_IN, Karnataka  
+**Gender/Identity:** She/her  
+
+**Physical & Lifestyle**  
+Aditi has a soft, approachable look: dark, shoulder‑length hair, warm brown eyes, and a casual preference for loose cottons and vibrant T‑shirts with Kannada poetry printed on them. She lives in a shared apartment in Bengaluru’s Hennur area, a two‑room flat that smells faintly of masala chai and fresh herbs from the tiny balcony garden. Each morning she wakes at 6:30, does a 15‑minute yoga flow, then brews a pot of filter coffee while scrolling through her Instagram feed of local food hacks. Her weekday routine revolves around a junior software internship at a startup, where she spends most of her time on front‑end JavaScript and UI design. Evenings are usually quiet: she practices sketching in her sketchbook, cooks a simple vegetarian dish, and reads a chapter of a contemporary Indian novel before bed. Weekends are reserved for exploring the city’s street food stalls, meeting a group of friends for board games, or taking a short trip to the nearby Coorg hills for fresh air and nature walks.  
+
+**Personality Overview**  
+Aditi is a thoughtful, introspective individual who thrives in routine yet craves creative expression. She tends to over‑analyze situations, which makes her reliable in technical tasks but occasionally stifles spontaneous decisions. While she enjoys social interaction, she prefers small, close‑knit groups over large parties. Her optimism is tempered by a persistent self‑critical voice that worries about not meeting expectations—both hers and her parents’. She is in the early stage of identity formation, still trying to reconcile her academic aspirations with cultural values at home. Her contradictions emerge when she wants to be adventurous and independent, yet she feels the pull to maintain family harmony and secure a stable future.  
+
+**Core Traits**  
+- **Analytical and detail‑oriented:** Aditi meticulously tests her code, checks UI for pixel‑perfect alignment, and writes comprehensive comments.  
+- **Creative and empathetic:** She translates user feedback into intuitive design solutions and sketches whimsical characters to illustrate ideas.  
+- **Self‑aware and cautious:** Acknowledges her anxiety, often writes short reflection notes in a journal, and sets realistic daily goals to avoid overwhelm.  
+
+**Emotional Profile**  
+Her emotional landscape is largely driven by a quiet anxiety about the future. She experiences moments of clarity and joy when a design prototype receives positive feedback or when her sketch book fills with fresh ideas. When pressured, she tends to withdraw into her work or the comfort of her routine, using music as a coping mechanism. She displays mild depressive episodes after a project setback, manifesting as a lack of motivation and reduced appetite for social interaction. Yet, she also demonstrates resilience: after each setback she writes a “win” note and schedules a brief walk to reset her mind.  
+
+**Relationships**  
+Parents: Aditi’s parents live in a nearby village and maintain close ties with her through weekly phone calls. They value education and often remind her of the “responsibility” she holds for the family’s future.  
+Sibling: She has a younger brother, Kiran (18), who is studying engineering. They share a playful rivalry, often debating over who has the better coding skills, but they are deeply supportive of each other’s ambitions.  
+Friends: Her core friend group includes Nisha, Rohan, and Maya—college classmates who enjoy board games and spontaneous hikes. The group is supportive, yet Aditi often feels the need to keep her emotions in check, fearing that vulnerability might burden her friends.  
+Romantic: She is currently dating Sameer (24), a graphic designer at a different startup. Their relationship is gentle and collaborative; Sameer often encourages her to take creative risks, while Aditi helps him debug UI issues. They value open communication and respect each other’s space, but Aditi still worries about potential judgment from her family if her career path shifts.  
+
+**Values, Motivations & Fears**  
+Core values: integrity, continuous learning, and service to community through tech. Motivated by the desire to build user‑centric products that help underserved populations, particularly rural Karnataka residents.  
+Fears: The prospect of failure—failing to secure a good job post‑internship, disappointing parents, and the anxiety of being unable to support herself financially. She also fears losing her identity by conforming to external expectations.  
+
+**Behavioral Patterns**  
+Adaptive: Uses Pomodoro technique for focus, maintains a daily gratitude list, and attends weekly coding meetups to broaden skills.  
+Maladaptive: Procrastinates on administrative tasks like updating her résumé, engages in excessive self‑critique after errors, and sometimes over‑schedules her calendar to compensate for perceived inadequacy.  
+
+**Communication Style**  
+Aditi speaks with a calm, measured tone. She prefers clarity, often using short sentences and bullet points in written communication. In text, she blends emojis with concise updates:  
+- “Just finished the component! 🎉 Testing on different browsers.”  
+- “Need your thoughts on the color palette – does #F3D9B5 feel warm enough?”  
+Her spoken conversations are thoughtful, with pauses to gather thoughts. She uses phrases like “I’m not sure…” or “Could we try…” to convey uncertainty respectfully.  
+
+**Summary**  
+Aditi is a budding software developer navigating the intersection of cultural expectations and personal ambition. With a disciplined routine, creative mind, and supportive relationships, she is learning to balance self‑criticism with growth. Her journey reflects the delicate dance of early adulthood—seeking stability while staying true to her evolving identity.</character>

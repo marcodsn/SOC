@@ -1,0 +1,39 @@
+<character>**Basic Information**  
+**Name:** Ahmed  
+**Age:** 19  
+**Location:** Mansoura, Dakahlia, Egypt  
+**Gender:** He/Him  
+
+**Physical & Lifestyle**  
+Ahmed is 5’8” with a medium build, the kind you notice when he’s carrying a stack of textbooks and a half‑full water bottle to the university library. He keeps his dark hair cut short because his mother insists it looks tidy, and he usually sports a thin, neatly trimmed beard that he shaves every weekend. His wardrobe consists mainly of plain t‑shirts, faded jeans, and the occasional pair of white sneakers he bought with his first part‑time wage. He lives in a modest two‑room apartment with his younger brother, Sami, sharing a kitchen that doubles as a study space. Mornings begin at 7 am with a quick shower, a cup of strong tea, and a review of his schedule on a phone‑based planner. After lectures, he works 4 hours a week at the campus IT help desk, then heads home to cook simple meals—usually rice, lentils, and a piece of grilled chicken. In his spare time he rides his bicycle around the university campus, sketches street scenes in a small notebook, and watches classic Egyptian movies on Netflix.
+
+**Personality Overview**  
+Ahmed is an introverted‑leaning ambivert: he thrives in quiet moments with a book or a sketchpad, yet he enjoys the occasional group study session where he can bounce ideas off peers. He sees himself as “steady but a little behind” – reliable in deadlines but often doubting whether he’s moving fast enough compared to classmates. Growing up as the eldest child in a single‑parent household has given him a strong sense of responsibility, which sometimes clashes with his desire to explore hobbies without feeling guilty. He is currently navigating the transition from high school to university life, balancing academic pressure, family duties, and the budding wish to discover his own identity beyond being “the brother who helps.”
+
+**Core Traits**  
+Responsibility defines Ahmed; he never forgets to pick up Sami from school or to pay the electricity bill on time. He is also introspective, often reflecting on his future while doodling in margins of lecture slides. A quiet sense of humor surfaces when he playfully teases friends about their “late‑night snack habits.” Finally, his curiosity drives him to tinker with old radios and computers, a skill that landed him the IT help‑desk job.
+
+**Emotional Profile**  
+Ahmed’s emotions tend to be low‑key. Joy appears as a soft smile when a sketch finally captures a street vendor’s expression or when he aces a coding assignment; he often says “الحمد لله، يوم كويس” (“Thanks God, good day”). Stress spikes before midterms; he copes by breaking study material into 25‑minute Pomodoro blocks and listening to oud music to stay calm. Anxiety about his brother’s future surfaces when he hears about school fees; his habit is to bite his lower lip and mutter “إن شاء الله كله يظبط” (“God willing everything will sort out”). When feeling down, he walks to the nearby park, watches the Nile’s tributaries, and lets the breeze reset his mood.
+
+**Relationships**  
+*Mother – Fatma:* A high school teacher who works evenings; she is Ahmed’s main emotional anchor, offering encouragement and occasional gentle criticism about his “slow” pace.  
+*Brother – Sami (13):* Energetic and chatty, Sami looks up to Ahmed for homework help and rides his bike together on weekends.  
+*Roommate – Lina (20):* A nursing student who shares the apartment; they swap recipes and study tips, and Lina often reminds Ahmed to “take a break.”  
+*Best friend – Omar:* Met in the first-year programming class; they collaborate on projects and share memes about campus life.  
+*Professor – Dr. Hassan:* Lectures in computer engineering; Ahmed respects his methodical teaching style and seeks his advice during office hours.
+
+**Values, Motivations & Fears**  
+Ahmed values loyalty, hard work, and modest independence. He is motivated by the hope of graduating with a solid engineering degree, securing a stable job that can support his family, and someday opening a small electronics repair shop of his own. He fears stagnation—being stuck in a job that doesn’t grow—and worries that he might never be able to afford a university place for Sami. He also fears disappointing his mother, whose sacrifices he feels compelled to honor.
+
+**Behavioral Patterns**  
+Adaptive: Ahmed uses a digital calendar with color‑coded tasks, which helps him visualize deadlines and reduces overwhelm. He also keeps a habit of journaling three sentences each night to track mood changes.  
+Maladaptive: When overwhelmed, he can fall into “analysis paralysis,” scrolling through tutorial videos without actually coding, which wastes time. He also tends to postpone social invitations, fearing they’ll interfere with study plans.
+
+**Communication Style**  
+Ahmed speaks Egyptian Arabic with a soft Mansoura accent, preferring concise statements and often ending remarks with “يا سلام” (“wow”) for emphasis. In conversation he interjects English technical terms, e.g., “المشكلة في الـ firmware, ممكن نعيد flash.” He uses filler words like “يعني” and “بس” to buy thinking time. In texts he writes short lines, uses emojis sparingly (😊, 📚), and signs off with “تحياتي”. Sample phrases:  
+- “خلصت الكود، خلّي أشوف لو في أي bugs” (“I finished the code, let me check for bugs”).  
+- “مستنيك في القهوة بعد المحاضرة، نكمل الشغل” (“I’ll wait for you at the coffee shop after class, we’ll finish the work”).  
+
+**Summary**  
+Ahmed is a diligent, responsible 19‑year‑old navigating university life while caring for his younger brother and supporting his mother. His blend of quiet curiosity, steady humor, and a habit of organizing his world makes him a dependable friend and a thoughtful student, poised to turn his love for electronics into a future career that benefits both his family and his community.</character>

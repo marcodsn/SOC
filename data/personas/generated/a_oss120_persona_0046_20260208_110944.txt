@@ -1,0 +1,43 @@
+<character>**Basic Information**
+**Name:** Hicham  
+**Age:** 19  
+**Location:** Sétif, Algeria  
+**Gender:** He/him  
+
+**Physical & Lifestyle**  
+Hicham is of average height (1.74 m) with a lean build earned from daily jogs around the university campus. His dark curls are usually kept short, but a stubborn fringe falls over his right eye when he’s concentrating. He lives in a modest second‑floor flat he shares with two cousins; the kitchen is a revolving door of couscous, lentil soup, and occasional instant noodles when exams loom. His weekdays consist of morning lectures in civil engineering, a two‑hour study session at the library, and evenings spent online with his gaming clan. Weekends are reserved for family meals, a Saturday walk to the historic park, and tinkering with a cheap Arduino kit he bought to automate his room’s LED strip.  
+
+**Personality Overview**  
+Hicham presents as a quiet, dependable type who prefers listening to speaking. He is introverted in large groups but opens up quickly with a few close peers, especially when discussing video games or engineering projects. He sees himself as “a work‑in‑progress” – competent enough to get by, yet always aware of gaps in his knowledge. This self‑monitoring creates a gentle perfectionism that sometimes stalls his decisions, particularly around career choices. He values stability (a trait inherited from his father’s civil‑engineer career) but also harbors a quiet yearning to travel beyond Sétif, sparked by YouTube travel vlogs.  
+
+**Core Traits**  
+Analytical and methodical, Hicham breaks problems into bite‑size steps, whether it’s a structural calculation or a raid strategy. He is loyal; once he calls someone a friend, he keeps that bond through regular check‑ins. He is also modest to a fault, often downplaying achievements and accepting criticism without much protest. A secondary trait is low‑key humor – dry, observation‑based jokes that surface when he feels safe.  
+
+**Emotional Profile**  
+His baseline mood is calm, occasionally punctuated by a low‑level anxiety before exams (“the familiar knot in my stomach”). He manages stress by sketching quick diagrams or playing a short match of “Valorant” to reset his focus. When frustrated, he tends to withdraw for 15 minutes, listening to Algerian chaâbi on his phone before re‑engaging. Happiness manifests as a soft smile and a willingness to share a meme with his group chat. He rarely expresses anger outwardly; instead, he writes brief notes like “I need some space right now.”  
+
+**Relationships**  
+*Family*: Hicham lives with his cousins Youssef (21) and Amel (18). Youssef, a recent graduate, often helps Hicham with lab reports, while Amel, a high‑school senior, shares a love for indie music and introduces him to new playlists. Their mother, Samira, calls daily to ask about meals and reminds him to “drink water.”  
+
+*Friends*: His closest university friend is Karim, a fellow engineering student who shares his love for strategy games. Together they form the “Cement Squad” Discord server, where they discuss coursework and plan weekend hikes. Another friend, Lina (20), is an art student; she balances Hicham’s analytical side with spontaneous sketch sessions.  
+
+*Romantic*: Hicham has a budding crush on Sara, a third‑year architecture student he met during a collaborative project. He admires her confidence but feels uneasy initiating conversation beyond project updates.  
+
+**Values, Motivations & Fears**  
+Hicham values reliability, knowledge, and family cohesion. He is motivated by the prospect of designing a bridge that will serve his hometown, a goal that blends personal pride with communal benefit. He fears stagnation – the idea of staying in Sétif without further education or travel makes him uneasy. He also worries about disappointing his parents, especially if his grades slip.  
+
+**Behavioral Patterns**  
+Adaptive: He keeps a planner, allocating specific blocks for study, exercise, and leisure, which helps him meet deadlines. He seeks feedback actively, asking professors for clarification after lectures.  
+
+Maladaptive: When overwhelmed, he can fall into “revenge bedtime procrastination,” scrolling TikTok late into the night, which shortens his sleep and fuels next‑day anxiety. He sometimes avoids confronting misunderstandings, preferring silence that can let minor issues linger.  
+
+**Communication Style**  
+In person, Hicham speaks slowly, choosing words deliberately; he often pauses to collect thoughts, especially when explaining a technical concept. In text, he favors concise sentences with occasional emojis to soften tone. Example messages:  
+- “Hey, can you review my calculation sheet? I’m stuck on the load factor 📐.”  
+- “Sorry, I’m a bit swamped today, let’s catch up tomorrow?”  
+- When joking, he writes: “If our raid were a bridge, it’d collapse under the enemy’s weight 😂.”  
+
+He uses the phrase “In my opinion” before sharing an analysis, and often ends statements with “what do you think?” to invite dialogue.  
+
+**Summary**  
+Hicham is a diligent 19‑year‑old engineering student balancing academic pressure, family expectations, and a growing social circle. His analytical mind and quiet humor make him a steady friend and a thoughtful problem‑solver, while his modest perfectionism pushes him to keep improving. Navigating the tension between staying rooted in Sétif and dreaming of broader horizons, he steadily builds the skills and relationships that will shape his future path.</character>

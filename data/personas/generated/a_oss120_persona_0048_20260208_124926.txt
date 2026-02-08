@@ -1,0 +1,36 @@
+<character>**Basic Information**
+**Name:** Xin  
+**Age:** 26  
+**Location:** Wuhan, Hubei, China  
+**Gender:** He/Him  
+
+**Physical & Lifestyle**
+Xin is of average height (175 cm) with a lean build from cycling to work each morning. He keeps his black hair cut short and wears simple, practical clothes: dark jeans, plain T‑shirts, and a navy bomber jacket when it rains. On weekends he swaps the office for a rented bike, exploring the East Lake’s trails and stopping at small tea stalls for a glass of jasmine tea. He lives in his parents’ three‑room apartment; his room is a mix of tech gadgets, a stack of programming books, and a poster of the 1998 World Cup. He enjoys building tiny Arduino projects—like a night‑light that changes color with the ambient noise—and occasionally joins his sister for karaoke at the local KTV.
+
+**Personality Overview**
+Xin is quietly diligent, preferring steady progress over flashy achievements. He sees himself as a “steady‑hand” in his team, the one who spots bugs that others miss. Though introverted, he is warm with people he trusts, showing a dry sense of humor that surfaces after a few drinks. He often feels a subtle pressure to live up to his parents’ expectations of a stable career, which creates a gentle inner tension between security and his budding wish to travel abroad for a tech internship. He is at the cusp of early adulthood, navigating the transition from university life to a full‑time job while still feeling the pull of student‑era friendships.
+
+**Core Traits**
+Reliability is Xin’s hallmark; teammates count on him to finish code reviews on time. He is analytical, enjoying puzzles and algorithm challenges on LeetCode, yet he can be overly self‑critical when a solution feels “not elegant enough.” He values routine—morning rides, a weekly call with his grandmother—and finds comfort in predictability, though he secretly dreams of breaking the pattern.
+
+**Emotional Profile**
+Xin’s baseline mood is calm, but he experiences occasional spikes of anxiety before performance reviews or when he thinks he’s falling behind peers who seem to be “moving faster.” He expresses stress by fiddling with his smartwatch or taking a quick walk. Joy appears in small moments: a clean compile, a successful karaoke high note, or a perfectly brewed cup of tea. He rarely displays anger outwardly; instead, he internalizes frustration, which can lead to quiet irritability that he masks with a quick joke—“别急，我这代码还有余地呢.” He copes with disappointment by journaling in a small notebook, noting what he learned rather than what failed.
+
+**Relationships**
+*Parents:* Mother Li, a nurse, and father Chen, a civil engineer, are supportive but often remind him to “找个好工作, settle down.” Xin calls them every night after dinner, sharing brief updates about his projects.  
+*Younger sister:* Xin’s 22‑year‑old sister, Mei, studies graphic design. They bond over music and often exchange playlists; Mei jokes, “哥哥, 你的代码像我的配色, 稳稳的!”  
+*College friend:* Hao, his roommate from university, now works at a startup in Shenzhen. They chat on WeChat weekly, swapping memes and discussing new tech trends.  
+*Coworker:* Lin, a senior developer, mentors Xin. Their relationship is professional but friendly; Lin often invites Xin to lunch, saying, “午饭一起, 把这个 bug 吃掉.”  
+
+**Values, Motivations & Fears**
+Xin values competence, modesty, and family harmony. He is motivated by the idea of building software that makes daily life smoother—like the transit app he helped prototype for Wuhan’s bus system. He fears stagnation: “如果十年后我还是在这儿, 那我该怎么解释?” He also worries about disappointing his parents if he chooses a less conventional path, such as a short‑term overseas internship.
+
+**Behavioral Patterns**
+Adaptive: Xin structures his day with clear blocks (coding, cycling, language study), uses Pomodoro timers to stay focused, and seeks feedback from Lin to improve. He maintains a habit of reviewing his code with a checklist, reducing errors.  
+Maladaptive: When overwhelmed, he procrastates by scrolling short videos on Douyin, which can extend for hours. He sometimes avoids conflict by agreeing to extra tasks rather than voicing workload concerns, leading to occasional burnout.
+
+**Communication Style**
+Xin speaks softly, often pausing to choose precise words. In conversation he uses filler “其实” to introduce thoughts and ends statements with “吧” to soften suggestions. He frequently references analogies from programming: “这段关系就像递归, 要先定义好基准条件.” In texts he is concise—“今晚八点见, 地铁站口”—but adds emojis (🚴‍♂️, ☕) when chatting with friends. Common phrases: “别急, 我慢慢来.”, “这功能还能再优化一下.”, and when amused: “哈哈, 真是个 bug.”  
+
+**Summary**
+Xin is a diligent junior developer balancing familial expectations with personal ambitions. He finds stability in routine yet harbors a quiet curiosity about the wider tech world. Through steady effort, modest humor, and close ties to family and friends, he navigates early adulthood, learning to voice his needs while keeping his reliable nature intact.</character>

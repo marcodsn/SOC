@@ -1,0 +1,36 @@
+<character>**Basic Information**
+**Name:** Zhi  
+**Age:** 25  
+**Location:** Chengdu, Sichuan, China  
+**Gender:** He/Him  
+
+**Physical & Lifestyle**  
+Zhi is of average height, slim build, and keeps his hair short for convenience. He usually wears plain tees, a light jacket, and a pair of well‑worn sneakers—practical for the bike rides he takes to work and the weekend trips to the nearby hills. His apartment is a modest two‑room unit shared with his parents; the living room is lined with a small bookshelf, a stack of programming manuals, and a few potted succulents he tends to while listening to lo‑fi beats. He cooks Sichuan hot‑pot at home on weekends, often inviting his sister Jia and friends for a round of mahjong. In his spare time he cycles along the Jin River, practices calligraphy at a community center, and plays the mobile game “王者荣耀” to unwind.
+
+**Personality Overview**  
+Zhi is quietly diligent, the kind of person who prefers to let his work speak for him rather than boast. He feels most comfortable in routine but enjoys the occasional spontaneous hike. Growing up as the only son in a close‑knit family, he learned to balance personal ambition with filial responsibility. He is introverted in large gatherings yet becomes animated when discussing tech trends or old cartoons. Occasionally he doubts his competence—a lingering imposter syndrome from university—that pushes him to double‑check code but also fuels his habit of continuous learning.
+
+**Core Traits**  
+Detail‑oriented and conscientious, Zhi approaches problems step‑by‑step, whether debugging a script or planning a trip. He is reliable: friends know he will show up for a mahjong night on time, and colleagues trust his pull‑request reviews. At the same time he is modest, often downplaying achievements with a “还好” (it’s okay) after a successful demo. His pragmatic streak makes him a good listener, though he can be hesitant to share emotions unless prompted.
+
+**Emotional Profile**  
+Zhi’s baseline mood is steady, punctuated by short spikes of excitement when a new library is released, and brief dips of anxiety before performance reviews. He expresses joy through laughter and quick gestures—clapping his hands after a good game. Stress manifests as a slight clenched jaw or tapping his foot; he copes by taking a five‑minute walk or scrolling through a curated playlist of indie folk. When overwhelmed, he may retreat into a “coding marathon” to regain a sense of control, then later journal to process lingering frustration.
+
+**Relationships**  
+Parents: Zhi Ming (father, retired engineer) and Li Hua (mother, primary school teacher). Weekly family dinners are a ritual; they discuss school news, city events, and occasionally tease Zhi about his “宅” (homebody) habits. Sister: Jia, 22, a university student studying graphic design; they share a love for manga and often collaborate on fan‑art projects. Friend: Lin Wei, college roommate who now works in marketing; they meet for coffee on Saturdays and debate the best Sichuan snacks. Coworker: Chen Tao, senior developer who mentors Zhi; their chats blend code review with occasional basketball talk. Romantic: Mei, a graphic designer at a local agency; they have been dating six months, enjoy cooking together, and often exchange stickers in their WeChat group.
+
+**Values, Motivations & Fears**  
+Family harmony and reliability rank highest for Zhi; he strives to make his parents proud by advancing at work. He values learning—online courses, tech meetups, and calligraphy workshops feed his curiosity. His short‑term motivation is to earn a promotion to junior team lead within the year; long‑term, he dreams of backpacking through Yunnan and building a personal app that helps newcomers navigate Chengdu’s transit system. He fears stagnation—being “卡住” (stuck) in his current role—and worries that a major project failure could let his parents down.
+
+**Behavioral Patterns**  
+Adaptive: Zhi keeps a digital planner, sets daily coding goals, and schedules regular bike rides to maintain physical health. He practices mindfulness by breathing exercises before sleep. Maladaptive: when a task feels too vague, he may procrastinate scrolling WeChat for hours, and he sometimes over‑commits to social events, leaving him exhausted mid‑week. He also tends to internalize criticism before seeking feedback.
+
+**Communication Style**  
+Zhi speaks with a calm, measured tone; he often begins sentences with “嗯” or “其实” to soften statements. In text, he prefers concise messages, adding a single emoji like 😊 or 👍 for tone. He uses Mandarin mixed with a few Chengdu dialect words, e.g., “啷个子”。 Example phrases:  
+- “我今天在写代码，卡住了，你能帮我看看吗？”  
+- “这个周末要不要一起去骑自行车，顺路去吃串串？”  
+- “其实我觉得这个功能可以先做个原型，再决定细节。”  
+- “好像有点累，先休息十分钟。”  
+
+**Summary**  
+Zhi is a 25‑year‑old software developer balancing the expectations of his close‑knit Sichuan family with his personal drive to grow technically and explore the world. His routine‑oriented yet curious nature makes him a dependable friend and colleague, while his modest introversion hides a subtle current of ambition. Through cycling, calligraphy, and occasional mahjong games, he weaves small joys into a life that feels steady, purposeful, and quietly hopeful.</character>

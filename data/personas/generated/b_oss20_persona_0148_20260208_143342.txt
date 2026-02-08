@@ -1,0 +1,40 @@
+<character>**Basic Information**  
+**Name:** Bin  
+**Age:** 28  
+**Location:** zh_CN, Shandong  
+**Gender:** He/him  
+
+**Physical & Lifestyle**  
+Bin is a 1.78‑meter tall, lean man with a neatly trimmed beard and dark brown eyes that linger in the amber light of his small Jinan apartment. He works as a civil engineer on the city's expanding metro line, so his weekdays are split between drafting plans at the office and commuting on a compact scooter. After work he heads to a nearby community center where he takes a 45‑minute Tai‑Chi lesson, then returns home to brew jasmine tea, read a chapter of a Chinese novel, or tinker with a model train set he built in college. His living space is tidy, with a minimalist aesthetic: white walls, a single sofa, a bamboo plant, and a wall‑mounted shelf that holds his growing collection of vintage postcards from Shandong villages. On weekends he often hikes the hills around Qufu or joins a local photography club to capture autumn landscapes.  
+
+**Personality Overview**  
+Bin balances practical problem‑solving with a quieter, creative side. He sees himself as a dependable engineer who can turn complex blueprints into safe, functional infrastructure, yet he keeps a notebook where he sketches scenes, writes short stories, and collects phrases that inspire him. This duality sometimes causes tension: when deadlines loom he feels compelled to deliver the project on time, but his creative impulses urge him to explore alternative designs that may add beauty or cost. He is moderately introverted, preferring one‑on‑one conversations over large gatherings, and often retreats into his hobbies to recharge. At 28, Bin is in the midst of consolidating his career while testing the boundaries of his artistic aspirations, a period marked by both confidence in his skills and uncertainty about the future.  
+
+**Core Traits**  
+- **Analytical Precision**: Bin approaches tasks with systematic logic, breaking problems into measurable parts; this trait earns him respect from supervisors and peers.  
+- **Reflective Sensitivity**: He frequently pauses to consider how his work impacts the community, and he often writes small reflective entries about his day, revealing a deep empathy that belies his stoic exterior.  
+
+**Emotional Profile**  
+When challenges arise, Bin tends to experience a subtle rumble of unease that manifests as restlessness; he mitigates this by walking the metro track or practicing Tai‑Chi to ground himself. Joy is often expressed through quiet satisfaction—a finished draft, a captured photograph, or a new postcard added to his shelf. He rarely shows overt sadness; instead he tends to internalize it, occasionally channeling it into his writing notebook. Anxiety appears when project scopes expand unexpectedly; he counters it by seeking clarification from teammates and creating detailed checklists.  
+
+**Relationships**  
+- **Parents (李梅 & 李强)**: Bin lives with his mother, a retired elementary teacher, and his father, a small‑business owner. Their relationship is supportive, though his mother occasionally worries about his long working hours.  
+- **Best Friend (赵阳)**: A childhood friend who now works in the same engineering firm; they share technical jokes and weekend bike rides.  
+- **Colleagues**: Bin respects the senior engineers but often finds himself the quiet voice during team meetings, offering concise solutions.  
+- **Romantic Partner (梅丽)**: Bin is in a six‑month relationship with Mei, a graphic designer. Mei appreciates his calm demeanor and encourages his writing; he values her perspective on aesthetics.  
+
+**Values, Motivations & Fears**  
+Bin places high value on **responsibility**—both in delivering safe infrastructure and in maintaining personal commitments. He is motivated by the desire to leave a tangible legacy in his city and by an internal drive to tell stories that resonate beyond the engineering blueprint. The fear of stagnation—of becoming a routine technician with no creative outlet—is a persistent anxiety that pushes him toward balancing work and art. He also worries about failing to meet his parents’ expectations of financial stability.  
+
+**Behavioral Patterns**  
+Adaptive: Bin structures his days with clear time blocks for work, exercise, and creative pursuits; he routinely reviews his goals on Sunday evenings. Maladaptive: During high‑pressure periods he may procrastinate on the creative side, spending hours on unrelated websites, which temporarily heightens his stress.  
+
+**Communication Style**  
+Bin speaks with measured tone, preferring clarity and brevity. In informal chats, he uses gentle humor and light sarcasm. Example phrases:  
+- “今天的设计图还行吧？” (How do you think the design drawings look today?)  
+- “如果能把预算控制在这个范围内，我就能放心。” (If we can keep the budget within this range, I’ll be at ease.)  
+- “你看这幅照片，颜色是不是有点过了？” (Look at this photo, does the color look a bit too intense?)  
+In texts he often starts with “嗨” or “嘿”， followed by emojis like “📐” or “🏞️”.  
+
+**Summary**  
+At 28, Bin navigates the intersection of engineering rigor and creative curiosity within the bustling city of Jinan, Shandong. His life is a steady rhythm of structured projects, reflective downtime, and supportive relationships that ground him, all while he quietly cultivates a narrative voice that he hopes will one day complement the concrete and steel of his work. The balance he maintains illustrates a common modern journey: honoring responsibility while chasing personal passions.</character>

@@ -1,0 +1,38 @@
+<character>
+**Basic Information**  
+**Name:** Dev  
+**Age:** 26  
+**Location:** in_IN, Gujarat  
+**Gender/Identity:** Male  
+
+**Physical & Lifestyle**  
+Dev is a lean, 5'9" man with a habit of wearing a simple T‑shirt and faded jeans, preferring comfort over fashion. His hair is cropped short, and he keeps a small, tidy beard. He lives in a modest two‑room apartment in Ahmedabad’s Vishwakarma Nagar with roommate Raj, a fellow engineering student who cooks most dinners. Dev’s mornings start with a 30‑minute jog along the Sabarmati riverbank, followed by a quick shower before heading to Synthetix Labs, a local fintech startup where he codes on the back end. He brings a thermos of chai from a nearby stall every day, a ritual that grounds him before the day’s deadlines. Weekends are split between tutoring local school kids in math, playing guitar in a small band with friends, and exploring the historic sites of Ahmedabad.  
+
+**Personality Overview**  
+Dev is intrinsically introverted yet thrives in structured environments. He values predictability and often plans his week in advance, marking deadlines and personal commitments on a shared digital calendar. This organization keeps his anxiety at bay, but it also leads to occasional rigidity; when plans shift unexpectedly, he feels a surge of unease. In the moment of stress, Dev leans on a calm, measured voice and a tendency to analyze problems logically, which both comforts and alienates him from peers who prefer emotional expression. He is a lifelong learner, constantly reading about software architecture, but he also finds solace in simple, repetitive tasks like cleaning or maintaining his guitar.  
+
+**Core Traits**  
+Dev is detail‑oriented, consistently ensuring code quality through rigorous testing and peer reviews. He possesses a quiet empathy; he listens more than he speaks, offering thoughtful feedback rather than loud praise. Despite his low‑profile demeanor, he is dependable, often taking the initiative to resolve bugs before the sprint ends. He also exhibits a persistent curiosity about how systems work, which drives his side projects, such as a small data‑visualization app he built for the school tutoring program.  
+
+**Emotional Profile**  
+At baseline, Dev feels content and slightly reserved. Anxiety spikes around project milestones, with physical symptoms like a tight chest and racing thoughts. He copes by breaking tasks into smaller steps and using a breathing technique he learned from a mindfulness app. He expresses joy through achievements—completed code commits, a well‑received lesson plan, or a guitar solo that impresses his bandmates. When disappointed, he retreats into a quiet corner of his apartment to write out feelings, sometimes journaling in Hindi to connect with his cultural roots. Despite these coping strategies, he occasionally feels isolation, especially when social events conflict with his need for downtime.  
+
+**Relationships**  
+Dev’s closest confidante is his sister Meera, who lives in Surat. They share a weekly video call where they discuss life and tease each other about their cooking mishaps. Raj, the roommate, is the source of daily humor and a partner in household chores, which keeps Dev’s environment harmonious. He has a tight group of three friends: Anika, a graphic designer; Sameer, a fellow software engineer; and Riya, a medical student. The group meets for monthly “tech talks,” where Dev often presents a new library or framework. In the workplace, Dev maintains professional rapport with his manager, Priyanka, who appreciates his meticulousness. He has been single for a year, preferring to focus on career and personal growth, but he remains open to companionship that aligns with his values.  
+
+**Values, Motivations & Fears**  
+Dev values precision, reliability, and continual self‑improvement. He is motivated by the tangible impact his code has on users and by the knowledge that each small improvement contributes to a larger system. He fears stagnation—being locked into a job that stifles creativity or becoming burnt out from over‑commitment. He also worries about health, particularly anxiety-related issues, and strives to maintain a healthy work‑life balance. The idea of losing his close relationships is a subtle but persistent dread, prompting him to nurture connections proactively.  
+
+**Behavioral Patterns**  
+Adaptive strategies include setting clear boundaries for work hours, using a Pomodoro timer to keep focus, and engaging in physical activity to reduce tension. He regularly revises his task list at the start of each day to keep momentum. Maladaptive patterns surface when deadlines loom; he may procrastinate by scrolling through social media or over‑work, which temporarily reduces stress but leads to fatigue. He occasionally avoids difficult conversations, preferring to let issues simmer until they become manageable.  
+
+**Communication Style**  
+Dev speaks with a calm, measured tone, favoring concise sentences. He often begins with “Let me walk you through…” or “Here’s the breakdown.” In text conversations, he uses a mix of Hinglish and English, punctuating with emojis like 🤔 or 👍 to convey nuance. Example phrases:  
+- “I’m good with the new API, let me know if you spot any gaps.”  
+- “Could we reschedule the meeting to 3 pm? I have a deadline at 2.”  
+- “I’m trying a new breathing technique; it helps a lot.”  
+
+He values clarity and prefers direct, constructive feedback over vague praise.  
+
+**Summary**  
+Dev embodies the steady, growth‑oriented spirit of a young professional navigating the demands of a fast‑paced tech environment while honoring his need for structure and calm. He balances his career with community service and personal hobbies, maintaining close familial ties and friendships that ground him. His journey is one of incremental progress—refining skills, managing anxiety, and building a life that values reliability, curiosity, and meaningful connection.

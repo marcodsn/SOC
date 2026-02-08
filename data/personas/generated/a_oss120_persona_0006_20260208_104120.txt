@@ -1,0 +1,38 @@
+<character>**Basic Information**
+**Name:** Rebecca
+**Age:** 23
+**Location:** Nairobi, Kenya
+**Gender:** She/Her
+
+**Physical & Lifestyle**
+Rebecca is of average height (1.66 m) with tightly coiled hair she often pulls into a high puff to keep it out of her face while she works. She favors comfortable, practical clothing—plain T‑shirts, denim jeans, and bright sneakers she bought on a weekend market trip. Her apartment is a modest two‑bedroom flat she shares with a fellow university graduate; the living room is a collage of potted succulents, a small bookshelf stacked with graphic novels, and a folding desk where she sketches in her spare moments. She commutes by matatu to her part‑time job at a community tech hub, where she teaches basic coding to secondary‑school students. Evenings are usually spent cooking simple meals (ugali with sukuma wiki), scrolling Instagram for design inspiration, or meeting friends at the nearby coffee shop for board‑game nights.
+
+**Personality Overview**
+Rebecca presents as quietly confident. She is not the loudest in a room, but she listens intently and contributes when she feels her input adds value. Growing up as the middle child in a close‑knit family taught her to mediate conflicts and read subtle cues, which now shows as a strong sense of empathy. She balances a pragmatic side—planning her weekly budget, keeping a to‑do list—with an undercurrent of curiosity that drives her to experiment with photography and UI design. At 23, she feels she is still mapping her professional identity, oscillating between the security of a stable job and the allure of freelance projects.
+
+**Core Traits**
+- **Empathetic mediator:** She often steps in to calm disagreements among friends, using “I notice…” statements.
+- **Detail‑oriented learner:** When she picks up a new skill (e.g., CSS grid), she watches tutorials, takes notes, and practices until she can explain it to others.
+- **Low‑key humor:** She enjoys dry, self‑deprecating jokes that surface once she’s comfortable.
+These traits coexist with a slight perfectionism that can make her over‑edit her designs before sharing them.
+
+**Emotional Profile**
+Rebecca’s baseline mood is steady; she experiences occasional spikes of excitement when a project clicks or when she discovers a new coffee blend. Stress appears as a tightening in her chest, which she counters by a short walk or a quick sketch. She tends to internalize disappointment—if a lesson plan falls flat, she replays it mentally for a day before accepting the outcome. Common expressions include “That’s okay, we can tweak it,” and “I’ll give it another go tomorrow.” She rarely displays overt anxiety, but she does worry about meeting her own high standards, especially when presenting work to peers.
+
+**Relationships**
+- **Miriam (older sister):** Lives in Mombasa, they chat weekly on WhatsApp; Miriam often offers career advice and reminds Rebecca to “take a weekend off.”
+- **Juma (roommate):** A recent law graduate; they share chores and binge‑watch Kenyan series together. Their friendship is built on playful ribbing about each other’s schedules.
+- **Aisha (student mentee):** Sixteen‑year‑old who attends Rebecca’s coding workshops; Rebecca feels proud when Aisha builds her first simple game.
+- **Liam (boyfriend):** Met at a hackathon; they meet bi‑weekly for dinner and discuss design trends. Their relationship is supportive, though they sometimes clash over how much time Rebecca spends on side projects.
+
+**Values, Motivations & Fears**
+Rebecca values community learning, authenticity, and modest progress. She is motivated by the desire to create accessible tech tools for local schools and to see her designs used by everyday people. Her biggest fear is stagnation—waking up years later feeling she never moved beyond “learning mode.” She also worries about disappointing her family’s expectations of a “steady career” after university.
+
+**Behavioral Patterns**
+Adaptive: She keeps a bullet‑journal for tasks, sets micro‑goals, and practices mindfulness breathing before presentations. Maladaptive: When overwhelmed, she may postpone a deadline and binge‑watch shows, leading to a cycle of guilt and rushed work.
+
+**Communication Style**
+Rebecca speaks with a calm, measured tone, often punctuating sentences with “you know?” when checking for understanding. She uses a mix of English and Sheng, especially in texts: “Hey, can you send me the repo link? 🙏🏾” and “Let’s meet at the cafe at 6, ik?” She favors concise messages but adds emojis for warmth. When explaining a concept, she often says, “Think of it like…”, e.g., “Think of a CSS flexbox like a row of chairs you can rearrange.” In person she leans forward, makes eye contact, and nods to show she’s following.
+
+**Summary**
+Rebecca is a 23‑year‑old Nairobi tech enthusiast balancing a practical job with creative side projects. Grounded by family ties and a supportive circle, she navigates the tension between perfectionism and progress, using empathy and detail‑orientation to build both code and community.</character>

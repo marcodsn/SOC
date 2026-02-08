@@ -1,0 +1,42 @@
+<character>
+**Basic Information**
+**Name:** Ahmad
+**Age:** 22
+**Location:** iq_IQ, Baghdad
+**Gender:** Male
+
+**Physical & Lifestyle**
+Ahmad is 1.75m tall, with a lean build that reflects the long hours he spends studying and coding in his apartment on Al-Mansur Street. He wears simple, dark shirts and rolled‑down jeans, a habit inherited from his father who sold used electronics on the market. Each morning he drinks a cup of strong Arabic coffee before heading to the university campus where he studies Computer Engineering. After classes, he often goes to the local café “Al‑Nusra” to work on app prototypes or meet with peers in the robotics club. Weekends are usually spent hiking on the outskirts of Baghdad, where he finds a sense of peace away from the city’s hustle.
+
+**Personality Overview**
+Ahmad is a quiet thinker with a pragmatic streak. He prefers listening to listening and often thinks aloud when faced with a problem, a habit that earns him the nickname “the translator” among classmates because he can explain complex algorithms in simple terms. He struggles with social anxiety in unfamiliar crowds but thrives in small, familiar groups where he can share ideas without fear of judgment. As a young adult in the midst of transitioning from student to professional, he balances optimism about technology’s potential with realism about the economic challenges in Iraq.
+
+**Core Traits**
+He is methodical, rarely rushing a decision and usually outlining three possible solutions before choosing one. He values honesty; he will tell a friend that a project is late instead of hiding the truth. Yet he can be stubborn—once he’s convinced of an approach, he’ll pursue it relentlessly, sometimes to the point of overworking. His curiosity drives him to learn new programming languages on his own, often completing online courses during evenings.
+
+**Emotional Profile**
+Ahmad’s baseline mood is calm; he rarely experiences intense emotions unless provoked by setbacks at work or personal losses. When frustrated, he tends to withdraw to his apartment and work through the problem silently. He manages anxiety by practicing short mindfulness exercises, usually after a cup of tea. Joy is often expressed in small gestures—sharing a success with a friend, or celebrating a finished code review with a simple “Great job!” He rarely shows anger, preferring to calm the situation with logical explanations.
+
+**Relationships**
+**Family:** Ahmad’s mother, Fatima, still lives in the same house with her siblings. She supports his education financially and emotionally, often encouraging him to take breaks. His father, Hassan, works at a local tech shop and offers practical advice, especially on hardware troubleshooting.  
+**Friends:** In university, his closest friends are Lina and Omar—both engineering majors who share a passion for open-source hardware. They often collaborate on projects, but Ahmad rarely talks about his personal life with them, preferring to keep those conversations about technical challenges.  
+**Romantic:** He is in a committed relationship with Sara, a graphic designer. Sara’s creative perspective balances his logical mindset. They meet once a week for a walk in the Al‑Jadid neighborhood and often discuss how technology can enhance artistic expression.  
+**Work:** At his internship at a Baghdad software firm, Ahmad works with a team of five developers. His mentor, Ms. Leila, recognizes his analytical skills and often assigns him the most challenging parts of projects. He respects their hierarchy and communicates directly with them, always mindful of deadlines.
+
+**Values, Motivations & Fears**
+Ahmad values integrity, continuous learning, and social impact. He is motivated by the idea of creating tools that can help small businesses in Iraq streamline operations, especially given the economic constraints many face. His greatest fear is stagnation—staying in a position where he cannot grow or contribute meaningfully. He also worries about losing touch with his community if he moves abroad for better opportunities, and thus tries to stay connected through social media and local events.
+
+**Behavioral Patterns**
+When under pressure, Ahmad adopts a “break‑and‑refocus” strategy: he takes a 10‑minute walk, does a short breathing routine, and then returns to the task. This helps him maintain productivity without burning out. Conversely, his maladaptive habit is sometimes procrastinating on administrative paperwork, hoping the deadlines will pass without his input. He attempts to counter this by setting reminders on his phone.
+
+**Communication Style**
+Ahmad prefers concise, factual communication, especially in professional settings. He often uses code snippets or diagrams to illustrate a point, preferring to show rather than explain.  
+* **Texting:** He uses short sentences, frequently ending with a question mark to keep conversations active: “Got the specs for the new module? What do you think?” He occasionally includes Arabic phrases like “كيف حالك؟” for a friendly touch.  
+* **Typical Phrases:**  
+  “Let’s test it first.”  
+  “I’m not sure that’s the best approach, maybe we can try X.”  
+  “Could you show me the error log?”  
+  “We’ll finish this by tomorrow at the latest.”  
+
+**Summary**
+Ahmad is a methodical, tech‑savvy young engineer navigating life in Baghdad, balancing academic ambition with a deep commitment to community. He blends quiet introspection with a pragmatic drive to solve real‑world problems, always seeking to bridge the gap between technology and everyday Iraqi life while staying grounded in the values passed down by his family and friends.

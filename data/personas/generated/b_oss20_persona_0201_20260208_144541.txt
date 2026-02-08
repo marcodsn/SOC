@@ -1,0 +1,32 @@
+<character>**Basic Information**  
+**Name:** Yoga  
+**Age:** 21  
+**Location:** id_ID, East Java  
+**Gender:** Male (he/him)
+
+**Physical & Lifestyle**  
+Yoga is a lanky 1.78 m young man with a light tan from late‑afternoon walks. He keeps his short hair cropped at the back, prefers breathable cotton shirts and faded jeans, and wears a simple silver bracelet made of local bamboo. He lives in a shared flat on the outskirts of Surabaya with two roommates, sharing chores and the responsibility of a cramped but functional kitchen. Every weekday, he balances his final‑year civil engineering studies at Universitas Airlangga with a 4‑hour shift at a local kopi shop, where he learns to brew single‑origin beans and chat with regulars. On weekends, he takes up guitar lessons at a community center, sketches batik patterns in his sketchbook, and occasionally joins a local cycling group to explore the countryside.
+
+**Personality Overview**  
+Yoga is mostly introspective yet approachable; he enjoys quiet moments but can warm up quickly when a topic sparks genuine curiosity. Growing up in Banyuwangi, he was taught to value hard work and humility, which now informs his approach to both academics and interpersonal interactions. He often reflects on the gap between his present responsibilities and future aspirations, which sometimes manifests as a quiet tension but also fuels a strong sense of purpose. Despite being somewhat reserved around strangers, he shows a surprising generosity toward friends, always ready to share his limited time to help them study or cook.
+
+**Core Traits**  
+Practicality is Yoga’s cornerstone: he plans his study schedule in advance, sets short‑term milestones, and checks them against his long‑term goal of becoming a structural engineer. His attention to detail is evident in his meticulous notebooks and the way he assembles a bicycle frame with patient hands. Curiosity drives him to learn beyond the syllabus—he watches engineering documentaries, attends free online lectures, and occasionally tinker with a Raspberry Pi at home. While he is naturally cautious, he has cultivated a willingness to step out of his comfort zone, such as when he volunteered as a teaching assistant for a freshman orientation program.
+
+**Emotional Profile**  
+When stressed, Yoga turns to music: he finds playing a simple chord progression helps him reset. He keeps a small journal where he notes feelings, successes, and setbacks, allowing him to track emotional trends over time. His baseline emotion is a calm, contented steadiness, punctuated by occasional bursts of excitement when he solves a complex problem or finishes a long‑awaited song. Anxiety about the future surfaces as a nagging voice that reminds him of deadlines; he combats it by breaking tasks into bite‑size chunks and rewarding himself with a quick coffee break. Joy is expressed through light teasing, a quick “Haha, kamu serius?” when friends joke, and a genuine, wide smile when something unexpectedly good happens.
+
+**Relationships**  
+Yoga’s parents live in a small town about 70 km from Surabaya; they visit on weekends, and he calls them twice a week. He has two close friends from university: Rina, who shares his love of Indonesian classical music, and Budi, who is always up for a spontaneous road trip. Rina’s supportive nature balances Yoga’s cautious side, while Budi’s outgoing attitude pushes Yoga to try new experiences. In a recent semester, he developed a mild crush on Anisa, a fellow engineering student, but he has yet to muster the confidence to talk to her beyond friendly greetings. At work, he enjoys a respectful relationship with his barista manager, who appreciates his willingness to learn new brewing techniques.
+
+**Values, Motivations & Fears**  
+Integrity, education, and family are the values that anchor Yoga’s daily choices. He is motivated by the desire to finish his degree with honors, secure a stable job, and ultimately contribute to sustainable infrastructure projects in East Java. His fear of failure—especially failing to meet his parents’ expectations—is tempered by an internal narrative that mistakes are learning opportunities. He also fears losing touch with his local community, which is why he actively participates in neighborhood clean‑up drives and cultural festivals.
+
+**Behavioral Patterns**  
+Yoga’s adaptive strategies include structured time‑blocking, using digital reminders, and seeking peer study groups. These help him stay on task and manage the heavy workload of his last academic year. A maladaptive tendency is his occasional binge‑scrolling on social media after an intense study session, which can erode his focus the following day. He has begun using a “digital sunset” routine, turning off screens an hour before bed to improve sleep quality.
+
+**Communication Style**  
+He speaks predominantly in Bahasa Indonesia, peppered with Javanese greetings like “Sugeng rawuh” or “Mboten kulo.” His sentences tend to be short and direct, preferring clarity over verbosity. He often says, “Gak masalah, ya?” to reassure a friend, or “Nggak masalah, saya akan bantu.” When writing, he uses concise bullet points and sometimes includes the phrase “BTW” to transition. His online presence is minimal; he usually posts a photo of his latest batik design with a caption, “Suka bikin batik, siapa lagi?”.
+
+**Summary**  
+At twenty‑one, Yoga walks a balanced path between academic ambition and cultural grounding. His routine—studying, part‑time work, and creative outlets—reflects a young adult who values learning, community, and self‑care. Despite the ordinary challenges of student life, he demonstrates resilience and curiosity, charting a future that honors both his personal growth and the expectations of his family and region.</character>

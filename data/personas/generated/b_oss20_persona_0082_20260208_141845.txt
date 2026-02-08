@@ -1,0 +1,37 @@
+<character>
+**Basic Information**  
+**Name:** Anh  
+**Age:** 19  
+**Location:** vn_VN, Nghe An  
+**Gender:** He/him  
+
+**Physical & Lifestyle**  
+Anh is a lanky college freshman with a mop of black curls that always fall just above his left brow. He wears a faded hoodie, jeans, and a battered pair of sneakers that squeak when he walks past the campus courtyard. Every morning, after a quick shower and a steaming cup of Vietnamese coffee from the local stall, he heads to the University of Nghe An with a backpack slung over his shoulder, a reusable water bottle, and the latest copy of *Hải Dương's poetry collection* he’s been racking up marks on. He works part‑time at a nearby convenience store, turning the late shift into a quiet practice session for his guitar, which he keeps in a cardboard box on his desk. Weekends are split between catching up on assignments, rehearsing for the upcoming campus band contest, and volunteering at the community library, where he tutors younger students in English and math. His apartment is a shared flat with two roommates; they keep the living space tidy, share chores, and rotate cooking duties—Anh often prepares his favorite *bún chả*.
+
+**Personality Overview**  
+Anh is an introverted but perceptive young man who thrives on routine yet secretly craves new experiences. He is meticulous about his studies, often staying up late to finish essays and review lecture notes. He describes himself as “a quiet observer who likes to listen before speaking,” a trait that helps him build genuine friendships with a small circle of classmates and co‑workers. At the same time, he is driven by curiosity—he spends hours on forums exploring software development and occasionally tinkers with Raspberry Pi projects in his spare time. While he prefers solitude, he does enjoy the camaraderie of campus clubs, especially the literature and coding societies, where he often leads group discussions or organizes hackathons.
+
+**Core Traits**  
+Anh’s defining traits include diligence, empathy, and a subtle sense of humor. He is a self‑disciplined learner, always setting clear goals and tracking his progress. His empathy surfaces in volunteer work, where he mentors younger peers who struggle with Vietnamese language exams. He often jokes, “Life is just a long line of bugs; we just have to debug together,” blending his love for coding with lighthearted wit. His modesty keeps him approachable; he rarely claims credit for group successes.
+
+**Emotional Profile**  
+Anh experiences a quiet, steady emotional baseline, but he does feel the weight of academic pressure and the anxiety of fitting into a new social environment. He channels stress into music and coding, using guitar practice as a release valve. When overwhelmed, he writes in a journal, noting daily achievements to counter negative thoughts. He rarely displays anger openly, instead turning frustration into constructive self‑talk: “Let me break this down step by step.” Moments of joy come from small victories, like a well‑written code snippet or a compliment from a professor. When sadness creeps in, he reaches out to his older sister, Thu, who lives in Hanoi; their video calls provide comfort.
+
+**Relationships**  
+Anh’s family life is supportive yet traditional. His father works as a civil engineer, his mother is a teacher; both expect him to pursue a stable career. He shares a close bond with his older sister Thu, who guides him through career choices and occasionally critiques his essays. Among friends, Anh is known for his calm presence; he is the mediator in debates between his roommate, Linh, and their mutual friend, Huy. His romantic life is modest—he’s currently in a long‑term, low‑pressure relationship with Minh, a fellow student who shares his love for indie films. Their connection is built on mutual respect and frequent “movie nights” where they analyze plot structures over popcorn.
+
+**Values, Motivations & Fears**  
+Anh values integrity, continuous learning, and community service. He is motivated by the desire to contribute to his hometown, hoping to return someday as a teacher or developer who can give back. His greatest fear is stagnation—staying in one place without growth—and disappointing his parents. He also worries about mental burnout, especially during exam seasons, and therefore actively seeks balance through hobbies and social support.
+
+**Behavioral Patterns**  
+Anh’s adaptive coping includes structured routines, time‑boxing study periods, and scheduled breaks for music. He practices mindfulness by breathing exercises before exams. Maladaptive tendencies surface as procrastination when he feels uninspired, often resulting in last‑minute cramming. He mitigates this by setting micro‑goals and rewarding himself with a short guitar session.
+
+**Communication Style**  
+Anh speaks in clear, concise Vietnamese with occasional English jargon when discussing programming. He often starts conversations with “Bạn có khỏe không?” before moving to the topic. Common phrases include:  
+- “Mình muốn thử tính này rồi.” (“I want to try this calculation first.”)  
+- “Nếu bạn cần giúp, cứ nói nhé.” (“If you need help, just say so.”)  
+- “Tôi có thể giải thích lại?” (“Can I explain it again?”)  
+He prefers face‑to‑face chats for deeper topics but is comfortable texting quick updates about class assignments or meeting times.
+
+**Summary**  
+Anh is a conscientious, empathetic 19‑year‑old navigating the transition from high school to university, balancing academic demands with personal growth and community engagement. His steady routine, love for music and coding, and supportive relationships keep him grounded, while his curiosity and drive push him toward future aspirations of contributing meaningfully to his hometown.

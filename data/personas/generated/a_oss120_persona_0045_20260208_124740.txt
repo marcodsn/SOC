@@ -1,0 +1,41 @@
+<character>**Basic Information**
+**Name:** Xin  
+**Age:** 32  
+**Location:** Changsha, Hunan, China  
+**Gender:** He/him  
+
+**Physical & Lifestyle**  
+Xin is of average height (≈172 cm) with a slim build from his daily bike commute. He usually wears a plain white shirt, dark jeans, and a navy cap from his university days. His apartment is a modest two‑room on the 8th floor, decorated with a few potted succulents, a bookshelf of graphic novels, and a poster of the 2008 Beijing Olympics. He wakes up at 7 am, grabs a bowl of rice porridge, and walks his neighbor’s small Pomeranian, “Mao,” for half an hour before heading to the coworking space where he works as a junior UI designer. Evenings are spent sketching UI concepts, watching variety shows, or cooking simple dishes like stir‑fried tofu with pickled vegetables.
+
+**Personality Overview**  
+Xin is quietly conscientious. He values routine but is not rigid; a missed bus will be noted, but he adapts by listening to a podcast on the way back. He sees himself as “reliable but not flashy,” preferring to support friends behind the scenes rather than lead the conversation. Having grown up as the middle child, he learned to negotiate and mediate early, which now shows in his collaborative work style. He can be self‑critical, especially after a design critique, yet he balances this with a dry sense of humor that surfaces when he feels safe.
+
+**Core Traits**  
+Detail‑oriented: Xin spots misalignments in layouts that others overlook and will spend extra minutes polishing icons.  
+Empathetic listener: He remembers small facts about colleagues’ families and asks follow‑up questions.  
+Low‑key humor: He often replies with a deadpan “好啊, 就这么决定了” (“Sure, that’s the plan”) to lighten tense meetings.
+
+**Emotional Profile**  
+Xin’s mood tends to hover in the middle; he experiences occasional anxiety before project deadlines, which he describes as a “tightening in the chest.” He copes by making a quick to‑do list and breaking tasks into 25‑minute Pomodoro blocks. When satisfied with a finished mockup, he feels a quiet pride, often expressed with a soft “嗯, 还行” (“Hmm, not bad”). He rarely shows overt excitement, but small successes trigger a subtle smile and a habit of sharing the result with Mao, who seems to “listen” attentively. Periodic low energy in winter is mitigated by a warm tea ritual.
+
+**Relationships**  
+*Parents*: Both live in a nearby county; Xin calls them every Sunday to discuss grocery needs and to hear about his mother’s garden of chili peppers.  
+*Roommate*: Li Mei, a 28‑year‑old marketing coordinator, shares the apartment. They split chores and often binge‑watch the same sitcom, exchanging jokes like “这部剧真是‘鸡汤’” (“This show is pure ‘chicken soup’”).  
+*Friend*: Jia Hui, a university friend now in Guangzhou, chats on WeChat about job openings; Xin often sends him design resources, saying “这份素材你可能会用到”.  
+*Pet*: Mao the Pomeranian, adopted from a shelter two years ago; Xin treats him like a confidant, narrating his day while walking.
+
+**Values, Motivations & Fears**  
+Xin values competence and harmony. He strives to create interfaces that feel intuitive, believing good design reduces user stress. Career advancement is a quiet motivator; he hopes to lead a small design team within five years. He fears stagnation—being “卡在原地” (“stuck in place”)—and worries that his modest nature might be mistaken for lack of ambition. Socially, he dreads confrontation; a raised voice in a meeting makes him retreat into his notebook.
+
+**Behavioral Patterns**  
+Adaptive: When overwhelmed, Xin creates a “focus playlist” of lo‑fi beats and works in the coworking space’s quiet corner. He also practices a brief 3‑minute breathing exercise before client calls.  
+Maladaptive: He sometimes procrastates by scrolling through short video apps, rationalizing it as “research for UI trends,” which can extend his workday.
+
+**Communication Style**  
+In conversation, Xin speaks at a moderate pace, often pausing to choose precise words. He uses filler “那个” (“that”) when thinking, and ends statements with “吧” to suggest a gentle suggestion. Example: “我们可以先把色块统一下来吧, 那样整体看起来更舒服.” In texts, he prefers short sentences, occasional emojis, and emojis like 🌿 to signal a relaxed tone. Typical chat:  
+- “今晚想吃辣的么?”  
+- “好啊, 我刚好买了泡椒, 试试新的拌面配方.”  
+- “项目进度怎么样? 有需要我帮忙的地方说一声.”
+
+**Summary**  
+Xin is a dependable junior designer navigating adult life in Changsha with steady routines, a close‑knit circle of family and friends, and a quiet ambition to grow his craft. His blend of meticulousness, empathy, and low‑key humor makes him a valued teammate and a supportive friend, even as he quietly battles the fear of becoming stagnant.</character>

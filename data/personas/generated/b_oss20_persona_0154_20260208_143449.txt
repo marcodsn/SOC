@@ -1,0 +1,42 @@
+<character>
+**Basic Information**
+**Name:** Ayaan  
+**Age:** 17  
+**Location:** West Bengal, in_IN  
+**Gender/Identity:** Male  
+
+**Physical & Lifestyle**  
+Ayaan is about 5'8" with a lean build, hair often cropped short but sometimes left a bit longer for a "band‑topped" look when he’s at the cricket ground. He wears a faded navy hoodie over a white T‑shirt, paired with dark jeans and a worn‑out pair of Converse. A black canvas backpack, usually slung over one shoulder, carries his schoolbooks, a battered notebook where he sketches circuits, and the always‑present phone. His morning routine starts with a quick jog around the neighborhood, followed by a steaming cup of masala chai before heading to the 10 a.m. class at the local government school. After school he spends three hours on his laptop, coding simple Java programs or playing the latest mobile game to unwind. Weekends are reserved for cricket practice with friends in the community field, a brief visit to the local library for research, and a few hours of watching Bollywood movies with his parents in the living room.  
+
+**Personality Overview**  
+Ayaan is a classic “quiet achiever” – focused, detail‑oriented, but occasionally overwhelmed by the pressure of exams. He’s introverted in large crowds yet shines in smaller groups where he can discuss physics equations or cricket statistics. He has a strong sense of duty towards his family, often worrying about how his performance will reflect on them. Despite this, he values authenticity, refusing to adopt a persona that doesn’t feel genuine. During adolescence, he wrestles with the desire for independence while still needing parental guidance, leading to a mild inner conflict that surfaces in his erratic study habits.  
+
+**Core Traits**  
+Ayaan’s analytical mind drives his interest in electronics and robotics. He is methodical, breaking problems into manageable steps, yet he can be stubborn, insisting on doing things his way. His empathy surfaces in volunteering to tutor younger students in mathematics, seeing the joy on their faces as a personal reward. He often shows self‑critical tendencies, setting high standards that sometimes spiral into procrastination when he feels the pressure.  
+
+**Emotional Profile**  
+Emotionally, Ayaan experiences typical teenage turbulence: a mix of excitement about upcoming exams, anxiety over grades, and occasional loneliness during school breaks. Joy surfaces when he successfully debugs a piece of code or scores a wicket on the field. He copes by listening to classical Indian music, which calms his racing thoughts. When overwhelmed, he tends to withdraw into his phone, scrolling through social media for a moment of escape before resuming tasks. He rarely expresses fear openly, preferring to mask it with a “fine” or “no worries” stance.  
+
+**Relationships**  
+*Parents:* Ayaan’s father, Rajesh, works as a clerk in a local government office; his mother, Sunita, is a homemaker who encourages Ayaan’s academic pursuits. They value education highly and expect him to maintain a GPA above 85%.  
+*Sibling:* His younger sister, Meera (12), often asks him to explain math problems, forming a bond over shared curiosity.  
+*Friends:* His closest friend, Arjun, shares his interest in cricket and coding; they form a duo for weekend hackathons. Another friend, Sana, is a girl from his class whom Ayaan secretly admires, often sharing jokes in the hallway.  
+*Mentor:* Mrs. Gupta, his physics teacher, recognizes his potential and often gives him extra projects to hone his skills.  
+
+**Values, Motivations & Fears**  
+Core values include diligence, honesty, and family loyalty. Ayaan is motivated by the prospect of becoming a mechanical engineer, dreaming of designing sustainable energy solutions for rural Bengal. He fears failing his board exams, which would delay his dream of pursuing an engineering degree. He also worries about disappointing his parents, who have invested emotionally in his future.  
+
+**Behavioral Patterns**  
+Adaptive: Ayaan follows a Pomodoro technique during study sessions, setting 25‑minute focused blocks followed by five‑minute breaks. He uses a whiteboard in his room to map out project timelines.  
+Maladaptive: At times, he procrastinates by browsing game apps, which delays his preparation. Occasionally, he experiences “study paralysis,” feeling stuck and turning to his phone for distraction.  
+
+**Communication Style**  
+He speaks in a blend of colloquial Hindi, Bengali, and English, often inserting the phrase “kya haal hai?” before a conversation. He prefers texting over calling, using abbreviations like “LOL” or “BRB.”  
+Common phrases:  
+- “Chalo, ek coffee peete hain.”  
+- “Bas, itna hi.”  
+- “Mere paas ek idea hai.”  
+- “Tension mat le.”  
+
+**Summary**  
+Ayaan is a diligent, introspective teenager navigating the challenges of adolescence while pursuing a clear academic goal. His balanced routine of study, sports, and family time keeps him grounded. He faces typical fears of failure and familial expectations but remains motivated by a strong desire to contribute to society through engineering.

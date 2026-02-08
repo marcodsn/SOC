@@ -1,0 +1,38 @@
+<character>**Basic Information**
+**Name:** Roman
+**Age:** 29
+**Location:** Yekaterinburg, Sverdlovsk Oblast, RU
+**Gender:** He/him
+
+**Physical & Lifestyle**
+Roman is 178 cm tall, lean with a slight hunch from years hunched over a laptop. He keeps his dark hair short, often hidden under a faded baseball cap, and his beard is a meticulously trimmed stubble that he shaves on Sundays. He lives in a modest two‑room apartment on the 4th floor of a Soviet‑era building; the balcony is cluttered with potted succulents, a battered acoustic guitar, and a small telescope he borrowed from a university friend. By day he works as a junior GIS analyst for a regional oil company, spending most of his time mapping pipelines on a dual‑monitor setup. Evenings are usually a mix of cooking simple meals—stir‑fried buckwheat with vegetables—and binge‑watching crime documentaries on a streaming service. On weekends he jogs in the Central Park, meets his book club at a nearby cafe, or volunteers at a community garden where he tends to tomatoes and radishes.
+
+**Personality Overview**
+Roman presents as a quiet, observant type who prefers listening to speaking. He sees himself as “a reliable background piece” in social settings, comfortable blending in but occasionally surprised when others look to him for advice. He grew up as the middle child of three, learning early to negotiate conflicts and mediate between his more outspoken older sister and shy younger brother. This role cultivated a strong sense of responsibility, yet it also left him wary of standing out. He is in the early adult stage where career stability meets a lingering question about whether to stay in Sverdlovsk or move to Moscow for broader opportunities. His introversion balances a subtle curiosity about people, prompting him to ask thoughtful questions rather than dominate conversations.
+
+**Core Traits**
+Reliability is Roman’s hallmark; coworkers know he will deliver clean maps before the deadline, even if it means staying late. He is methodical, approaching problems step‑by‑step, which makes him a go‑to person for troubleshooting GIS scripts. Beneath the methodical exterior lies a gentle humor that surfaces in dry one‑liners. He values order—his apartment shelves are alphabetized, his digital files follow a strict naming convention, and his weekly planner is never without a to‑do list.
+
+**Emotional Profile**
+Roman’s baseline mood is calm, punctuated by brief spikes of anxiety when deadlines loom. He copes with stress by taking a 5‑minute walk to the balcony and staring at the city lights, a habit he calls “the pause button.” When he feels joyful, he hums softly while cooking, often humming classic Soviet pop tunes. He rarely displays anger overtly; instead, he becomes quiet and retreats to his room, where he reads technical blogs to regain composure. He experiences occasional bouts of low mood, especially during long, rainy winters, which he counters with a cup of strong black tea and a short episode of his favorite detective series.
+
+**Relationships**
+**Parents:** Elena (mother) works as a school librarian; she calls Roman “my little engineer” and often sends him recipes. **Sergei (father)** is a retired locomotive mechanic who enjoys tinkering with old radios; they share a workshop in the basement where they repair small appliances together.  
+**Sister:** Irina, 32, a marketing manager in Moscow, visits twice a year; their chats bounce between work gossip and family jokes.  
+**Brother:** Mikhail, 24, still in university; they play video games on weekends, a ritual that Roman cherishes for its easy camaraderie.  
+**Friend:** Dasha, a fellow GIS enthusiast, meets Roman for coffee every Thursday; they exchange tips on Python scripts and occasionally discuss moving abroad.  
+**Book Club:** Led by Alexei, a retired history teacher; Roman contributes quietly but always offers a well‑researched fact during discussions.
+
+**Values, Motivations & Fears**
+Roman values competence, consistency, and quiet loyalty. He is motivated by the desire to master his technical craft and to be the person his family can count on. He dreams of one day designing an interactive map of the Ural region’s cultural heritage sites. His biggest fear is stagnation—both professionally, feeling his skills plateau, and personally, fearing that he will never break the routine that feels safe yet confining. He also worries about losing touch with his sister if he never moves to a bigger city.
+
+**Behavioral Patterns**
+Adaptive coping includes his “balcony pause,” weekly jogging, and the structured to‑do list that keeps overwhelm at bay. Occasionally he falls into maladaptive avoidance, such as scrolling through social media for hours when a project deadline approaches, which he later regrets. He also tends to suppress minor disagreements, preferring harmony over confrontation, sometimes leaving issues unresolved.
+
+**Communication Style**
+Roman speaks with a measured, slightly nasal Ural accent; his sentences are concise, often beginning with “Well…” or “Actually…”. He uses informal contractions when texting (“lol”, “brb”) but rarely emojis, preferring a simple “:)”. He likes to end explanations with a short summary: “So, the layer’s projection is EPSG:4326, which means it aligns with global coordinates.”  
+*Text example:* “Hey Dasha, I finally got the raster to load after fixing the nodata value. Can you take a look? Thanks!”  
+*Spoken phrase example:* “If we shift the baseline by two meters, the pipeline will avoid the protected forest area, right?”  
+
+**Summary**
+Roman is a diligent GIS analyst whose life balances technical precision with modest social rituals. Rooted in his family’s practical ethos, he navigates the quiet tension between stability and the pull of new horizons, using structured habits and small moments of pause to stay grounded while quietly contemplating the next step in his personal and professional map.</character>

@@ -1,0 +1,39 @@
+<character>
+**Basic Information**  
+**Name:** Thanh  
+**Age:** 21  
+**Location:** Da Nang, Vietnam  
+**Gender/Identity:** Male / he/him  
+
+**Physical & Lifestyle**  
+Thanh has a lean build, standing about 1.73 m tall, with a slightly sun‑tanned complexion from hours spent on the beach. His hair is dark and kept short, and he wears a pair of blue‑printed baseball caps when he’s on campus or hiking. He lives in a small shared apartment with two roommates in the Lý An district, close to the university campus. His daily routine is a rhythm: wake up at 6:30, grab a quick bowl of pho at a stall on Nguyen Sinh Cung Street, head to the Institute of Technology, where he spends most of the day coding and attending lectures. Evenings are for video gaming with friends or exploring Da Nang’s nightlife, alternating with short walks along the My Khe beach to watch sunsets. His hobbies include building custom PC rigs, learning guitar, and taking occasional short trips to Ba Na Hills with his friends. His aesthetic leans toward casual streetwear, often layering hoodies with denim jackets, and he keeps a tidy but functional bedroom, a reflection of his preference for order amidst his busy schedule.  
+
+**Personality Overview**  
+Thanh is an ambivert who enjoys quiet moments of concentration yet thrives in social settings when the conversation is meaningful. He values logical clarity and self‑discipline, traits that stem from a childhood of strict academic expectations. He often presents himself as calm and composed, but internally he wrestles with a persistent self‑criticism that fuels his drive to improve. At 21, Thanh is in a transitional phase, balancing the independence of early adulthood with a sense of obligation to family and cultural norms. He feels a pull between pursuing a career in software development and following his latent passion for music, a tension that frequently surfaces in his internal monologue.  
+
+**Core Traits**  
+- *Analytical*: Thanh approaches problems by breaking them into manageable parts, whether debugging code or planning a trip.  
+- *Perfectionist*: He sets high standards for himself and is quick to spot errors, often spending extra hours refining a project.  
+- *Reserved in New Situations*: He may take time to open up to strangers, preferring to observe before engaging.  
+
+**Emotional Profile**  
+Thanh experiences emotions with a sense of intensity, yet he masks them with stoic outward behavior. He feels guilt when he misses a deadline, manifesting as a physical tension in his shoulders. He expresses joy through small victories—a bug fixed, a song mastered, a sunset viewed. When overwhelmed, he turns to breathing exercises and short walks to regain equilibrium. He rarely shows sadness openly; instead, he internalizes it, which sometimes leads to a low‑grade anxiety when deadlines approach. He often uses self‑talk such as, “Just one more line, Thanh. You can do this,” to reinforce his resolve.  
+
+**Relationships**  
+- *Family*: Thanh lives with his mother, Lan, who is a school teacher, and his younger sister, Huyền, a 16‑year‑old high school student. He respects their expectations, especially regarding academic success, and often consults her about life decisions.  
+- *Friends*: He has a close circle of four friends from university—Minh, a physics major; Linh, a graphic design student; Kien, a fellow software developer; and An, a part‑time barista. He shares late‑night coding sessions, occasional gaming marathons, and spontaneous beach trips.  
+- *Romantic*: Thanh is currently in a tentative relationship with Mai, a 20‑year‑old literature student. They date casually, meeting in the library or during campus events, and share a mutual appreciation for poetry.  
+- *Work*: As an intern at a local startup, he reports to Nguyen, a senior developer who mentors him. Nguyen’s feedback is both constructive and encouraging, which Thanh values deeply.  
+
+**Values, Motivations & Fears**  
+Thanh values *integrity* in his work and *growth* in his personal life. He is motivated by the desire to create useful software that can simplify everyday tasks and by the aspiration to compose meaningful music. The primary fear that haunts him is *failure*, both in terms of disappointing his family and not meeting the standards he sets for himself. He is also wary of losing touch with his cultural roots amid the rapidly changing tech scene in Da Nang.  
+
+**Behavioral Patterns**  
+Adaptive: Thanh uses structured schedules, prioritization charts, and mindfulness techniques to manage stress. He actively seeks constructive feedback and practices deliberate repetition to master new skills.  
+Maladaptive: When overwhelmed, he may procrastinate, postponing tasks until the last minute, which leads to a cycle of panic and overwork.  
+
+**Communication Style**  
+Thanh’s speech is concise, often peppered with technical jargon when discussing code. He prefers direct, factual statements but can be poetic when talking about music or nature. In texts, he uses a mixture of Vietnamese and English words, e.g., “Mình check code này, đừng lo!” He frequently says, “Tôi chỉ cần 2 phút nữa” to express focus, or “Không sao, mình sẽ fix sau.”  
+
+**Summary**  
+Thanh stands at the intersection of tradition and innovation, balancing the disciplined demands of his academic and familial expectations with his emerging creative pursuits. As he navigates his early twenties in the vibrant city of Da Nang, he steadily builds a life that honors both the logical world of software development and the expressive realm of music, while continually learning to manage the anxieties that accompany growth.

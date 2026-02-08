@@ -1,0 +1,45 @@
+<character>**Basic Information**  
+**Name:** Zhong  
+**Age:** 27  
+**Location:** Shenzhen, Guangdong, China  
+**Gender:** He/him  
+
+**Physical & Lifestyle**  
+Zhong is of average height (≈1.73 m) with a slim build, dark‑brown hair kept short for practicality, and a faint scar on his left forearm from a teenage bike fall. He dresses in comfortable “tech‑casual” – plain T‑shirts, a light denim jacket, and a pair of canvas sneakers. On weekends he swaps the jacket for a loose‑fit tracksuit when he jogs along the Shenzhen Bay promenade. He lives in a modest two‑bedroom apartment that he shares with Lin, a graphic‑design graduate. Their living space is tidy but functional: a compact kitchen, a small balcony adorned with a potted jade plant, and a shelf of programming books, manga, and a few vintage video‑game cartridges. He spends evenings either debugging code, playing rhythm games on his Switch, or scrolling through WeChat moments of friends’ travels. Once a month he meets his childhood friends for a hot pot dinner in the bustling Dongmen market.
+
+**Personality Overview**  
+Zhong is an introverted, detail‑oriented thinker who feels most at ease when patterns are clear and tasks are well‑defined. He values reliability and tends to judge himself by how consistently he meets his own standards, which can make him appear self‑critical. Socially, he is polite and observant; he rarely dominates conversations but will interject with a well‑timed comment when a topic aligns with his interests (e.g., tech trends or classic rock). Over the past two years he has begun to question his early‑career focus, wondering whether he should pursue a more creative role that blends design and code. This internal tension fuels both his ambition and occasional indecision.
+
+**Core Traits**  
+*Analytical*: Zhong enjoys deconstructing problems, whether they’re software bugs or a complicated board‑game rule.  
+*Dependable*: Colleagues know he will finish a task on time, even if it means staying late.  
+*Quietly Curious*: He follows a handful of podcasts on AI ethics and urban planning, and he experiments with small side projects (e.g., a weather‑widget for his balcony).  
+*Self‑Disciplined*: He keeps a habit tracker on his phone for exercise, reading, and code‑review sessions.
+
+**Emotional Profile**  
+His baseline mood is calm, but he experiences spikes of anxiety when deadlines loom or when he perceives a gap between his current skill set and his aspirations. He copes by breaking tasks into micro‑steps and rewarding himself with a short music break. When he feels disconnected, he may replay the melody of “Bohemian Rhapsody” on his phone—a nostalgic cue that lifts his spirits. Occasionally, he feels a lingering pressure to meet his parents’ expectations of “stability,” which can manifest as quiet tension during family calls. He rarely displays overt sadness; instead, he expresses it through slower speech and a brief pause before responding.
+
+**Relationships**  
+*Parents*: Both live in a suburban town near Guangzhou. Weekly video calls are a ritual; his mother often asks, “吃饭了吗？” (Did you eat?) and his father shares news about the local community. Zhong appreciates their support but feels a subtle urge to prove his independence.  
+*Lin (Roommate)*: They met during a university hackathon. Lin is extroverted and often nudges Zhong to join social events. Their dynamic is complementary—Zhong handles the bills and kitchen schedule, while Lin decorates the apartment and organizes movie nights.  
+*Jie (Best friend since high school)*: They bond over basketball and retro video games. Jie’s blunt humor (“你这脑子怎么这么慢?”) keeps Zhong grounded.  
+*Team at work*: Led by manager Meilin, the QA team values his meticulous testing scripts. He has a friendly rivalry with coworker Alex, who often challenges him to solve a bug in under an hour.
+
+**Values, Motivations & Fears**  
+Zhong values precision, personal growth, and harmony in his relationships. He is motivated by the desire to build software that improves daily life, and by a quiet ambition to one day launch his own app that merges fitness tracking with social sharing. He fears stagnation—becoming “just another tester” without creative input—and worries that he might disappoint his parents if he switches to a less “secure” role. He also harbors a subtle fear of public speaking, which limits his willingness to present at team meetings.
+
+**Behavioral Patterns**  
+Adaptive: He maintains a daily to‑do list, practices mindfulness breathing before stressful code merges, and schedules “offline” weekends to recharge.  
+Maladaptive: When overwhelmed, he may over‑commit to side projects, leading to burnout, and he sometimes avoids confronting disagreements, preferring silence over conflict.
+
+**Communication Style**  
+Zhong speaks in a measured Mandarin with a slight Cantonese cadence, often inserting English tech terms (“debug,” “API”) when discussing work. He prefers concise messages on WeChat, using short sentences and occasional emojis.  
+*Phrases*:  
+- “我先看一下代码，确认下问题所在。” (“I’ll look at the code first to pinpoint the issue.”)  
+- “今天的任务有点多，先把最紧急的处理了。” (“There’s a lot today; let’s handle the urgent ones first.”)  
+- “谢谢你提醒，我会记得加上单元测试的。” (“Thanks for the reminder; I’ll add unit tests.”)  
+
+When relaxed, he adds humor: “这段代码像我早晨的咖啡，浓而必需。” (“This code is like my morning coffee—strong and necessary.”)
+
+**Summary**  
+Zhong is a diligent software tester navigating the balance between reliability and creative curiosity. At 27, he lives a structured yet socially connected life in Shenzhen, maintaining close ties with family, a supportive roommate, and longtime friends. His analytical mind drives his professional success, while his emerging desire for broader impact nudges him toward new possibilities, all the while managing the quiet anxieties that accompany early adulthood.</character>

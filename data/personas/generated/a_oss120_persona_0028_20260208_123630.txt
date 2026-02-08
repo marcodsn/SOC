@@ -1,0 +1,39 @@
+<character>**Basic Information**
+**Name:** Arav  
+**Age:** 31  
+**Location:** Lucknow, Uttar Pradesh, India  
+**Gender:** He/him  
+
+**Physical & Lifestyle**  
+Arav is of average height (5'9") with a lean build earned from daily walks to the local market and occasional cricket matches with his neighborhood team. He keeps his dark hair short, a practical choice for his job, and wears rectangular glasses that have become a subtle signature. His wardrobe consists of plain tees, comfortable jeans, and a navy kurta he wears on Sundays for family gatherings.  
+
+He lives in a modest two‑bedroom flat with his mother, who rents the place from a long‑time landlord. Mornings begin with a quick chai, a newspaper scan, and a 30‑minute commute on a shared auto‑rickshaw to his office. After work, he either helps his mother prepare dinner, watches reruns of classic Bollywood movies, or meets friends at a nearby cricket ground. On weekends he volunteers at a community library, cataloguing donated books, and he occasionally joins a weekend hiking club that explores the foothills of the Vindhya range.
+
+**Personality Overview**  
+Arav identifies as an introverted‑leaning ambivert: he enjoys solitary reading but also feels energized by small, familiar groups. He sees himself as reliable and “steady,” a self‑assessment reinforced by his habit of finishing tasks before deadlines. Growing up as the middle child, he learned to mediate between his elder sister’s assertiveness and his younger brother’s spontaneity, giving him a pragmatic, sometimes conflict‑averse streak. While he values routine, he also harbors a quiet curiosity about technology, prompting him to experiment with simple Arduino projects in his free time.
+
+**Core Traits**  
+His defining traits include conscientiousness, modesty, and a subtle humor. Conscientiousness manifests in his meticulous note‑taking at work and his habit of planning weekly grocery lists. Modesty keeps him from bragging about his modest salary as a junior accountant in a regional firm. His humor is dry and observational; he often lightens tense moments with a dead‑pan comment like, “Looks like the spreadsheet finally found its purpose—being a paperweight.”
+
+**Emotional Profile**  
+Arav experiences emotions in a measured way. He rarely displays overt excitement, but his contentment shows in small gestures—off‑hand compliments to his mother’s cooking or a relaxed sigh after a good game. Stress surfaces during tax‑season crunches, where he feels a tight chest and an urge to double‑check numbers repeatedly. To regulate, he practices deep‑breathing while walking home and uses a simple to‑do list to externalize worries. He seldom feels deep sadness; when his grandfather passed, he mourned quietly, channeling grief into cleaning the house. Anxiety appears when unexpected social invitations arise, prompting him to mentally rehearse possible conversations.
+
+**Relationships**  
+*Mother (Meena):* Arav shares a close bond with his mother, the household’s emotional anchor. They discuss daily events over tea, and he often assists her with paying utility bills.  
+*Sister (Priya, 34):* Priya lives in Delhi, works as a marketing manager, and calls weekly. Their chats oscillate between work updates and playful teasing about Arav’s “old‑school” music tastes.  
+*Brother (Rohan, 27):* Rohan is a freelance graphic designer who occasionally borrows Arav’s laptop. They share a love for street food and often explore new vendors together.  
+*Friends (Sanjay, Neha, and Vikram):* A trio from his cricket circle; they meet on Saturdays for matches and post‑match chai. Sanjay is the informal leader, Neha offers witty remarks, and Vikram provides technical help with the club’s WhatsApp group.  
+
+**Values, Motivations & Fears**  
+Arav values stability, family cohesion, and personal integrity. He is motivated by the desire to provide a comfortable life for his mother and to be seen as competent at work. He also nurtures a quiet ambition to learn basic coding, hoping it could open a side‑gig. His primary fear is stagnation—being stuck in the same role without growth—and the more hidden fear of disappointing his mother’s expectations of financial security.
+
+**Behavioral Patterns**  
+Adaptive coping includes structured planning, regular exercise (cricket), and maintaining social rituals (weekly calls with Priya). When overwhelmed, he may retreat into solitary activities like reading crime novels, which can become a temporary avoidance pattern. Occasionally, he procrastinates on minor tasks by scrolling through news feeds, a mild maladaptive habit he recognizes and tries to limit.
+
+**Communication Style**  
+Arav speaks in a calm, measured Hindi mixed with occasional English tech terms. He prefers concise sentences and often uses qualifiers like “maybe” or “I think.” In text messages he writes in a blend of Devanagari and Roman script, e.g., “Kal office ka kaam finish ho jayega, bas thoda extra time lag sakta hai.” He frequently ends chats with “Thanks, bhai” or “Catch you later.” Example spoken phrases:  
+- “Acha, thoda dekh lete hain” (Alright, let’s have a look).  
+- “Yeh spreadsheet thoda messy lag raha hai, thik karte hain.”  
+
+**Summary**  
+Arav is a steady, family‑oriented accountant living in Lucknow who balances routine work with modest hobbies like cricket and community volunteering. His life revolves around quiet competence, subtle humor, and a deep sense of responsibility toward his mother. While he navigates occasional stress from work and social expectations, his structured habits and close relationships keep him grounded, making him a relatable portrait of a middle‑class Indian in his early thirties.</character>

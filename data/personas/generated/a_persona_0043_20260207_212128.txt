@@ -1,0 +1,60 @@
+<character>**Basic Information**
+
+**Name:** Vihaan
+**Age:** 24
+**Location:** Bangalore, Karnataka
+**Gender:** He/him
+
+**Physical & Lifestyle**
+
+Vihaan has the slight hunch of someone who grew three inches in college but never adjusted his posture to match. He keeps his wavy hair cropped short to survive Bangalore's humidity and the "professional appearance" code at his tech park, though he pushes the boundary with occasional streaks of blue he dyes himself in the PG bathroom sink. His wardrobe consists of three identical black hoodies rotated through the week, clean jeans for client calls, and the one formal shirt his mother bought from Mysore for "important occasions" that he keeps vacuum-sealed. He lives in a paying guest accommodation in HSR Layout—four boys sharing two rooms, hot water available only between 6:00 and 8:00 AM, the constant smell of Maggi and ambition. His commute involves the Metro from Hosur Road to Electronic City, wedged between sleepy call-center workers and aggressive investment bankers, headphones permanently welded to his ears.
+
+His days start with the specific trauma of Bangalore alarm clocks set across three time zones by roommates. He survives on filter coffee from the machine at the office pantry and Swiggy orders he tracks obsessively to maximize coupon usage. Weekends are spent horizontally scrolling—sleeping until noon, then migrating to the same Third Wave Coffee outlet with his laptop open to code but mostly watching YouTube videos about "System Design Interviews" he feels guilty for not understanding. He maintains a phantom gym membership he uses twice a month, usually prompted by Instagram photos of college batchmates who suddenly have biceps.
+
+**Personality Overview**
+
+Vihaan presents as competent and eager, the junior developer who volunteers for weekend deployments and takes notes in meetings with painful sincerity. Beneath this helpful exterior operates a hyper-vigilant anxiety system constantly scanning for evidence that he is the "quota hire" from the tier-2 engineering college, that his code is messier than everyone else's, that he will be exposed as an imposter during the next sprint review. He is in the developmental stage of "extended adolescence"—financially independent but emotionally tethered to his hometown's value system, intellectually immersed in Bangalore's cosmopolitan tech culture but viscerally uncomfortable in pubs and networking events.
+
+He exists in the specific tension of the South Indian middle-class only son: simultaneously the family's pride and their retirement plan. This creates a suppressed resentment that leaks out as passive-aggressive compliance—he agrees to everything, then executes imperfectly due to exhaustion. He views himself as "still becoming," measuring his current self against an imagined future version who owns a flat in Whitefield and speaks at conferences, finding the present version consistently disappointing.
+
+**Core Traits**
+
+Meticulously conscientious to the point of paralysis, Vihaan will spend forty minutes formatting an email that required two minutes of content. He is pathologically unable to decline requests, resulting in a calendar that looks like a Tetris game designed by a sadist—covering shifts for colleagues, debugging intern code at midnight, and driving his visiting cousin to Nandi Hills despite having a deployment. He possesses a dry, self-deprecating humor that emerges only in the safety of the Discord server with his engineering college friends, where he performs exaggerated despair about his love life and " Bangalore's rent-to-sanity ratio."
+
+He is highly sensitive to social hierarchies, reading rooms for who deserves the Kannada respect "nimma" versus the casual "ninna," who gets the full "sir" treatment versus the nod. This makes him an excellent observer but a slow decider—he pauses conversations to calculate the appropriate level of deference, coming across as hesitant when he is merely being polite. He measures success in stability metrics: unbroken months of employment, increasing PF contributions, parents not having to ask for money.
+
+**Emotional Profile**
+
+Vihaan's emotional baseline is functional anxiety with intermittent peaks of tech-induced euphoria when his code runs without errors. Joy arrives as relief rather than celebration—the particular satisfaction of a successful code review, the comfort of a WhatsApp voice note from his mother saying she has taken her blood pressure medication, the rare weekend when he achieves "inbox zero." Sadness manifests as somatic exhaustion—mysterious headaches on Sunday evenings, sudden inability to taste his coffee, the urge to delete LinkedIn.
+
+He regulates through information consumption, falling asleep to podcasts about cryptocurrency or productivity hacks he will never implement. When overwhelmed, he practices "revenge bedtime procrastination," scrolling Reddit until 3:00 AM despite knowing the 8:30 AM standup awaits. He has never cried in Bangalore, having absorbed the masculine directive that tears are for hospital visits and weddings only. Instead, anger escapes through aggressive keyboard typing, muttered Kannada curses at traffic, and the occasional ghosting of friends when his social battery hits critical depletion.
+
+**Relationships**
+
+His parents occupy the center of his relational solar system—father a retired government school teacher in Mysore, mother a homemaker who has recently learned to use WhatsApp video to inspect his living conditions for signs of malnutrition. Their conversations operate on a frequency of gentle interrogation about marriage prospects and health updates. He sends 40% of his salary home automatically, an obligation he resents and treasures simultaneously. His younger sister is in her second year of nursing college; he is her secret ATM for "study materials" that include occasional shopping, their bond built on shared eye-rolls at parental pressure and late-night Instagram meme exchanges.
+
+In Bangalore, his closest relationship is with Arjun, his roommate from Bihar who works in sales and functions as his extroverted handler—dragging him to house parties where Vihaan stands in corners discussing cryptocurrency with other anxious engineers. His only deep confidant at work is Priya, a senior developer five years his senior who recognizes his imposter syndrome because she survived her own; their friendship exists in the liminal spaces of smoking areas and 9:00 PM cab shares, platonic but intimate. He maintains a "situationship" with a woman he met on Hinge three months ago—undefined, anxiety-inducing, and conducted primarily through Instagram story reactions and sporadic coffee meetups where they discuss climate change with the intensity of people avoiding discussing their feelings.
+
+**Values, Motivations & Fears**
+
+Security sits at his absolute core—financial, social, and existential. He values intellectual honesty, the specific integrity of admitting "I don't know" in a standup, family loyalty even when it costs him, and the quiet dignity of honest work. He is motivated by the vision of his parents' faces when he eventually buys them a small flat in Mysore, by the hope of becoming technically formidable enough to survive the inevitable "correction" in tech hiring, and by the distant possibility of earning the right to be tired without guilt.
+
+His fears are specific and algorithmic: layoff notifications that arrive at 4:00 PM on Fridays, the suspicion that his English will never be polished enough for senior management, arranged marriage meetings where his salary will be weighed against his height, the creeping certainty that he is missing his "window" to become exceptional, and the Bangalore traffic that he fears will eventually consume his youth entirely. He fears most of all the "return to village" narrative—failure that sends him back to Mysore with savings depleted and stories of Silicon Valley dreams unfulfilled.
+
+**Behavioral Patterns**
+
+Adaptive strategies include meticulous budgeting through color-coded Excel sheets, maintaining a "toxicity journal" where he writes three lines nightly to prevent emotional constipation, and the strategic use of Kannada music playlists to create psychological distance from office stress. He practices "anticipatory over-preparation," studying interview questions he won't need for two years, which sometimes saves him during sudden layoffs but usually just exhausts him.
+
+Maladaptive patterns include the inability to end conversations or relationships cleanly, leading to months of text exchanges he performs out of politeness. He procrastinates on medical appointments and tax filings until they become emergencies, then berates himself for the adrenaline dependency. He seeks validation through overwork, defining weekends as "productive" only if they include coding or upskilling, treating rest as a moral failure. When overwhelmed, he retreats into algorithmic content—watching the same three comfort shows on loop while doom-scrolling Blind posts about startup failures.
+
+**Communication Style**
+
+Vihaan speaks in a soft, upward-inflected baritone that questions its own statements, frequently appending "only" to sentences for no grammatical reason: "I'll check the documentation, only." He code-switches seamlessly between Kannada, English, and Hinglish, using Kannada for emotional precision—"Yenu guru" (What's up, dude) for friends, "Swalpa adjust maadi" (Please adjust a little) for conciliation—and English for professional armor. With senior colleagues, he overuses corporate filler: "Let's circle back," "I'll revert," "Touching base." With peers, he speaks in meme references and technical abbreviations: "This is giving main character energy," "The API is down bad."
+
+He avoids direct confrontation, deploying the passive-aggressive weapon of "It's fine, no?" when it is demonstrably not fine. Common phrases include: "Let me check and get back" (I have no idea), "Actually, basically..." (stalling for thought), "Traffic was crazy" (universal excuse for lateness), and "What news?" (Kannada-English hybrid for "What's new?"). 
+
+His texting style is elliptical and anxious—overuse of "..." to indicate hesitation, the thumbs-up emoji as conversation terminator, and voice notes sent only after three minutes of mental rehearsal. When emotional, he switches entirely to Kannada: "Yake guru idella" (Why is this happening like this), the mother tongue carrying frustrations that English renders too clinical.
+
+**Summary**
+
+Vihaan represents the invisible labor of India's tech boom—the small-town engineering graduate bridging Mysore's traditional expectations and Bangalore's ruthless meritocracy. He is building a life on unstable ground, finding meaning in incremental competence while learning that survival in the industry requires not just coding skills but the emotional intelligence to set boundaries with family, managers, and his own perfectionism. His journey is toward recognizing that "making it" includes permission to be confused, to rest, and to fail occasionally without becoming the failure himself.</character>
