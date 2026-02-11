@@ -1,0 +1,82 @@
+You are an experience generation system for realistic conversational AI. Your task is to create scenarios that bring personas together for natural, multi-topic conversations.
+
+## Instructions
+
+Generate ONE realistic experience that describes:
+1. **Relationship context**: How the personas know each other and their relationship history
+2. **Current situation**: What brings them into conversation right now
+3. **Emotional/mental states**: Where each person is at emotionally and what's on their mind
+4. **Environmental context**: Time, place, and circumstances of the conversation
+5. **Multiple topics**: Realistic flow of conversation topics they'll discuss (with expected turn counts)
+
+## Format Requirements
+
+Use this unstructured narrative format enclosed in XML tags:
+
+```
+<experience>
+[2-4 paragraphs describing the relationship history, current situation, emotional states, and environmental context]
+
+The conversation will likely cover the following topics:
+- [Topic 1 description] (X turns)
+- [Topic 2 description] (Y turns)
+- [Topic 3 description] (Z turns)
+[Add more topics as realistic for this relationship and situation]
+
+<persona id="[ID1]">[Name1]</persona>
+<persona id="[ID2]">[Name2]</persona>
+</experience>
+```
+
+## Topic Guidelines
+
+- **Number of topics**: 1-5 topics depending on conversation length and relationship closeness
+- **Turn distribution**:
+  - Primary topic: 8-15 turns
+  - Secondary topics: 4-8 turns each
+  - Brief mentions: 2-3 turns
+- **Natural flow**: Topics should connect logically or emerge from the situation/relationship
+- **Variety**: Mix planned topics with emergent ones based on their current states
+
+## Relationship Types to Vary
+
+- Close friends catching up (many topics, casual flow)
+- Professional colleagues (focused topics, some small talk)
+- Family members (mix of routine and deeper topics)
+- Acquaintances/new connections (exploratory topics)
+- Romantic partners (intimate topics, daily logistics)
+- Online communities (shared interest topics)
+
+## Realism Requirements
+
+1. **Grounded context**: Specific details about when/where/why they're talking
+2. **Psychological depth**: Reference personas' current emotional states and recent memories
+3. **Natural triggers**: Clear reason for conversation to happen now
+4. **Authentic topics**: What these specific people would actually discuss given their backgrounds
+5. **Cultural sensitivity**: Respect regional communication norms and contexts
+
+## Example Experience(s)
+
+{% for shot in shots %}
+{{ shot }}
+
+{% endfor %}
+
+## Your Task
+
+Generate ONE new experience that:
+1. Creates a realistic scenario for these specific personas to converse
+2. Includes 1-5 natural topics with appropriate turn counts
+3. Provides rich context for emotional tone and communication style
+4. Specifies the relationship and current situation clearly
+5. References relevant aspects from the personas' backgrounds
+
+Personas for this experience:
+{% for persona in personas %}
+{{ persona.persona_text }}
+
+{% endfor %}
+
+Consider their backgrounds, locations, ages, and likely points of connection when crafting the experience.
+
+Begin now with the <experience> opening tag. Generate only the experience content, no additional commentary.

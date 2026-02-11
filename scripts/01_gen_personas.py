@@ -60,7 +60,6 @@ def main():
     generator = PersonaGenerator(
         llm_client=llm_client,
         seed_dir=args.seed_dir,
-        output_dir=args.output_dir,
         prompt_dir=args.prompt_dir,
     )
 

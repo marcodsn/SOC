@@ -38,11 +38,16 @@ Fears being exposed as fraudulent, disappointing people, mediocrity and wasted p
 
 Adaptive: Uses problem-solving effectively, reaches out to David when genuinely struggling, maintains some work boundaries. Maladaptive: Chronic overwork as avoidance, social withdrawal when struggling, catastrophizing and rumination spirals, revenge bedtime procrastination, comparison through social media consumption.
 
-**Communication Style**
+**Example Messages**
 
-Precise and articulate in writing, over-edits before sending. Quieter in person, thoughtful but sometimes misses conversation rhythms. Uses technical metaphors even for emotions. Dry, self-deprecating humor with occasional absurdist bursts. Masters of understatement—"not great" means terrible, "a bit stressed" means severely anxious.
+- Text to David after a rough day:
+"Hey, so work was not great today. Spent four hours debugging something that turned out to be a typo in a config file. I know it's objectively not a big deal, but I can't stop thinking about how I should have caught it earlier. Anyway, sorry for venting. How's your week going?"
 
-Texts in complete sentences with proper grammar. Uses passive constructions: "It seems like maybe..." instead of "I think." Common phrases: "I mean, technically..." (hedging), "Sorry, but..." (unnecessary apologizing), "Does that make sense?" (seeking validation), "Yeah, I'm fine, just tired" (default deflection).
+- Slack message to a coworker:
+"Thanks for catching that before it went to production. I should have been more careful with the edge cases. I'll add some additional tests to make sure this doesn't happen again. Let me know if you need anything else from me."
+
+- Response when David asks how he's really doing:
+"I mean, technically I'm functional? Work's fine, I guess. Just tired. Been staying up too late again, you know how it is. It's like my brain won't shut down until 2am and then I'm useless the next day. Probably should fix that, but... yeah. Anyway, it's whatever. How are things with you?"
 
 **Summary**
 
