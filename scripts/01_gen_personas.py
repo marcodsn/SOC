@@ -49,6 +49,12 @@ def main():
         default="conf/prompts",
         help="Directory containing Jinja prompt templates",
     )
+    parser.add_argument(
+        "--batch-size",
+        type=int,
+        default=4,
+        help="Batch size for asynchronous generation (default: 4)",
+    )
 
     args = parser.parse_args()
 
@@ -64,7 +70,7 @@ def main():
     )
 
     # Generate personas
-    generator.generate_batch(num_personas=args.num)
+    generator.generate_batch(num_personas=args.num, batch_size=args.batch_size)
 
 
 if __name__ == "__main__":

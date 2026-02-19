@@ -1,3 +1,4 @@
+import asyncio
 import json
 import random
 from datetime import datetime
@@ -68,8 +69,8 @@ class PersonaGenerator:
 
         return random.sample(pool, min(num_shots, len(pool)))
 
-    def generate_persona(self, iteration: int = 0) -> Dict[str, Any]:
-        """Generate a persona and return a dictionary with metadata."""
+    async def generate_persona_async(self, iteration: int = 0) -> Dict[str, Any]:
+        """Generate a persona asynchronously and return a dictionary with metadata."""
         # Select shots
         shots = self._select_shots(iteration)
 
@@ -103,14 +104,12 @@ class PersonaGenerator:
         # Call LLM and measure time
         start_time = datetime.now()
 
-        response = self.llm_client.generate(messages)
+        # Assuming llm_client has generate_async
+        response = await self.llm_client.generate_async(messages)
         generated_text = response.choices[0].message.content.strip()
 
         end_time = datetime.now()
         time_taken = (end_time - start_time).total_seconds()
-        self.mean_time_per_persona = (
-            self.mean_time_per_persona * self.n_generated + time_taken
-        ) / (self.n_generated + 1)
 
         # Extract <character> block
         if "<character>" in generated_text:
@@ -135,6 +134,7 @@ class PersonaGenerator:
                 "subregion": persona_info["subregion"],
                 "name": persona_info["name"],
                 "age": persona_info["age"],
+                "time_taken": time_taken,
             },
         }
 
@@ -143,21 +143,43 @@ class PersonaGenerator:
         with open(self.output_file, "a", encoding="utf-8") as f:
             f.write(json.dumps(data, ensure_ascii=False) + "\n")
 
-    def generate_batch(self, num_personas: int, start_iteration: int = 0):
+    async def _run_batch_async(
+        self, num_personas: int, start_iteration: int, batch_size: int
+    ):
         print(f"\n{'=' * 60}")
         print(f"Generating {num_personas} personas to {self.output_file}")
+        print(f"Batch size: {batch_size}")
         print(f"{'=' * 60}")
 
-        for i in range(num_personas):
-            iteration = start_iteration + i
+        iterations = range(start_iteration, start_iteration + num_personas)
 
-            try:
-                result = self.generate_persona(iteration)
+        # Process in batches
+        for i in range(0, len(iterations), batch_size):
+            batch_iterations = iterations[i : i + batch_size]
+            tasks = [
+                self.generate_persona_async(iteration) for iteration in batch_iterations
+            ]
+
+            # Wait for all tasks in the batch to complete
+            results = await asyncio.gather(*tasks, return_exceptions=True)
+
+            for j, result in enumerate(results):
+                iteration = batch_iterations[j]
+
+                if isinstance(result, Exception):
+                    print(f"✗ Error at iteration {iteration}: {result}")
+                    continue
 
                 # Check if generation failed (empty dict or empty text)
                 if not result or not result.get("persona_text"):
                     print(f"✗ No persona generated at iteration {iteration}, skipping.")
                     continue
+
+                # Update timing stats
+                time_taken = result["meta"].pop("time_taken", 0.0)
+                self.mean_time_per_persona = (
+                    self.mean_time_per_persona * self.n_generated + time_taken
+                ) / (self.n_generated + 1)
 
                 # Save to JSONL
                 self._append_to_jsonl(result)
@@ -173,10 +195,16 @@ class PersonaGenerator:
                 if len(self.generated_personas) > 20:
                     self.generated_personas = []
 
-            except Exception as e:
-                print(f"✗ Error at iteration {iteration}: {e}")
-                continue
-
         print(f"\n{'=' * 60}")
         print(f"Generation complete! Total: {self.n_generated}")
         print(f"{'=' * 60}")
+
+    def generate_batch(
+        self, num_personas: int, start_iteration: int = 0, batch_size: int = 4
+    ):
+        """Generate personas in batches asynchronously."""
+        asyncio.run(self._run_batch_async(num_personas, start_iteration, batch_size))
+
+    def generate_persona(self, iteration: int = 0) -> Dict[str, Any]:
+        """Synchronous wrapper for single persona generation."""
+        return asyncio.run(self.generate_persona_async(iteration))

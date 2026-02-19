@@ -1,3 +1,4 @@
+import asyncio
 import json
 import random
 import traceback
@@ -108,8 +109,8 @@ class ExperienceGenerator:
                 second_persona = random.choice(self.personas)
             return [first_persona, second_persona]
 
-    def generate_experience(self, iteration: int = 0) -> Dict[str, Any]:
-        """Generate an experience and return a dictionary with metadata."""
+    async def generate_experience_async(self, iteration: int = 0) -> Dict[str, Any]:
+        """Generate an experience asynchronously and return a dictionary with metadata."""
         # Select personas
         selected_personas = self._select_personas(n=2)
 
@@ -139,14 +140,11 @@ class ExperienceGenerator:
 
         # Call LLM
         start_time = datetime.now()
-        response = self.llm_client.generate(messages)
+        response = await self.llm_client.generate_async(messages)
         generated_text = response.choices[0].message.content.strip()
         end_time = datetime.now()
 
         time_taken = (end_time - start_time).total_seconds()
-        self.mean_time_per_experience = (
-            self.mean_time_per_experience * self.n_generated + time_taken
-        ) / (self.n_generated + 1)
 
         # Extract <experience> block
         if "<experience>" in generated_text:
@@ -172,6 +170,7 @@ class ExperienceGenerator:
                 "iteration": iteration,
                 "model": self.model_name,
                 "persona_ids": persona_ids,
+                "time_taken": time_taken,
                 # "timestamp": datetime.now().isoformat(),
             },
         }
@@ -181,22 +180,43 @@ class ExperienceGenerator:
         with open(self.output_file, "a", encoding="utf-8") as f:
             f.write(json.dumps(data, ensure_ascii=False) + "\n")
 
-    def generate_batch(self, num_experiences: int, start_iteration: int = 0):
+    async def _run_batch_async(
+        self, num_experiences: int, start_iteration: int, batch_size: int
+    ):
         print(f"\n{'=' * 60}")
         print(f"Generating {num_experiences} experiences to {self.output_file}")
+        print(f"Batch size: {batch_size}")
         print(f"{'=' * 60}")
 
-        for i in range(num_experiences):
-            iteration = start_iteration + i
+        iterations = range(start_iteration, start_iteration + num_experiences)
 
-            try:
-                result = self.generate_experience(iteration)
+        for i in range(0, len(iterations), batch_size):
+            batch_iterations = iterations[i : i + batch_size]
+            tasks = [
+                self.generate_experience_async(iteration)
+                for iteration in batch_iterations
+            ]
+
+            results = await asyncio.gather(*tasks, return_exceptions=True)
+
+            for j, result in enumerate(results):
+                iteration = batch_iterations[j]
+
+                if isinstance(result, Exception):
+                    print(f"✗ Error at iteration {iteration}: {result}")
+                    # traceback.print_exception(type(result), result, result.__traceback__)
+                    continue
 
                 if not result or not result.get("experience_text"):
                     print(
                         f"✗ No experience generated at iteration {iteration}, skipping."
                     )
                     continue
+
+                time_taken = result["meta"].pop("time_taken", 0.0)
+                self.mean_time_per_experience = (
+                    self.mean_time_per_experience * self.n_generated + time_taken
+                ) / (self.n_generated + 1)
 
                 self._append_to_jsonl(result)
                 print(
@@ -209,11 +229,16 @@ class ExperienceGenerator:
                 if len(self.generated_experiences) > 20:
                     self.generated_experiences = []  # Keep pool fresh
 
-            except Exception as e:
-                print(f"✗ Error at iteration {iteration}: {e}")
-                traceback.print_exc()
-                continue
-
         print(f"\n{'=' * 60}")
         print(f"Generation complete! Total: {self.n_generated}")
         print(f"{'=' * 60}")
+
+    def generate_batch(
+        self, num_experiences: int, start_iteration: int = 0, batch_size: int = 4
+    ):
+        """Generate experiences in batches asynchronously."""
+        asyncio.run(self._run_batch_async(num_experiences, start_iteration, batch_size))
+
+    def generate_experience(self, iteration: int = 0) -> Dict[str, Any]:
+        """Synchronous wrapper for single experience generation."""
+        return asyncio.run(self.generate_experience_async(iteration))

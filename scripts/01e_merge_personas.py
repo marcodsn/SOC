@@ -1,5 +1,5 @@
+import hashlib
 import json
-import uuid
 from glob import glob
 from typing import List
 
@@ -30,7 +30,9 @@ def merge_persona_files(input_files: List[str], output_file: str):
                     # Add unique ID
                     if "meta" not in persona:
                         persona["meta"] = {}
-                    persona["meta"]["id"] = str(uuid.uuid4())
+                    persona_text = json.dumps(persona, ensure_ascii=False)
+                    persona_id = hashlib.md5(persona_text.encode()).hexdigest()
+                    persona["meta"]["id"] = persona_id
 
                     # Remove iteration number if present
                     if "iteration" in persona["meta"]:
