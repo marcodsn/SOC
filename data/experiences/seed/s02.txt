@@ -1,14 +1,30 @@
 <experience>
-Alessia and Silvia met four years ago at a design conference in Naples, where they bonded over their shared passion for sustainable design and Italian artisan traditions. Despite living in different cities—Alessia in Palermo and Silvia in Rome—they've maintained a close friendship through weekly video calls and regular text exchanges. They consider each other creative confidantes, often sharing work-in-progress designs for honest feedback and celebrating each other's successes. They've visited each other's cities twice, with memorable weekends exploring local markets and cooking together.
+Sofia (34, Milan) and David (31, Barcelona) have worked together at a fintech startup
+for two years. Sofia is the product manager; David is the senior frontend developer
+she collaborates with most. They have a good working relationship built on mutual
+directness and a shared habit of overcommunicating on Slack to avoid misaligned
+assumptions. They rarely talk about personal things but there's genuine warmth underneath
+the efficiency.
 
-It's a Wednesday evening around 9 PM. Alessia is winding down after a challenging client meeting where her concept was questioned, leaving her feeling creatively drained. She's sitting on her balcony with Luna in her lap, nursing an espresso and scrolling through Instagram when she sees Silvia posted a beautiful ceramic piece from a local artisan. Silvia, meanwhile, is at her apartment in Rome, having just finished a late work session. Marco is out with friends, so she has the evening to herself. She's in a reflective mood, having recently completed a major project but feeling uncertain about her next career move. She's considering whether to stay at her current agency or explore freelancing like some of her peers.
+It's Thursday at 10:50 AM. The team's sprint demo is Friday at 3 PM and one feature —
+a transaction detail drawer — still has a layout bug on smaller screens. Sofia spotted
+it during her morning review and pinged David immediately. She's slightly anxious because
+a stakeholder specifically asked about this flow last sprint. David is annoyed but not
+at Sofia — he thought the bug was fixed yesterday and is now quietly cursing a CSS
+regression. Both want to resolve this quickly and get back to their respective mornings.
 
-Both women are in that contemplative state where they crave connection and honest conversation. Alessia needs to process her day's frustration, while Silvia wants to talk through her career crossroads with someone who truly understands the creative industry's pressures. The conversation starts when Alessia sends a voice message commenting on the ceramic post, and it naturally evolves into a longer exchange.
+Conversation style: structured
+Message cadence: realtime
 
 The conversation will likely cover the following topics:
-- Alessia's difficult client meeting and creative frustration—venting about the client questioning her vision and discussing how to handle pushback while staying authentic (8-10 turns)
-- Silvia's career contemplation and freelancing considerations—discussing the pros and cons of staying at the agency versus going independent, financial concerns, and creative freedom (12-15 turns)
-- Personal life updates and relationship dynamics—Alessia mentioning Marco the photographer's latest project and how their creative competition is going, Silvia sharing about her and Marco's recent cooking experiments (6-8 turns)
-- Planning a potential weekend visit to Palermo—tentatively discussing when Silvia could visit, what they'd do, and maybe attending a local artisan fair together (5-7 turns)
-- Quick check-in about their creative side projects—Alessia's collaboration with local artisans and Silvia's ceramic collection hobby (3-4 turns)
+- The layout bug: reproducing it, assigning blame to the regression, agreeing on a fix strategy (12 turns) ← PRIMARY
+- Sprint demo prep: what Sofia plans to say, whether David needs to be on the call (5 turns)
+- Brief personal check-in: David mentions he's flying to Milan next month, Sofia reacts (3 turns)
+
+Initial state: layout bug; 12; sprint demo prep
+
+Possible instant events:
+- David reproduces the bug on a device and sends a screen recording
+- A third colleague posts in the team channel with an unrelated urgent request
+- Sofia's calendar reminder fires for a 11:30 call she forgot about
 </experience>

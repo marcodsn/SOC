@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JSONL Chat Viewer</title>
+        <style>
+            :root {
+                --bg-color: #efeae2;
+                --sidebar-bg: #ffffff;
+                --bubble-left: #ffffff;
+                --bubble-right: #dcf8c6;
+                --text-main: #303030;
+                --text-muted: #667781;
+                --thought-bg: #fff3cd;
+                --state-bg: #e2e3e5;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                    Helvetica, Arial, sans-serif;
+                display: flex;
+                height: 100vh;
+                background-color: var(--bg-color);
+                color: var(--text-main);
+            }
+
+            /* Sidebar Styles */
+            #sidebar {
+                width: 300px;
+                background: var(--sidebar-bg);
+                border-right: 1px solid #d1d7db;
+                display: flex;
+                flex-direction: column;
+            }
+
+            #upload-container {
+                padding: 20px;
+                background: #f0f2f5;
+                border-bottom: 1px solid #d1d7db;
+            }
+
+            #upload-container input[type="file"] {
+                width: 100%;
+            }
+
+            #chat-list {
+                flex: 1;
+                overflow-y: auto;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .chat-list-item {
+                padding: 15px 20px;
+                border-bottom: 1px solid #f2f2f2;
+                cursor: pointer;
+                transition: background 0.2s;
+            }
+
+            .chat-list-item:hover {
+                background: #f5f6f6;
+            }
+            .chat-list-item.active {
+                background: #ebebeb;
+                font-weight: bold;
+            }
+
+            .chat-title {
+                font-size: 15px;
+                margin-bottom: 5px;
+            }
+            .chat-meta {
+                font-size: 12px;
+                color: var(--text-muted);
+            }
+
+            /* Main Chat Area Styles */
+            #main {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+
+            #chat-header {
+                padding: 15px 25px;
+                background: var(--sidebar-bg);
+                border-bottom: 1px solid #d1d7db;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+                z-index: 10;
+            }
+
+            #chat-header h2 {
+                margin: 0 0 5px 0;
+                font-size: 18px;
+            }
+            #chat-header p {
+                margin: 0;
+                font-size: 13px;
+                color: var(--text-muted);
+            }
+
+            #chat-box {
+                flex: 1;
+                padding: 20px 10%;
+                overflow-y: auto;
+                background-image: radial-gradient(
+                    circle at center,
+                    #e4dfd7 0%,
+                    var(--bg-color) 100%
+                );
+            }
+
+            /* Message Bubbles */
+            .turn-container {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 20px;
+            }
+
+            .turn-container.left {
+                align-items: flex-start;
+            }
+            .turn-container.right {
+                align-items: flex-end;
+            }
+
+            .state-badge {
+                align-self: center;
+                background: var(--state-bg);
+                color: #383d41;
+                font-size: 11px;
+                padding: 4px 10px;
+                border-radius: 12px;
+                margin-bottom: 15px;
+                text-align: center;
+                max-width: 80%;
+            }
+
+            .thought-bubble {
+                background: var(--thought-bg);
+                color: #856404;
+                font-size: 13px;
+                padding: 8px 12px;
+                border-radius: 8px;
+                margin-bottom: 8px;
+                max-width: 70%;
+                border-left: 4px solid #ffeeba;
+                font-style: italic;
+            }
+
+            .message-bubble {
+                max-width: 70%;
+                padding: 8px 12px;
+                border-radius: 8px;
+                margin-bottom: 4px;
+                position: relative;
+                box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+                font-size: 14px;
+                line-height: 1.4;
+                white-space: pre-wrap;
+                word-wrap: break-word;
+            }
+
+            .turn-container.left .message-bubble {
+                background: var(--bubble-left);
+                border-top-left-radius: 0;
+            }
+
+            .turn-container.right .message-bubble {
+                background: var(--bubble-right);
+                border-top-right-radius: 0;
+            }
+
+            .message-header {
+                font-size: 11px;
+                font-weight: bold;
+                margin-bottom: 4px;
+                color: #128c7e;
+            }
+
+            .turn-container.right .message-header {
+                color: #075e54;
+            }
+
+            .message-meta {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                font-size: 10px;
+                color: var(--text-muted);
+                margin-top: 4px;
+                gap: 5px;
+            }
+
+            .type-icon {
+                font-size: 12px;
+            }
+
+            /* Empty State */
+            #empty-state {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                color: var(--text-muted);
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="sidebar">
+            <div id="upload-container">
+                <strong>Load JSONL File</strong><br /><br />
+                <input type="file" id="fileInput" accept=".jsonl,.json" />
+            </div>
+            <ul id="chat-list"></ul>
+        </div>
+
+        <div id="main">
+            <div id="chat-header" style="display: none">
+                <h2 id="header-title">Chat Title</h2>
+                <p id="header-desc">Metadata goes here</p>
+            </div>
+            <div id="chat-box">
+                <div id="empty-state">
+                    Please upload a JSONL file to view chats.
+                </div>
+            </div>
+        </div>
+
+        <script>
+            let chatData = [];
+
+            document
+                .getElementById("fileInput")
+                .addEventListener("change", function (e) {
+                    const file = e.target.files[0];
+                    if (!file) return;
+
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        const lines = e.target.result.split("\n");
+                        chatData = [];
+
+                        lines.forEach((line) => {
+                            if (line.trim()) {
+                                try {
+                                    chatData.push(JSON.parse(line));
+                                } catch (err) {
+                                    console.error("Error parsing line:", err);
+                                }
+                            }
+                        });
+
+                        renderChatList();
+                        if (chatData.length > 0) {
+                            renderChat(0);
+                        }
+                    };
+                    reader.readAsText(file);
+                });
+
+            function renderChatList() {
+                const listEl = document.getElementById("chat-list");
+                listEl.innerHTML = "";
+
+                chatData.forEach((chat, index) => {
+                    const personas = chat.meta?.persona_names || [
+                        "Persona A",
+                        "Persona B",
+                    ];
+                    const li = document.createElement("li");
+                    li.className = "chat-list-item";
+                    li.innerHTML = `
+                    <div class="chat-title">${personas.join(" & ")}</div>
+                    <div class="chat-meta">Turns: ${chat.turns ? chat.turns.length : 0} | Index: ${index}</div>
+                `;
+                    li.onclick = () => {
+                        document
+                            .querySelectorAll(".chat-list-item")
+                            .forEach((el) => el.classList.remove("active"));
+                        li.classList.add("active");
+                        renderChat(index);
+                    };
+                    listEl.appendChild(li);
+                });
+
+                if (listEl.firstChild) {
+                    listEl.firstChild.classList.add("active");
+                }
+            }
+
+            function renderChat(index) {
+                const chat = chatData[index];
+                const chatBox = document.getElementById("chat-box");
+                const header = document.getElementById("chat-header");
+                const personas = chat.meta?.persona_names || [
+                    "Speaker A",
+                    "Speaker B",
+                ];
+
+                // Setup Header
+                header.style.display = "block";
+                document.getElementById("header-title").innerText =
+                    personas.join(" & ");
+                document.getElementById("header-desc").innerText =
+                    `Style: ${chat.conversation_style} | Cadence: ${chat.message_cadence}`;
+
+                // Clear chat box
+                chatBox.innerHTML = "";
+
+                if (!chat.turns) return;
+
+                // Parse Turns
+                chat.turns.forEach((turnStr, turnIndex) => {
+                    // Determine who is speaking based on turn index (even = P1, odd = P2)
+                    const isLeft = turnIndex % 2 === 0;
+                    const speakerName = isLeft ? personas[0] : personas[1];
+
+                    const container = document.createElement("div");
+                    container.className = `turn-container ${isLeft ? "left" : "right"}`;
+
+                    // Regex parsing (safer than DOMParser for LLM generated XML)
+                    const stateMatch = turnStr.match(
+                        /<state>([\s\S]*?)<\/state>/,
+                    );
+                    const eventMatch = turnStr.match(
+                        /<instant_event>([\s\S]*?)<\/instant_event>/,
+                    );
+
+                    // State Badge
+                    if (stateMatch && stateMatch[1].trim()) {
+                        const stateEl = document.createElement("div");
+                        stateEl.className = "state-badge";
+                        stateEl.innerText = stateMatch[1].trim();
+                        container.appendChild(stateEl);
+                    }
+
+                    // Internal Thought (Instant Event)
+                    if (eventMatch && eventMatch[1].trim()) {
+                        const eventEl = document.createElement("div");
+                        eventEl.className = "thought-bubble";
+                        eventEl.innerText = "💭 " + eventMatch[1].trim();
+                        container.appendChild(eventEl);
+                    }
+
+                    // Messages
+                    const messageRegex =
+                        /<message\s+t="([^"]*)"\s+d="([^"]*)"\s+type="([^"]*)">([\s\S]*?)(?=<\/message>|<message|<\/turn>|$)/g;
+                    let m;
+                    while ((m = messageRegex.exec(turnStr)) !== null) {
+                        const time = m[1];
+                        const date = m[2];
+                        const type = m[3];
+                        const content = m[4].replace(/<\/message>/, "").trim(); // Cleanup hanging tags
+
+                        const msgEl = document.createElement("div");
+                        msgEl.className = "message-bubble";
+
+                        // Header (Name)
+                        const msgHeader = document.createElement("div");
+                        msgHeader.className = "message-header";
+                        msgHeader.innerText = speakerName;
+                        msgEl.appendChild(msgHeader);
+
+                        // Content
+                        const contentEl = document.createElement("div");
+                        contentEl.innerText = content;
+                        msgEl.appendChild(contentEl);
+
+                        // Meta (Time & Type)
+                        const metaEl = document.createElement("div");
+                        metaEl.className = "message-meta";
+                        metaEl.innerHTML = `
+                        <span class="type-icon">${getTypeIcon(type)}</span>
+                        <span>${time} ${date ? `(${date})` : ""}</span>
+                    `;
+                        msgEl.appendChild(metaEl);
+
+                        container.appendChild(msgEl);
+                    }
+
+                    chatBox.appendChild(container);
+                });
+
+                // Auto-scroll to top when loading a new chat
+                chatBox.scrollTop = 0;
+            }
+
+            function getTypeIcon(type) {
+                switch (type.toLowerCase()) {
+                    case "audio":
+                        return "🎤";
+                    case "image":
+                        return "📸";
+                    case "video":
+                        return "🎥";
+                    case "sticker":
+                        return "🪧";
+                    default:
+                        return "";
+                }
+            }
+        </script>
+    </body>
+</html>

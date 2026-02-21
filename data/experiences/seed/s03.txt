@@ -1,14 +1,32 @@
 <experience>
-Olivia and George have been friends for three years, originally meeting through Olivia's younger sister Maya, who works as a nurse at a Manchester hospital and dated George's friend Liam briefly. Despite the relationship not working out between Maya and Liam, Olivia and George discovered they had an instant connection through their shared love of design, tech, and sci-fi. They've maintained a steady friendship through regular WhatsApp chats, monthly video calls where they discuss their projects, and occasional meetups when Olivia visits Manchester to see Maya or when George comes down to London for tech meetups.
+Giulia (29, Rome) and Alessia (30, London) were inseparable during their undergraduate
+years in Bologna. Since graduating they've drifted into very different lives — Giulia is
+three years into a PhD in marine biology, living on a researcher's stipend and genuinely
+loving it; Alessia pivoted hard into finance, is doing well materially but carries a
+quiet background anxiety about whether she chose the right path. They last had a proper
+conversation about four months ago and have exchanged only sporadic Instagram likes since.
 
-It's a Thursday evening around 8:45 PM. George has just arrived home from work, fed Milo, and settled onto his sofa with a controller in hand, about to start a gaming session. Olivia is winding down her evening routine—she's already done her chamomile ritual and is scrolling through Instagram with her feet up on the sofa when something completely unexpected happens: she receives an email notification that one of her design case studies has been featured on a major UX design platform (UX Collective or similar), and it's already gotten hundreds of reactions in the past hour. She's buzzing with excitement, a bit shocked, and immediately wants to share this with someone who'll truly understand the significance.
+This morning Giulia saw Alessia post a photo from a weekend in the Dolomites — a rare
+break for Alessia — and it made her smile. She sent a voice note on WhatsApp saying
+simply "you look genuinely happy here, what happened to you??" with a laughing emoji.
+Alessia is now on a lunch break, sitting alone at her desk, and picked it up. She's
+been meaning to properly reconnect for weeks and this feels like the right moment.
+The tone will be warm with a current of honesty underneath — these two don't do small talk
+for long before getting real.
 
-She opens WhatsApp and sees George is online (green dot showing). The conversation is sparked by her excited, somewhat frantic message about the feature. This is pure reactive conversation—no planning, just genuine excitement and the need to share a "holy shit" moment with a friend who gets it.
+Conversation style: semi-structured
+Message cadence: delayed (messages every few minutes, occasional gaps of 15–30 min)
 
-The conversation will likely cover the following instant topics:
-- Olivia's design case study feature and her immediate reaction—sharing the link, expressing disbelief and excitement, George congratulating her (4-6 turns)
-- Reading through some of the comments together and reacting in real-time—discussing what people are saying, laughing at some comments, feeling validated by others (5-8 turns)
-- George sharing his own recent small win that he hadn't mentioned yet—maybe his Raspberry Pi project finally worked or he got positive feedback on something at work (3-5 turns)
-- Brief digression into weekend plans—George mentioning he might come to London soon, possibility of meeting up for a celebratory pint (3-4 turns)
-- Potential instant topic if it comes up naturally—one of them noticing something funny or weird in the comments or on social media while chatting (2-3 turns)
+The conversation will likely cover the following topics:
+- Alessia's Dolomites trip and what she needed it for (8 turns) ← PRIMARY
+- Giulia's PhD fieldwork: she just got back from ten days on a research vessel (6 turns)
+- Career and life choices, surfacing gently (7 turns)
+- Talking about meeting up — vague plans, both wanting it to happen (4 turns)
+
+Initial state: Dolomites trip; 8; PhD fieldwork
+
+Possible instant events:
+- Alessia gets pulled back into a meeting, goes quiet for 25 minutes
+- Giulia remembers a specific shared memory from Bologna and brings it up unprompted
+- Alessia admits something she hasn't told anyone else yet, triggered by the career topic
 </experience>

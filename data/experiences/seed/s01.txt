@@ -1,15 +1,29 @@
 <experience>
-Aarav and Hassan connected three months ago through a South Asian educators and content creators online forum. Hassan, a high school science teacher from Peshawar, had been impressed by Aarav's photography portfolio showcasing urban landscapes and sustainability campaigns in Pune. He reached out hoping to learn about visual storytelling techniques that could help his students grasp abstract physics concepts better.
+Lena (28, Berlin, graphic designer) and Marco (30, Udine, freelance photographer)
+met at a three-day documentary photography workshop in Vienna three years ago.
+They never became close in a structured way — no regular calls, no plans to visit —
+but they've maintained a warm, low-maintenance thread on WhatsApp that resurfaces every
+few weeks. Their messages feel like postcards: fragments of whatever is happening,
+shared links, photos taken out of context. Neither expects a quick reply.
 
-They've exchanged sporadic messages since then—mostly Hassan asking technical questions about camera angles and lighting, with Aarav offering advice between his client projects. Recently, Hassan posted in their shared group about feeling frustrated with limited teaching resources and wanting to create a photo series demonstrating physics principles in everyday objects. He admitted feeling overwhelmed by the technical aspects and unsure where to start.
+Right now it's a slow Wednesday afternoon. Marco is waiting for a client to approve
+edits and is restless, half-reading, half on his phone. Lena just got back from a
+frustrating client meeting and opened WhatsApp to decompress without really knowing who
+she was going to text. She saw Marco's name and his last message — a photo of fog over
+a canal from six weeks ago — and just started typing.
 
-Aarav saw the post during one of his late-night editing sessions on a Sunday evening. He's been in a reflective mood lately, questioning whether his commercial marketing work truly aligns with his values of creativity and meaningful impact. The idea of using photography for education—something tangible that helps students—resonates deeply with his recent feelings about wanting more purposeful creative projects. He's also curious about the challenge of translating abstract concepts into visual media, which appeals to both his analytical marketing mind and his artistic sensibilities.
+Conversation style: freeform
+Message cadence: async (hours–days)
 
-Hassan is at home, having just finished grading papers. His son Faris is drawing at the dining table, and Ayesha is preparing dinner. He's in a contemplative mood, feeling both proud of his recent science fair success but also aware of his limitations in technical skills. Aarav is taking a break from editing travel photos at his Viman Nagar apartment, feeling restless about his creative direction and open to new possibilities.
+Conversational energy: Warm but unhurried. Lena and Marco share an eye for aesthetics
+and a mild disdain for corporate work, which surfaces as dry humour. They tend to pass
+things to each other — photos, music, a sentence that's stuck in their head — more than
+they have structured conversations. A topic might be a single image followed by silence
+for two hours. They often ask each other questions they don't expect a complete answer to.
 
-The conversation will likely cover the following topics:
-- The educational photography collaboration idea and initial planning—discussing what physics concepts to cover, technical requirements, and how they could work together across borders (10-12 turns)
-- Comparing their work environments and daily challenges—Hassan's resource constraints in Peshawar schools versus Aarav's commercial pressure in Pune's marketing scene (6-8 turns)
-- Personal motivations and career reflections—Aarav's struggle with authenticity in commercial work and Hassan's desire to grow beyond traditional teaching methods (8-10 turns)
-- Practical logistics and next steps—timeline, communication methods, and what each person needs to contribute (4-5 turns)
+Possible instant events:
+- Marco's client finally sends approval (or a barrage of revision requests) mid-chat
+- Lena's flatmate interrupts her and she goes quiet for 40 minutes
+- Marco walks outside and sends a spontaneous photo of something he passes
+- A song comes on that Lena had sent Marco a year ago and she notices it
 </experience>

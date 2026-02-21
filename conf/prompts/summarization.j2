@@ -1,0 +1,30 @@
+You are a conversation memory system. Your job is to maintain a concise rolling
+summary of an ongoing conversation between two people.
+
+## Prior Summary
+{% if prior_summary %}
+{{ prior_summary }}
+{% else %}
+No prior summary — this is the first batch being retired.
+{% endif %}
+
+## Messages Being Retired
+{{ messages_to_retire }}
+
+---
+
+Produce an updated summary that incorporates everything above.
+
+Preserve:
+- Key facts exchanged (names, plans, decisions)
+- Emotional beats and mood shifts
+- Unresolved threads or open questions
+- Recurring themes (especially important for freeform conversations)
+- Anything either person seems to care about or return to
+
+Be concise: 3–6 sentences of plain prose. No headers, no lists.
+Wrap your entire summary in <summary> </summary> tags and output nothing else.
+
+<summary>
+summary text goes here
+</summary>

@@ -12,13 +12,21 @@ class LLMClient:
         #     base_url="https://router.huggingface.co/v1",
         #     api_key=os.getenv("HF_TOKEN"),
         # )
+        # self.client = OpenAI(
+        #     # base_url="http://192.168.1.67:8083/v1",
+        #     base_url="http://10.8.0.5:8083/v1",
+        #     api_key=os.getenv("HF_TOKEN"),
+        # )
+        # self.async_client = AsyncOpenAI(
+        #     base_url="http://10.8.0.5:8083/v1",
+        #     api_key=os.getenv("HF_TOKEN"),
+        # )
         self.client = OpenAI(
-            # base_url="http://192.168.1.67:8083/v1",
-            base_url="http://10.8.0.5:8083/v1",
+            base_url="http://10.8.0.5:8000/v1",
             api_key=os.getenv("HF_TOKEN"),
         )
         self.async_client = AsyncOpenAI(
-            base_url="http://10.8.0.5:8083/v1",
+            base_url="http://10.8.0.5:8000/v1",
             api_key=os.getenv("HF_TOKEN"),
         )
         self.model_id = model_id
