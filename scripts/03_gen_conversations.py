@@ -67,7 +67,7 @@ def main():
     parser.add_argument(
         "--model",
         type=str,
-        default="moonshotai/Kimi-K2.5:fireworks-ai",
+        default="openai/gpt-oss-20b",
         help="Model ID for turn generation",
     )
     parser.add_argument(
@@ -85,7 +85,7 @@ def main():
     parser.add_argument(
         "--experiences",
         type=str,
-        default="data/experiences/generated/experiences_20260221_140037.jsonl",
+        default="data/experiences/generated/experiences_20260221_180551.jsonl",
         help="Path to merged experiences JSONL file",
     )
     parser.add_argument(

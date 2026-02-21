@@ -21,6 +21,18 @@ class LLMClient:
         #     base_url="http://10.8.0.5:8083/v1",
         #     api_key=os.getenv("HF_TOKEN"),
         # )
+
+        ### HUGGING FACE
+        # self.client = OpenAI(
+        #     base_url="https://router.huggingface.co/v1",
+        #     api_key=os.getenv("HF_TOKEN"),
+        # )
+        # self.async_client = AsyncOpenAI(
+        #     base_url="https://router.huggingface.co/v1",
+        #     api_key=os.getenv("HF_TOKEN"),
+        # )
+
+        ### LOCAL AI
         self.client = OpenAI(
             base_url="http://10.8.0.5:8000/v1",
             api_key=os.getenv("HF_TOKEN"),
@@ -37,7 +49,7 @@ class LLMClient:
             messages=prompt,
             stop=stop_sequences,
             max_tokens=8192,
-            temperature=1.0,
+            temperature=0.7,
         )
 
     async def generate_async(self, prompt: list, stop_sequences: list = []):
@@ -46,5 +58,5 @@ class LLMClient:
             messages=prompt,
             stop=stop_sequences,
             max_tokens=8192,
-            temperature=1.0,
+            temperature=0.7,
         )
