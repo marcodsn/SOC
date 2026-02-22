@@ -49,7 +49,7 @@ class LLMClient:
             messages=prompt,
             stop=stop_sequences,
             max_tokens=8192,
-            temperature=0.7,
+            temperature=1.0,
         )
 
     async def generate_async(self, prompt: list, stop_sequences: list = []):
@@ -58,5 +58,5 @@ class LLMClient:
             messages=prompt,
             stop=stop_sequences,
             max_tokens=8192,
-            temperature=0.7,
+            temperature=1.0,
         )
