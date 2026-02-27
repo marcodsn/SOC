@@ -5,6 +5,7 @@ Generate conversations from paired personas and experiences.
 Usage:
     python scripts/03_gen_conversations.py --num 50
     python scripts/03_gen_conversations.py --num 20 --style freeform
+    python scripts/03_gen_conversations.py --num 50 --provider nim
     python scripts/03_gen_conversations.py \\
         --model "moonshotai/Kimi-K2.5:fireworks-ai" \\
         --summarizer-model "meta-llama/Llama-3.1-8B-Instruct:fireworks-ai"
@@ -79,13 +80,13 @@ def main():
     parser.add_argument(
         "--personas",
         type=str,
-        default="data/personas/generated/b_merged_personas.jsonl",
+        default="data/personas/generated/data.jsonl",
         help="Path to merged personas JSONL file",
     )
     parser.add_argument(
         "--experiences",
         type=str,
-        default="data/experiences/generated/experiences_20260221_180551.jsonl",
+        default="data/experiences/generated/data.jsonl",
         help="Path to merged experiences JSONL file",
     )
     parser.add_argument(
@@ -121,6 +122,13 @@ def main():
         help="Filter experiences by message cadence",
     )
     parser.add_argument(
+        "--provider",
+        type=str,
+        default="local",
+        choices=["modal", "nim", "huggingface", "mistral", "local"],
+        help="LLM provider to use (default: local)",
+    )
+    parser.add_argument(
         "--start-index",
         type=int,
         default=0,
@@ -132,13 +140,17 @@ def main():
     # -------------------------------------------------------------------------
     # Clients
     # -------------------------------------------------------------------------
-    print(f"Initializing turn model: {args.model}")
-    llm_client = LLMClient(model_id=args.model)
+    print(f"Initializing turn model: {args.model} (provider: {args.provider})")
+    llm_client = LLMClient(model_id=args.model, provider=args.provider)
 
     summarizer_client = None
     if args.summarizer_model:
-        print(f"Initializing summarizer model: {args.summarizer_model}")
-        summarizer_client = LLMClient(model_id=args.summarizer_model)
+        print(
+            f"Initializing summarizer model: {args.summarizer_model} (provider: {args.provider})"
+        )
+        summarizer_client = LLMClient(
+            model_id=args.summarizer_model, provider=args.provider
+        )
 
     # -------------------------------------------------------------------------
     # Load and filter experiences

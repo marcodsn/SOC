@@ -3,7 +3,9 @@
 Generate experiences for personas using iterative sampling.
 
 Usage:
+    python scripts/02_gen_experiences.py --num 50
     python scripts/02_gen_experiences.py --num 50 --model "moonshotai/Kimi-K2.5:fireworks-ai"
+    python scripts/02_gen_experiences.py --num 50 --provider nim
 """
 
 import argparse
@@ -11,7 +13,6 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
-# Add src to path
 sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
 from soc_2602.generation.experience_generator import ExperienceGenerator
@@ -20,6 +21,7 @@ from soc_2602.llm.client import LLMClient
 
 def main():
     parser = argparse.ArgumentParser(description="Generate conversation experiences")
+
     parser.add_argument(
         "--num",
         type=int,
@@ -29,13 +31,20 @@ def main():
     parser.add_argument(
         "--model",
         type=str,
-        default="moonshotai/Kimi-K2.5:fireworks-ai",
-        help="Model ID to use (default: moonshotai/Kimi-K2.5:fireworks-ai)",
+        default="openai/gpt-oss-20b",
+        help="Model ID to use (default: openai/gpt-oss-20b)",
+    )
+    parser.add_argument(
+        "--provider",
+        type=str,
+        default="local",
+        choices=["modal", "nim", "huggingface", "mistral", "local"],
+        help="LLM provider to use (default: local)",
     )
     parser.add_argument(
         "--personas",
         type=str,
-        default="data/personas/generated/b_merged_personas.jsonl",
+        default="data/personas/generated/data.jsonl",
         help="Path to merged personas JSONL file",
     )
     parser.add_argument(
@@ -60,22 +69,28 @@ def main():
         "--batch-size",
         type=int,
         default=4,
-        help="Batch size for asynchronous generation (default: 4)",
+        help="Number of experiences to run concurrently (default: 4)",
     )
 
     args = parser.parse_args()
 
-    # Initialize LLM client
-    print(f"Initializing LLM client with model: {args.model}")
-    llm_client = LLMClient(model_id=args.model)
+    # -------------------------------------------------------------------------
+    # Client
+    # -------------------------------------------------------------------------
+    print(f"Initializing model: {args.model} (provider: {args.provider})")
+    llm_client = LLMClient(model_id=args.model, provider=args.provider)
 
-    # Construct output file path
+    # -------------------------------------------------------------------------
+    # Output path
+    # -------------------------------------------------------------------------
     output_file = (
         Path(args.output_dir)
         / f"experiences_{datetime.now().strftime('%Y%m%d_%H%M%S')}.jsonl"
     )
 
-    # Initialize experience generator
+    # -------------------------------------------------------------------------
+    # Generator
+    # -------------------------------------------------------------------------
     generator = ExperienceGenerator(
         llm_client=llm_client,
         persona_file=args.personas,
@@ -84,7 +99,6 @@ def main():
         prompt_dir=args.prompt_dir,
     )
 
-    # Generate experiences
     generator.generate_batch(num_experiences=args.num, batch_size=args.batch_size)
 
 

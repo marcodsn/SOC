@@ -89,7 +89,7 @@ class ExperienceGenerator:
     # Selection helpers
     # -------------------------------------------------------------------------
 
-    def _select_shots(self, iteration: int, num_shots: int = 2) -> List[str]:
+    def _select_shots(self, iteration: int, num_shots: int = 1) -> List[str]:
         """
         Select few-shot examples.
         Seeds only for the first 10 iterations (warmup),
@@ -210,15 +210,12 @@ class ExperienceGenerator:
 
     def _update_pool(self, experience_text: str) -> None:
         """
-        Rolling window pool: append new experience, then trim to the most
-        recent POOL_KEEP_ON_RESET entries once POOL_MAX_SIZE is exceeded.
-        Avoids the hard reset that discards all recent context at once.
+        Rolling window pool: append new experience, then pop the oldest entries
+        once POOL_MAX_SIZE is exceeded.
         """
         self.generated_experiences.append(experience_text)
         if len(self.generated_experiences) > self.POOL_MAX_SIZE:
-            self.generated_experiences = self.generated_experiences[
-                -self.POOL_KEEP_ON_RESET :
-            ]
+            self.generated_experiences.pop(0)
 
     # -------------------------------------------------------------------------
     # Generation

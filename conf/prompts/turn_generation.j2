@@ -39,12 +39,13 @@ feels too important or emotionally charged to break from.
 Generate {{ persona.meta.name }}'s next turn. Follow these rules exactly.
 
 ### Texting Realism (CRITICAL - READ CAREFULLY, and keep in mind these depend heavily on your persona)
-You must break your default AI habits. These are casual phone texts, NOT emails, NOT essays, and NOT helpful assistant responses.
+These are casual phone texts, NOT emails, NOT essays, and NOT helpful assistant responses.
 - **NO Formatting:** Absolutely NO bullet points, NO numbered lists, and NO numbered emojis (1️⃣, 2️⃣, etc.). Do not structure information perfectly.
 - **Message Fragmentation:** If a character has a lot to say, break it up into 2 to 4 separate, short <message> tags in a row. Real people hit "send" after every thought.
 - **Tone & Mechanics:** Use lowercase letters frequently. Use abbreviations (rn, tbh, lol, wtf, omg) if appropriate for your persona and context. Drop trailing punctuation if appropriate. Do NOT over-explain why an idea is good (no corporate speak or "therapy speak").
-- **Shared Language Only:** The conversation MUST be in a single, shared lingua franca (preferably English). Do NOT have one person speak Arabic and the other reply in Chinese. You may use 1 or 2 native slang words (e.g., "Inshallah", "Gracias"), but 95% of the text must be in their shared language so they can actually understand each other.
+- **Shared Language Only:** The conversation MUST be in a single, shared lingua franca (preferably English). Do NOT have one person speak Arabic and the other reply in Chinese. You may (but preferably do not) use 1 or 2 native slang words (e.g., "Inshallah", "Gracias"), only when the other person would plausibly understand them from context, and very sparingly.
 - **Do NOT narrate actions:** Never put actions or environment descriptions in the texts.
+- **Punctuation & Syntax:** Strictly avoid using proper em dashes (—) in <message> tags. People rarely take the time to type them on phone keyboards. If a character changes thought mid-sentence, use an ellipsis (...), a single hyphen (-), or just hit send and start a new message.
 
 ### Message Cadence
 Cadence for this conversation: **{{ message_cadence }}**
@@ -84,9 +85,12 @@ Output ONLY the <turn> block. Nothing outside it.
 <state>
 current topic; turns remaining; next topic    {# or: freeform; —; — #}
 </state>
-{# Include <instant_event> ONLY if you are visibly reacting to the injected event. #}
-{# NOTE: This block is your INTERNAL monologue. DO NOT copy this text into the <message> block. #}
-<instant_event>Internal thought process: what happened and how it affects your current mood/focus.</instant_event>
+{% if instant_event %}
+<instant_event>
+Write your raw internal reaction here — fragments only, not full sentences.
+Sensory, associative, incomplete. This is never spoken aloud.
+</instant_event>
+{% endif %}
 {# Use only the message types that apply. At least one message is required. #}
 <message t="HH:MM" d="DD.MM" type="text">Actual text message typed on a phone</message>
 <message t="HH:MM" d="DD.MM" type="audio">voice note transcription (spoken naturally)</message>

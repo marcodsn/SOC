@@ -3,14 +3,16 @@
 Generate diverse personas using iterative sampling.
 
 Usage:
-    python scripts/generate_personas.py --num 50 --model "moonshotai/Kimi-K2.5:fireworks-ai"
+    python scripts/01_gen_personas.py --num 50
+    python scripts/01_gen_personas.py --num 50 --model "moonshotai/Kimi-K2.5:fireworks-ai"
+    python scripts/01_gen_personas.py --num 50 --provider nim
 """
 
 import argparse
 import sys
+from datetime import datetime
 from pathlib import Path
 
-# Add src to path
 sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
 from soc_2602.generation.persona_generator import PersonaGenerator
@@ -19,6 +21,7 @@ from soc_2602.llm.client import LLMClient
 
 def main():
     parser = argparse.ArgumentParser(description="Generate diverse personas")
+
     parser.add_argument(
         "--num",
         type=int,
@@ -28,8 +31,15 @@ def main():
     parser.add_argument(
         "--model",
         type=str,
-        default="moonshotai/Kimi-K2.5:fireworks-ai",
-        help="Model ID to use (default: moonshotai/Kimi-K2.5:fireworks-ai)",
+        default="openai/gpt-oss-20b",
+        help="Model ID to use (default: openai/gpt-oss-20b)",
+    )
+    parser.add_argument(
+        "--provider",
+        type=str,
+        default="local",
+        choices=["modal", "nim", "huggingface", "mistral", "local"],
+        help="LLM provider to use (default: local)",
     )
     parser.add_argument(
         "--seed-dir",
@@ -53,23 +63,35 @@ def main():
         "--batch-size",
         type=int,
         default=4,
-        help="Batch size for asynchronous generation (default: 4)",
+        help="Number of personas to run concurrently (default: 4)",
     )
 
     args = parser.parse_args()
 
-    # Initialize LLM client
-    print(f"Initializing LLM client with model: {args.model}")
-    llm_client = LLMClient(model_id=args.model)
+    # -------------------------------------------------------------------------
+    # Client
+    # -------------------------------------------------------------------------
+    print(f"Initializing model: {args.model} (provider: {args.provider})")
+    llm_client = LLMClient(model_id=args.model, provider=args.provider)
 
-    # Initialize persona generator
+    # -------------------------------------------------------------------------
+    # Output path
+    # -------------------------------------------------------------------------
+    output_file = (
+        Path(args.output_dir)
+        / f"personas_{datetime.now().strftime('%Y%m%d_%H%M%S')}.jsonl"
+    )
+
+    # -------------------------------------------------------------------------
+    # Generator
+    # -------------------------------------------------------------------------
     generator = PersonaGenerator(
         llm_client=llm_client,
         seed_dir=args.seed_dir,
+        output_file=str(output_file),
         prompt_dir=args.prompt_dir,
     )
 
-    # Generate personas
     generator.generate_batch(num_personas=args.num, batch_size=args.batch_size)
 
 

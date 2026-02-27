@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Persona Viewer</title>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <style>
+            :root {
+                --primary: #2c3e50;
+                --accent: #3498db;
+                --bg-color: #f8f9fa;
+                --sidebar-bg: #ffffff;
+                --text-main: #333333;
+                --text-muted: #6c757d;
+                --border: #dee2e6;
+            }
+
+            body {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                    Helvetica, Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                background-color: var(--bg-color);
+                color: var(--text-main);
+            }
+
+            header {
+                background-color: var(--primary);
+                color: white;
+                padding: 1rem 2rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                z-index: 10;
+            }
+
+            header h1 {
+                margin: 0;
+                font-size: 1.5rem;
+            }
+
+            .upload-btn-wrapper {
+                position: relative;
+                overflow: hidden;
+                display: inline-block;
+            }
+
+            .upload-btn-wrapper input[type="file"] {
+                font-size: 100px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                opacity: 0;
+                cursor: pointer;
+            }
+
+            .btn {
+                border: 2px solid white;
+                color: white;
+                background-color: transparent;
+                padding: 8px 20px;
+                border-radius: 8px;
+                font-size: 14px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: all 0.2s;
+            }
+
+            .btn:hover {
+                background-color: white;
+                color: var(--primary);
+            }
+
+            #main-container {
+                display: flex;
+                flex: 1;
+                overflow: hidden;
+            }
+
+            #sidebar {
+                width: 320px;
+                background-color: var(--sidebar-bg);
+                border-right: 1px solid var(--border);
+                overflow-y: auto;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .persona-card {
+                padding: 1.25rem;
+                border-bottom: 1px solid var(--border);
+                cursor: pointer;
+                transition: background-color 0.15s;
+            }
+
+            .persona-card:hover {
+                background-color: #f1f3f5;
+            }
+
+            .persona-card.active {
+                background-color: #e7f5ff;
+                border-left: 4px solid var(--accent);
+            }
+
+            .p-name {
+                font-size: 1.15rem;
+                font-weight: 600;
+                margin-bottom: 0.25rem;
+            }
+
+            .p-meta {
+                font-size: 0.85rem;
+                color: var(--text-muted);
+                line-height: 1.4;
+            }
+
+            #content-area {
+                flex: 1;
+                padding: 2rem 4rem;
+                overflow-y: auto;
+                background-color: #ffffff;
+            }
+
+            .empty-state {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                color: var(--text-muted);
+                font-size: 1.2rem;
+                text-align: center;
+            }
+
+            /* Markdown Styling */
+            .markdown-body {
+                max-width: 850px;
+                margin: 0 auto;
+                font-size: 1.05rem;
+                line-height: 1.6;
+            }
+
+            .markdown-body h2 {
+                border-bottom: 2px solid #eaecef;
+                padding-bottom: 0.3em;
+                margin-top: 1.5em;
+                color: var(--primary);
+            }
+
+            .markdown-body strong {
+                color: #111;
+            }
+
+            .markdown-body ul {
+                padding-left: 1.5em;
+            }
+
+            .markdown-body li {
+                margin-bottom: 0.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>👥 Persona Viewer</h1>
+            <div class="upload-btn-wrapper">
+                <button class="btn">Upload .jsonl File</button>
+                <input type="file" id="file-input" accept=".jsonl,.json,.txt" />
+            </div>
+        </header>
+
+        <div id="main-container">
+            <div id="sidebar">
+                <div class="empty-state" style="padding: 2rem; font-size: 1rem">
+                    Please upload a .jsonl file to view personas.
+                </div>
+            </div>
+            <div id="content-area">
+                <div class="empty-state">
+                    Select a persona from the sidebar to read their profile.
+                </div>
+            </div>
+        </div>
+
+        <script>
+            let personas = [];
+
+            // Handle file upload
+            document
+                .getElementById("file-input")
+                .addEventListener("change", function (e) {
+                    const file = e.target.files[0];
+                    if (!file) return;
+
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        const contents = e.target.result;
+                        const lines = contents.split("\n");
+                        personas = [];
+
+                        // Parse each line as a JSON object
+                        lines.forEach((line) => {
+                            if (line.trim()) {
+                                try {
+                                    personas.push(JSON.parse(line));
+                                } catch (err) {
+                                    console.error(
+                                        "Skipped invalid JSON line:",
+                                        err,
+                                    );
+                                }
+                            }
+                        });
+
+                        renderSidebar();
+                    };
+                    reader.readAsText(file);
+                });
+
+            // Render the list of personas in the sidebar
+            function renderSidebar() {
+                const sidebar = document.getElementById("sidebar");
+                sidebar.innerHTML = ""; // Clear current
+
+                if (personas.length === 0) {
+                    sidebar.innerHTML =
+                        '<div class="empty-state" style="padding: 2rem; font-size: 1rem;">No valid personas found in file.</div>';
+                    document.getElementById("content-area").innerHTML =
+                        '<div class="empty-state">Select a persona from the sidebar to read their profile.</div>';
+                    return;
+                }
+
+                personas.forEach((p, index) => {
+                    const card = document.createElement("div");
+                    card.className = "persona-card";
+
+                    // Extract metadata safely
+                    const meta = p.meta || {};
+                    const name = meta.name || "Unknown Name";
+                    const age = meta.age ? `${meta.age} yrs` : "Unknown Age";
+
+                    // Format location nicely based on available data
+                    let locationArr = [];
+                    if (meta.subregion) locationArr.push(meta.subregion);
+                    if (meta.region) locationArr.push(meta.region);
+                    const location =
+                        locationArr.length > 0
+                            ? locationArr.join(", ")
+                            : "Location not specified";
+
+                    card.innerHTML = `
+                    <div class="p-name">${name}</div>
+                    <div class="p-meta">
+                        ${age}<br>
+                        ${location}
+                    </div>
+                `;
+
+                    card.onclick = () => {
+                        // Highlight active card
+                        document
+                            .querySelectorAll(".persona-card")
+                            .forEach((el) => el.classList.remove("active"));
+                        card.classList.add("active");
+                        // Render content
+                        renderContent(index);
+                    };
+
+                    sidebar.appendChild(card);
+                });
+
+                // Auto-click the first persona to load it immediately
+                if (sidebar.firstChild) {
+                    sidebar.firstChild.click();
+                }
+            }
+
+            // Render the Markdown content of the selected persona
+            function renderContent(index) {
+                const p = personas[index];
+                const contentDiv = document.getElementById("content-area");
+
+                let text = p.persona_text || "";
+
+                // Clean up the <character> tags from the raw text
+                text = text.replace(/<\/?character>/g, "").trim();
+
+                // Convert Markdown to HTML
+                const htmlContent = marked.parse(text);
+
+                contentDiv.innerHTML = `<div class="markdown-body">${htmlContent}</div>`;
+
+                // Scroll to top when a new persona is loaded
+                contentDiv.scrollTop = 0;
+            }
+        </script>
+    </body>
+</html>

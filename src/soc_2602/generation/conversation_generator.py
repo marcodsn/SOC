@@ -19,7 +19,7 @@ class ConversationGenerator:
     RETIRE_BATCH = 8
 
     # Hard safety ceiling on turns per conversation
-    MAX_TURNS = 100
+    MAX_TURNS = 50
 
     def __init__(
         self,

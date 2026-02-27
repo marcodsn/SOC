@@ -1,23 +1,50 @@
 import hashlib
 import json
-import sys
+import re
+from datetime import datetime
 from glob import glob
-from pathlib import Path
-from typing import List
+from typing import List, Optional
 
 
-def merge_experience_files(input_files: List[str], output_file: str):
+def parse_timestamp_from_filename(file_path: str) -> Optional[datetime]:
+    """Extract datetime from filename like experiences_YYYYMMDD_HHMMSS.jsonl"""
+    match = re.search(r"experiences_(\d{8})_(\d{6})\.jsonl$", file_path)
+    if match:
+        return datetime.strptime(f"{match.group(1)}_{match.group(2)}", "%Y%m%d_%H%M%S")
+    return None
+
+
+def merge_experience_files(
+    input_files: List[str],
+    output_file: str,
+    min_datetime: Optional[datetime] = None,
+):
     """
     Merge multiple JSONL files containing experience data.
-    Adds unique ID to each experience and removes iteration number.
+    Adds unique ID and source file timestamp to each experience's meta.
+    Optionally skips files created before a given datetime.
 
     Args:
-        input_files: List of paths to input JSONL files
-        output_file: Path to output merged JSONL file
+        input_files:  List of paths to input JSONL files
+        output_file:  Path to output merged JSONL file
+        min_datetime: If set, skip files with a parsed timestamp strictly before this value
     """
     merged_experiences = []
 
-    for file_path in input_files:
+    for file_path in sorted(input_files):  # sorted -> chronological processing order
+        file_ts = parse_timestamp_from_filename(file_path)
+
+        # --- datetime filter ---
+        if min_datetime is not None:
+            if file_ts is None:
+                print(f"Warning: Cannot parse timestamp from '{file_path}', skipping.")
+                continue
+            if file_ts < min_datetime:
+                print(
+                    f"Skipping {file_path}  ({file_ts.isoformat()} < {min_datetime.isoformat()})"
+                )
+                continue
+
         print(f"Processing {file_path}...")
 
         with open(file_path, "r", encoding="utf-8") as f:
@@ -29,18 +56,23 @@ def merge_experience_files(input_files: List[str], output_file: str):
                 try:
                     experience = json.loads(line)
 
-                    # Add unique ID
                     if "meta" not in experience:
                         experience["meta"] = {}
 
-                    # Create a deterministic ID based on content
-                    experience_text = json.dumps(experience, ensure_ascii=False)
-                    experience_id = hashlib.md5(experience_text.encode()).hexdigest()
-                    experience["meta"]["id"] = experience_id
+                    # Store the source file's timestamp in meta
+                    if file_ts is not None:
+                        experience["meta"]["source_timestamp"] = file_ts.isoformat()
 
                     # Remove iteration number if present
-                    if "iteration" in experience["meta"]:
-                        del experience["meta"]["iteration"]
+                    experience["meta"].pop("iteration", None)
+
+                    # Unique ID — computed last so it reflects the full meta content
+                    experience_text = json.dumps(
+                        experience, sort_keys=True, ensure_ascii=False
+                    )
+                    experience["meta"]["id"] = hashlib.md5(
+                        experience_text.encode()
+                    ).hexdigest()
 
                     merged_experiences.append(experience)
 
@@ -49,7 +81,6 @@ def merge_experience_files(input_files: List[str], output_file: str):
                         f"Warning: Skipping invalid JSON in {file_path}, line {line_num}: {e}"
                     )
 
-    # Write merged data
     with open(output_file, "w", encoding="utf-8") as f:
         for experience in merged_experiences:
             f.write(json.dumps(experience, ensure_ascii=False) + "\n")
@@ -58,31 +89,10 @@ def merge_experience_files(input_files: List[str], output_file: str):
 
 
 if __name__ == "__main__":
-    # Determine the base directory (SOC/)
-    # Resolves to .../SOC/
-    base_dir = Path(__file__).resolve().parent.parent
+    # Only merge files from this datetime onwards (set to None to merge all)
+    min_dt = datetime(2026, 2, 24, 10, 0, 0)
 
-    # Define data directory
-    data_dir = base_dir / "data" / "experiences" / "generated"
+    input_files = glob("data/experiences/generated/experiences_*.jsonl")
+    output_file = "data/experiences/generated/data.jsonl"
 
-    # Input files pattern: experiences_*.jsonl
-    # This matches experiences_20260212_164333.jsonl, etc.
-    input_pattern = str(data_dir / "experiences_*.jsonl")
-    input_files = glob(input_pattern)
-
-    # Output file: merged_experiences.jsonl
-    output_file = data_dir / "merged_experiences.jsonl"
-
-    # Ensure we don't include the output file in the input if it already exists
-    # (though the pattern 'experiences_' vs 'merged_' shouldn't overlap, it's good practice)
-    if str(output_file) in input_files:
-        input_files.remove(str(output_file))
-
-    # Sort input files to ensure deterministic order
-    input_files.sort()
-
-    if not input_files:
-        print(f"No input files found matching pattern: {input_pattern}")
-        sys.exit(1)
-
-    merge_experience_files(input_files, str(output_file))
+    merge_experience_files(input_files, output_file, min_datetime=min_dt)
