@@ -1,32 +1,67 @@
-You are roleplaying as {{ persona.meta.name }} in an ongoing conversation.
-You can only perceive your own persona and the shared context — not the other person's private details.
+{#- ───────────────────────────────────────────────────────────────────────────
+    Turn Generation Prompt — split for prompt caching
 
+    This template is rendered ONCE per turn and inserted as the **user**
+    message.  The static instruction block now lives in the system message
+    (assembled in ConversationGenerator._TURN_SYSTEM_PROMPT), so this file
+    contains ONLY the variable, per-turn content: the persona, experience,
+    conversation memory, current state, and any instant event.
+
+    The system message (built in code) contains:
+      • Role definition and character immersion instructions
+      • All texting realism rules (no formatting, tone, shared language, etc.)
+      • Message cadence definitions
+      • Multi-message turn rules
+      • Content & topic flow rules for all conversation styles
+      • Coincidence budget and ending rules
+      • Full output format specification (<turn> XML)
+
+    This split maximises the byte-identical prefix across generation calls
+    so that providers with automatic prompt caching can reuse the KV cache.
+─────────────────────────────────────────────────────────────────────────── -#}
 ## Your Persona
+
 {{ persona.persona_text }}
 
+---
+
 ## Shared Experience
+
 {{ experience }}
+
+---
 
 ## Conversation Memory
 {% if summary %}
+
 ### Summary of earlier conversation
+
 {{ summary }}
 {% endif %}
 
 ### Recent messages
 {% if active_messages %}
+
 {{ active_messages }}
 {% else %}
+
 [No messages yet — you are sending the first message.]
 {% endif %}
 
+---
+
 ## Current State
+
 {{ current_state }}
-{# Format for structured/semi-structured: "current topic; turns remaining; next topic" #}
-{# Format for freeform: "freeform; —; —" #}
+
+**Conversation style:** {{ conversation_style }}
+**Message cadence:** {{ message_cadence }}
 
 {% if instant_event %}
+---
+
 ## Instant Event
+
 Something just happened to you or around you: {{ instant_event }}
 React naturally if it fits — or stay focused on the conversation if the current topic
 feels too important or emotionally charged to break from.
@@ -34,76 +69,4 @@ feels too important or emotionally charged to break from.
 
 ---
 
-## Your Task
-
-Generate {{ persona.meta.name }}'s next turn. Follow these rules exactly.
-
-### Texting Realism (CRITICAL - READ CAREFULLY, and keep in mind these depend heavily on your persona)
-These are casual phone texts, NOT emails, NOT essays, and NOT helpful assistant responses. Also avoid meta-commentary.
-- **NO Formatting:** Absolutely NO bullet points, NO numbered lists, and NO numbered emojis (1️⃣, 2️⃣, etc.). Do not structure information perfectly.
-- **Tone & Mechanics:** Use abbreviations (rn, tbh, lol, wtf, omg) if appropriate for your persona and context. Drop trailing punctuation if appropriate for your persona. Do NOT over-explain why an idea is good (no corporate speak or "therapy speak").
-- **Shared Language Only:** The conversation MUST be in a single, shared lingua franca (preferably English). Do NOT have one person speak Arabic and the other reply in Chinese. You may (but preferably do not) use 1 or 2 native slang words (e.g., "Inshallah", "Gracias"), only when the other person would plausibly understand them from context, and very sparingly.
-- **Do NOT narrate actions:** Never put actions or environment descriptions in the texts.
-- **Punctuation & Syntax:** Strictly avoid using em dashes (—) in <message> tags. If needed, use an ellipsis (...), but don't overuse them.
-
-### Message Cadence
-Cadence for this conversation: **{{ message_cadence }}**
-- realtime → messages usualy seconds apart, quick back-and-forth
-- delayed → minutes between messages, occasional gaps
-- async → messages hours or days apart; often just one message per turn
-
-Timestamp every message accurately relative to the ones already sent. Delays are allowed. Some messages may require more time to compose, and that's okay. If your persona is busy or distracted, it's also okay for there to be a long gap before they reply. Just make sure the timestamps reflect that.
-
-**Remember:** The timestamps need to be realistic; this rule has priority over the expected cadence.
-
-### Multi-Message Turns
-- Send 1–3 messages per turn when it feels authentic
-- Never fragment one thought into multiple messages, split only when a real person would
-  (e.g. a sticker after a text, a voice note following up, a photo mid-story)
-- For async cadence: usually 1 message; short bursts of 2–3 are fine when excited
-
-### Content & Topic Flow
-{% if conversation_style in ["structured", "semi-structured"] %}
-- If turns remaining is 2, start weaving the next topic in organically — no hard cuts
-- If turns remaining reaches 0, transition fully; the next topic becomes current
-- Decrement turns remaining by 1 in your <state> block
-- If all topics are exhausted and the conversation feels naturally complete,
-  add <predefined_topics_exhausted/> with an optional closing message
-{% else %}
-- This is a freeform conversation — no topic list to follow
-- Write as {{ persona.meta.name }} actually would: random thoughts, questions mid-sentence,
-  long silences, a sudden photo, drifting to something unrelated
-- Keep <state> as "freeform; —; —" throughout
-- Add <predefined_topics_exhausted/> only if the exchange has clearly and naturally wound down
-{% endif %}
-
-### Coincidence Budget
-Do not let both personas share the same hidden desire, secret, or parallel situation in the same conversation
-unless your persona explicitly states that it is a shared experience.
-
-### Endings
-Conversations do not need to resolve. If turns are exhausted and no natural closing
-has emerged, it is valid for the last message to be mid-thought, unanswered,
-or simply a one-word reaction. Avoid engineering emotional catharsis at the end.
-Do not exhaust topics before the state tracker expects it.
-
-### Output Format
-Output ONLY the <turn> block. Nothing outside it.
-
-<turn>
-<state>
-current topic; turns remaining; next topic    {# or: freeform; —; — #}
-</state>
-{% if instant_event %}
-<instant_event>
-Write your raw internal reaction here. This is never spoken aloud.
-</instant_event>
-{% endif %}
-{# Use only the message types that apply. At least one message is required. #}
-<message t="HH:MM" d="DD.MM" type="text">Actual text message typed on a phone</message>
-<message t="HH:MM" d="DD.MM" type="audio">voice note transcription (spoken naturally)</message>
-<message t="HH:MM" d="DD.MM" type="image">brief, realistic description of image sent (e.g., "blurry photo of a cat")</message>
-<message t="HH:MM" d="DD.MM" type="video">brief, realistic description of video sent</message>
-<message t="HH:MM" d="DD.MM" type="sticker">brief description of a standard chat sticker</message>
-{# Add <predefined_topics_exhausted/> only when the conversation has wound down #}
-</turn>
+Generate {{ persona.meta.name }}'s next turn now. Output ONLY the `<turn>` block.

@@ -1,0 +1,226 @@
+# =============================================================================
+# SOC Pipeline Configuration
+# =============================================================================
+# This file defines all tunable parameters for the SOC generation pipeline.
+# Override any value via CLI flags or environment variables.
+
+# ── Region Profiles ──────────────────────────────────────────────────────────
+# Each profile restricts persona sampling to a subset of regions from
+# data/stats/demographics/regions.yaml.  "global" uses all regions with
+# their natural population weights.  Custom profiles re-normalize weights
+# to the included regions.
+
+region_profiles:
+  global:
+    description: "All regions, population-weighted"
+    regions: null # null means use all regions from regions.yaml
+
+  west:
+    description: "North America, Europe, Australia/NZ"
+    regions:
+      - en_US
+      - en_CA
+      - en_GB
+      - de_DE
+      - fr_FR
+      - it_IT
+      - es_ES
+      - pl_PL
+      - ru_RU
+      - uk_UA
+
+  east_asia:
+    description: "East and Southeast Asia"
+    regions:
+      - zh_CN
+      - jp_JP
+      - kr_KR
+      - vn_VN
+      - th_TH
+      - mm_MM
+      - id_ID
+      - ph_PH
+
+  south_asia:
+    description: "South Asia and Iran"
+    regions:
+      - in_IN
+      - pk_PK
+      - bd_BD
+      - ir_IR
+      - af_AF
+
+  middle_east:
+    description: "Middle East and North Africa"
+    regions:
+      - tr_TR
+      - iq_IQ
+      - sa_SA
+      - eg_EG
+      - dz_DZ
+      - ma_MA
+      - sd_SD
+
+  africa:
+    description: "Sub-Saharan Africa"
+    regions:
+      - ng_NG
+      - et_ET
+      - cd_CD
+      - tz_TZ
+      - za_ZA
+      - ke_KE
+      - ug_UG
+      - ao_AO
+
+  latam:
+    description: "Latin America"
+    regions:
+      - pt_BR
+      - es_MX
+      - es_CO
+      - es_AR
+
+  english_speaking:
+    description: "Primarily English-speaking countries"
+    regions:
+      - en_US
+      - en_CA
+      - en_GB
+      - za_ZA
+      - ke_KE
+      - ng_NG
+      - ph_PH
+
+# Active profile used when --region-profile is not passed on the CLI.
+default_region_profile: global
+
+# ── Language Settings ────────────────────────────────────────────────────────
+# lingua_franca: the shared language conversations are conducted in.
+# native_flavor: whether personas may sprinkle in native-language words.
+language:
+  lingua_franca: "English"
+  native_flavor: true
+  # Maximum native-language words per message (ignored if native_flavor is false)
+  max_native_words_per_message: 2
+
+# ── Persona Generation ───────────────────────────────────────────────────────
+persona:
+  seed_dir: "data/personas/seed"
+  output_dir: "data/personas/generated"
+  prompt_dir: "conf/prompts"
+
+  # Age sampling distribution
+  age_mean: 25
+  age_std: 5
+  age_min: 14
+  age_max: 100
+
+  # Rolling few-shot pool
+  pool_max_size: 20
+  num_shots: 1
+  warmup_iterations: 10
+
+  # Target character count range for generated personas
+  min_characters: 2000
+  max_characters: 3000
+
+  # Default batch concurrency
+  batch_size: 4
+
+# ── Experience Generation ────────────────────────────────────────────────────
+experience:
+  seed_dir: "data/experiences/seed"
+  output_dir: "data/experiences/generated"
+  prompt_dir: "conf/prompts"
+
+  # Persona pairing: probability of same-region match
+  same_region_probability: 0.5
+
+  # Rolling few-shot pool
+  pool_max_size: 20
+  num_shots: 1
+  warmup_iterations: 10
+
+  # Style diversity: trigger rebalancing when the most-used style
+  # exceeds 2x the least-used style after this many generations
+  diversity_min_generations: 6
+
+  # Default batch concurrency
+  batch_size: 4
+
+# ── Conversation Generation ──────────────────────────────────────────────────
+conversation:
+  output_dir: "data/conversations/generated"
+  prompt_dir: "conf/prompts"
+
+  # Turn limits
+  max_turns: 50
+
+  # Instant event injection probability per turn
+  instant_event_probability: 0.05
+
+  # Rolling summarization window
+  max_active_turns: 20
+  retire_batch: 8
+
+  # Consecutive failures before aborting a conversation
+  max_consecutive_failures: 3
+
+  # Default batch concurrency (conversations per batch, turns are sequential)
+  batch_size: 4
+
+# ── Model Defaults ───────────────────────────────────────────────────────────
+# These are used when --model / --provider are not specified on the CLI.
+models:
+  default:
+    model_id: "openai/gpt-oss-20b"
+    provider: "local"
+    temperature: 1.0
+    max_tokens: 8192
+
+  summarizer:
+    # If null, uses the default model for summarization
+    model_id: null
+    provider: null
+    temperature: 1.0
+    max_tokens: 2048
+
+  # Named model presets for convenience (use via --preset <name>)
+  presets:
+    kimi_k2:
+      model_id: "moonshotai/Kimi-K2-Instruct-0905"
+      provider: "huggingface"
+    kimi_k25:
+      model_id: "moonshotai/Kimi-K2.5:fireworks-ai"
+      provider: "huggingface"
+    glm5:
+      model_id: "zai-org/GLM-5"
+      provider: "huggingface"
+    local_default:
+      model_id: "openai/gpt-oss-20b"
+      provider: "local"
+
+# ── Provider Endpoints ───────────────────────────────────────────────────────
+# Base URLs and auth env-var names for each provider.
+providers:
+  local:
+    base_url: "http://10.8.0.5:8000/v1"
+    api_key_env: "HF_TOKEN"
+  huggingface:
+    base_url: "https://router.huggingface.co/v1"
+    api_key_env: "HF_TOKEN"
+  nim:
+    base_url: "https://integrate.api.nvidia.com/v1"
+    api_key_env: "NVIDIA_API_KEY"
+  modal:
+    base_url: "https://api.us-west-2.modal.direct/v1"
+    api_key_env: "MODAL_TOKEN"
+  mistral:
+    api_key_env: "MISTRAL_API_KEY"
+
+# ── Paths ────────────────────────────────────────────────────────────────────
+paths:
+  stats_dir: "data/stats"
+  merged_personas: "data/personas/generated/data.jsonl"
+  merged_experiences: "data/experiences/generated/data.jsonl"

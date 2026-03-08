@@ -9,11 +9,109 @@ from typing import Any, Dict, List, Optional
 
 from jinja2 import Environment, FileSystemLoader
 
+from soc_2602.llm.client import LLMClient
+
+# ── Static system prompt ─────────────────────────────────────────────────────
+# This block is identical across ALL experience generation calls, maximising
+# the byte-identical prefix for providers with automatic prompt caching.
+# The variable content (personas, few-shot examples, diversity hints) goes
+# into the user message rendered from the Jinja template.
+
+_EXPERIENCE_SYSTEM_PROMPT = """\
+You are an experience generation system for realistic conversational AI.
+Your output is shared with both agents, who CANNOT see each other's persona.
+
+## Task
+
+Generate ONE realistic experience bringing two personas into conversation.
+Vary the style widely: experiences can be structured, semi-structured, or
+completely freeform (like two friends who chat indefinitely with no agenda).
+
+## Output Format
+
+<experience>
+[2–4 paragraphs: relationship history, current situation, emotional states,
+and environmental context including the text-based communication channel used]
+
+Conversation style: [structured | semi-structured | freeform]
+Message cadence: [realtime (seconds–1 min) | delayed (minutes–hours) | async (hours–days)]
+
+[IF structured or semi-structured:]
+The conversation will likely cover the following topics:
+- [Topic 1] (X turns) ← PRIMARY
+- [Topic 2] (Y turns)
+- [Topic 3] (Z turns)
+
+Initial state: [Topic 1]; [X turns remaining]; [Topic 2]
+
+[IF freeform:]
+Conversational energy: [2–3 sentences describing the tone, what these two
+tend to talk about, recurring themes, shared references, and how they
+typically drift from subject to subject. No turn counts.]
+
+Initial state: freeform; —; —
+
+Possible instant events:
+- [Plausible event affecting Persona 1 given their situation]
+- [Plausible event affecting Persona 2 given their situation]
+- [Optional shared or environmental event]
+[2–5 events. For async conversations, events can include things like a
+memory resurfacing, a news item, a song coming on, not just physical accidents.]
+</experience>
+
+## Requirements
+
+1. Vary relationship type: close friends, distant friends, colleagues,
+   family, romantic partners, acquaintances, online communities
+2. Vary cadence: don't always make conversations real-time
+3. Freeform conversations have NO topic list — they just drift naturally
+4. Instant events must fit the cadence (async chats → no physical accidents;
+   use mood shifts, something they saw, a memory, a notification instead)
+5. Psychological depth: current emotional states and recent context for each persona
+6. Strict 1-on-1 Channels Only: The conversation MUST take place in a private,
+   text-based, direct message setting (e.g., WhatsApp DM, iMessage, Telegram DM,
+   Tinder, Discord DM). Do NOT place them in group chats, public Slack channels,
+   or forum threads.
+7. Shared Language (No "Babel Fish"): Explicitly establish a shared lingua franca.
+   If personas have different native backgrounds, note that they communicate in
+   the shared language, only occasionally sprinkling in a native slang word or
+   greeting for flavor. Do NOT set up scenarios where they speak entirely in
+   different languages.
+
+## Output
+
+Output ONLY the content between <experience> and </experience> tags (inclusive). No additional commentary."""
+
 
 class ExperienceGenerator:
+    """Generates realistic conversational experiences pairing two personas.
+
+    Supports region profiles (via the persona pool it draws from),
+    language configuration for the shared lingua franca, and style
+    diversity nudging to prevent over-representation of any single
+    conversation style.
+
+    Parameters
+    ----------
+    llm_client : LLMClient
+        Client for LLM API calls.
+    persona_file : str
+        Path to the merged personas JSONL file.
+    output_file : str | None
+        Path to the output JSONL file.  Auto-generated if ``None``.
+    seed_dir : str
+        Directory containing seed experience text files.
+    prompt_dir : str
+        Directory containing Jinja2 prompt templates.
+    language_settings : dict | None
+        Language configuration from ``config.yaml``.  Keys:
+        ``lingua_franca``, ``native_flavor``, ``max_native_words_per_message``.
+    same_region_probability : float
+        Probability that both personas are drawn from the same region.
+    """
+
     # Pool management
     POOL_MAX_SIZE = 20
-    POOL_KEEP_ON_RESET = 5
 
     # Valid field values for validation and diversity tracking
     VALID_STYLES = {"structured", "semi-structured", "freeform"}
@@ -21,11 +119,13 @@ class ExperienceGenerator:
 
     def __init__(
         self,
-        llm_client,
+        llm_client: LLMClient,
         persona_file: str,
-        output_file: str = f"data/experiences/generated/experiences_{datetime.now().strftime('%Y%m%d_%H%M%S')}.jsonl",
+        output_file: Optional[str] = None,
         seed_dir: str = "data/experiences/seed",
         prompt_dir: str = "conf/prompts",
+        language_settings: Optional[Dict[str, Any]] = None,
+        same_region_probability: float = 0.5,
     ):
         self.llm_client = llm_client
         self.model_name = self.llm_client.model_id
@@ -33,6 +133,8 @@ class ExperienceGenerator:
         self.persona_file = Path(persona_file)
         self.seed_dir = Path(seed_dir)
 
+        if output_file is None:
+            output_file = f"data/experiences/generated/experiences_{datetime.now().strftime('%Y%m%d_%H%M%S')}.jsonl"
         self.output_file = Path(output_file)
         self.output_file.parent.mkdir(parents=True, exist_ok=True)
 
@@ -52,6 +154,16 @@ class ExperienceGenerator:
 
         # Tracks style distribution across the run for diversity nudging
         self.style_counts: Counter = Counter()
+
+        # Language settings
+        self.language_settings = language_settings or {
+            "lingua_franca": "English",
+            "native_flavor": True,
+            "max_native_words_per_message": 2,
+        }
+
+        # Persona pairing
+        self.same_region_probability = same_region_probability
 
         print(f"Loaded {len(self.personas)} personas")
         print(f"Loaded {len(self.seed_experiences)} seed experiences")
@@ -108,14 +220,14 @@ class ExperienceGenerator:
 
     def _select_personas(self, n: int = 2) -> List[Dict[str, Any]]:
         """
-        Select n personas with a 50% chance of same-region pairing
+        Select n personas with a configurable chance of same-region pairing
         to encourage geographical coherence where it matters.
         """
         if len(self.personas) < n:
             return self.personas
 
         first_persona = random.choice(self.personas)
-        if random.random() > 0.5:
+        if random.random() < self.same_region_probability:
             same_region = [
                 p
                 for p in self.personas
@@ -227,19 +339,23 @@ class ExperienceGenerator:
         shots = self._select_shots(iteration)
         style_hint = self._underrepresented_style()
 
-        prompt_text = self.template.render(
+        # Build language hint from settings
+        lingua_franca = self.language_settings.get("lingua_franca", "English")
+        language_hint = lingua_franca if lingua_franca else None
+
+        # Render the user message (variable part only)
+        user_text = self.template.render(
             shots=shots,
             personas=selected_personas,
-            style_hint=style_hint,  # template uses {% if style_hint %} guard
+            style_hint=style_hint,
+            language_hint=language_hint,
         )
 
-        messages = [
-            {
-                "role": "system",
-                "content": "You are an expert at creating realistic scenarios and conversation contexts for AI personas.",
-            },
-            {"role": "user", "content": prompt_text},
-        ]
+        # Build messages with static system prompt for cache-friendliness
+        messages = LLMClient.build_messages(
+            system_text=_EXPERIENCE_SYSTEM_PROMPT,
+            user_text=user_text,
+        )
 
         names = [
             p["meta"].get("name", "Unknown") for p in selected_personas if "meta" in p
@@ -253,8 +369,8 @@ class ExperienceGenerator:
         response = await self.llm_client.generate_async(messages)
         generated_text = response.choices[0].message.content.strip()
 
-        input_tokens = response.usage.prompt_tokens
-        output_tokens = response.usage.completion_tokens
+        input_tokens = getattr(response.usage, "prompt_tokens", 0)
+        output_tokens = getattr(response.usage, "completion_tokens", 0)
 
         time_taken = (datetime.now() - start_time).total_seconds()
 

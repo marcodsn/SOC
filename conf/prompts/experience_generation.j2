@@ -1,71 +1,51 @@
-You are an experience generation system for realistic conversational AI.
-Your output is shared with both agents, who CANNOT see each other's persona.
+{#- ───────────────────────────────────────────────────────────────────────────
+    Experience Generation Prompt — split for prompt caching
 
-## Task
-Generate ONE realistic experience bringing two personas into conversation.
-Vary the style widely: experiences can be structured, semi-structured, or
-completely freeform (like two friends who chat indefinitely with no agenda).
+    This template is rendered ONCE per call and inserted as the **user**
+    message.  The static instruction block now lives in the system message
+    (assembled in ExperienceGenerator._EXPERIENCE_SYSTEM_PROMPT), so this
+    file contains ONLY the variable, per-call content: the persona pair,
+    few-shot examples, and any diversity hints.
 
-## Output Format
+    The system message (built in code) contains:
+      • Role definition
+      • Full output format specification (<experience> XML)
+      • All requirements (relationship variety, cadence rules, etc.)
+      • Language and channel constraints
 
-<experience>
-[2–4 paragraphs: relationship history, current situation, emotional states,
-and environmental context including the text-based communication channel used]
+    This split maximises the byte-identical prefix across generation calls
+    so that providers with automatic prompt caching can reuse the KV cache.
+─────────────────────────────────────────────────────────────────────────── -#}
+## Personas
 
-Conversation style: [structured | semi-structured | freeform]
-Message cadence: [realtime (seconds–1 min) | delayed (minutes–hours) | async (hours–days)]
+The following two personas will be having a conversation. You can see both — they cannot see each other's profile.
 
-{% if style_hint %}
-Diversity note: recent generations have over-represented certain styles.
-Please lean toward generating a **{{ style_hint }}** conversation for this experience.
-{% endif %}
+{% for persona in personas %}
+{{ persona.persona_text }}
 
-[IF structured or semi-structured:]
-The conversation will likely cover the following topics:
-- [Topic 1] (X turns) ← PRIMARY
-- [Topic 2] (Y turns)
-- [Topic 3] (Z turns)
+{% endfor %}
 
-Initial state: [Topic 1]; [X turns remaining]; [Topic 2]
+---
 
-[IF freeform:]
-Conversational energy: [2–3 sentences describing the tone, what these two
-tend to talk about, recurring themes, shared references, and how they
-typically drift from subject to subject. No turn counts.]
+## Example Experience(s)
 
-Initial state: freeform; —; —
-
-Possible instant events:
-- [Plausible event affecting Persona 1 given their situation]
-- [Plausible event affecting Persona 2 given their situation]
-- [Optional shared or environmental event]
-[2–5 events. For async conversations, events can include things like a
-memory resurfacing, a news item, a song coming on, not just physical accidents.]
-</experience>
-
-## Example experience(s)
-
-Use this example experience(s) as a template and inspiration, but create a new one that is distinctly different in multiple dimensions while maintaining realism and depth.
+Use the example(s) below as a template and inspiration, but create a new experience that is distinctly different while maintaining realism and depth.
 
 {% for shot in shots %}
 {{ shot }}
 
 {% endfor %}
 
-## Requirements
-1. Vary relationship type: close friends, distant friends, colleagues,
-   family, romantic partners, acquaintances, online communities
-2. Vary cadence: don't always make conversations real-time
-3. Freeform conversations have NO topic list — they just drift naturally
-4. Instant events must fit the cadence (async chats → no physical accidents;
-   use mood shifts, something they saw, a memory, a notification instead)
-5. Psychological depth: current emotional states and recent context for each persona
-6. Strict 1-on-1 Channels Only: The conversation MUST take place in a private, text-based, direct message setting (e.g., WhatsApp DM, iMessage, Telegram DM, Tinder, Discord DM). Do NOT place them in group chats, public Slack channels, or forum threads.
-7. Shared Language (No "Babel Fish"): Explicitly establish a shared lingua franca. If personas have different native backgrounds, note that they communicate in English, only occasionally sprinkling in a native slang word or greeting for flavor. Do NOT set up scenarios where they speak entirely in different languages.
+---
 
-## Personas
-{% for persona in personas %}
-{{ persona.persona_text }}
-{% endfor %}
+## Generate
 
-Output only the <experience> block. No additional commentary.
+{% if style_hint %}
+**Diversity note:** Recent generations have over-represented certain styles. Please lean toward generating a **{{ style_hint }}** conversation for this experience.
+
+{% endif %}
+{% if language_hint %}
+**Language:** The shared lingua franca for this conversation is **{{ language_hint }}**. Both personas communicate in this language, only occasionally sprinkling in a native slang word or greeting for flavor.
+
+{% endif %}
+Create ONE realistic experience bringing these two personas into conversation. Output ONLY the `<experience>` block — no additional commentary.
