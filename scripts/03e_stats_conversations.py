@@ -4,7 +4,8 @@ Comprehensive conversation dataset statistics.
 
 Analyzes merged or raw conversation JSONL files and prints detailed
 statistics covering turn counts, message types, timing patterns,
-conversation styles, topic exhaustion, token usage, and potential issues.
+conversation styles, topic exhaustion, token usage (with means), and
+potential issues.
 
 Usage:
     python scripts/03e_stats_conversations.py
@@ -18,7 +19,7 @@ import json
 import re
 import statistics
 import sys
-from collections import Counter, defaultdict
+from collections import Counter
 from glob import glob
 from pathlib import Path
 
@@ -172,7 +173,7 @@ def print_numeric_stats(values: list, label: str = "", show_histogram: bool = Tr
             idx = min(int((v - lo) / bin_width), num_bins - 1)
             bins[idx] += 1
         max_count = max(bins)
-        print(f"\n  Distribution:")
+        print("\n  Distribution:")
         for i, count in enumerate(bins):
             lo_edge = lo + i * bin_width
             hi_edge = lo + (i + 1) * bin_width
@@ -201,6 +202,15 @@ def analyze_conversations(conversations: list, verbose: bool = False, top_n: int
 
     print(f"\n  Total conversations: {total}")
 
+    # Check for IDs
+    with_ids = sum(
+        1
+        for c in conversations
+        if c.get("meta", {}).get("experience_meta", {}).get("id")
+        or c.get("meta", {}).get("id")
+    )
+    print(f"  With unique IDs:    {with_ids} / {total}")
+
     # ── Basic metadata ───────────────────────────────────────────────────
     turn_counts = []
     styles = Counter()
@@ -209,6 +219,7 @@ def analyze_conversations(conversations: list, verbose: bool = False, top_n: int
     models = Counter()
     summarizer_models = Counter()
     persona_names_all = Counter()
+    source_timestamps = Counter()
     total_input_tokens = []
     total_output_tokens = []
     total_summarizer_input_tokens = []
@@ -220,7 +231,7 @@ def analyze_conversations(conversations: list, verbose: bool = False, top_n: int
     all_message_types = Counter()
     all_message_word_counts = []
     all_messages_per_turn = []
-    all_instant_events = 0
+
     all_turns_with_events = 0
 
     # Timing analysis
@@ -272,6 +283,12 @@ def analyze_conversations(conversations: list, verbose: bool = False, top_n: int
         if meta.get("time_taken"):
             generation_times.append(meta["time_taken"])
 
+        # Source timestamp (from nested experience_meta, by date)
+        exp_meta = meta.get("experience_meta", {})
+        ts = exp_meta.get("source_timestamp")
+        if ts:
+            source_timestamps[ts[:10]] += 1
+
         # Per-turn analysis
         conv_messages = []
         conv_dates = set()
@@ -288,6 +305,7 @@ def analyze_conversations(conversations: list, verbose: bool = False, top_n: int
 
             if has_instant_event(turn_xml):
                 all_turns_with_events += 1
+                # (all_instant_events counter removed — use all_turns_with_events instead)
 
             state = parse_state_from_turn(turn_xml)
             if is_exhausted(turn_xml):
@@ -421,22 +439,31 @@ def analyze_conversations(conversations: list, verbose: bool = False, top_n: int
         print_section("SUMMARIZER MODEL DISTRIBUTION")
         print_distribution(summarizer_models, total=total)
 
+    # Source timestamps
+    if source_timestamps:
+        print_section("CONVERSATIONS BY SOURCE DATE")
+        print_distribution(source_timestamps, top_n=30, total=total)
+
     # Token usage
     if total_input_tokens:
         print_section("TOKEN USAGE — TURN GENERATION (per conversation)")
-        print(f"\n  Input tokens:")
+        print(f"\n  Input tokens  (n={len(total_input_tokens)}):")
         print_numeric_stats(total_input_tokens, show_histogram=False)
-        print(f"\n  Output tokens:")
+        print(f"\n  Output tokens  (n={len(total_output_tokens)}):")
         print_numeric_stats(total_output_tokens, show_histogram=False)
+
         if total_summarizer_input_tokens and any(
             t > 0 for t in total_summarizer_input_tokens
         ):
-            print(f"\n  Summarizer input tokens:")
+            print(
+                f"\n  Summarizer input tokens  (n={len(total_summarizer_input_tokens)}):"
+            )
             print_numeric_stats(total_summarizer_input_tokens, show_histogram=False)
-            print(f"\n  Summarizer output tokens:")
+            print(
+                f"\n  Summarizer output tokens  (n={len(total_summarizer_output_tokens)}):"
+            )
             print_numeric_stats(total_summarizer_output_tokens, show_histogram=False)
 
-        # Cost estimate (rough)
         total_in = sum(total_input_tokens)
         total_out = sum(total_output_tokens)
         total_s_in = (
@@ -445,14 +472,45 @@ def analyze_conversations(conversations: list, verbose: bool = False, top_n: int
         total_s_out = (
             sum(total_summarizer_output_tokens) if total_summarizer_output_tokens else 0
         )
-        print(f"\n  Aggregate token usage:")
+        grand_total = total_in + total_out + total_s_in + total_s_out
+
+        print("\n  Aggregate token usage:")
         print(f"    Turn gen input:        {total_in:>12,d}")
         print(f"    Turn gen output:       {total_out:>12,d}")
         print(f"    Summarizer input:      {total_s_in:>12,d}")
         print(f"    Summarizer output:     {total_s_out:>12,d}")
-        print(
-            f"    Total tokens:          {total_in + total_out + total_s_in + total_s_out:>12,d}"
-        )
+        print(f"    Grand total:           {grand_total:>12,d}")
+
+        n_tok = len(total_input_tokens)
+        print("\n  Mean per conversation:")
+        print(f"    Turn gen input:        {total_in / n_tok:>12,.1f}")
+        print(f"    Turn gen output:       {total_out / n_tok:>12,.1f}")
+        if total_s_in > 0:
+            n_s = len(total_summarizer_input_tokens)
+            print(f"    Summarizer input:      {total_s_in / n_s:>12,.1f}")
+            print(f"    Summarizer output:     {total_s_out / n_s:>12,.1f}")
+        print(f"    Total (all):           {grand_total / n_tok:>12,.1f}")
+
+        # Per-turn rates (using turn_counts aligned to token records)
+        # turn_counts are in the same order as conversations
+        turns_with_tokens = [
+            turn_counts[i]
+            for i, conv in enumerate(conversations)
+            if conv.get("meta", {}).get("total_input_tokens")
+        ]
+        if turns_with_tokens and len(turns_with_tokens) == n_tok:
+            total_turns_for_tok = sum(turns_with_tokens)
+            if total_turns_for_tok > 0:
+                print("\n  Per-turn rates (turn gen only):")
+                print(
+                    f"    Input  tokens / turn:  {total_in / total_turns_for_tok:>12,.1f}"
+                )
+                print(
+                    f"    Output tokens / turn:  {total_out / total_turns_for_tok:>12,.1f}"
+                )
+    else:
+        print_section("TOKEN USAGE")
+        print("  (no token data found — pre-token-tracking records)")
 
     # Generation time
     if generation_times:
@@ -463,7 +521,7 @@ def analyze_conversations(conversations: list, verbose: bool = False, top_n: int
             f"\n  Total generation time: {total_time:.1f}s ({total_time / 60:.1f} min)"
         )
         if total > 0:
-            print(f"  Avg per conversation: {total_time / total:.1f}s")
+            print(f"  Mean per conversation:  {total_time / total:.1f}s")
 
     # Persona participation
     print_section(f"PERSONA PARTICIPATION (top {top_n})")
@@ -533,7 +591,7 @@ def analyze_conversations(conversations: list, verbose: bool = False, top_n: int
             least = styles.most_common()[-1]
             most = styles.most_common()[0]
             issues.append(
-                f"  ⚠ Style imbalance: '{most[0]}' ({most[1]}x) vs '{least[0]}' ({least[1]}x) — "
+                f"  ⚠ Style imbalance: '{most[0]}' ({most[1]}×) vs '{least[0]}' ({least[1]}×) — "
                 f"consider using style diversity nudging"
             )
 
@@ -554,6 +612,17 @@ def analyze_conversations(conversations: list, verbose: bool = False, top_n: int
             issues.append(
                 f"  ⚠ Only {exh_rate:.0f}% of structured/semi-structured conversations exhausted their topics"
             )
+
+    # Conversations with no token data
+    no_token_data = sum(
+        1
+        for conv in conversations
+        if not conv.get("meta", {}).get("total_input_tokens")
+    )
+    if 0 < no_token_data < total:
+        issues.append(
+            f"  ⚠ {no_token_data} conversations have no token usage data (pre-tracking records)"
+        )
 
     if issues:
         for issue in issues:
@@ -609,7 +678,7 @@ def main():
     analyze_conversations(conversations, verbose=args.verbose, top_n=args.top_n)
 
     print(f"\n{'═' * 70}")
-    print(f"  Analysis complete.")
+    print("  Analysis complete.")
     print(f"{'═' * 70}\n")
 
 

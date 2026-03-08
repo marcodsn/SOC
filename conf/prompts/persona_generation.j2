@@ -12,6 +12,7 @@
       • Full format specification with XML/markdown structure
       • All diversity guidelines
       • All stylistic rules (show-don't-tell, positive framing, etc.)
+      • Archetype reference table with population base rates
 
     This split maximises the byte-identical prefix across generation calls
     so that providers with automatic prompt caching can reuse the KV cache.
@@ -34,6 +35,8 @@ Generate ONE new persona with these details:
 - **Age:** {{ persona_info["age"] }}
 - **Region:** {{ persona_info["region"] }}
 - **Location:** {{ persona_info["subregion"] }}
+- **Psychological direction:** {{ persona_info["archetype"] }}
+- **How they handle emotions:** {{ persona_info["regulation_style"] }}
 {% if persona_info.get("lingua_franca") %}
 - **Lingua franca:** {{ persona_info["lingua_franca"] }} (example messages should be in this language; native slang is fine sparingly)
 {% endif %}
@@ -44,7 +47,20 @@ The persona must:
 3. Maintain psychological realism and depth
 4. Include specific, concrete details (actual hobbies, real communication patterns, named relationships)
 5. Have conversational speech patterns with quoted example phrases
-6. Represent "normal" people — not extreme cases
+6. **Let the assigned psychological direction and emotional pattern genuinely shape the character.** A `grounded_pragmatist` is steady and reliable — not edgy. A `warm_connector` is empathetic and kind — not prickly. A `defensive_cynic` is guarded and sharp — lean into that. Match the archetype faithfully; do not flatten every persona toward the same emotional tone.
 7. Be 2000–3000 characters total
+
+{% if persona_info["archetype"] in ["grounded_pragmatist", "warm_connector", "quiet_introvert"] %}
+**Archetype note:** The assigned archetype ({{ persona_info["archetype"] }}) describes a fundamentally stable or prosocial personality. This character should feel *ordinary and functional* — not dramatic, not edgy, not burdened by deep wounds. Most real people are like this. Flaws should be mundane: procrastination, mild stubbornness, conflict avoidance, being a bit boring, talking too much about a hobby. Do NOT inject cynicism, sarcasm-as-armor, or passive-aggression unless the archetype specifically calls for it.
+{% elif persona_info["archetype"] in ["anxious_achiever", "earnest_idealist"] %}
+**Archetype note:** The assigned archetype ({{ persona_info["archetype"] }}) describes someone with real tension in their personality, but who is fundamentally well-intentioned. Their flaws come from caring too much or holding themselves to impossible standards — not from hostility or detachment. Show the friction that comes from high standards or rigid principles, not from cynicism.
+{% elif persona_info["archetype"] in ["defensive_cynic", "wounded_caretaker", "ambitious_performer"] %}
+**Archetype note:** The assigned archetype ({{ persona_info["archetype"] }}) calls for genuine edge, friction, or self-serving behavior. Lean into it. Show-don't-tell: reveal the trait through what the character *does* in specific situations — the favour called in at the worst time, the way they go quiet after a slight, the competitive comment disguised as a compliment.
+{% elif persona_info["archetype"] == "drifter" %}
+**Archetype note:** The assigned archetype (drifter) describes someone disengaged and passive — not hostile or cynical. They're coasting, not fighting. The texture here is absence of direction, not presence of anger. They might be pleasant enough company but hard to pin down or rely on.
+{% endif %}
+
+**Show-don't-tell reminder:** Do not write "she is manipulative" or "he is kind." Instead, write what they do in a specific situation that reveals the trait — the 2 AM phone call they always answer, the way they change the subject when things get real, the grocery list they keep for a friend who forgets to eat.
+**Do not use the archetype name, regulation style label, or any clinical/taxonomic term (e.g. "volatile regulation," "anxious achiever drive," "stable baseline") anywhere in the persona text.** These are generation parameters, not character vocabulary. Reveal everything through scene and behavior.
 
 Begin now with the `<character>` opening tag. Output ONLY the persona between `<character>` and `</character>` tags.

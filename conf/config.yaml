@@ -118,7 +118,7 @@ persona:
 
   # Rolling few-shot pool
   pool_max_size: 20
-  num_shots: 1
+  num_shots: 2
   warmup_iterations: 10
 
   # Target character count range for generated personas
@@ -139,7 +139,7 @@ experience:
 
   # Rolling few-shot pool
   pool_max_size: 20
-  num_shots: 1
+  num_shots: 2
   warmup_iterations: 10
 
   # Style diversity: trigger rebalancing when the most-used style
@@ -174,10 +174,10 @@ conversation:
 # These are used when --model / --provider are not specified on the CLI.
 models:
   default:
-    model_id: "openai/gpt-oss-20b"
+    model_id: "unsloth/Qwen3.5-35B-A3B-UD-Q4_K_XL"
     provider: "local"
     temperature: 1.0
-    max_tokens: 8192
+    max_tokens: 16384
 
   summarizer:
     # If null, uses the default model for summarization
@@ -195,17 +195,17 @@ models:
       model_id: "moonshotai/Kimi-K2.5:fireworks-ai"
       provider: "huggingface"
     glm5:
-      model_id: "zai-org/GLM-5"
+      model_id: "zai-org/GLM-5:fireworks-ai"
       provider: "huggingface"
     local_default:
-      model_id: "openai/gpt-oss-20b"
+      model_id: "unsloth/Qwen3.5-35B-A3B-UD-Q4_K_XL"
       provider: "local"
 
 # ── Provider Endpoints ───────────────────────────────────────────────────────
 # Base URLs and auth env-var names for each provider.
 providers:
   local:
-    base_url: "http://10.8.0.5:8000/v1"
+    base_url: "http://10.8.0.5:8083/v1"
     api_key_env: "HF_TOKEN"
   huggingface:
     base_url: "https://router.huggingface.co/v1"

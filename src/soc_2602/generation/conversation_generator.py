@@ -45,10 +45,11 @@ Your task: generate the next turn in the conversation. Follow these rules exactl
 These are casual phone texts, NOT emails, NOT essays, and NOT helpful assistant responses. Also avoid meta-commentary.
 
 - **NO Formatting:** Absolutely NO bullet points, NO numbered lists, and NO numbered emojis (1️⃣, 2️⃣, etc.). Do not structure information perfectly.
-- **Tone & Mechanics:** Use abbreviations (rn, tbh, lol, wtf, omg) if appropriate for your persona and context. Drop trailing punctuation if appropriate for your persona. Do NOT over-explain why an idea is good (no corporate speak or "therapy speak").
+- **Tone & Mechanics:** Use abbreviations (rn, tbh, lol, wtf, omg) if appropriate for your persona and context. Drop trailing punctuation if appropriate for your persona. Do NOT over-explain why an idea is good (no corporate speak or "therapy speak"). If your persona is prickly, passive-aggressive, or cold, that must come through in the texting style — clipped replies, conspicuous brevity, sudden warmth when they want something, deflection disguised as humor.
 - **Shared Language Only:** The conversation MUST be in a single, shared lingua franca. Do NOT have one person speak Arabic and the other reply in Chinese. You may (but preferably do not) use 1 or 2 native slang words (e.g., "Inshallah", "Gracias"), only when the other person would plausibly understand them from context, and very sparingly.
 - **Do NOT narrate actions:** Never put actions or environment descriptions in the texts.
 - **Punctuation & Syntax:** Strictly avoid using em dashes (—) in <message> tags. If needed, use an ellipsis (...), but don't overuse them.
+- **Stay in character even when difficult:** If your persona is selfish, entitled, avoidant, or contemptuous, do not soften them into reasonableness. Real conversations with difficult people are uncomfortable — reproduce that discomfort faithfully through word choice, deflection, and subtext, not through narration.
 
 ## Message Cadence
 
@@ -84,6 +85,21 @@ Timestamp every message accurately relative to the ones already sent. Delays are
 ## Coincidence Budget
 
 Do not let both personas share the same hidden desire, secret, or parallel situation in the same conversation unless your persona explicitly states that it is a shared experience.
+
+## Playing Difficult Personas — Show, Don't Tell
+
+If your persona has difficult traits (passive-aggressive, entitled, low-empathy, blame-externalizing, attention-seeking, contemptuous), express those traits through the texture of the messages themselves — never through narration or explicit labeling.
+
+Concrete techniques:
+- **Passive aggression**: "fine", "no worries", "I'm sure you're busy" — words that look neutral but carry a charge. Sudden silence after warmth. Excessive politeness as punishment.
+- **Blame externalization**: Recounting a conflict where the other party is always the problem. Conditional apologies ("I'm sorry you felt that way"). Pivoting from accountability to grievance.
+- **Attention redirection**: Briefly acknowledging the other person's news, then steering back to their own situation. Asking a follow-up question they then don't wait to hear answered.
+- **Contempt and dismissal**: A one-word reply to a long, emotionally invested message. A joke at the other person's expense framed as teasing. Comparing the other person to someone they find lesser.
+- **Cognitive distortions in text**: "you always do this", "nobody ever takes my side", "I knew this would happen" — overgeneralizations that reveal a distorted internal filter. Assuming bad faith without evidence.
+- **Hot-cold texture**: Intense and effusive one message, then cold and terse the next. Reacting to a perceived slight by withdrawing without explanation.
+- **Manipulation through vulnerability**: Dropping distress into a conversation in a way that makes the other person responsible for managing it. Framing a demand as helplessness.
+
+Do NOT resolve these dynamics neatly. Real conversations with difficult people often end without resolution, with one person confused and the other already somewhere else mentally.
 
 ## Endings
 

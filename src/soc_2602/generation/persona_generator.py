@@ -31,6 +31,7 @@ Generate ONE detailed persona following the exact format shown in the examples t
 6. **Psychologically deep**: Include emotional patterns, values, fears, relationships, coping mechanisms
 7. **Show, don't tell**: Imply traits through narrative situations, history, and behavior rather than bare keyword labels. Instead of `Trait: "extremely loyal"`, write: "She has driven four hours in a snowstorm when a friend called in crisis; it's not something she would question."
 8. **Positive framing**: Express all behavioral tendencies as what the character *does* or *values*, not as prohibitions. Write "She speaks her mind candidly" rather than "She never lies."
+9. **Archetype-guided**: Each persona request includes a psychological archetype and an emotional regulation style sampled from population base rates (Kerber et al. 2021, SOEP N=22,820). Use the assigned archetype as a *seed direction*, not a straitjacket — real people are complex and resist neat labels — but let it genuinely shape the character's core orientation. Most people are reasonably functional and ordinary; only ~8% are defensive cynics, only ~15% are emotionally volatile. Do NOT default to edgy, prickly, or cynical unless the assigned archetype calls for it.
 
 ## Format Requirements
 
@@ -71,19 +72,42 @@ Use this exact XML structure with markdown formatting inside:
 [2-3 short back-and-forth exchanges showing how the persona actually sounds in conversation. Precede each block with <START>.]
 
 **Summary**
-[1 paragraph synthesizing their journey/current life stage]
+[1 paragraph synthesizing their journey/current life stage. No trait labels, no summary of their flaws, no "he is a man who…" construction. Write what it *feels like* to know them.]
 </character>
 
 ## Diversity Guidelines
 
 Vary across these dimensions:
 - **Occupation**: Blue collar, white collar, creative, service, unemployed, retired, student
-- **Personality**: Introvert/extrovert, optimistic/pessimistic, stable/volatile, organized/chaotic
+- **Personality**: Guided by the assigned archetype and regulation style — but still varied within those bounds
 - **Life circumstances**: Single, partnered, divorced, widowed, with/without children, different family structures
-- **Mental health**: Generally stable, managing conditions, in therapy, undiagnosed struggles
+- **Mental health**: Generally stable, managing conditions, in therapy, undiagnosed struggles, resistant to self-reflection
 - **Socioeconomic**: Working class, middle class, comfortable (avoid extremes)
 - **Life stage**: Student, early career, established, midlife, retirement, crisis, transition
 - **Self-awareness level**: Highly introspective, moderately self-aware, unreflective/practically minded (most common in real populations)
+
+## Archetype Reference
+
+The user message will specify one of these archetypes (with approximate population base rates):
+
+- **grounded_pragmatist** (~22%): Practical, steady, reliable. Handles stress with problem-solving. Not flashy.
+- **warm_connector** (~18%): Empathetic, relationship-oriented, emotionally available. Genuinely kind without being saccharine.
+- **anxious_achiever** (~14%): Driven but stressed. High standards, self-critical. Productive but wound tight.
+- **quiet_introvert** (~12%): Low-key, reflective, private. Rich inner life, selective about social energy.
+- **earnest_idealist** (~10%): Principled, sometimes rigid. Cares deeply about fairness, can be preachy.
+- **defensive_cynic** (~8%): Guarded, sharp-tongued, uses humor or sarcasm as armor. Often hurt underneath.
+- **drifter** (~7%): Aimless, disengaged, passive. Not depressed per se — just hasn't found traction.
+- **ambitious_performer** (~5%): Self-assured, competitive, image-conscious. Wants to be seen succeeding.
+- **wounded_caretaker** (~4%): Self-sacrificing, resentful. Gives too much, then feels unappreciated.
+
+And one of these emotional regulation styles:
+
+- **stable** (~35%): Generally even-keeled, predictable emotional responses.
+- **expressive** (~30%): Emotions are visible and freely communicated.
+- **suppressed** (~20%): Emotions are felt but rarely shown or discussed.
+- **volatile** (~15%): Quick shifts, intense reactions, slow to return to baseline.
+
+The archetype sets the *personality direction*; the regulation style sets *how emotions are processed and displayed*. A warm_connector with suppressed regulation looks very different from a warm_connector with expressive regulation. Lean into these combinations.
 
 ## Output
 
@@ -187,7 +211,7 @@ class PersonaGenerator:
     # Selection helpers
     # -------------------------------------------------------------------------
 
-    def _select_shots(self, iteration: int, num_shots: int = 1) -> List[str]:
+    def _select_shots(self, iteration: int, num_shots: int = 2) -> List[str]:
         """
         Select few-shot examples.
         Seeds only for the first 10 iterations (warmup),
@@ -231,6 +255,8 @@ class PersonaGenerator:
             "age": StatsEngine.get_random_age(self.age_mean, self.age_std),
             "region": region,
             "subregion": self.stats_engine.gen_random_subregion(region),
+            "archetype": StatsEngine.get_random_archetype(),
+            "regulation_style": StatsEngine.get_random_regulation_style(),
         }
 
         # Pass language settings into the template context
@@ -251,7 +277,9 @@ class PersonaGenerator:
         )
 
         print(
-            f"\n[Iteration {iteration}] Generating persona ({persona_info['region']})..."
+            f"\n[Iteration {iteration}] Generating persona "
+            f"({persona_info['region']} | {persona_info['archetype']} | "
+            f"{persona_info['regulation_style']})..."
         )
 
         start_time = datetime.now()
@@ -282,6 +310,8 @@ class PersonaGenerator:
                 "subregion": persona_info["subregion"],
                 "name": persona_info["name"],
                 "age": persona_info["age"],
+                "archetype": persona_info["archetype"],
+                "regulation_style": persona_info["regulation_style"],
                 "time_taken": time_taken,
                 "input_tokens": input_tokens,
                 "output_tokens": output_tokens,
@@ -337,6 +367,8 @@ class PersonaGenerator:
                 print(
                     f"✓ Saved record {iteration} | "
                     f"region={result['meta']['region']} | "
+                    f"archetype={result['meta'].get('archetype', '?')} | "
+                    f"regulation={result['meta'].get('regulation_style', '?')} | "
                     f"call latency {time_taken:.2f}s"
                 )
 

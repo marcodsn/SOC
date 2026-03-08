@@ -27,6 +27,11 @@ Generate ONE realistic experience bringing two personas into conversation.
 Vary the style widely: experiences can be structured, semi-structured, or
 completely freeform (like two friends who chat indefinitely with no agenda).
 
+Not every conversation needs to be warm or productive. Real online exchanges
+include friction, passive aggression, unresolved tension, and interactions
+where one party is difficult, self-absorbed, or quietly hostile. If personas
+allow, experiences should lean toward these dynamics.
+
 ## Output Format
 
 <experience>
@@ -77,6 +82,34 @@ memory resurfacing, a news item, a song coming on, not just physical accidents.]
    the shared language, only occasionally sprinkling in a native slang word or
    greeting for flavor. Do NOT set up scenarios where they speak entirely in
    different languages.
+
+## Friction Dynamics — Use When Appropriate
+
+When one or both personas have difficult traits, the experience should
+reflect that honestly. Consider these relationship textures:
+
+- **Asymmetric investment**: One person clearly cares more. The other is
+  present but distracted, or replies out of obligation.
+- **Latent grievance**: The conversation is technically about something
+  mundane but one person is carrying unspoken resentment that keeps
+  bleeding through.
+- **Performative support**: One person is ostensibly helping or checking in,
+  but the subtext is about their own need for validation or control.
+- **Competitive dynamic**: Two people who are nominally friends but keep
+  subtle score. Compliments arrive with a sting in their tail.
+- **One-sided venting loop**: One person uses the other purely as an
+  emotional dumping ground with no reciprocity. The other tolerates it,
+  resents it, or enables it.
+- **Re-established contact after conflict**: A conversation reopened with
+  superficial normalcy that hasn't processed what happened. The wound is
+  still there.
+- **Obligation conversation**: A family check-in, a work follow-up, or a
+  courtesy reply that neither party particularly wants to have.
+
+Instant events for friction-heavy scenarios can include: a message that
+arrives at the wrong moment and is read uncharitably; a notification that
+reignites an old argument; something good happening to one person that
+the other finds quietly threatening.
 
 ## Output
 
@@ -201,7 +234,7 @@ class ExperienceGenerator:
     # Selection helpers
     # -------------------------------------------------------------------------
 
-    def _select_shots(self, iteration: int, num_shots: int = 1) -> List[str]:
+    def _select_shots(self, iteration: int, num_shots: int = 2) -> List[str]:
         """
         Select few-shot examples.
         Seeds only for the first 10 iterations (warmup),

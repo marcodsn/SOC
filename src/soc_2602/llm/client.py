@@ -41,7 +41,7 @@ PROVIDER_NIM = "nim"
 PROVIDER_MODAL = "modal"
 
 _DEFAULT_ENDPOINTS: Dict[str, str] = {
-    PROVIDER_LOCAL: "http://10.8.0.5:8000/v1",
+    PROVIDER_LOCAL: "http://10.8.0.5:8083/v1",
     PROVIDER_HF: "https://router.huggingface.co/v1",
     PROVIDER_NIM: "https://integrate.api.nvidia.com/v1",
     PROVIDER_MODAL: "https://api.us-west-2.modal.direct/v1",
@@ -146,10 +146,10 @@ class LLMClient:
         defaults = models_section.get("default") or {}
 
         resolved: Dict[str, Any] = {
-            "model_id": defaults.get("model_id", "openai/gpt-oss-20b"),
+            "model_id": defaults.get("model_id", "unsloth/Qwen3.5-35B-A3B-UD-Q4_K_XL"),
             "provider": defaults.get("provider", PROVIDER_LOCAL),
             "temperature": defaults.get("temperature", 1.0),
-            "max_tokens": defaults.get("max_tokens", 8192),
+            "max_tokens": defaults.get("max_tokens", 16384),
         }
 
         # Layer on preset if requested
