@@ -90,7 +90,7 @@ def merge_experience_files(
 
 if __name__ == "__main__":
     # Only merge files from this datetime onwards (set to None to merge all)
-    min_dt = datetime(2026, 2, 24, 10, 0, 0)
+    min_dt = datetime(2026, 2, 27, 10, 0, 0)
 
     input_files = glob("data/experiences/generated/experiences_*.jsonl")
     output_file = "data/experiences/generated/data.jsonl"

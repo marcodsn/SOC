@@ -252,6 +252,10 @@ class ExperienceGenerator:
         start_time = datetime.now()
         response = await self.llm_client.generate_async(messages)
         generated_text = response.choices[0].message.content.strip()
+
+        input_tokens = response.usage.prompt_tokens
+        output_tokens = response.usage.completion_tokens
+
         time_taken = (datetime.now() - start_time).total_seconds()
 
         # Extract <experience> block
@@ -285,6 +289,8 @@ class ExperienceGenerator:
                 "initial_state": parsed["initial_state"],
                 "instant_events": parsed["instant_events"],
                 "time_taken": time_taken,
+                "input_tokens": input_tokens,
+                "output_tokens": output_tokens,
             },
         }
 

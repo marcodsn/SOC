@@ -34,6 +34,7 @@ class ConversationGenerator:
         self.model_name = self.llm_client.model_id
         # Allow a separate (cheaper/faster) client for summarization
         self.summarizer_client = summarizer_client or llm_client
+        self.summarizer_model_name = self.summarizer_client.model_id
 
         self.persona_file = Path(persona_file)
         self.experience_file = Path(experience_file)
@@ -124,7 +125,7 @@ class ConversationGenerator:
 
     async def _summarize_async(
         self, prior_summary: str, turns_to_retire: List[str]
-    ) -> str:
+    ) -> Tuple[str, int, int]:
         prompt_text = self.summarizer_template.render(
             prior_summary=prior_summary or None,
             messages_to_retire="\n\n".join(turns_to_retire),
@@ -138,31 +139,33 @@ class ConversationGenerator:
         ]
         response = await self.summarizer_client.generate_async(messages)
         raw = response.choices[0].message.content.strip()
+        input_tokens = response.usage.prompt_tokens
+        output_tokens = response.usage.completion_tokens
 
         # Programmatic extraction — never trust the LLM to output only the summary
         m = re.search(r"<summary>\s*(.*?)\s*</summary>", raw, re.DOTALL)
         if m:
-            return m.group(1).strip()
+            return m.group(1).strip(), input_tokens, output_tokens
 
         # Graceful fallback: if the model forgot the tags, use the full output
         # rather than silently losing the summary
         print("  ⚠ summarizer did not wrap output in <summary> tags, using raw output")
-        return raw
+        return raw, input_tokens, output_tokens
 
     async def _maybe_summarize(
         self, summary: str, active_turns: List[str]
-    ) -> Tuple[str, List[str]]:
+    ) -> Tuple[str, List[str], int, int]:
         """
         If the active window is full, retire the oldest RETIRE_BATCH turns
         into the rolling summary and return the trimmed active window.
         """
         if len(active_turns) <= self.MAX_ACTIVE_TURNS:
-            return summary, active_turns
+            return summary, active_turns, 0, 0
 
         to_retire = active_turns[: self.RETIRE_BATCH]
         keep = active_turns[self.RETIRE_BATCH :]
-        new_summary = await self._summarize_async(summary, to_retire)
-        return new_summary, keep
+        new_summary, inp, out = await self._summarize_async(summary, to_retire)
+        return new_summary, keep, inp, out
 
     # -------------------------------------------------------------------------
     # Turn generation
@@ -178,7 +181,7 @@ class ConversationGenerator:
         instant_event: Optional[str],
         conversation_style: str,
         message_cadence: str,
-    ) -> str:
+    ) -> Tuple[str, int, int]:
         """Generate one agent's turn and return the raw XML string."""
         prompt_text = self.turn_template.render(
             persona=persona,
@@ -202,13 +205,15 @@ class ConversationGenerator:
         ]
         response = await self.llm_client.generate_async(messages)
         raw = response.choices[0].message.content.strip()
+        input_tokens = response.usage.prompt_tokens
+        output_tokens = response.usage.completion_tokens
 
         # Ensure we always return a well-formed <turn> block
         if "<turn>" in raw and "</turn>" in raw:
             start = raw.find("<turn>")
             end = raw.find("</turn>") + len("</turn>")
-            return raw[start:end]
-        return raw
+            return raw[start:end], input_tokens, output_tokens
+        return raw, input_tokens, output_tokens
 
     # -------------------------------------------------------------------------
     # Conversation loop
@@ -266,6 +271,10 @@ class ConversationGenerator:
         exhausted = False
         consecutive_failures = 0
         MAX_CONSECUTIVE_FAILURES = 3
+        total_input_tokens = 0
+        total_output_tokens = 0
+        total_summarizer_input_tokens = 0
+        total_summarizer_output_tokens = 0
 
         start_time = datetime.now()
 
@@ -281,7 +290,7 @@ class ConversationGenerator:
             )
 
             try:
-                turn_xml = await self._generate_turn_async(
+                turn_xml, inp, out = await self._generate_turn_async(
                     persona=agent,
                     experience_text=experience_text,
                     summary=summary,
@@ -291,6 +300,8 @@ class ConversationGenerator:
                     conversation_style=conversation_style,
                     message_cadence=message_cadence,
                 )
+                total_input_tokens += inp
+                total_output_tokens += out
                 consecutive_failures = 0
             except Exception as e:
                 print(f"  ✗ Turn {turn_index} ({agent_name}) failed: {e}")
@@ -311,7 +322,11 @@ class ConversationGenerator:
             active_turns.append(turn_xml)
 
             # Rolling summarization (async, inline)
-            summary, active_turns = await self._maybe_summarize(summary, active_turns)
+            summary, active_turns, inp, out = await self._maybe_summarize(
+                summary, active_turns
+            )
+            total_summarizer_input_tokens += inp
+            total_summarizer_output_tokens += out
 
             # Termination check
             if self._is_exhausted(turn_xml):
@@ -338,6 +353,11 @@ class ConversationGenerator:
                 "message_cadence": message_cadence,
                 "exhausted": exhausted,
                 "model": self.model_name,
+                "summarizer_model": self.summarizer_model_name,
+                "total_input_tokens": total_input_tokens,
+                "total_output_tokens": total_output_tokens,
+                "total_summarizer_input_tokens": total_summarizer_input_tokens,
+                "total_summarizer_output_tokens": total_summarizer_output_tokens,
                 "time_taken": time_taken,
             },
         }
