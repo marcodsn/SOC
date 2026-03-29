@@ -56,12 +56,11 @@ MISTRAL_API_KEY=...          # Mistral
 
 ## Configuration
 
-All pipeline parameters are centralised in two YAML files:
+All pipeline parameters are centralised in one YAML file:
 
 | File | Purpose |
 |------|---------|
-| `conf/config.yaml` | Region profiles, language settings, generation parameters, paths |
-| `conf/models.yaml` | Named model presets, provider endpoints |
+| `conf/config.yaml` | Pipeline parameters, region profiles, model presets, provider endpoints |
 
 CLI flags always override config file values. See the files for full documentation of every option.
 
@@ -219,8 +218,7 @@ This means the first call in a batch pays the full prompt processing cost, but s
 ```
 SOC/
 ├── conf/
-│   ├── config.yaml              # Pipeline configuration
-│   ├── models.yaml              # Model presets and provider endpoints
+│   ├── config.yaml              # Pipeline configuration, model presets, provider endpoints
 │   └── prompts/
 │       ├── persona_generation.j2    # Persona user-message template
 │       ├── experience_generation.j2 # Experience user-message template

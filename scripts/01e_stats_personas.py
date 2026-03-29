@@ -3,16 +3,19 @@
 Comprehensive persona dataset statistics.
 
 Analyzes merged or raw persona JSONL files and prints detailed statistics
-covering demographic distributions, token usage, text quality metrics, and
-potential issues.
+covering demographic distributions, token usage, text quality metrics,
+evaluation scores (overall and per generation model), and potential issues.
+A text report is automatically saved alongside the input file.
 
 Usage:
     python scripts/01e_stats_personas.py
     python scripts/01e_stats_personas.py --input data/personas/generated/data.jsonl
     python scripts/01e_stats_personas.py --input data/personas/generated/data.jsonl --verbose
+    python scripts/01e_stats_personas.py --input data/personas/generated/data.jsonl --report reports/my_report.txt
 """
 
 import argparse
+import datetime
 import json
 import re
 import statistics
@@ -21,6 +24,33 @@ from collections import Counter
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
+
+
+# ── Tee ───────────────────────────────────────────────────────────────────────
+
+
+class Tee:
+    """Duplicate stdout writes to both the terminal and a file."""
+
+    def __init__(self, filepath: Path):
+        self._terminal = sys.stdout
+        self._file = open(filepath, "w", encoding="utf-8")
+        sys.stdout = self
+
+    def write(self, message):
+        self._terminal.write(message)
+        self._file.write(message)
+
+    def flush(self):
+        self._terminal.flush()
+        self._file.flush()
+
+    def close(self):
+        sys.stdout = self._terminal
+        self._file.close()
+
+
+# ── I/O helpers ───────────────────────────────────────────────────────────────
 
 
 def load_personas(path: str) -> list:
@@ -36,6 +66,9 @@ def load_personas(path: str) -> list:
             except json.JSONDecodeError as e:
                 print(f"  ⚠ Skipping invalid JSON at line {line_num}: {e}")
     return personas
+
+
+# ── Text helpers ──────────────────────────────────────────────────────────────
 
 
 def extract_sections(persona_text: str) -> dict:
@@ -61,6 +94,9 @@ def estimate_word_count(text: str) -> int:
 
 def char_count(text: str) -> int:
     return len(text)
+
+
+# ── Print helpers ─────────────────────────────────────────────────────────────
 
 
 def print_section(title: str, width: int = 70):
@@ -123,6 +159,9 @@ def print_numeric_stats(values: list, label: str = "", show_histogram: bool = Tr
             bar_len = int((count / max_count) * 30) if max_count > 0 else 0
             bar = "█" * bar_len
             print(f"  {lo_edge:>8.1f}–{hi_edge:<8.1f}  {count:>4d}  {bar}")
+
+
+# ── Text quality ──────────────────────────────────────────────────────────────
 
 
 def analyze_text_quality(personas: list) -> dict:
@@ -191,6 +230,245 @@ def analyze_text_quality(personas: list) -> dict:
     return metrics
 
 
+# ── Eval analysis ─────────────────────────────────────────────────────────────
+
+EVAL_CRITERIA = [
+    "internal_consistency",
+    "archetype_fidelity",
+    "show_dont_tell",
+    "psychological_realism",
+    "roleplay_utility",
+    "distinctiveness",
+    "format_compliance",
+]
+
+
+def analyze_eval_scores(personas: list) -> dict:
+    """
+    Collect overall eval_score and per-criterion scores from eval_results.
+
+    Returns a dict with:
+        overall      : list[float]          — top-level eval_score values
+        criteria     : dict[str, list[int]] — per-criterion score lists
+        judge_models : Counter              — frequency of judge_model strings
+        with_eval    : int                  — number of records that have eval data
+        score_dist   : Counter[str]         — bucketed overall score distribution
+        by_model     : dict[str, dict]      — per-generation-model overall + criteria
+    """
+    result = {
+        "overall": [],
+        "criteria": {c: [] for c in EVAL_CRITERIA},
+        "judge_models": Counter(),
+        "with_eval": 0,
+        "score_dist": Counter(),
+        "by_model": {},
+    }
+
+    for record in personas:
+        eval_score = record.get("eval_score")
+        eval_results = record.get("eval_results")
+
+        if eval_score is None and eval_results is None:
+            continue
+
+        result["with_eval"] += 1
+
+        model = record.get("meta", {}).get("model", "Unknown")
+        if model not in result["by_model"]:
+            result["by_model"][model] = {
+                "overall": [],
+                "criteria": {c: [] for c in EVAL_CRITERIA},
+            }
+
+        if eval_score is not None:
+            try:
+                score = float(eval_score)
+                result["overall"].append(score)
+                result["score_dist"][f"{score:.1f}"] += 1
+                result["by_model"][model]["overall"].append(score)
+            except (TypeError, ValueError):
+                pass
+
+        if eval_results and isinstance(eval_results, dict):
+            scores = eval_results.get("scores", {})
+            if isinstance(scores, dict):
+                for criterion in EVAL_CRITERIA:
+                    val = scores.get(criterion)
+                    if val is not None:
+                        try:
+                            ival = int(val)
+                            result["criteria"][criterion].append(ival)
+                            result["by_model"][model]["criteria"][criterion].append(
+                                ival
+                            )
+                        except (TypeError, ValueError):
+                            pass
+
+            judge = eval_results.get("judge_model")
+            if judge:
+                result["judge_models"][judge] += 1
+
+    return result
+
+
+# ── Eval print helpers ────────────────────────────────────────────────────────
+
+
+def print_eval_per_model_section(eval_data: dict, verbose: bool):
+    """Print per-generation-model evaluation breakdown."""
+    by_model = eval_data.get("by_model", {})
+    if not by_model:
+        return
+
+    model_rows = []
+    for model, data in by_model.items():
+        overall = data["overall"]
+        if not overall:
+            continue
+        mean_overall = statistics.mean(overall)
+        n = len(overall)
+        criteria_means = {}
+        for c in EVAL_CRITERIA:
+            vals = data["criteria"].get(c, [])
+            criteria_means[c] = statistics.mean(vals) if vals else None
+        model_rows.append((model, n, mean_overall, criteria_means))
+
+    model_rows.sort(key=lambda r: -r[2])
+
+    print_section("EVAL SCORES BY GENERATION MODEL")
+
+    short = {
+        "internal_consistency": "consist.",
+        "archetype_fidelity": "archtype",
+        "show_dont_tell": "show/tell",
+        "psychological_realism": "psych.",
+        "roleplay_utility": "roleplay",
+        "distinctiveness": "distinct.",
+        "format_compliance": "format",
+    }
+
+    header_criteria = "  ".join(f"{short[c]:>9s}" for c in EVAL_CRITERIA)
+    print(f"\n  {'Model':<40s}  {'n':>5s}  {'Mean':>6s}  {header_criteria}")
+    print(
+        f"  {'─' * (40 + 5 + 6 + 9 * len(EVAL_CRITERIA) + 4 + len(EVAL_CRITERIA) * 2)}"
+    )
+
+    for model, n, mean_overall, criteria_means in model_rows:
+        criteria_cols = "  ".join(
+            f"{criteria_means[c]:>9.2f}"
+            if criteria_means[c] is not None
+            else f"{'—':>9s}"
+            for c in EVAL_CRITERIA
+        )
+        display_model = model if len(model) <= 40 else model[:37] + "..."
+        print(f"  {display_model:<40s}  {n:>5d}  {mean_overall:>6.2f}  {criteria_cols}")
+
+    if len(model_rows) >= 2:
+        best = model_rows[0]
+        worst = model_rows[-1]
+        print(f"\n  Best  model (by mean score): {best[0]}  →  {best[2]:.2f}")
+        print(f"  Worst model (by mean score): {worst[0]}  →  {worst[2]:.2f}")
+
+    if verbose:
+        print(f"\n  Per-model weakest criterion:")
+        for model, n, mean_overall, criteria_means in model_rows:
+            valid = {c: v for c, v in criteria_means.items() if v is not None}
+            if valid:
+                weakest = min(valid, key=lambda c: valid[c])
+                print(f"    {model:<40s}  →  {weakest} ({valid[weakest]:.2f})")
+
+
+def print_eval_section(eval_data: dict, total: int, top_n: int, verbose: bool):
+    """Print the full evaluation scores section."""
+    with_eval = eval_data["with_eval"]
+    eval_pct = with_eval / total * 100 if total else 0
+
+    print_section("EVALUATION SCORES")
+    print(f"\n  Evaluated personas: {with_eval} / {total} ({eval_pct:.1f}%)")
+
+    if not eval_data["overall"]:
+        print("  (no eval_score data found)")
+        print_eval_per_model_section(eval_data, verbose)
+        return
+
+    # ── Overall score stats ──────────────────────────────────────────────
+    print("\n  Overall eval_score:")
+    print_numeric_stats(eval_data["overall"], "eval_score", show_histogram=False)
+
+    score_dist = eval_data["score_dist"]
+    if score_dist:
+        print("\n  Score distribution:")
+        dist_total = sum(score_dist.values())
+        for bucket, count in sorted(score_dist.items()):
+            pct = count / dist_total * 100
+            bar = "█" * int(pct / 2)
+            print(f"  {bucket:>6s}  {count:>5d}  ({pct:5.1f}%)  {bar}")
+
+    # ── Per-criterion stats ──────────────────────────────────────────────
+    criteria_with_data = {c: vals for c, vals in eval_data["criteria"].items() if vals}
+    if criteria_with_data:
+        print(f"\n  Per-criterion mean scores:")
+        header = (
+            f"  {'Criterion':>28s}  {'n':>5s}  {'Mean':>6s}"
+            f"  {'Median':>7s}  {'Min':>4s}  {'Max':>4s}  {'StdDev':>7s}"
+        )
+        print(header)
+        print(f"  {'─' * 65}")
+        for criterion in EVAL_CRITERIA:
+            vals = criteria_with_data.get(criterion)
+            if not vals:
+                print(f"  {criterion:>28s}  {'—':>5s}")
+                continue
+            n = len(vals)
+            mean = statistics.mean(vals)
+            median = statistics.median(vals)
+            stdev = statistics.stdev(vals) if n > 1 else 0.0
+            lo, hi = min(vals), max(vals)
+            print(
+                f"  {criterion:>28s}  {n:>5d}  {mean:>6.2f}  {median:>7.1f}"
+                f"  {lo:>4d}  {hi:>4d}  {stdev:>7.2f}"
+            )
+
+        sorted_criteria = sorted(
+            criteria_with_data.items(),
+            key=lambda kv: statistics.mean(kv[1]),
+        )
+        if len(sorted_criteria) >= 2:
+            weakest_name, weakest_vals = sorted_criteria[0]
+            strongest_name, strongest_vals = sorted_criteria[-1]
+            print(
+                f"\n  Weakest criterion:   {weakest_name} "
+                f"(mean {statistics.mean(weakest_vals):.2f})"
+            )
+            print(
+                f"  Strongest criterion: {strongest_name} "
+                f"(mean {statistics.mean(strongest_vals):.2f})"
+            )
+
+    # ── Judge model distribution ─────────────────────────────────────────
+    if eval_data["judge_models"]:
+        print(f"\n  Judge model distribution:")
+        print_distribution(
+            eval_data["judge_models"], "Judge model", top_n=top_n, total=with_eval
+        )
+
+    # ── Low-score breakdown (verbose) ────────────────────────────────────
+    if verbose and eval_data["overall"]:
+        low_threshold = 3.0
+        low_scores = [s for s in eval_data["overall"] if s < low_threshold]
+        if low_scores:
+            print(
+                f"\n  Low scores (< {low_threshold}): {len(low_scores)} "
+                f"({len(low_scores) / len(eval_data['overall']) * 100:.1f}%)"
+            )
+
+    # ── Per-model breakdown ──────────────────────────────────────────────
+    print_eval_per_model_section(eval_data, verbose)
+
+
+# ── Main ──────────────────────────────────────────────────────────────────────
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Comprehensive persona dataset statistics"
@@ -202,9 +480,18 @@ def main():
         help="Path to personas JSONL file (default: data/personas/generated/data.jsonl)",
     )
     parser.add_argument(
+        "--report",
+        type=str,
+        default=None,
+        help=(
+            "Path to save the text report. "
+            "Defaults to <input_dir>/stats_report_<timestamp>.txt"
+        ),
+    )
+    parser.add_argument(
         "--verbose",
         action="store_true",
-        help="Show additional detail (e.g. all duplicate names, low-rep regions)",
+        help="Show additional detail (e.g. all duplicate names, low-rep regions, low eval scores)",
     )
     parser.add_argument(
         "--top-n",
@@ -214,14 +501,29 @@ def main():
     )
     args = parser.parse_args()
 
+    # ── Report file setup ─────────────────────────────────────────────────
     input_path = Path(args.input)
+
+    if args.report:
+        report_path = Path(args.report)
+    else:
+        timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+        report_path = input_path.parent / f"stats_report_{timestamp}.txt"
+
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    tee = Tee(report_path)
+
+    # ── Validate input ────────────────────────────────────────────────────
     if not input_path.exists():
         print(f"Error: File not found: {input_path}")
+        tee.close()
         sys.exit(1)
 
     print(f"\n{'═' * 70}")
     print(f"  PERSONA DATASET STATISTICS")
-    print(f"  Source: {input_path}")
+    print(f"  Source:  {input_path}")
+    print(f"  Report:  {report_path}")
+    print(f"  Run at:  {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"{'═' * 70}")
 
     personas = load_personas(str(input_path))
@@ -229,15 +531,22 @@ def main():
 
     if total == 0:
         print("\n  No personas found in file.")
+        tee.close()
         sys.exit(0)
 
     print(f"\n  Total personas:  {total}")
 
-    # Check for IDs
     with_ids = sum(1 for p in personas if p.get("meta", {}).get("id"))
     print(f"  With unique IDs: {with_ids} / {total}")
 
-    # ── Demographics ─────────────────────────────────────────────────────
+    with_eval_quick = sum(
+        1
+        for p in personas
+        if p.get("eval_score") is not None or p.get("eval_results") is not None
+    )
+    print(f"  With eval data:  {with_eval_quick} / {total}")
+
+    # ── Demographics ──────────────────────────────────────────────────────
     ages = []
     regions = Counter()
     subregions = Counter()
@@ -260,21 +569,20 @@ def main():
         regulation_styles[meta.get("regulation_style", "Unknown")] += 1
         ts = meta.get("source_timestamp")
         if ts:
-            # Group by date (first 10 chars of ISO string)
             source_timestamps[ts[:10]] += 1
 
-    # ── Age ──────────────────────────────────────────────────────────────
+    # ── Age ───────────────────────────────────────────────────────────────
     print_section("AGE DISTRIBUTION")
     print_numeric_stats(ages, "Age")
 
-    # ── Region ───────────────────────────────────────────────────────────
+    # ── Region ────────────────────────────────────────────────────────────
     print_section(f"REGION DISTRIBUTION (top {args.top_n})")
     print_distribution(regions, "Region", top_n=args.top_n, total=total)
 
     print_section(f"SUBREGION DISTRIBUTION (top {args.top_n})")
     print_distribution(subregions, "Subregion", top_n=args.top_n, total=total)
 
-    # ── Names ────────────────────────────────────────────────────────────
+    # ── Names ─────────────────────────────────────────────────────────────
     print_section(f"NAME DISTRIBUTION (top {args.top_n})")
     print_distribution(names, "Name", top_n=args.top_n, total=total)
     unique_names = len(names)
@@ -282,13 +590,12 @@ def main():
         f"\n  Unique names: {unique_names} / {total} ({unique_names / total * 100:.1f}%)"
     )
 
-    # ── Models ───────────────────────────────────────────────────────────
+    # ── Models ────────────────────────────────────────────────────────────
     print_section("MODEL DISTRIBUTION")
     print_distribution(models, "Model", top_n=10, total=total)
 
-    # ── Archetypes ───────────────────────────────────────────────────────
+    # ── Archetypes ────────────────────────────────────────────────────────
     print_section("ARCHETYPE DISTRIBUTION")
-    # Show expected base rates alongside actual
     ARCHETYPE_BASE_RATES = {
         "grounded_pragmatist": 0.22,
         "warm_connector": 0.18,
@@ -316,12 +623,11 @@ def main():
         print(
             f"  {archetype:>25s}  {count:>6d}  {actual_pct:>7.1f}%  {target_pct:>7.1f}%  {delta_str:>6s}"
         )
-    # Unknown archetypes (pre-archetype runs)
     unknown_arch = archetypes.get("Unknown", 0)
     if unknown_arch:
         print(f"  {'Unknown (pre-archetype)':>25s}  {unknown_arch:>6d}")
 
-    # ── Regulation Styles ────────────────────────────────────────────────
+    # ── Regulation Styles ─────────────────────────────────────────────────
     print_section("REGULATION STYLE DISTRIBUTION")
     REGULATION_BASE_RATES = {
         "stable": 0.35,
@@ -347,12 +653,12 @@ def main():
     if unknown_reg:
         print(f"  {'Unknown':>15s}  {unknown_reg:>6d}")
 
-    # ── Source Timestamps ────────────────────────────────────────────────
+    # ── Source Timestamps ─────────────────────────────────────────────────
     if source_timestamps:
         print_section("PERSONAS BY SOURCE DATE")
         print_distribution(source_timestamps, "Date", top_n=30, total=total)
 
-    # ── Token Usage ──────────────────────────────────────────────────────
+    # ── Token Usage ───────────────────────────────────────────────────────
     input_tokens = []
     output_tokens = []
     total_tokens = []
@@ -383,7 +689,6 @@ def main():
             print(f"\n  Total tokens per persona  (n={len(total_tokens)}):")
             print_numeric_stats(total_tokens, show_histogram=False)
 
-        # Aggregate
         sum_in = sum(input_tokens)
         sum_out = sum(output_tokens)
         sum_tot = sum_in + sum_out
@@ -401,7 +706,11 @@ def main():
         print_section("TOKEN USAGE")
         print("  (no token data found — pre-token-tracking records)")
 
-    # ── Text Quality ─────────────────────────────────────────────────────
+    # ── Evaluation Scores ─────────────────────────────────────────────────
+    eval_data = analyze_eval_scores(personas)
+    print_eval_section(eval_data, total, args.top_n, args.verbose)
+
+    # ── Text Quality ──────────────────────────────────────────────────────
     print_section("TEXT QUALITY METRICS")
     quality = analyze_text_quality(personas)
 
@@ -428,7 +737,7 @@ def main():
             pct = count / total * 100
             print(f"    {section:>35s}:  {count:>4d} missing ({pct:.1f}%)")
 
-    # ── Potential Issues ─────────────────────────────────────────────────
+    # ── Potential Issues ──────────────────────────────────────────────────
     print_section("POTENTIAL ISSUES")
     issues = []
 
@@ -462,7 +771,6 @@ def main():
             for name, count in sorted(dupes, key=lambda x: -x[1])[:20]:
                 issues.append(f"      {name}: {count}×")
 
-    # Archetype distribution skew
     if arch_total >= 30:
         for archetype, base_rate in ARCHETYPE_BASE_RATES.items():
             count = archetypes.get(archetype, 0)
@@ -473,7 +781,6 @@ def main():
                     f"(target {base_rate * 100:.1f}%) — deviation > 10pp"
                 )
 
-    # Regulation style skew
     if reg_total >= 30:
         for style, base_rate in REGULATION_BASE_RATES.items():
             count = regulation_styles.get(style, 0)
@@ -484,7 +791,6 @@ def main():
                     f"(target {base_rate * 100:.1f}%) — deviation > 10pp"
                 )
 
-    # Underrepresented regions
     if total >= 50:
         threshold = total * 0.005
         zero_regions = [
@@ -498,12 +804,31 @@ def main():
                 for r in sorted(zero_regions)[:10]:
                     issues.append(f"      {r}: {regions[r]}")
 
-    # Personas with no token data
     no_token_data = total - len(input_tokens)
     if no_token_data > 0 and no_token_data < total:
         issues.append(
             f"  ⚠ {no_token_data} personas have no token usage data (pre-tracking records)"
         )
+
+    if eval_data["overall"]:
+        low_eval_threshold = 3.0
+        low_eval_count = sum(1 for s in eval_data["overall"] if s < low_eval_threshold)
+        if low_eval_count > 0:
+            issues.append(
+                f"  ⚠ {low_eval_count} personas with eval_score < {low_eval_threshold} "
+                f"(consider filtering or regenerating)"
+            )
+
+    unevaluated = total - eval_data["with_eval"]
+    if unevaluated > 0:
+        issues.append(f"  ⚠ {unevaluated} personas have no evaluation data")
+
+    for criterion, vals in eval_data["criteria"].items():
+        if vals and statistics.mean(vals) < 3.0:
+            issues.append(
+                f"  ⚠ Criterion '{criterion}' has mean score "
+                f"{statistics.mean(vals):.2f} — below acceptable floor (3.0)"
+            )
 
     if issues:
         for issue in issues:
@@ -511,7 +836,7 @@ def main():
     else:
         print("  ✓ No obvious issues detected")
 
-    # ── Region Coverage ──────────────────────────────────────────────────
+    # ── Region Coverage ───────────────────────────────────────────────────
     print_section("REGION COVERAGE")
     regions_yaml_path = Path("data/stats/demographics/regions.yaml")
     if regions_yaml_path.exists():
@@ -550,8 +875,11 @@ def main():
         print("  (regions.yaml not found, skipping coverage check)")
 
     print(f"\n{'═' * 70}")
-    print("  Analysis complete.")
+    print(f"  Analysis complete.")
+    print(f"  Report saved to: {report_path}")
     print(f"{'═' * 70}\n")
+
+    tee.close()
 
 
 if __name__ == "__main__":

@@ -30,6 +30,7 @@ SCRIPT_MAP = {
     "experiences": SCRIPTS_DIR / "02_gen_experiences.py",
     "conversations": SCRIPTS_DIR / "03_gen_conversations.py",
     "validate": SCRIPTS_DIR / "04_validate_data.py",
+    "evaluate": SCRIPTS_DIR / "01e_evaluate_personas.py",
 }
 
 MERGE_SCRIPTS = {
@@ -68,6 +69,7 @@ Utility commands:
   merge             Merge generated files (--stage personas|experiences|conversations)
   stats             Show dataset statistics (--stage personas|conversations)
   validate          Run data validation and quality tests
+  evaluate          Evaluate persona quality with LLM-as-a-judge
   info              Show this help message
 
 Examples:
@@ -78,11 +80,11 @@ Examples:
   python main.py merge --stage personas
   python main.py stats --stage conversations
   python main.py validate --verbose
+  python main.py evaluate --preset kimi_k2
 
 Configuration:
 
-  conf/config.yaml    Pipeline parameters, region profiles, language settings
-  conf/models.yaml    Model presets and provider endpoints
+  conf/config.yaml    Pipeline parameters, region profiles, model presets, provider endpoints
 
 For detailed help on any subcommand, run:
 
@@ -119,6 +121,7 @@ def main():
             "  merge           Merge generated files (use --stage)\n"
             "  stats           Show dataset statistics (use --stage)\n"
             "  validate        Run data validation tests\n"
+            "  evaluate        Evaluate persona quality with LLM-as-a-judge\n"
             "  info            Show pipeline overview\n"
         ),
     )
@@ -134,6 +137,7 @@ def main():
             "merge",
             "stats",
             "validate",
+            "evaluate",
             "info",
         ],
         help="Pipeline command to run",

@@ -1,0 +1,362 @@
+
+══════════════════════════════════════════════════════════════════════
+  PERSONA DATASET STATISTICS
+  Source:  data/personas/generated/data.jsonl
+  Report:  data/personas/generated/stats_report_20260315_161555.txt
+  Run at:  2026-03-15 16:15:55
+══════════════════════════════════════════════════════════════════════
+
+  Total personas:  1073
+  With unique IDs: 1073 / 1073
+  With eval data:  1073 / 1073
+
+──────────────────────────────────────────────────────────────────────
+  AGE DISTRIBUTION
+──────────────────────────────────────────────────────────────────────
+  Count:  1073
+  Min:    14
+  Max:    40
+  Mean:   24.70
+  Median: 25.0
+  StdDev: 5.03
+
+  Distribution:
+      14.0–15.7        36  █████
+      15.7–17.5        47  ███████
+      17.5–19.2        82  █████████████
+      19.2–20.9        42  ██████
+      20.9–22.7       148  ███████████████████████
+      22.7–24.4       176  ████████████████████████████
+      24.4–26.1       186  ██████████████████████████████
+      26.1–27.9        61  █████████
+      27.9–29.6       103  ████████████████
+      29.6–31.3        96  ███████████████
+      31.3–33.1        42  ██████
+      33.1–34.8        20  ███
+      34.8–36.5        21  ███
+      36.5–38.3         8  █
+      38.3–40.0         5  
+
+──────────────────────────────────────────────────────────────────────
+  REGION DISTRIBUTION (top 20)
+──────────────────────────────────────────────────────────────────────
+                                in_IN    237  ( 22.1%)  ███████████
+                                zh_CN    213  ( 19.9%)  █████████
+                                en_US     60  (  5.6%)  ██
+                                id_ID     51  (  4.8%)  ██
+                                pt_BR     35  (  3.3%)  █
+                                pk_PK     34  (  3.2%)  █
+                                ng_NG     34  (  3.2%)  █
+                                bd_BD     28  (  2.6%)  █
+                                eg_EG     20  (  1.9%)  
+                                tr_TR     19  (  1.8%)  
+                                ru_RU     19  (  1.8%)  
+                                es_MX     18  (  1.7%)  
+                                et_ET     18  (  1.7%)  
+                                ph_PH     17  (  1.6%)  
+                                vn_VN     17  (  1.6%)  
+                                cd_CD     16  (  1.5%)  
+                                jp_JP     16  (  1.5%)  
+                                de_DE     15  (  1.4%)  
+                                dz_DZ     15  (  1.4%)  
+                                es_CO     14  (  1.3%)  
+                      ... and 22 more    177
+
+──────────────────────────────────────────────────────────────────────
+  SUBREGION DISTRIBUTION (top 20)
+──────────────────────────────────────────────────────────────────────
+                        Uttar Pradesh     42  (  3.9%)  █
+                          Maharashtra     31  (  2.9%)  █
+                                Henan     30  (  2.8%)  █
+                              Sichuan     29  (  2.7%)  █
+                          West Bengal     27  (  2.5%)  █
+                              Jiangsu     27  (  2.5%)  █
+                                Bihar     25  (  2.3%)  █
+                            Guangdong     24  (  2.2%)  █
+                             Shandong     24  (  2.2%)  █
+                           Tamil Nadu     22  (  2.1%)  █
+                            Rajasthan     22  (  2.1%)  █
+                       Andhra Pradesh     21  (  2.0%)  
+                                Hebei     21  (  2.0%)  
+                               Punjab     20  (  1.9%)  
+                       Madhya Pradesh     19  (  1.8%)  
+                                Hunan     19  (  1.8%)  
+                                Anhui     16  (  1.5%)  
+                            Karnataka     15  (  1.4%)  
+                            West Java     14  (  1.3%)  
+                             Zhejiang     14  (  1.3%)  
+                     ... and 218 more    611
+
+──────────────────────────────────────────────────────────────────────
+  NAME DISTRIBUTION (top 20)
+──────────────────────────────────────────────────────────────────────
+                                Arjun     13  (  1.2%)  
+                                  Jie     12  (  1.1%)  
+                               Ananya     11  (  1.0%)  
+                                Aryan     10  (  0.9%)  
+                               Aditya     10  (  0.9%)  
+                                 Fang      9  (  0.8%)  
+                                  Xin      9  (  0.8%)  
+                                  Hui      9  (  0.8%)  
+                                 Diya      9  (  0.8%)  
+                                 Sara      9  (  0.8%)  
+                                  Yan      8  (  0.7%)  
+                                  Wei      8  (  0.7%)  
+                                   Li      7  (  0.7%)  
+                                Navya      7  (  0.7%)  
+                                 Chao      7  (  0.7%)  
+                                  Xiu      7  (  0.7%)  
+                                Maria      7  (  0.7%)  
+                                Angel      7  (  0.7%)  
+                                 Ravi      7  (  0.7%)  
+                                  Min      7  (  0.7%)  
+                     ... and 502 more    900
+
+  Unique names: 522 / 1073 (48.6%)
+
+──────────────────────────────────────────────────────────────────────
+  MODEL DISTRIBUTION
+──────────────────────────────────────────────────────────────────────
+           zai-org/GLM-5:fireworks-ai    505  ( 47.1%)  ███████████████████████
+   unsloth/Qwen3.5-35B-A3B-UD-Q4_K_XL    460  ( 42.9%)  █████████████████████
+    moonshotai/Kimi-K2.5:fireworks-ai    108  ( 10.1%)  █████
+
+──────────────────────────────────────────────────────────────────────
+  ARCHETYPE DISTRIBUTION
+──────────────────────────────────────────────────────────────────────
+                  Archetype   Count   Actual%   Target%       Δ
+  ────────────────────────────────────────────────────────────
+        grounded_pragmatist     233     21.7%     22.0%    -0.3
+             warm_connector     206     19.2%     18.0%    +1.2
+           anxious_achiever     165     15.4%     14.0%    +1.4
+            quiet_introvert     129     12.0%     12.0%    +0.0
+           earnest_idealist     107     10.0%     10.0%    -0.0
+            defensive_cynic      76      7.1%      8.0%    -0.9
+                    drifter      68      6.3%      7.0%    -0.7
+        ambitious_performer      42      3.9%      5.0%    -1.1
+          wounded_caretaker      47      4.4%      4.0%    +0.4
+
+──────────────────────────────────────────────────────────────────────
+  REGULATION STYLE DISTRIBUTION
+──────────────────────────────────────────────────────────────────────
+            Style   Count   Actual%   Target%       Δ
+  ──────────────────────────────────────────────────
+           stable     385     35.9%     35.0%    +0.9
+       expressive     298     27.8%     30.0%    -2.2
+       suppressed     225     21.0%     20.0%    +1.0
+         volatile     165     15.4%     15.0%    +0.4
+
+──────────────────────────────────────────────────────────────────────
+  PERSONAS BY SOURCE DATE
+──────────────────────────────────────────────────────────────────────
+                           2026-03-08    513  ( 47.8%)  ███████████████████████
+                           2026-03-14    460  ( 42.9%)  █████████████████████
+                           2026-03-12    100  (  9.3%)  ████
+
+──────────────────────────────────────────────────────────────────────
+  TOKEN USAGE PER PERSONA
+──────────────────────────────────────────────────────────────────────
+
+  Input tokens  (n=1073):
+  Count:  1073
+  Min:    3,974
+  Max:    7,289
+  Mean:   4,712.00
+  Median: 4,660.0
+  StdDev: 401.79
+
+  Output tokens  (n=1073):
+  Count:  1073
+  Min:    1,159
+  Max:    8,192
+  Mean:   2,330.26
+  Median: 1,975.0
+  StdDev: 1,079.01
+
+  Total tokens per persona  (n=1073):
+  Count:  1073
+  Min:    5,371
+  Max:    14,556
+  Mean:   7,042.26
+  Median: 6,737.0
+  StdDev: 1,178.01
+
+  Aggregate token usage:
+    Input  tokens total:     5,055,975
+    Output tokens total:     2,500,370
+    Grand total:             7,556,345
+
+  Mean per persona:
+    Input:      4,712.0
+    Output:     2,330.3
+    Total:      7,042.3
+
+──────────────────────────────────────────────────────────────────────
+  EVALUATION SCORES
+──────────────────────────────────────────────────────────────────────
+
+  Evaluated personas: 1073 / 1073 (100.0%)
+
+  Overall eval_score:
+  Count:  1073
+  Min:    1.0
+  Max:    5.0
+  Mean:   4.87
+  Median: 5.0
+  StdDev: 0.23
+
+  Score distribution:
+     1.0      1  (  0.1%)  
+     3.2      2  (  0.2%)  
+     3.4      1  (  0.1%)  
+     3.5      2  (  0.2%)  
+     3.9      1  (  0.1%)  
+     4.1      1  (  0.1%)  
+     4.2     10  (  0.9%)  
+     4.3      7  (  0.7%)  
+     4.4      5  (  0.5%)  
+     4.5     50  (  4.7%)  ██
+     4.6      9  (  0.8%)  
+     4.7    150  ( 14.0%)  ██████
+     4.8    145  ( 13.5%)  ██████
+     4.9     66  (  6.2%)  ███
+     5.0    623  ( 58.1%)  █████████████████████████████
+
+  Per-criterion mean scores:
+                     Criterion      n    Mean   Median   Min   Max   StdDev
+  ─────────────────────────────────────────────────────────────────
+          internal_consistency   1073    4.94      5.0     1     5     0.33
+            archetype_fidelity   1073    4.98      5.0     1     5     0.18
+                show_dont_tell   1073    4.65      5.0     1     5     0.50
+         psychological_realism   1073    4.91      5.0     1     5     0.32
+              roleplay_utility   1073    4.99      5.0     1     5     0.16
+               distinctiveness   1073    4.74      5.0     1     5     0.47
+             format_compliance   1073    4.95      5.0     1     5     0.30
+
+  Weakest criterion:   show_dont_tell (mean 4.65)
+  Strongest criterion: roleplay_utility (mean 4.99)
+
+  Judge model distribution:
+   unsloth/Qwen3.5-35B-A3B-UD-Q4_K_XL   1073  (100.0%)  ██████████████████████████████████████████████████
+
+──────────────────────────────────────────────────────────────────────
+  EVAL SCORES BY GENERATION MODEL
+──────────────────────────────────────────────────────────────────────
+
+  Model                                         n    Mean   consist.   archtype  show/tell     psych.   roleplay  distinct.     format
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  zai-org/GLM-5:fireworks-ai                  505    4.97       4.98       5.00       4.91       5.00       5.00       4.95       4.95
+  moonshotai/Kimi-K2.5:fireworks-ai           108    4.95       4.96       4.95       4.96       4.96       4.94       4.95       4.90
+  unsloth/Qwen3.5-35B-A3B-UD-Q4_K_XL          460    4.74       4.89       4.97       4.30       4.80       4.99       4.45       4.96
+
+  Best  model (by mean score): zai-org/GLM-5:fireworks-ai  →  4.97
+  Worst model (by mean score): unsloth/Qwen3.5-35B-A3B-UD-Q4_K_XL  →  4.74
+
+──────────────────────────────────────────────────────────────────────
+  TEXT QUALITY METRICS
+──────────────────────────────────────────────────────────────────────
+
+  Character count:
+  Count:  1073
+  Min:    28
+  Max:    13,671
+  Mean:   7,242.50
+  Median: 7,111.0
+  StdDev: 1,335.29
+
+  Distribution:
+      28.0–937.5        1  
+     937.5–1847.1       0  
+    1847.1–2756.6       1  
+    2756.6–3666.1       0  
+    3666.1–4575.7       5  
+    4575.7–5485.2      37  ███
+    5485.2–6394.7     239  ██████████████████████
+    6394.7–7304.3     325  ██████████████████████████████
+    7304.3–8213.8     289  ██████████████████████████
+    8213.8–9123.3     108  █████████
+    9123.3–10032.9     27  ██
+   10032.9–10942.4     17  █
+   10942.4–11851.9     11  █
+   11851.9–12761.5      9  
+   12761.5–13671.0      4  
+
+  Word count:
+  Count:  1073
+  Min:    3
+  Max:    2,232
+  Mean:   1,199.39
+  Median: 1,187.0
+  StdDev: 221.70
+
+  Distribution:
+       3.0–151.6        1  
+     151.6–300.2        0  
+     300.2–448.8        1  
+     448.8–597.4        0  
+     597.4–746.0        8  
+     746.0–894.6       35  ███
+     894.6–1043.2     210  █████████████████████
+    1043.2–1191.8     296  ██████████████████████████████
+    1191.8–1340.4     284  ████████████████████████████
+    1340.4–1489.0     158  ████████████████
+    1489.0–1637.6      43  ████
+    1637.6–1786.2      14  █
+    1786.2–1934.8      12  █
+    1934.8–2083.4       6  
+    2083.4–2232.0       5  
+
+  Section count (out of 11 expected):
+  Count:  1073
+  Min:    0
+  Max:    11
+  Mean:   10.97
+  Median: 11.0
+  StdDev: 0.39
+
+  Example message blocks (<START> count):
+  Count:  1073
+  Min:    0
+  Max:    3
+  Mean:   2.66
+  Median: 3.0
+  StdDev: 0.50
+
+  Proper <character> tags: 1071 / 1073 (99.8%)
+
+  Frequently missing sections:
+                                Summary:    14 missing (1.3%)
+                       Example Messages:    10 missing (0.9%)
+            Values, Motivations & Fears:     2 missing (0.2%)
+                    Behavioral Patterns:     2 missing (0.2%)
+                    Communication Style:     2 missing (0.2%)
+                            Core Traits:     1 missing (0.1%)
+                          Relationships:     1 missing (0.1%)
+                      Basic Information:     1 missing (0.1%)
+                   Personality Overview:     1 missing (0.1%)
+                   Physical & Lifestyle:     1 missing (0.1%)
+                      Emotional Profile:     1 missing (0.1%)
+
+──────────────────────────────────────────────────────────────────────
+  POTENTIAL ISSUES
+──────────────────────────────────────────────────────────────────────
+  ⚠ 1 personas under 1500 characters (may be truncated)
+  ⚠ 1056 personas over 5000 characters (may be verbose)
+  ⚠ 2 personas missing <character> tags
+  ⚠ 2 personas have no example message blocks
+  ⚠ 198 duplicate name(s) affecting 749 personas
+  ⚠ 3 region(s) with very low representation (≤5 personas)
+  ⚠ 1 personas with eval_score < 3.0 (consider filtering or regenerating)
+
+──────────────────────────────────────────────────────────────────────
+  REGION COVERAGE
+──────────────────────────────────────────────────────────────────────
+  Expected regions:  42
+  Found regions:     42
+  Coverage:          42 / 42 (100.0%)
+
+══════════════════════════════════════════════════════════════════════
+  Analysis complete.
+  Report saved to: data/personas/generated/stats_report_20260315_161555.txt
+══════════════════════════════════════════════════════════════════════
+

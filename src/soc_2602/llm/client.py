@@ -137,20 +137,33 @@ class LLMClient:
         cfg : dict
             Merged config as returned by ``load_config()``.
         preset_name : str | None
-            Named preset from ``models.yaml``.
+            Named preset from ``config.yaml → models.presets``.
         model_id, provider, temperature, max_tokens
             Explicit overrides (typically from CLI flags).
         """
-        # Start with defaults from config.yaml → models.default
+        # Start with defaults from config.yaml → models.default_preset
         models_section = cfg.get("models") or {}
-        defaults = models_section.get("default") or {}
+        default_preset_name = models_section.get("default_preset")
 
-        resolved: Dict[str, Any] = {
-            "model_id": defaults.get("model_id", "unsloth/Qwen3.5-35B-A3B-UD-Q4_K_XL"),
-            "provider": defaults.get("provider", PROVIDER_LOCAL),
-            "temperature": defaults.get("temperature", 1.0),
-            "max_tokens": defaults.get("max_tokens", 16384),
+        # Resolve base defaults from the default_preset if it exists
+        hardcoded: Dict[str, Any] = {
+            "model_id": "unsloth/Qwen3.5-35B-A3B-UD-Q4_K_XL",
+            "provider": PROVIDER_LOCAL,
+            "temperature": 1.0,
+            "max_tokens": 16384,
         }
+
+        if default_preset_name:
+            presets = models_section.get("presets") or {}
+            dp = presets.get(default_preset_name) or {}
+            resolved: Dict[str, Any] = {
+                "model_id": dp.get("model_id", hardcoded["model_id"]),
+                "provider": dp.get("provider", hardcoded["provider"]),
+                "temperature": dp.get("temperature", hardcoded["temperature"]),
+                "max_tokens": dp.get("max_tokens", hardcoded["max_tokens"]),
+            }
+        else:
+            resolved = dict(hardcoded)
 
         # Layer on preset if requested
         if preset_name:
@@ -173,12 +186,8 @@ class LLMClient:
 
         # Resolve base_url from provider config
         provider_name = resolved["provider"]
-        base_url = None
         providers_cfg = cfg.get("providers") or {}
-        mdl_providers = (cfg.get("models_file") or {}).get("providers", {})
-        pcfg = (
-            mdl_providers.get(provider_name) or providers_cfg.get(provider_name) or {}
-        )
+        pcfg = providers_cfg.get(provider_name) or {}
         base_url = pcfg.get("base_url")
 
         return cls(

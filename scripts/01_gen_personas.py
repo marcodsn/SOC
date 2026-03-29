@@ -69,7 +69,7 @@ def main():
         "--preset",
         type=str,
         default=None,
-        help="Named model preset from models.yaml (e.g. kimi_k2, glm5)",
+        help="Named model preset from config.yaml (e.g. kimi_k2, glm5)",
     )
 
     # ── Region and language ──────────────────────────────────────────────

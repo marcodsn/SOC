@@ -1,17 +1,15 @@
 """
 Centralised configuration loader for the SOC pipeline.
 
-Reads ``conf/config.yaml`` and ``conf/models.yaml``, merges them into a
-single namespace, and exposes helpers that the rest of the codebase can use
-without touching YAML directly.
+Reads ``conf/config.yaml`` and exposes helpers that the rest of the
+codebase can use without touching YAML directly.
 
 Usage
 -----
     from soc_2602.utils.config import load_config, get_region_profile, get_model_preset
 
-    cfg = load_config()                          # reads from default paths
-    cfg = load_config("conf/config.yaml",        # or supply explicit paths
-                      "conf/models.yaml")
+    cfg = load_config()                          # reads from default path
+    cfg = load_config("conf/config.yaml")        # or supply an explicit path
 
     profile  = get_region_profile(cfg, "west")   # list of region codes
     preset   = get_model_preset(cfg, "kimi_k2")  # dict with model_id, provider, …
@@ -28,7 +26,6 @@ import yaml
 # ── Default file locations (relative to the project root) ────────────────────
 
 _DEFAULT_CONFIG_PATH = "conf/config.yaml"
-_DEFAULT_MODELS_PATH = "conf/models.yaml"
 
 
 # ── Public helpers ───────────────────────────────────────────────────────────
@@ -36,20 +33,16 @@ _DEFAULT_MODELS_PATH = "conf/models.yaml"
 
 def load_config(
     config_path: Optional[str] = None,
-    models_path: Optional[str] = None,
     *,
     project_root: Optional[str | Path] = None,
 ) -> Dict[str, Any]:
-    """Load and merge the pipeline config and model-presets files.
+    """Load the pipeline configuration from ``config.yaml``.
 
     Parameters
     ----------
     config_path : str | None
         Path to the main ``config.yaml``.  Falls back to
         ``<project_root>/conf/config.yaml``.
-    models_path : str | None
-        Path to ``models.yaml``.  Falls back to
-        ``<project_root>/conf/models.yaml``.
     project_root : str | Path | None
         If supplied, relative paths are resolved against this directory.
         Otherwise the current working directory is used.
@@ -57,20 +50,14 @@ def load_config(
     Returns
     -------
     dict
-        Merged configuration dictionary with top-level keys from both files.
-        The models file is nested under the ``"models_file"`` key to avoid
-        collisions with the ``"models"`` section in the main config.
+        Configuration dictionary with all top-level keys from
+        ``config.yaml``, including ``models`` and ``providers``.
     """
     root = Path(project_root) if project_root else Path.cwd()
 
     cfg_path = Path(config_path) if config_path else root / _DEFAULT_CONFIG_PATH
-    mdl_path = Path(models_path) if models_path else root / _DEFAULT_MODELS_PATH
 
     cfg: Dict[str, Any] = _read_yaml(cfg_path)
-    mdl: Dict[str, Any] = _read_yaml(mdl_path)
-
-    # Merge models file under a dedicated key so we never clobber config.models
-    cfg["models_file"] = mdl
     return cfg
 
 
@@ -85,7 +72,7 @@ def get_region_profile(
     Parameters
     ----------
     cfg : dict
-        Merged configuration as returned by :func:`load_config`.
+        Configuration as returned by :func:`load_config`.
     profile_name : str | None
         Profile name (e.g. ``"west"``, ``"east_asia"``).  ``None`` or
         ``"global"`` both map to all regions.
@@ -116,13 +103,12 @@ def get_model_preset(
 ) -> Dict[str, Any]:
     """Look up a named model preset and return a copy of its settings.
 
-    Searches in both ``config.yaml → models.presets`` and
-    ``models.yaml → presets``.
+    Searches in ``config.yaml → models.presets``.
 
     Parameters
     ----------
     cfg : dict
-        Merged configuration as returned by :func:`load_config`.
+        Configuration as returned by :func:`load_config`.
     preset_name : str
         Preset key (e.g. ``"kimi_k2"``).
 
@@ -134,17 +120,16 @@ def get_model_preset(
     Raises
     ------
     ValueError
-        If the preset is not found in either file.
+        If the preset is not found.
     """
-    # Check models.yaml first, then config.yaml fallback
-    models_file_presets = (cfg.get("models_file") or {}).get("presets", {})
     config_presets = (cfg.get("models") or {}).get("presets", {})
 
-    preset = models_file_presets.get(preset_name) or config_presets.get(preset_name)
+    preset = config_presets.get(preset_name)
 
     if preset is None:
-        all_names = set(models_file_presets.keys()) | set(config_presets.keys())
-        available = ", ".join(sorted(all_names)) if all_names else "(none)"
+        available = (
+            ", ".join(sorted(config_presets.keys())) if config_presets else "(none)"
+        )
         raise ValueError(
             f"Unknown model preset '{preset_name}'. Available: {available}"
         )
@@ -158,12 +143,10 @@ def get_provider_config(
 ) -> Dict[str, Any]:
     """Return endpoint information for *provider_name*.
 
-    Searches both config files; ``models.yaml → providers`` takes priority.
-
     Parameters
     ----------
     cfg : dict
-        Merged configuration.
+        Configuration as returned by :func:`load_config`.
     provider_name : str
         Provider key (e.g. ``"local"``, ``"huggingface"``).
 
@@ -172,14 +155,14 @@ def get_provider_config(
     dict
         Provider config with ``base_url`` and/or ``api_key_env``.
     """
-    mdl_providers = (cfg.get("models_file") or {}).get("providers", {})
     cfg_providers = cfg.get("providers") or {}
 
-    provider = mdl_providers.get(provider_name) or cfg_providers.get(provider_name)
+    provider = cfg_providers.get(provider_name)
 
     if provider is None:
-        all_names = set(mdl_providers.keys()) | set(cfg_providers.keys())
-        available = ", ".join(sorted(all_names)) if all_names else "(none)"
+        available = (
+            ", ".join(sorted(cfg_providers.keys())) if cfg_providers else "(none)"
+        )
         raise ValueError(f"Unknown provider '{provider_name}'. Available: {available}")
 
     return copy.deepcopy(provider)
@@ -205,7 +188,7 @@ def get_section(cfg: Dict[str, Any], section: str) -> Dict[str, Any]:
     Parameters
     ----------
     cfg : dict
-        Merged configuration.
+        Configuration as returned by :func:`load_config`.
     section : str
         Top-level key, e.g. ``"persona"``, ``"experience"``, ``"conversation"``.
     """

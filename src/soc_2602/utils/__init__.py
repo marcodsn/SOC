@@ -7,10 +7,9 @@ This subpackage provides:
   region profiles, population-weighted name/subregion selection, and
   age distribution sampling.
 
-- :mod:`config` — centralised YAML configuration loader that merges
-  ``conf/config.yaml`` and ``conf/models.yaml`` and exposes helpers
-  for region profiles, model presets, language settings, and provider
-  endpoints.
+- :mod:`config` — centralised YAML configuration loader that reads
+  ``conf/config.yaml`` and exposes helpers for region profiles, model
+  presets, language settings, and provider endpoints.
 """
 
 from soc_2602.utils.config import (

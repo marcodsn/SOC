@@ -170,36 +170,47 @@ conversation:
   # Default batch concurrency (conversations per batch, turns are sequential)
   batch_size: 4
 
-# ── Model Defaults ───────────────────────────────────────────────────────────
-# These are used when --model / --provider are not specified on the CLI.
+# ── Model Defaults & Presets ─────────────────────────────────────────────────
+# Single source of truth for model selection.  Use --preset <name> on the CLI
+# to pick a preset, or omit the flag to use the default_preset.
 models:
-  default:
-    model_id: "unsloth/Qwen3.5-35B-A3B-UD-Q4_K_XL"
-    provider: "local"
-    temperature: 1.0
-    max_tokens: 16384
+  # Which preset to use when no --model or --preset flag is provided.
+  default_preset: "local_default"
+  # If null, uses the default model for summarization.
+  summarizer_preset: "local_small"
 
-  summarizer:
-    # If null, uses the default model for summarization
-    model_id: null
-    provider: null
-    temperature: 1.0
-    max_tokens: 2048
-
-  # Named model presets for convenience (use via --preset <name>)
+  # Named model presets for quick switching via --preset <name>
   presets:
+    mistral-creative:
+      model_id: "labs-mistral-small-creative"
+      provider: "mistral"
+      temperature: 1.0
+      max_tokens: 8192
     kimi_k2:
       model_id: "moonshotai/Kimi-K2-Instruct-0905"
       provider: "huggingface"
+      temperature: 1.0
+      max_tokens: 8192
     kimi_k25:
       model_id: "moonshotai/Kimi-K2.5:fireworks-ai"
       provider: "huggingface"
+      temperature: 1.0
+      max_tokens: 8192
     glm5:
       model_id: "zai-org/GLM-5:fireworks-ai"
       provider: "huggingface"
+      temperature: 1.0
+      max_tokens: 8192
     local_default:
       model_id: "unsloth/Qwen3.5-35B-A3B-UD-Q4_K_XL"
       provider: "local"
+      temperature: 1.0
+      max_tokens: 16384
+    local_small:
+      model_id: "unsloth/Qwen3.5-35B-A3B-UD-Q4_K_XL"
+      provider: "local"
+      temperature: 1.0
+      max_tokens: 16384
 
 # ── Provider Endpoints ───────────────────────────────────────────────────────
 # Base URLs and auth env-var names for each provider.

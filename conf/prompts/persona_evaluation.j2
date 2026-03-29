@@ -1,0 +1,23 @@
+{#- ───────────────────────────────────────────────────────────────────────────
+    Persona Evaluation Prompt — user message (variable part)
+
+    The static system message (criteria definitions, scoring rubrics, output
+    format) is assembled in code.  This template provides per-call content:
+    the persona under review, its generation parameters, and the few-shot
+    examples it was generated from.
+─────────────────────────────────────────────────────────────────────────── -#}
+## Persona to Evaluate
+
+**Generation parameters:**
+- Name: {{ persona_info["name"] }}
+- Age: {{ persona_info["age"] }}
+- Region: {{ persona_info["region"] }}
+- Location: {{ persona_info["subregion"] }}
+- Assigned archetype: {{ persona_info["archetype"] }}
+- Emotion regulation style: {{ persona_info["regulation_style"] }}
+{% if persona_info.get("lingua_franca") %}
+- Lingua franca: {{ persona_info["lingua_franca"] }}
+{% endif %}
+
+**Generated persona under evaluation:**
+{{ persona }}

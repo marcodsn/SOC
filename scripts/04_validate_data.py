@@ -1011,7 +1011,7 @@ def validate_seed_data(result: ValidationResult):
         result.fail("Regions YAML not found: data/stats/demographics/regions.yaml")
 
     # Config files
-    for config_file in ["conf/config.yaml", "conf/models.yaml"]:
+    for config_file in ["conf/config.yaml"]:
         if Path(config_file).exists():
             result.ok(f"Config file exists: {config_file}")
         else:
